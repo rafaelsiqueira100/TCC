@@ -1,0 +1,10 @@
+Command: cmake -G Ninja -B C:\Users\rafae\workspace\LorawanGateway\build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe -DESP_PLATFORM=1 --warn-uninitialized -DIDF_TARGET=esp32 -DCCACHE_ENABLE=True C:\Users\rafae\workspace\LorawanGateway
+Loading defaults file C:/Users/rafae/workspace/LorawanGateway/sdkconfig.defaults...
+Configuration Report               
++---------------------------------+
+|  Parser Version: 1              |
+|  Verbosity: default             |
+|  Defaults policy: sdkconfig     |
+|  Status: Finished successfully  |
+|                                 |
++---------------------------------+
