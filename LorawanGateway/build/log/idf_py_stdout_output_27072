@@ -1,0 +1,160 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM10 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanGateway\build\LorawanGateway.elf C:\Users\rafae\workspace\LorawanGateway\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM10'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun  8 2026 17:49:41[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=20878h (133240) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=000308a0 vaddr=3ffb0000 size=04720h ( 18208) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00034fc8 vaddr=40080000 size=0b050h ( 45136) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9d97ch (645500) map[0m
+[0;32mI (389) esp_image: segment 4: paddr=000dd9a4 vaddr=4008b050 size=0c4fch ( 50428) load[0m
+[0;32mI (410) esp_image: segment 5: paddr=000e9ea8 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (422) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (422) boot: Disabling RNG early entropy source...[0m
+[0;32mI (433) cpu_start: Multicore app[0m
+[0;32mI (441) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (441) cpu_start: Pro cpu start user code[0m
+[0;32mI (441) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (447) app_init: Project name:     LorawanGateway[0m
+[0;32mI (451) app_init: App version:      1[0m
+[0;32mI (455) app_init: Compile time:     Jun  8 2026 17:48:54[0m
+[0;32mI (460) app_init: ELF file SHA256:  0fc22819b...[0m
+[0;32mI (464) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (468) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (476) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (480) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (486) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFB9248 len 00026DB8 (155 KiB): DRAM[0m
+[0;32mI (497) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (508) heap_init: At 4009754C len 00008AB4 (34 KiB): IRAM[0m
+[0;32mI (514) spi_flash: detected chip: generic[0m
+[0;32mI (516) spi_flash: flash io: dio[0m
+[0;33mW (519) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (533) main_task: Started on CPU0[0m
+[0;32mI (543) main_task: Calling app_main()[0m
+[0;32mI (593) wifi:wifi driver task: 3ffc0d68, prio:23, stack:6656, core=0[0m
+[0;32mI (603) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (603) wifi:wifi certification version: v7.0[0m
+[0;32mI (603) wifi:config NVS flash: enabled[0m
+[0;32mI (603) wifi:config nano formatting: disabled[0m
+[0;32mI (613) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (613) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (623) wifi:Init management short buffer num: 32[0m
+[0;32mI (623) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (633) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (633) wifi:Init static rx buffer num: 10[0m
+[0;32mI (633) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (643) wifi_init: rx ba win: 6[0m
+[0;32mI (643) wifi_init: accept mbox: 6[0m
+[0;32mI (643) wifi_init: tcpip mbox: 32[0m
+[0;32mI (653) wifi_init: udp mbox: 6[0m
+[0;32mI (653) wifi_init: tcp mbox: 6[0m
+[0;32mI (653) wifi_init: tcp tx win: 5760[0m
+[0;32mI (653) wifi_init: tcp rx win: 5760[0m
+[0;32mI (663) wifi_init: tcp mss: 1440[0m
+[0;32mI (663) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (663) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (673) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (683) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (753) wifi:mode : sta (5c:01:3b:09:29:68)[0m
+[0;32mI (763) wifi:enable tsf[0m
+[0;32mI (763) LORA_RX: Aguardando conexão WiFi...[0m
+[0;32mI (773) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (773) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (783) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (793) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (813) wifi:connected with IoT-local, aid = 1, channel 6, BW20, bssid = e8:26:89:be:53:21[0m
+[0;32mI (813) wifi:security: WPA2-PSK, phy: bgn, rssi: -77[0m
+[0;32mI (823) wifi:pm start, type: 1[0m
+
+[0;32mI (823) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (833) wifi:<ba-add>idx:0 (ifx:0, e8:26:89:be:53:21), tid:0, ssn:2, winSize:64[0m
+[0;32mI (863) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1843) esp_netif_handlers: sta ip: 100.64.33.29, mask: 255.255.255.0, gw: 100.64.33.1[0m
+[0;32mI (1843) LORA_RX: WiFi conectado, IP: 100.64.33.29[0m
+[1;31mE (11863) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (11863) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (11863) mqtt_client: Error transport connect[0m
+[1;31mE (11863) LORA_RX: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (11863) LORA_RX: MQTT desconectado[0m
+[0;32mI (11873) mqtt_client: Client force reconnect requested[0m
+[0;32mI (11893) LORA_RX: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (11903) LORA_RX: LoRa inicializado — aguardando pacotes...[0m
+[1;31mE (20913) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (20913) LORA_RX: Pacote inesperado: 64 bytes, ignorando[0m
+[0;32mI (20913) LORA_RX: cb 0d 80 40 b2 fb 3f 8d ff ff ff 00 00 00 00 40[0m
+[0;32mI (20913) LORA_RX: b2 fb 3f 00 00 00 00 00 00 00 00 00 00 00 00 24[0m
+[0;32mI (20923) LORA_RX: 00 00 00 68 b2 fb 3f f5 07 00 00 94 ac fc 3f 5d[0m
+[0;32mI (20923) LORA_RX: 58 0d 80 90 b2 fb 3f 03 00 00 00 12 00 00 00 0c[0m
+[0;33mW (21443) LORA_RX: Erro de CRC no pacote recebido[0m
+[1;31mE (21613) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (21613) LORA_RX: Pacote inesperado: 64 bytes, ignorando[0m
+[0;32mI (21613) LORA_RX: cb 0d 80 40 b2 fb 3f 8d ff ff ff 80 00 00 00 40[0m
+[0;32mI (21613) LORA_RX: b2 fb 3f 00 00 00 00 00 00 00 00 00 00 00 00 24[0m
+[0;32mI (21623) LORA_RX: 00 00 00 68 b2 fb 3f 3b 08 00 00 94 ac fc 3f 5d[0m
+[0;32mI (21623) LORA_RX: 58 0d 80 90 b2 fb 3f 00 b2 fb 3f a0 b3 fb 3f 0c[0m
+[1;31mE (21793) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (21793) LORA_RX: Pacote inesperado: 64 bytes, ignorando[0m
+[0;32mI (21793) LORA_RX: cb 0d 80 40 b2 fb 3f 8d ff ff ff c0 00 00 00 40[0m
+[0;32mI (21793) LORA_RX: b2 fb 3f 00 00 00 00 00 00 00 00 00 00 00 00 24[0m
+[0;32mI (21803) LORA_RX: 00 00 00 68 b2 fb 3f 4d 08 00 00 94 ac fc 3f 5d[0m
+[0;32mI (21803) LORA_RX: 58 0d 80 90 b2 fb 3f 00 b2 fb 3f a0 b3 fb 3f 0c[0m
+[1;31mE (21893) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (21893) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (21893) mqtt_client: Error transport connect[0m
+[1;31mE (21893) LORA_RX: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (21893) LORA_RX: MQTT desconectado[0m
+[0;32mI (21903) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21963) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (21963) LORA_RX: Pacote inesperado: 64 bytes, ignorando[0m
+[0;32mI (21963) LORA_RX: cb 0d 80 40 b2 fb 3f 8d ff ff ff 00 00 00 00 40[0m
+[0;32mI (21963) LORA_RX: b2 fb 3f 00 00 00 00 00 00 00 00 00 00 00 00 24[0m
+[0;32mI (21973) LORA_RX: 00 00 00 68 b2 fb 3f 5e 08 00 00 94 ac fc 3f 5d[0m
+[0;32mI (21973) LORA_RX: 58 0d 80 90 b2 fb 3f 00 b2 fb 3f a0 b3 fb 3f 0c[0m
+[0;32mI (22053) LORA_RX: Novo nó registrado: 0x01 (total: 1)[0m
+[0;32mI (22053) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (22053) LORA_RX:   Pacote #12 do nó 0x01[0m
+[0;32mI (22053) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (22063) LORA_RX:   RSSI        : -50 dBm[0m
+[0;32mI (22063) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (22073) LORA_RX:   Pkts ok/lost: 1 / 0[0m
+[0;32mI (22073) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (22083) LORA_RX: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;33mW (22503) LORA_RX: Erro de CRC no pacote recebido[0m
+[1;31mE (31923) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (31923) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (31923) mqtt_client: Error transport connect[0m
+[1;31mE (31923) LORA_RX: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (31923) LORA_RX: MQTT desconectado[0m
+[0;32mI (31933) mqtt_client: Client force reconnect requested[0m
+[0;32mI (32493) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (32493) LORA_RX:   Pacote #13 do nó 0x01[0m
+[0;32mI (32493) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (32493) LORA_RX:   RSSI        : -50 dBm[0m
+[0;32mI (32503) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (32503) LORA_RX:   Pkts ok/lost: 2 / 0[0m
+[0;32mI (32513) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (32523) LORA_RX: MQTT não conectado, descartando pacote do nó 0x01[0m
