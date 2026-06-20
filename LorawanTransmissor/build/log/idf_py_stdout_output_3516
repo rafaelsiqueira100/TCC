@@ -1,0 +1,51 @@
+Command: ninja all
+[1/33] Linking C static library esp-idf\esp_driver_touch_sens\libesp_driver_touch_sens.a
+[2/33] Linking C static library esp-idf\esp_driver_sdio\libesp_driver_sdio.a
+[3/33] Linking C static library esp-idf\esp_driver_rmt\libesp_driver_rmt.a
+[4/33] Linking C static library esp-idf\esp_driver_ledc\libesp_driver_ledc.a
+[5/33] Linking C static library esp-idf\cmock\libcmock.a
+[6/33] Linking C static library esp-idf\esp_driver_dac\libesp_driver_dac.a
+[7/33] Linking C static library esp-idf\esp_driver_mcpwm\libesp_driver_mcpwm.a
+[8/33] Linking C static library esp-idf\esp_driver_sdm\libesp_driver_sdm.a
+[9/33] Linking C static library esp-idf\esp_driver_pcnt\libesp_driver_pcnt.a
+[10/33] Linking C static library esp-idf\esp_driver_cam\libesp_driver_cam.a
+[11/33] Linking C static library esp-idf\esp_driver_gptimer\libesp_driver_gptimer.a
+[12/33] Linking C static library esp-idf\esp_driver_twai\libesp_driver_twai.a
+[13/33] Linking C static library esp-idf\esp_hid\libesp_hid.a
+[14/33] Linking C static library esp-idf\esp_eth\libesp_eth.a
+[15/33] Linking C static library esp-idf\perfmon\libperfmon.a
+[16/33] Linking C static library esp-idf\esp_lcd\libesp_lcd.a
+[17/33] Linking C static library esp-idf\mqtt\libmqtt.a
+[18/33] Linking C static library esp-idf\esp_local_ctrl\libesp_local_ctrl.a
+[19/33] Linking C static library esp-idf\fatfs\libfatfs.a
+[20/33] Linking C static library esp-idf\rt\librt.a
+[21/33] Linking C static library esp-idf\spiffs\libspiffs.a
+[22/33] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\rafae\workspace\LorawanTransmissor\build\bootloader && C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:/esp/v6.0/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/rafae/workspace/LorawanTransmissor/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6610 bytes. 0x9f0 bytes (9%) free.
+[23/33] No install step for 'bootloader'
+[24/33] Completed 'bootloader'
+[25/33] Building C object esp-idf/ttn-esp32/CMakeFiles/__idf_ttn-esp32.dir/src/lmic/oslmic.c.obj
+[26/33] Building C object esp-idf/ttn-esp32/CMakeFiles/__idf_ttn-esp32.dir/src/lmic/radio.c.obj
+[27/33] Linking C static library esp-idf\ttn-esp32\libttn-esp32.a
+[28/33] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+C:/Users/rafae/workspace/LorawanTransmissor/main/main.c:203:13: warning: 'ds3231_format_time' defined but not used [-Wunused-function]
+  203 | static void ds3231_format_time(const ds3231_time_t *t, char *buf, size_t len)
+      |             ^~~~~~~~~~~~~~~~~~
+C:/Users/rafae/workspace/LorawanTransmissor/main/main.c:195:13: warning: 'ds3231_format' defined but not used [-Wunused-function]
+  195 | static void ds3231_format(const ds3231_time_t *t, char *buf, size_t len)
+      |             ^~~~~~~~~~~~~
+C:/Users/rafae/workspace/LorawanTransmissor/main/main.c:124:18: warning: 'ds3231_get_time' defined but not used [-Wunused-function]
+  124 | static esp_err_t ds3231_get_time(ds3231_time_t *t)
+      |                  ^~~~~~~~~~~~~~~
+[29/33] Linking C static library esp-idf\main\libmain.a
+[30/33] Generating esp-idf/esp_system/ld/sections.ld
+[31/33] Linking CXX executable LorawanTransmissor.elf
+[32/33] Generating binary image from built executable
+esptool v5.3.0
+Creating ESP32 image...
+Merged 2 ELF sections.
+Successfully created ESP32 image.
+Generated C:/Users/rafae/workspace/LorawanTransmissor/build/LorawanTransmissor.bin
+[33/33] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\rafae\workspace\LorawanTransmissor\build && C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:/esp/v6.0/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/rafae/workspace/LorawanTransmissor/build/partition_table/partition-table.bin C:/Users/rafae/workspace/LorawanTransmissor/build/LorawanTransmissor.bin"
+LorawanTransmissor.bin binary size 0x30550 bytes. Smallest app partition is 0x100000 bytes. 0xcfab0 bytes (81%) free.

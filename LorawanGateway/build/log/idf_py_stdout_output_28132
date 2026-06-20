@@ -1,0 +1,281 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanGateway\build\LorawanGateway.elf C:\Users\rafae\workspace\LorawanGateway\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM9'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun  8 2026 17:49:41[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21e34h (138804) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=00031e5c vaddr=3ffb0000 size=04750h ( 18256) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=000365b4 vaddr=40080000 size=09a64h ( 39524) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9fda4h (654756) map[0m
+[0;32mI (393) esp_image: segment 4: paddr=000dfdcc vaddr=40089a64 size=0ecech ( 60652) load[0m
+[0;32mI (418) esp_image: segment 5: paddr=000eeac0 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (430) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (430) boot: Disabling RNG early entropy source...[0m
+[0;32mI (441) cpu_start: Multicore app[0m
+[0;32mI (449) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (449) cpu_start: Pro cpu start user code[0m
+[0;32mI (449) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (451) app_init: Application information:[0m
+[0;32mI (455) app_init: Project name:     LorawanGateway[0m
+[0;32mI (459) app_init: App version:      1[0m
+[0;32mI (463) app_init: Compile time:     Jun  8 2026 17:48:54[0m
+[0;32mI (468) app_init: ELF file SHA256:  ddd9f5be8...[0m
+[0;32mI (472) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (476) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (480) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (484) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (488) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (494) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (499) heap_init: At 3FFB9688 len 00026978 (154 KiB): DRAM[0m
+[0;32mI (505) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (510) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 40098750 len 000078B0 (30 KiB): IRAM[0m
+[0;32mI (522) spi_flash: detected chip: generic[0m
+[0;32mI (524) spi_flash: flash io: dio[0m
+[0;33mW (527) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (540) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (551) main_task: Started on CPU0[0m
+[0;32mI (561) main_task: Calling app_main()[0m
+[0;32mI (611) wifi:wifi driver task: 3ffc124c, prio:23, stack:6656, core=0[0m
+[0;32mI (621) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (631) wifi:wifi certification version: v7.0[0m
+[0;32mI (631) wifi:config NVS flash: enabled[0m
+[0;32mI (631) wifi:config nano formatting: disabled[0m
+[0;32mI (631) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (631) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (641) wifi:Init management short buffer num: 32[0m
+[0;32mI (641) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (651) wifi:Init static rx buffer num: 10[0m
+[0;32mI (651) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (661) wifi_init: rx ba win: 6[0m
+[0;32mI (661) wifi_init: accept mbox: 6[0m
+[0;32mI (661) wifi_init: tcpip mbox: 32[0m
+[0;32mI (671) wifi_init: udp mbox: 6[0m
+[0;32mI (671) wifi_init: tcp mbox: 6[0m
+[0;32mI (671) wifi_init: tcp tx win: 5760[0m
+[0;32mI (681) wifi_init: tcp rx win: 5760[0m
+[0;32mI (681) wifi_init: tcp mss: 1440[0m
+[0;32mI (681) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (691) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (691) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (701) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (781) wifi:mode : sta (5c:01:3b:09:2a:d4)[0m
+[0;32mI (781) wifi:enable tsf[0m
+[0;32mI (781) LORA_RX: Aguardando conexão WiFi...[0m
+[0;32mI (791) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (801) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (841) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (861) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (921) wifi:connected with HUAWEI SQ, aid = 12, channel 6, BW20, bssid = 98:b3:ef:09:8c:50[0m
+[0;32mI (921) wifi:security: WPA2-PSK, phy: bgn, rssi: -74[0m
+[0;32mI (931) wifi:pm start, type: 1[0m
+
+[0;32mI (931) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (981) wifi:<ba-add>idx:0 (ifx:0, 98:b3:ef:09:8c:50), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1021) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2031) esp_netif_handlers: sta ip: 192.168.3.139, mask: 255.255.255.0, gw: 192.168.3.1[0m
+[0;32mI (2031) LORA_RX: WiFi conectado, IP: 192.168.3.139[0m
+[0;32mI (2241) LORA_RX: MQTT conectado[0m
+[0;32mI (2341) LORA_RX: Scanning I2C bus...[0m
+[1;31mE (2371) LORA_RX: DS3231 não encontrado (err=0xffffffff)[0m
+[0;33mW (2371) LORA_RX: DS3231 indisponível — timestamps serão "unknown"[0m
+[0;32mI (2471) LORA_RX: OLED SSD1306 inicializado[0m
+[0;32mI (2491) LORA_RX: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (2501) LORA_RX: LoRa inicializado — aguardando pacotes...[0m
+[0;32mI (3321) LORA_RX: Novo nó registrado: 0x01 (total: 1)[0m
+[0;32mI (3321) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (3321) LORA_RX:   Pacote #247 do nó 0x01  [--:--:--][0m
+[0;32mI (3331) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (3331) LORA_RX:   RSSI        : -87 dBm[0m
+[0;32mI (3331) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (3341) LORA_RX:   Pkts ok/lost: 1 / 0[0m
+[0;32mI (3341) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (3361) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (13761) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (13761) LORA_RX:   Pacote #248 do nó 0x01  [--:--:--][0m
+[0;32mI (13761) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (13771) LORA_RX:   RSSI        : -86 dBm[0m
+[0;32mI (13771) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (13771) LORA_RX:   Pkts ok/lost: 2 / 0[0m
+[0;32mI (13781) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (13801) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (24201) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (24201) LORA_RX:   Pacote #249 do nó 0x01  [--:--:--][0m
+[0;32mI (24201) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (24211) LORA_RX:   RSSI        : -81 dBm[0m
+[0;32mI (24211) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (24211) LORA_RX:   Pkts ok/lost: 3 / 0[0m
+[0;32mI (24221) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (24241) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (34641) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (34641) LORA_RX:   Pacote #250 do nó 0x01  [--:--:--][0m
+[0;32mI (34641) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (34651) LORA_RX:   RSSI        : -83 dBm[0m
+[0;32mI (34651) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (34651) LORA_RX:   Pkts ok/lost: 4 / 0[0m
+[0;32mI (34661) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (34681) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (45081) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (45081) LORA_RX:   Pacote #251 do nó 0x01  [--:--:--][0m
+[0;32mI (45081) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (45091) LORA_RX:   RSSI        : -84 dBm[0m
+[0;32mI (45091) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (45101) LORA_RX:   Pkts ok/lost: 5 / 0[0m
+[0;32mI (45101) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (45121) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (55521) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (55521) LORA_RX:   Pacote #252 do nó 0x01  [--:--:--][0m
+[0;32mI (55521) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (55531) LORA_RX:   RSSI        : -82 dBm[0m
+[0;32mI (55531) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (55541) LORA_RX:   Pkts ok/lost: 6 / 0[0m
+[0;32mI (55541) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (55561) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[1;31mE (64211) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (64211) LORA_RX: Pacote inesperado: 67 bytes (esperado: 10)[0m
+[0;32mI (64211) LORA_RX: 00 00 00 de 18 00 00 00 00 00 00 23 06 06 00 ff[0m
+[0;32mI (64211) LORA_RX: ff ff ff 30 b5 fb 3f 00 00 00 00 90 b5 fb 3f 8c[0m
+[0;32mI (64221) LORA_RX: b3 fc 3f 00 00 00 00 30 b5 fb 3f 01 00 00 00 29[0m
+[0;32mI (64221) LORA_RX: c7 0d 80 60 b5 fb 3f 00 00 00 00 90 b5 fb 3f 90[0m
+[0;32mI (64231) LORA_RX: b5 fb 3f[0m
+[0;32mI (65961) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (65961) LORA_RX:   Pacote #253 do nó 0x01  [--:--:--][0m
+[0;32mI (65961) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (65971) LORA_RX:   RSSI        : -83 dBm[0m
+[0;32mI (65971) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (65981) LORA_RX:   Pkts ok/lost: 7 / 0[0m
+[0;32mI (65981) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (66001) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (76401) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (76401) LORA_RX:   Pacote #254 do nó 0x01  [--:--:--][0m
+[0;32mI (76401) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (76411) LORA_RX:   RSSI        : -83 dBm[0m
+[0;32mI (76411) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (76421) LORA_RX:   Pkts ok/lost: 8 / 0[0m
+[0;32mI (76421) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (76441) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (86841) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (86841) LORA_RX:   Pacote #255 do nó 0x01  [--:--:--][0m
+[0;32mI (86841) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (86851) LORA_RX:   RSSI        : -84 dBm[0m
+[0;32mI (86851) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (86861) LORA_RX:   Pkts ok/lost: 9 / 0[0m
+[0;32mI (86861) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (86881) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (97281) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (97281) LORA_RX:   Pacote #256 do nó 0x01  [--:--:--][0m
+[0;32mI (97281) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (97291) LORA_RX:   RSSI        : -85 dBm[0m
+[0;32mI (97291) LORA_RX:   SNR         : 10 dB[0m
+[0;32mI (97301) LORA_RX:   Pkts ok/lost: 10 / 0[0m
+[0;32mI (97301) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (97321) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (107721) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (107721) LORA_RX:   Pacote #257 do nó 0x01  [--:--:--][0m
+[0;32mI (107721) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (107731) LORA_RX:   RSSI        : -83 dBm[0m
+[0;32mI (107731) LORA_RX:   SNR         : 10 dB[0m
+[0;32mI (107741) LORA_RX:   Pkts ok/lost: 11 / 0[0m
+[0;32mI (107741) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (107761) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (118161) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (118161) LORA_RX:   Pacote #258 do nó 0x01  [--:--:--][0m
+[0;32mI (118161) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (118171) LORA_RX:   RSSI        : -84 dBm[0m
+[0;32mI (118171) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (118181) LORA_RX:   Pkts ok/lost: 12 / 0[0m
+[0;32mI (118181) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (118201) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (128601) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (128601) LORA_RX:   Pacote #259 do nó 0x01  [--:--:--][0m
+[0;32mI (128611) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (128611) LORA_RX:   RSSI        : -83 dBm[0m
+[0;32mI (128611) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (128621) LORA_RX:   Pkts ok/lost: 13 / 0[0m
+[0;32mI (128621) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (128641) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (139041) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (139041) LORA_RX:   Pacote #260 do nó 0x01  [--:--:--][0m
+[0;32mI (139041) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (139051) LORA_RX:   RSSI        : -83 dBm[0m
+[0;32mI (139051) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (139061) LORA_RX:   Pkts ok/lost: 14 / 0[0m
+[0;32mI (139061) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (139081) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (149481) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (149481) LORA_RX:   Pacote #261 do nó 0x01  [--:--:--][0m
+[0;32mI (149481) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (149491) LORA_RX:   RSSI        : -84 dBm[0m
+[0;32mI (149491) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (149501) LORA_RX:   Pkts ok/lost: 15 / 0[0m
+[0;32mI (149501) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (149521) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (159921) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (159921) LORA_RX:   Pacote #262 do nó 0x01  [--:--:--][0m
+[0;32mI (159921) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (159931) LORA_RX:   RSSI        : -85 dBm[0m
+[0;32mI (159931) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (159941) LORA_RX:   Pkts ok/lost: 16 / 0[0m
+[0;32mI (159941) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (159961) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (170361) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (170361) LORA_RX:   Pacote #263 do nó 0x01  [--:--:--][0m
+[0;32mI (170361) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (170371) LORA_RX:   RSSI        : -87 dBm[0m
+[0;32mI (170371) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (170381) LORA_RX:   Pkts ok/lost: 17 / 0[0m
+[0;32mI (170381) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (170401) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (180801) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (180801) LORA_RX:   Pacote #264 do nó 0x01  [--:--:--][0m
+[0;32mI (180801) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (180811) LORA_RX:   RSSI        : -86 dBm[0m
+[0;32mI (180811) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (180821) LORA_RX:   Pkts ok/lost: 18 / 0[0m
+[0;32mI (180821) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (180841) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (191251) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (191251) LORA_RX:   Pacote #265 do nó 0x01  [--:--:--][0m
+[0;32mI (191251) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (191261) LORA_RX:   RSSI        : -86 dBm[0m
+[0;32mI (191261) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (191271) LORA_RX:   Pkts ok/lost: 19 / 0[0m
+[0;32mI (191271) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (191291) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (201691) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (201691) LORA_RX:   Pacote #266 do nó 0x01  [--:--:--][0m
+[0;32mI (201691) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (201701) LORA_RX:   RSSI        : -86 dBm[0m
+[0;32mI (201701) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (201711) LORA_RX:   Pkts ok/lost: 20 / 0[0m
+[0;32mI (201711) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (201731) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (212131) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (212131) LORA_RX:   Pacote #267 do nó 0x01  [--:--:--][0m
+[0;32mI (212131) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (212141) LORA_RX:   RSSI        : -86 dBm[0m
+[0;32mI (212141) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (212151) LORA_RX:   Pkts ok/lost: 21 / 0[0m
+[0;32mI (212151) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (212171) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m

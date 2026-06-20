@@ -1,0 +1,2788 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanGateway\build\LorawanGateway.elf C:\Users\rafae\workspace\LorawanGateway\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM9'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun  8 2026 17:49:41[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21e04h (138756) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=00031e2c vaddr=3ffb0000 size=04750h ( 18256) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00036584 vaddr=40080000 size=09a94h ( 39572) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9fd34h (654644) map[0m
+[0;32mI (393) esp_image: segment 4: paddr=000dfd5c vaddr=40089a94 size=0ecbch ( 60604) load[0m
+[0;32mI (418) esp_image: segment 5: paddr=000eea20 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (430) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (430) boot: Disabling RNG early entropy source...[0m
+[0;32mI (441) cpu_start: Multicore app[0m
+[0;32mI (449) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (449) cpu_start: Pro cpu start user code[0m
+[0;32mI (449) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (451) app_init: Application information:[0m
+[0;32mI (455) app_init: Project name:     LorawanGateway[0m
+[0;32mI (459) app_init: App version:      1[0m
+[0;32mI (463) app_init: Compile time:     Jun  8 2026 17:48:54[0m
+[0;32mI (468) app_init: ELF file SHA256:  1e4272959...[0m
+[0;32mI (472) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (476) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (480) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (484) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (488) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (494) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (499) heap_init: At 3FFB9688 len 00026978 (154 KiB): DRAM[0m
+[0;32mI (505) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (510) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 40098750 len 000078B0 (30 KiB): IRAM[0m
+[0;32mI (522) spi_flash: detected chip: generic[0m
+[0;32mI (524) spi_flash: flash io: dio[0m
+[0;33mW (527) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (540) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (551) main_task: Started on CPU0[0m
+[0;32mI (561) main_task: Calling app_main()[0m
+[0;32mI (611) wifi:wifi driver task: 3ffc124c, prio:23, stack:6656, core=0[0m
+[0;32mI (621) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (621) wifi:wifi certification version: v7.0[0m
+[0;32mI (621) wifi:config NVS flash: enabled[0m
+[0;32mI (621) wifi:config nano formatting: disabled[0m
+[0;32mI (631) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (631) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (641) wifi:Init management short buffer num: 32[0m
+[0;32mI (641) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (651) wifi:Init static rx buffer num: 10[0m
+[0;32mI (651) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (661) wifi_init: rx ba win: 6[0m
+[0;32mI (661) wifi_init: accept mbox: 6[0m
+[0;32mI (661) wifi_init: tcpip mbox: 32[0m
+[0;32mI (671) wifi_init: udp mbox: 6[0m
+[0;32mI (671) wifi_init: tcp mbox: 6[0m
+[0;32mI (671) wifi_init: tcp tx win: 5760[0m
+[0;32mI (681) wifi_init: tcp rx win: 5760[0m
+[0;32mI (681) wifi_init: tcp mss: 1440[0m
+[0;32mI (681) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (681) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (691) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (701) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (771) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (791) wifi:mode : sta (5c:01:3b:09:2a:d4)[0m
+[0;32mI (791) wifi:enable tsf[0m
+[0;32mI (791) LORA_RX: Aguardando conexão WiFi...[0m
+[0;33mW (3211) LORA_RX: WiFi desconectado, reconectando...[0m
+[0;33mW (5631) LORA_RX: WiFi desconectado, reconectando...[0m
+[0;33mW (8041) LORA_RX: WiFi desconectado, reconectando...[0m
+[0;33mW (10461) LORA_RX: WiFi desconectado, reconectando...[0m
+[0;33mW (12881) LORA_RX: WiFi desconectado, reconectando...[0m
+[0;33mW (15291) LORA_RX: WiFi desconectado, reconectando...[0m
+[1;31mE (15791) LORA_RX: Timeout DHCP — continuando mesmo assim[0m
+[1;31mE (15791) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15791) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15791) mqtt_client: Error transport connect[0m
+[1;31mE (15801) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (15801) LORA_RX: MQTT desconectado[0m
+[0;32mI (15801) mqtt_client: Client force reconnect requested[0m
+[1;31mE (15811) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15811) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15821) mqtt_client: Error transport connect[0m
+[1;31mE (15821) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (15831) LORA_RX: MQTT desconectado[0m
+[0;32mI (15831) mqtt_client: Client force reconnect requested[0m
+[1;31mE (15841) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15841) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15851) mqtt_client: Error transport connect[0m
+[1;31mE (15851) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (15851) LORA_RX: MQTT desconectado[0m
+[0;32mI (15861) mqtt_client: Client force reconnect requested[0m
+[1;31mE (15871) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15871) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15871) mqtt_client: Error transport connect[0m
+[1;31mE (15881) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (15881) LORA_RX: MQTT desconectado[0m
+[0;32mI (15891) mqtt_client: Client force reconnect requested[0m
+[1;31mE (15891) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15901) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15901) mqtt_client: Error transport connect[0m
+[1;31mE (15911) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (15911) LORA_RX: MQTT desconectado[0m
+[0;32mI (15911) mqtt_client: Client force reconnect requested[0m
+[1;31mE (15921) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15931) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15931) mqtt_client: Error transport connect[0m
+[1;31mE (15931) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (15941) LORA_RX: MQTT desconectado[0m
+[0;32mI (15941) mqtt_client: Client force reconnect requested[0m
+[1;31mE (15951) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15951) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15961) mqtt_client: Error transport connect[0m
+[1;31mE (15961) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (15971) LORA_RX: MQTT desconectado[0m
+[0;32mI (15971) mqtt_client: Client force reconnect requested[0m
+[1;31mE (15981) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (15981) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (15991) mqtt_client: Error transport connect[0m
+[1;31mE (15991) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (15991) LORA_RX: MQTT desconectado[0m
+[0;32mI (16001) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16001) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16011) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16011) mqtt_client: Error transport connect[0m
+[1;31mE (16021) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16021) LORA_RX: MQTT desconectado[0m
+[0;32mI (16021) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16031) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16041) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16041) mqtt_client: Error transport connect[0m
+[1;31mE (16051) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16051) LORA_RX: MQTT desconectado[0m
+[0;32mI (16051) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16061) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16061) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16071) mqtt_client: Error transport connect[0m
+[1;31mE (16071) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16081) LORA_RX: MQTT desconectado[0m
+[0;32mI (16081) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16091) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16091) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16101) mqtt_client: Error transport connect[0m
+[1;31mE (16101) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16101) LORA_RX: MQTT desconectado[0m
+[0;32mI (16111) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16111) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16121) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16121) mqtt_client: Error transport connect[0m
+[1;31mE (16131) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16131) LORA_RX: MQTT desconectado[0m
+[0;32mI (16141) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16141) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16151) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16151) mqtt_client: Error transport connect[0m
+[1;31mE (16161) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16161) LORA_RX: MQTT desconectado[0m
+[0;32mI (16161) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16171) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16171) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16181) mqtt_client: Error transport connect[0m
+[1;31mE (16181) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16191) LORA_RX: MQTT desconectado[0m
+[0;32mI (16191) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16201) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16201) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16211) mqtt_client: Error transport connect[0m
+[1;31mE (16211) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16221) LORA_RX: MQTT desconectado[0m
+[0;32mI (16221) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16231) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16231) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16241) mqtt_client: Error transport connect[0m
+[1;31mE (16241) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16241) LORA_RX: MQTT desconectado[0m
+[0;32mI (16251) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16251) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16261) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16261) mqtt_client: Error transport connect[0m
+[1;31mE (16271) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16271) LORA_RX: MQTT desconectado[0m
+[0;32mI (16271) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16281) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16291) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16291) mqtt_client: Error transport connect[0m
+[1;31mE (16301) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16301) LORA_RX: MQTT desconectado[0m
+[0;32mI (16301) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16311) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16311) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16321) mqtt_client: Error transport connect[0m
+[1;31mE (16321) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16331) LORA_RX: MQTT desconectado[0m
+[0;32mI (16331) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16341) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16341) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16351) mqtt_client: Error transport connect[0m
+[1;31mE (16351) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16351) LORA_RX: MQTT desconectado[0m
+[0;32mI (16361) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16361) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16371) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16371) mqtt_client: Error transport connect[0m
+[1;31mE (16381) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16381) LORA_RX: MQTT desconectado[0m
+[0;32mI (16391) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16391) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16401) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16401) mqtt_client: Error transport connect[0m
+[1;31mE (16411) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16411) LORA_RX: MQTT desconectado[0m
+[0;32mI (16411) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16421) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16421) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16431) mqtt_client: Error transport connect[0m
+[1;31mE (16431) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16441) LORA_RX: MQTT desconectado[0m
+[0;32mI (16441) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16451) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16451) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16461) mqtt_client: Error transport connect[0m
+[1;31mE (16461) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16471) LORA_RX: MQTT desconectado[0m
+[0;32mI (16471) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16481) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16481) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16491) mqtt_client: Error transport connect[0m
+[1;31mE (16491) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16491) LORA_RX: MQTT desconectado[0m
+[0;32mI (16501) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16501) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16511) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16511) mqtt_client: Error transport connect[0m
+[1;31mE (16521) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16521) LORA_RX: MQTT desconectado[0m
+[0;32mI (16531) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16531) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16541) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16541) mqtt_client: Error transport connect[0m
+[1;31mE (16551) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16551) LORA_RX: MQTT desconectado[0m
+[0;32mI (16551) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16561) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16561) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16571) mqtt_client: Error transport connect[0m
+[1;31mE (16571) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16581) LORA_RX: MQTT desconectado[0m
+[0;32mI (16581) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16591) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16591) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16601) mqtt_client: Error transport connect[0m
+[1;31mE (16601) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16601) LORA_RX: MQTT desconectado[0m
+[0;32mI (16611) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16611) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16621) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16621) mqtt_client: Error transport connect[0m
+[1;31mE (16631) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16631) LORA_RX: MQTT desconectado[0m
+[0;32mI (16641) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16641) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16651) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16651) mqtt_client: Error transport connect[0m
+[1;31mE (16661) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16661) LORA_RX: MQTT desconectado[0m
+[0;32mI (16661) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16671) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16671) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16681) mqtt_client: Error transport connect[0m
+[1;31mE (16681) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16691) LORA_RX: MQTT desconectado[0m
+[0;32mI (16691) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16701) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16701) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16711) mqtt_client: Error transport connect[0m
+[1;31mE (16711) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16721) LORA_RX: MQTT desconectado[0m
+[0;32mI (16721) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16731) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16731) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16741) mqtt_client: Error transport connect[0m
+[1;31mE (16741) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16741) LORA_RX: MQTT desconectado[0m
+[0;32mI (16751) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16751) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16761) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16761) mqtt_client: Error transport connect[0m
+[1;31mE (16771) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16771) LORA_RX: MQTT desconectado[0m
+[0;32mI (16771) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16781) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16791) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16791) mqtt_client: Error transport connect[0m
+[1;31mE (16801) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16801) LORA_RX: MQTT desconectado[0m
+[0;32mI (16801) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16811) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16811) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16821) mqtt_client: Error transport connect[0m
+[1;31mE (16821) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16831) LORA_RX: MQTT desconectado[0m
+[0;32mI (16831) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16841) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16841) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16851) mqtt_client: Error transport connect[0m
+[1;31mE (16851) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16851) LORA_RX: MQTT desconectado[0m
+[0;32mI (16861) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16861) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16871) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16871) mqtt_client: Error transport connect[0m
+[1;31mE (16881) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16881) LORA_RX: MQTT desconectado[0m
+[0;32mI (16891) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16891) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16901) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16901) mqtt_client: Error transport connect[0m
+[1;31mE (16911) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16911) LORA_RX: MQTT desconectado[0m
+[0;32mI (16911) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16921) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16921) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16931) mqtt_client: Error transport connect[0m
+[1;31mE (16931) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16941) LORA_RX: MQTT desconectado[0m
+[0;32mI (16941) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16951) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16951) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16961) mqtt_client: Error transport connect[0m
+[1;31mE (16961) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16971) LORA_RX: MQTT desconectado[0m
+[0;32mI (16971) mqtt_client: Client force reconnect requested[0m
+[1;31mE (16981) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (16981) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16991) mqtt_client: Error transport connect[0m
+[1;31mE (16991) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (16991) LORA_RX: MQTT desconectado[0m
+[0;32mI (17001) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17001) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17011) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17011) mqtt_client: Error transport connect[0m
+[1;31mE (17021) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17021) LORA_RX: MQTT desconectado[0m
+[0;32mI (17021) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17031) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17041) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17041) mqtt_client: Error transport connect[0m
+[1;31mE (17051) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17051) LORA_RX: MQTT desconectado[0m
+[0;32mI (17051) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17061) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17061) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17071) mqtt_client: Error transport connect[0m
+[1;31mE (17071) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17081) LORA_RX: MQTT desconectado[0m
+[0;32mI (17081) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17091) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17091) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17101) mqtt_client: Error transport connect[0m
+[1;31mE (17101) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17101) LORA_RX: MQTT desconectado[0m
+[0;32mI (17111) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17111) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17121) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17121) mqtt_client: Error transport connect[0m
+[1;31mE (17131) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17131) LORA_RX: MQTT desconectado[0m
+[0;32mI (17141) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17141) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17151) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17151) mqtt_client: Error transport connect[0m
+[1;31mE (17161) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17161) LORA_RX: MQTT desconectado[0m
+[0;32mI (17161) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17171) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17171) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17181) mqtt_client: Error transport connect[0m
+[1;31mE (17181) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17191) LORA_RX: MQTT desconectado[0m
+[0;32mI (17191) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17201) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17201) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17211) mqtt_client: Error transport connect[0m
+[1;31mE (17211) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17221) LORA_RX: MQTT desconectado[0m
+[0;32mI (17221) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17231) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17231) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17241) mqtt_client: Error transport connect[0m
+[1;31mE (17241) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17241) LORA_RX: MQTT desconectado[0m
+[0;32mI (17251) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17251) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17261) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17261) mqtt_client: Error transport connect[0m
+[1;31mE (17271) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17271) LORA_RX: MQTT desconectado[0m
+[0;32mI (17271) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17281) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17291) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17291) mqtt_client: Error transport connect[0m
+[1;31mE (17301) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17301) LORA_RX: MQTT desconectado[0m
+[0;32mI (17301) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17311) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17311) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17321) mqtt_client: Error transport connect[0m
+[1;31mE (17321) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17331) LORA_RX: MQTT desconectado[0m
+[0;32mI (17331) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17341) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17341) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17351) mqtt_client: Error transport connect[0m
+[1;31mE (17351) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17351) LORA_RX: MQTT desconectado[0m
+[0;32mI (17361) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17361) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17371) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17371) mqtt_client: Error transport connect[0m
+[1;31mE (17381) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17381) LORA_RX: MQTT desconectado[0m
+[0;32mI (17391) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17391) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17401) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17401) mqtt_client: Error transport connect[0m
+[1;31mE (17411) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17411) LORA_RX: MQTT desconectado[0m
+[0;32mI (17411) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17421) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17421) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17431) mqtt_client: Error transport connect[0m
+[1;31mE (17431) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17441) LORA_RX: MQTT desconectado[0m
+[0;32mI (17441) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17451) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17451) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17461) mqtt_client: Error transport connect[0m
+[1;31mE (17461) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17471) LORA_RX: MQTT desconectado[0m
+[0;32mI (17471) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17481) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17481) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17491) mqtt_client: Error transport connect[0m
+[1;31mE (17491) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17491) LORA_RX: MQTT desconectado[0m
+[0;32mI (17501) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17501) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17511) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17511) mqtt_client: Error transport connect[0m
+[1;31mE (17521) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17521) LORA_RX: MQTT desconectado[0m
+[0;32mI (17521) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17531) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17541) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17541) mqtt_client: Error transport connect[0m
+[1;31mE (17551) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17551) LORA_RX: MQTT desconectado[0m
+[0;32mI (17551) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17561) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17561) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17571) mqtt_client: Error transport connect[0m
+[1;31mE (17571) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17581) LORA_RX: MQTT desconectado[0m
+[0;32mI (17581) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17591) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17591) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17601) mqtt_client: Error transport connect[0m
+[1;31mE (17601) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17601) LORA_RX: MQTT desconectado[0m
+[0;32mI (17611) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17611) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17621) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17621) mqtt_client: Error transport connect[0m
+[1;31mE (17631) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17631) LORA_RX: MQTT desconectado[0m
+[0;32mI (17641) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17641) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17651) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17651) mqtt_client: Error transport connect[0m
+[1;31mE (17661) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17661) LORA_RX: MQTT desconectado[0m
+[0;32mI (17661) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17671) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17671) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17681) mqtt_client: Error transport connect[0m
+[1;31mE (17681) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17691) LORA_RX: MQTT desconectado[0m
+[0;32mI (17691) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17701) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17701) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17711) mqtt_client: Error transport connect[0m
+[0;33mW (17711) LORA_RX: WiFi desconectado, reconectando...[0m
+[1;31mE (17711) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17721) LORA_RX: MQTT desconectado[0m
+[0;32mI (17721) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17731) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17741) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17741) mqtt_client: Error transport connect[0m
+[1;31mE (17741) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17751) LORA_RX: MQTT desconectado[0m
+[0;32mI (17751) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17761) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17761) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17771) mqtt_client: Error transport connect[0m
+[1;31mE (17771) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17781) LORA_RX: MQTT desconectado[0m
+[0;32mI (17781) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17791) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17791) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17801) mqtt_client: Error transport connect[0m
+[1;31mE (17801) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17801) LORA_RX: MQTT desconectado[0m
+[0;32mI (17811) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17811) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17821) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17821) mqtt_client: Error transport connect[0m
+[1;31mE (17831) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17831) LORA_RX: MQTT desconectado[0m
+[0;32mI (17841) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17841) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17851) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17851) mqtt_client: Error transport connect[0m
+[1;31mE (17861) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17861) LORA_RX: MQTT desconectado[0m
+[0;32mI (17861) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17871) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17871) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17881) mqtt_client: Error transport connect[0m
+[1;31mE (17881) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17891) LORA_RX: MQTT desconectado[0m
+[0;32mI (17891) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17901) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17901) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17911) mqtt_client: Error transport connect[0m
+[1;31mE (17911) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17921) LORA_RX: MQTT desconectado[0m
+[0;32mI (17921) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17931) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17931) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17931) mqtt_client: Error transport connect[0m
+[1;31mE (17941) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17941) LORA_RX: MQTT desconectado[0m
+[0;32mI (17951) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17951) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17961) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17961) mqtt_client: Error transport connect[0m
+[1;31mE (17971) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (17971) LORA_RX: MQTT desconectado[0m
+[0;32mI (17971) mqtt_client: Client force reconnect requested[0m
+[1;31mE (17981) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (17991) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17991) mqtt_client: Error transport connect[0m
+[1;31mE (17991) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18001) LORA_RX: MQTT desconectado[0m
+[0;32mI (18001) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18011) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18011) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18021) mqtt_client: Error transport connect[0m
+[1;31mE (18021) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18031) LORA_RX: MQTT desconectado[0m
+[0;32mI (18031) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18041) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18041) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18051) mqtt_client: Error transport connect[0m
+[1;31mE (18051) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18051) LORA_RX: MQTT desconectado[0m
+[0;32mI (18061) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18061) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18071) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18071) mqtt_client: Error transport connect[0m
+[1;31mE (18081) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18081) LORA_RX: MQTT desconectado[0m
+[0;32mI (18091) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18091) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18101) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18101) mqtt_client: Error transport connect[0m
+[1;31mE (18111) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18111) LORA_RX: MQTT desconectado[0m
+[0;32mI (18111) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18121) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18121) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18131) mqtt_client: Error transport connect[0m
+[1;31mE (18131) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18141) LORA_RX: MQTT desconectado[0m
+[0;32mI (18141) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18151) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18151) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18161) mqtt_client: Error transport connect[0m
+[1;31mE (18161) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18171) LORA_RX: MQTT desconectado[0m
+[0;32mI (18171) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18181) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18181) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18181) mqtt_client: Error transport connect[0m
+[1;31mE (18191) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18191) LORA_RX: MQTT desconectado[0m
+[0;32mI (18201) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18201) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18211) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18211) mqtt_client: Error transport connect[0m
+[1;31mE (18221) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18221) LORA_RX: MQTT desconectado[0m
+[0;32mI (18221) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18231) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18241) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18241) mqtt_client: Error transport connect[0m
+[1;31mE (18241) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18251) LORA_RX: MQTT desconectado[0m
+[0;32mI (18251) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18261) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18261) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18271) mqtt_client: Error transport connect[0m
+[1;31mE (18271) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18281) LORA_RX: MQTT desconectado[0m
+[0;32mI (18281) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18291) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18291) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18301) mqtt_client: Error transport connect[0m
+[1;31mE (18301) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18301) LORA_RX: MQTT desconectado[0m
+[0;32mI (18311) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18311) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18321) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18321) mqtt_client: Error transport connect[0m
+[1;31mE (18331) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18331) LORA_RX: MQTT desconectado[0m
+[0;32mI (18341) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18341) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18351) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18351) mqtt_client: Error transport connect[0m
+[1;31mE (18361) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18361) LORA_RX: MQTT desconectado[0m
+[0;32mI (18361) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18371) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18371) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18381) mqtt_client: Error transport connect[0m
+[1;31mE (18381) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18391) LORA_RX: MQTT desconectado[0m
+[0;32mI (18391) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18401) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18401) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18411) mqtt_client: Error transport connect[0m
+[1;31mE (18411) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18421) LORA_RX: MQTT desconectado[0m
+[0;32mI (18421) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18431) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18431) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18431) mqtt_client: Error transport connect[0m
+[1;31mE (18441) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18441) LORA_RX: MQTT desconectado[0m
+[0;32mI (18451) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18451) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18461) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18461) mqtt_client: Error transport connect[0m
+[1;31mE (18471) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18471) LORA_RX: MQTT desconectado[0m
+[0;32mI (18471) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18481) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18491) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18491) mqtt_client: Error transport connect[0m
+[1;31mE (18491) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18501) LORA_RX: MQTT desconectado[0m
+[0;32mI (18501) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18511) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18511) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18521) mqtt_client: Error transport connect[0m
+[1;31mE (18521) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18531) LORA_RX: MQTT desconectado[0m
+[0;32mI (18531) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18541) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18541) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18551) mqtt_client: Error transport connect[0m
+[1;31mE (18551) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18551) LORA_RX: MQTT desconectado[0m
+[0;32mI (18561) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18571) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18571) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18571) mqtt_client: Error transport connect[0m
+[1;31mE (18581) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18581) LORA_RX: MQTT desconectado[0m
+[0;32mI (18591) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18591) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18601) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18601) mqtt_client: Error transport connect[0m
+[1;31mE (18611) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18611) LORA_RX: MQTT desconectado[0m
+[0;32mI (18611) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18621) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18621) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18631) mqtt_client: Error transport connect[0m
+[1;31mE (18631) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18641) LORA_RX: MQTT desconectado[0m
+[0;32mI (18641) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18651) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18651) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18661) mqtt_client: Error transport connect[0m
+[1;31mE (18661) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18671) LORA_RX: MQTT desconectado[0m
+[0;32mI (18671) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18681) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18681) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18681) mqtt_client: Error transport connect[0m
+[1;31mE (18691) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18691) LORA_RX: MQTT desconectado[0m
+[0;32mI (18701) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18701) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18711) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18711) mqtt_client: Error transport connect[0m
+[1;31mE (18721) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18721) LORA_RX: MQTT desconectado[0m
+[0;32mI (18721) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18731) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18741) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18741) mqtt_client: Error transport connect[0m
+[1;31mE (18741) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18751) LORA_RX: MQTT desconectado[0m
+[0;32mI (18751) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18761) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18761) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18771) mqtt_client: Error transport connect[0m
+[1;31mE (18771) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18781) LORA_RX: MQTT desconectado[0m
+[0;32mI (18781) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18791) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18791) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18801) mqtt_client: Error transport connect[0m
+[1;31mE (18801) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18801) LORA_RX: MQTT desconectado[0m
+[0;32mI (18811) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18811) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18821) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18821) mqtt_client: Error transport connect[0m
+[1;31mE (18831) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18831) LORA_RX: MQTT desconectado[0m
+[0;32mI (18841) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18841) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18851) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18851) mqtt_client: Error transport connect[0m
+[1;31mE (18861) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18861) LORA_RX: MQTT desconectado[0m
+[0;32mI (18861) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18871) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18871) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18881) mqtt_client: Error transport connect[0m
+[1;31mE (18881) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18891) LORA_RX: MQTT desconectado[0m
+[0;32mI (18891) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18901) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18901) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18911) mqtt_client: Error transport connect[0m
+[1;31mE (18911) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18921) LORA_RX: MQTT desconectado[0m
+[0;32mI (18921) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18931) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18931) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18931) mqtt_client: Error transport connect[0m
+[1;31mE (18941) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18941) LORA_RX: MQTT desconectado[0m
+[0;32mI (18951) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18951) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18961) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18961) mqtt_client: Error transport connect[0m
+[1;31mE (18971) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (18971) LORA_RX: MQTT desconectado[0m
+[0;32mI (18971) mqtt_client: Client force reconnect requested[0m
+[1;31mE (18981) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (18991) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18991) mqtt_client: Error transport connect[0m
+[1;31mE (18991) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19001) LORA_RX: MQTT desconectado[0m
+[0;32mI (19001) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19011) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19011) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19021) mqtt_client: Error transport connect[0m
+[1;31mE (19021) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19031) LORA_RX: MQTT desconectado[0m
+[0;32mI (19031) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19041) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19041) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19051) mqtt_client: Error transport connect[0m
+[1;31mE (19051) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19051) LORA_RX: MQTT desconectado[0m
+[0;32mI (19061) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19061) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19071) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19071) mqtt_client: Error transport connect[0m
+[1;31mE (19081) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19081) LORA_RX: MQTT desconectado[0m
+[0;32mI (19081) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19091) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19101) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19101) mqtt_client: Error transport connect[0m
+[1;31mE (19111) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19111) LORA_RX: MQTT desconectado[0m
+[0;32mI (19111) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19121) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19121) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19131) mqtt_client: Error transport connect[0m
+[1;31mE (19131) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19141) LORA_RX: MQTT desconectado[0m
+[0;32mI (19141) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19151) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19151) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19161) mqtt_client: Error transport connect[0m
+[1;31mE (19161) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19171) LORA_RX: MQTT desconectado[0m
+[0;32mI (19171) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19181) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19181) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19181) mqtt_client: Error transport connect[0m
+[1;31mE (19191) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19191) LORA_RX: MQTT desconectado[0m
+[0;32mI (19201) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19201) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19211) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19211) mqtt_client: Error transport connect[0m
+[1;31mE (19221) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19221) LORA_RX: MQTT desconectado[0m
+[0;32mI (19221) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19231) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19241) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19241) mqtt_client: Error transport connect[0m
+[1;31mE (19241) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19251) LORA_RX: MQTT desconectado[0m
+[0;32mI (19251) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19261) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19261) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19271) mqtt_client: Error transport connect[0m
+[1;31mE (19271) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19281) LORA_RX: MQTT desconectado[0m
+[0;32mI (19281) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19291) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19291) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19301) mqtt_client: Error transport connect[0m
+[1;31mE (19301) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19301) LORA_RX: MQTT desconectado[0m
+[0;32mI (19311) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19311) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19321) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19321) mqtt_client: Error transport connect[0m
+[1;31mE (19331) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19331) LORA_RX: MQTT desconectado[0m
+[0;32mI (19331) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19341) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19351) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19351) mqtt_client: Error transport connect[0m
+[1;31mE (19361) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19361) LORA_RX: MQTT desconectado[0m
+[0;32mI (19361) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19371) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19371) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19381) mqtt_client: Error transport connect[0m
+[1;31mE (19381) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19391) LORA_RX: MQTT desconectado[0m
+[0;32mI (19391) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19401) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19401) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19411) mqtt_client: Error transport connect[0m
+[1;31mE (19411) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19421) LORA_RX: MQTT desconectado[0m
+[0;32mI (19421) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19431) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19431) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19431) mqtt_client: Error transport connect[0m
+[1;31mE (19441) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19441) LORA_RX: MQTT desconectado[0m
+[0;32mI (19451) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19451) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19461) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19461) mqtt_client: Error transport connect[0m
+[1;31mE (19471) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19471) LORA_RX: MQTT desconectado[0m
+[0;32mI (19471) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19481) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19491) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19491) mqtt_client: Error transport connect[0m
+[1;31mE (19491) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19501) LORA_RX: MQTT desconectado[0m
+[0;32mI (19501) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19511) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19511) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19521) mqtt_client: Error transport connect[0m
+[1;31mE (19521) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19531) LORA_RX: MQTT desconectado[0m
+[0;32mI (19531) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19541) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19541) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19551) mqtt_client: Error transport connect[0m
+[1;31mE (19551) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19551) LORA_RX: MQTT desconectado[0m
+[0;32mI (19561) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19561) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19571) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19571) mqtt_client: Error transport connect[0m
+[1;31mE (19581) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19581) LORA_RX: MQTT desconectado[0m
+[0;32mI (19581) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19591) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19601) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19601) mqtt_client: Error transport connect[0m
+[1;31mE (19611) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19611) LORA_RX: MQTT desconectado[0m
+[0;32mI (19611) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19621) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19621) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19631) mqtt_client: Error transport connect[0m
+[1;31mE (19631) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19641) LORA_RX: MQTT desconectado[0m
+[0;32mI (19641) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19651) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19651) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19661) mqtt_client: Error transport connect[0m
+[1;31mE (19661) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19671) LORA_RX: MQTT desconectado[0m
+[0;32mI (19671) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19681) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19681) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19681) mqtt_client: Error transport connect[0m
+[1;31mE (19691) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19691) LORA_RX: MQTT desconectado[0m
+[0;32mI (19701) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19701) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19711) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19711) mqtt_client: Error transport connect[0m
+[1;31mE (19721) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19721) LORA_RX: MQTT desconectado[0m
+[0;32mI (19721) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19731) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19741) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19741) mqtt_client: Error transport connect[0m
+[1;31mE (19741) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19751) LORA_RX: MQTT desconectado[0m
+[0;32mI (19751) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19761) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19761) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19771) mqtt_client: Error transport connect[0m
+[1;31mE (19771) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19781) LORA_RX: MQTT desconectado[0m
+[0;32mI (19781) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19791) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19791) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19801) mqtt_client: Error transport connect[0m
+[1;31mE (19801) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19801) LORA_RX: MQTT desconectado[0m
+[0;32mI (19811) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19811) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19821) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19821) mqtt_client: Error transport connect[0m
+[1;31mE (19831) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19831) LORA_RX: MQTT desconectado[0m
+[0;32mI (19831) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19841) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19851) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19851) mqtt_client: Error transport connect[0m
+[1;31mE (19861) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19861) LORA_RX: MQTT desconectado[0m
+[0;32mI (19861) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19871) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19871) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19881) mqtt_client: Error transport connect[0m
+[1;31mE (19881) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19891) LORA_RX: MQTT desconectado[0m
+[0;32mI (19891) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19901) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19901) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19911) mqtt_client: Error transport connect[0m
+[1;31mE (19911) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19921) LORA_RX: MQTT desconectado[0m
+[0;32mI (19921) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19931) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19931) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19931) mqtt_client: Error transport connect[0m
+[1;31mE (19941) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19941) LORA_RX: MQTT desconectado[0m
+[0;32mI (19951) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19951) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19961) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19961) mqtt_client: Error transport connect[0m
+[1;31mE (19971) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (19971) LORA_RX: MQTT desconectado[0m
+[0;32mI (19971) mqtt_client: Client force reconnect requested[0m
+[1;31mE (19981) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (19991) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19991) mqtt_client: Error transport connect[0m
+[1;31mE (19991) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20001) LORA_RX: MQTT desconectado[0m
+[0;32mI (20001) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20011) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20011) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20021) mqtt_client: Error transport connect[0m
+[1;31mE (20021) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20031) LORA_RX: MQTT desconectado[0m
+[0;32mI (20031) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20041) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20041) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20051) mqtt_client: Error transport connect[0m
+[1;31mE (20051) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20051) LORA_RX: MQTT desconectado[0m
+[0;32mI (20061) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20061) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20071) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20071) mqtt_client: Error transport connect[0m
+[1;31mE (20081) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20081) LORA_RX: MQTT desconectado[0m
+[0;32mI (20081) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20091) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20101) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20101) mqtt_client: Error transport connect[0m
+[1;31mE (20111) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20111) LORA_RX: MQTT desconectado[0m
+[0;32mI (20111) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20121) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20121) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20131) mqtt_client: Error transport connect[0m
+[1;31mE (20131) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20141) LORA_RX: MQTT desconectado[0m
+[0;33mW (20141) LORA_RX: WiFi desconectado, reconectando...[0m
+[0;32mI (20141) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20151) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20161) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20161) mqtt_client: Error transport connect[0m
+[1;31mE (20171) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20171) LORA_RX: MQTT desconectado[0m
+[0;32mI (20171) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20181) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20181) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20191) mqtt_client: Error transport connect[0m
+[1;31mE (20191) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20201) LORA_RX: MQTT desconectado[0m
+[0;32mI (20201) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20211) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20211) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20221) mqtt_client: Error transport connect[0m
+[1;31mE (20221) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20231) LORA_RX: MQTT desconectado[0m
+[0;32mI (20231) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20241) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20241) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20251) mqtt_client: Error transport connect[0m
+[1;31mE (20251) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20251) LORA_RX: MQTT desconectado[0m
+[0;32mI (20261) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20261) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20271) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20271) mqtt_client: Error transport connect[0m
+[1;31mE (20281) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20281) LORA_RX: MQTT desconectado[0m
+[0;32mI (20281) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20291) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20301) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20301) mqtt_client: Error transport connect[0m
+[1;31mE (20311) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20311) LORA_RX: MQTT desconectado[0m
+[0;32mI (20311) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20321) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20321) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20331) mqtt_client: Error transport connect[0m
+[1;31mE (20331) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20341) LORA_RX: MQTT desconectado[0m
+[0;32mI (20341) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20351) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20351) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20361) mqtt_client: Error transport connect[0m
+[1;31mE (20361) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20361) LORA_RX: MQTT desconectado[0m
+[0;32mI (20371) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20371) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20381) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20381) mqtt_client: Error transport connect[0m
+[1;31mE (20391) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20391) LORA_RX: MQTT desconectado[0m
+[0;32mI (20401) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20401) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20411) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20411) mqtt_client: Error transport connect[0m
+[1;31mE (20421) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20421) LORA_RX: MQTT desconectado[0m
+[0;32mI (20421) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20431) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20431) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20441) mqtt_client: Error transport connect[0m
+[1;31mE (20441) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20451) LORA_RX: MQTT desconectado[0m
+[0;32mI (20451) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20461) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20461) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20471) mqtt_client: Error transport connect[0m
+[1;31mE (20471) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20481) LORA_RX: MQTT desconectado[0m
+[0;32mI (20481) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20491) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20491) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20501) mqtt_client: Error transport connect[0m
+[1;31mE (20501) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20501) LORA_RX: MQTT desconectado[0m
+[0;32mI (20511) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20511) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20521) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20521) mqtt_client: Error transport connect[0m
+[1;31mE (20531) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20531) LORA_RX: MQTT desconectado[0m
+[0;32mI (20531) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20541) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20551) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20551) mqtt_client: Error transport connect[0m
+[1;31mE (20551) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20561) LORA_RX: MQTT desconectado[0m
+[0;32mI (20561) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20571) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20571) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20581) mqtt_client: Error transport connect[0m
+[1;31mE (20581) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20591) LORA_RX: MQTT desconectado[0m
+[0;32mI (20591) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20601) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20601) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20611) mqtt_client: Error transport connect[0m
+[1;31mE (20611) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20611) LORA_RX: MQTT desconectado[0m
+[0;32mI (20621) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20621) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20631) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20631) mqtt_client: Error transport connect[0m
+[1;31mE (20641) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20641) LORA_RX: MQTT desconectado[0m
+[0;32mI (20651) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20651) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20661) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20661) mqtt_client: Error transport connect[0m
+[1;31mE (20671) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20671) LORA_RX: MQTT desconectado[0m
+[0;32mI (20671) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20681) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20681) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20691) mqtt_client: Error transport connect[0m
+[1;31mE (20691) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20701) LORA_RX: MQTT desconectado[0m
+[0;32mI (20701) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20711) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20711) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20721) mqtt_client: Error transport connect[0m
+[1;31mE (20721) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20731) LORA_RX: MQTT desconectado[0m
+[0;32mI (20731) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20741) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20741) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20751) mqtt_client: Error transport connect[0m
+[1;31mE (20751) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20751) LORA_RX: MQTT desconectado[0m
+[0;32mI (20761) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20761) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20771) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20771) mqtt_client: Error transport connect[0m
+[1;31mE (20781) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20781) LORA_RX: MQTT desconectado[0m
+[0;32mI (20781) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20791) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20801) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20801) mqtt_client: Error transport connect[0m
+[1;31mE (20801) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20811) LORA_RX: MQTT desconectado[0m
+[0;32mI (20811) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20821) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20821) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20831) mqtt_client: Error transport connect[0m
+[1;31mE (20831) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20841) LORA_RX: MQTT desconectado[0m
+[0;32mI (20841) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20851) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20851) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20861) mqtt_client: Error transport connect[0m
+[1;31mE (20861) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20861) LORA_RX: MQTT desconectado[0m
+[0;32mI (20871) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20871) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20881) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20881) mqtt_client: Error transport connect[0m
+[1;31mE (20891) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20891) LORA_RX: MQTT desconectado[0m
+[0;32mI (20901) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20901) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20911) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20911) mqtt_client: Error transport connect[0m
+[1;31mE (20921) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20921) LORA_RX: MQTT desconectado[0m
+[0;32mI (20921) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20931) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20931) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20941) mqtt_client: Error transport connect[0m
+[1;31mE (20941) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20951) LORA_RX: MQTT desconectado[0m
+[0;32mI (20951) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20961) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20961) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20971) mqtt_client: Error transport connect[0m
+[1;31mE (20971) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (20981) LORA_RX: MQTT desconectado[0m
+[0;32mI (20981) mqtt_client: Client force reconnect requested[0m
+[1;31mE (20991) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (20991) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21001) mqtt_client: Error transport connect[0m
+[1;31mE (21001) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21001) LORA_RX: MQTT desconectado[0m
+[0;32mI (21011) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21011) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21021) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21021) mqtt_client: Error transport connect[0m
+[1;31mE (21031) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21031) LORA_RX: MQTT desconectado[0m
+[0;32mI (21031) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21041) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21051) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21051) mqtt_client: Error transport connect[0m
+[1;31mE (21051) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21061) LORA_RX: MQTT desconectado[0m
+[0;32mI (21061) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21071) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21071) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21081) mqtt_client: Error transport connect[0m
+[1;31mE (21081) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21091) LORA_RX: MQTT desconectado[0m
+[0;32mI (21091) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21101) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21101) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21111) mqtt_client: Error transport connect[0m
+[1;31mE (21111) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21111) LORA_RX: MQTT desconectado[0m
+[0;32mI (21121) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21121) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21131) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21131) mqtt_client: Error transport connect[0m
+[1;31mE (21141) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21141) LORA_RX: MQTT desconectado[0m
+[0;32mI (21151) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21151) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21161) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21161) mqtt_client: Error transport connect[0m
+[1;31mE (21171) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21171) LORA_RX: MQTT desconectado[0m
+[0;32mI (21171) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21181) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21181) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21191) mqtt_client: Error transport connect[0m
+[1;31mE (21191) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21201) LORA_RX: MQTT desconectado[0m
+[0;32mI (21201) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21211) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21211) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21221) mqtt_client: Error transport connect[0m
+[1;31mE (21221) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21231) LORA_RX: MQTT desconectado[0m
+[0;32mI (21231) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21241) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21241) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21251) mqtt_client: Error transport connect[0m
+[1;31mE (21251) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21251) LORA_RX: MQTT desconectado[0m
+[0;32mI (21261) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21261) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21271) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21271) mqtt_client: Error transport connect[0m
+[1;31mE (21281) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21281) LORA_RX: MQTT desconectado[0m
+[0;32mI (21281) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21291) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21301) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21301) mqtt_client: Error transport connect[0m
+[1;31mE (21301) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21311) LORA_RX: MQTT desconectado[0m
+[0;32mI (21311) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21321) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21321) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21331) mqtt_client: Error transport connect[0m
+[1;31mE (21331) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21341) LORA_RX: MQTT desconectado[0m
+[0;32mI (21341) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21351) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21351) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21361) mqtt_client: Error transport connect[0m
+[1;31mE (21361) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21361) LORA_RX: MQTT desconectado[0m
+[0;32mI (21371) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21381) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21381) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21381) mqtt_client: Error transport connect[0m
+[1;31mE (21391) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21391) LORA_RX: MQTT desconectado[0m
+[0;32mI (21401) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21401) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21411) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21411) mqtt_client: Error transport connect[0m
+[1;31mE (21421) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21421) LORA_RX: MQTT desconectado[0m
+[0;32mI (21421) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21431) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21431) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21441) mqtt_client: Error transport connect[0m
+[1;31mE (21441) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21451) LORA_RX: MQTT desconectado[0m
+[0;32mI (21451) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21461) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21461) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21471) mqtt_client: Error transport connect[0m
+[1;31mE (21471) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21481) LORA_RX: MQTT desconectado[0m
+[0;32mI (21481) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21491) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21491) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21501) mqtt_client: Error transport connect[0m
+[1;31mE (21501) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21501) LORA_RX: MQTT desconectado[0m
+[0;32mI (21511) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21511) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21521) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21521) mqtt_client: Error transport connect[0m
+[1;31mE (21531) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21531) LORA_RX: MQTT desconectado[0m
+[0;32mI (21531) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21541) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21551) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21551) mqtt_client: Error transport connect[0m
+[1;31mE (21561) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21561) LORA_RX: MQTT desconectado[0m
+[0;32mI (21561) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21571) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21571) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21581) mqtt_client: Error transport connect[0m
+[1;31mE (21581) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21591) LORA_RX: MQTT desconectado[0m
+[0;32mI (21591) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21601) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21601) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21611) mqtt_client: Error transport connect[0m
+[1;31mE (21611) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21611) LORA_RX: MQTT desconectado[0m
+[0;32mI (21621) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21621) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21631) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21631) mqtt_client: Error transport connect[0m
+[1;31mE (21641) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21641) LORA_RX: MQTT desconectado[0m
+[0;32mI (21651) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21651) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21661) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21661) mqtt_client: Error transport connect[0m
+[1;31mE (21671) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21671) LORA_RX: MQTT desconectado[0m
+[0;32mI (21671) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21681) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21681) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21691) mqtt_client: Error transport connect[0m
+[1;31mE (21691) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21701) LORA_RX: MQTT desconectado[0m
+[0;32mI (21701) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21711) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21711) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21721) mqtt_client: Error transport connect[0m
+[1;31mE (21721) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21731) LORA_RX: MQTT desconectado[0m
+[0;32mI (21731) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21741) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21741) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21751) mqtt_client: Error transport connect[0m
+[1;31mE (21751) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21751) LORA_RX: MQTT desconectado[0m
+[0;32mI (21761) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21761) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21771) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21771) mqtt_client: Error transport connect[0m
+[1;31mE (21781) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21781) LORA_RX: MQTT desconectado[0m
+[0;32mI (21781) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21791) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21801) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21801) mqtt_client: Error transport connect[0m
+[1;31mE (21801) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21811) LORA_RX: MQTT desconectado[0m
+[0;32mI (21811) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21821) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21821) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21831) mqtt_client: Error transport connect[0m
+[1;31mE (21831) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21841) LORA_RX: MQTT desconectado[0m
+[0;32mI (21841) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21851) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21851) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21861) mqtt_client: Error transport connect[0m
+[1;31mE (21861) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21861) LORA_RX: MQTT desconectado[0m
+[0;32mI (21871) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21871) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21881) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21881) mqtt_client: Error transport connect[0m
+[1;31mE (21891) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21891) LORA_RX: MQTT desconectado[0m
+[0;32mI (21901) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21901) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21911) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21911) mqtt_client: Error transport connect[0m
+[1;31mE (21921) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21921) LORA_RX: MQTT desconectado[0m
+[0;32mI (21921) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21931) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21931) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21941) mqtt_client: Error transport connect[0m
+[1;31mE (21941) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21951) LORA_RX: MQTT desconectado[0m
+[0;32mI (21951) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21961) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21961) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21971) mqtt_client: Error transport connect[0m
+[1;31mE (21971) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (21981) LORA_RX: MQTT desconectado[0m
+[0;32mI (21981) mqtt_client: Client force reconnect requested[0m
+[1;31mE (21991) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (21991) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22001) mqtt_client: Error transport connect[0m
+[1;31mE (22001) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22001) LORA_RX: MQTT desconectado[0m
+[0;32mI (22011) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22011) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22021) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22021) mqtt_client: Error transport connect[0m
+[1;31mE (22031) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22031) LORA_RX: MQTT desconectado[0m
+[0;32mI (22031) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22041) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22051) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22051) mqtt_client: Error transport connect[0m
+[1;31mE (22051) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22061) LORA_RX: MQTT desconectado[0m
+[0;32mI (22061) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22071) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22071) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22081) mqtt_client: Error transport connect[0m
+[1;31mE (22081) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22091) LORA_RX: MQTT desconectado[0m
+[0;32mI (22091) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22101) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22101) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22111) mqtt_client: Error transport connect[0m
+[1;31mE (22111) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22111) LORA_RX: MQTT desconectado[0m
+[0;32mI (22121) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22121) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22131) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22131) mqtt_client: Error transport connect[0m
+[1;31mE (22141) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22141) LORA_RX: MQTT desconectado[0m
+[0;32mI (22151) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22151) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22161) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22161) mqtt_client: Error transport connect[0m
+[1;31mE (22171) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22171) LORA_RX: MQTT desconectado[0m
+[0;32mI (22171) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22181) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22181) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22191) mqtt_client: Error transport connect[0m
+[1;31mE (22191) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22201) LORA_RX: MQTT desconectado[0m
+[0;32mI (22201) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22211) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22211) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22221) mqtt_client: Error transport connect[0m
+[1;31mE (22221) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22231) LORA_RX: MQTT desconectado[0m
+[0;32mI (22231) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22241) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22241) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22251) mqtt_client: Error transport connect[0m
+[1;31mE (22251) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22251) LORA_RX: MQTT desconectado[0m
+[0;32mI (22261) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22261) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22271) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22271) mqtt_client: Error transport connect[0m
+[1;31mE (22281) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22281) LORA_RX: MQTT desconectado[0m
+[0;32mI (22281) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22291) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22301) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22301) mqtt_client: Error transport connect[0m
+[1;31mE (22301) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22311) LORA_RX: MQTT desconectado[0m
+[0;32mI (22311) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22321) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22321) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22331) mqtt_client: Error transport connect[0m
+[1;31mE (22331) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22341) LORA_RX: MQTT desconectado[0m
+[0;32mI (22341) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22351) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22351) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22361) mqtt_client: Error transport connect[0m
+[1;31mE (22361) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22361) LORA_RX: MQTT desconectado[0m
+[0;32mI (22371) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22371) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22381) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22381) mqtt_client: Error transport connect[0m
+[1;31mE (22391) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22391) LORA_RX: MQTT desconectado[0m
+[0;32mI (22401) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22401) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22411) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22411) mqtt_client: Error transport connect[0m
+[1;31mE (22421) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22421) LORA_RX: MQTT desconectado[0m
+[0;32mI (22421) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22431) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22431) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22441) mqtt_client: Error transport connect[0m
+[1;31mE (22441) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22451) LORA_RX: MQTT desconectado[0m
+[0;32mI (22451) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22461) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22461) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22471) mqtt_client: Error transport connect[0m
+[1;31mE (22471) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22481) LORA_RX: MQTT desconectado[0m
+[0;32mI (22481) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22491) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22491) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22501) mqtt_client: Error transport connect[0m
+[1;31mE (22501) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22501) LORA_RX: MQTT desconectado[0m
+[0;32mI (22511) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22511) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22521) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22521) mqtt_client: Error transport connect[0m
+[1;31mE (22531) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22531) LORA_RX: MQTT desconectado[0m
+[0;32mI (22531) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22541) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22551) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22551) mqtt_client: Error transport connect[0m
+[1;31mE (22551) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22561) LORA_RX: MQTT desconectado[0m
+[0;32mI (22561) mqtt_client: Client force reconnect requested[0m
+[0;33mW (22571) LORA_RX: WiFi desconectado, reconectando...[0m
+[1;31mE (22571) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22581) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22581) mqtt_client: Error transport connect[0m
+[1;31mE (22591) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22591) LORA_RX: MQTT desconectado[0m
+[0;32mI (22591) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22601) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22611) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22611) mqtt_client: Error transport connect[0m
+[1;31mE (22621) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22621) LORA_RX: MQTT desconectado[0m
+[0;32mI (22621) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22631) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22631) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22641) mqtt_client: Error transport connect[0m
+[1;31mE (22641) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22651) LORA_RX: MQTT desconectado[0m
+[0;32mI (22651) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22661) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22661) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22671) mqtt_client: Error transport connect[0m
+[1;31mE (22671) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22671) LORA_RX: MQTT desconectado[0m
+[0;32mI (22681) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22681) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22691) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22691) mqtt_client: Error transport connect[0m
+[1;31mE (22701) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22701) LORA_RX: MQTT desconectado[0m
+[0;32mI (22711) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22711) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22721) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22721) mqtt_client: Error transport connect[0m
+[1;31mE (22731) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22731) LORA_RX: MQTT desconectado[0m
+[0;32mI (22731) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22741) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22741) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22751) mqtt_client: Error transport connect[0m
+[1;31mE (22751) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22761) LORA_RX: MQTT desconectado[0m
+[0;32mI (22761) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22771) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22771) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22781) mqtt_client: Error transport connect[0m
+[1;31mE (22781) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22791) LORA_RX: MQTT desconectado[0m
+[0;32mI (22791) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22801) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22801) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22811) mqtt_client: Error transport connect[0m
+[1;31mE (22811) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22811) LORA_RX: MQTT desconectado[0m
+[0;32mI (22821) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22821) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22831) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22831) mqtt_client: Error transport connect[0m
+[1;31mE (22841) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22841) LORA_RX: MQTT desconectado[0m
+[0;32mI (22841) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22851) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22861) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22861) mqtt_client: Error transport connect[0m
+[1;31mE (22871) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22871) LORA_RX: MQTT desconectado[0m
+[0;32mI (22871) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22881) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22881) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22891) mqtt_client: Error transport connect[0m
+[1;31mE (22891) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22901) LORA_RX: MQTT desconectado[0m
+[0;32mI (22901) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22911) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22911) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22921) mqtt_client: Error transport connect[0m
+[1;31mE (22921) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22921) LORA_RX: MQTT desconectado[0m
+[0;32mI (22931) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22931) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22941) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22941) mqtt_client: Error transport connect[0m
+[1;31mE (22951) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22951) LORA_RX: MQTT desconectado[0m
+[0;32mI (22961) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22961) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22971) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22971) mqtt_client: Error transport connect[0m
+[1;31mE (22981) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (22981) LORA_RX: MQTT desconectado[0m
+[0;32mI (22981) mqtt_client: Client force reconnect requested[0m
+[1;31mE (22991) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (22991) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23001) mqtt_client: Error transport connect[0m
+[1;31mE (23001) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23011) LORA_RX: MQTT desconectado[0m
+[0;32mI (23011) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23021) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23021) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23031) mqtt_client: Error transport connect[0m
+[1;31mE (23031) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23041) LORA_RX: MQTT desconectado[0m
+[0;32mI (23041) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23051) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23051) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23061) mqtt_client: Error transport connect[0m
+[1;31mE (23061) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23061) LORA_RX: MQTT desconectado[0m
+[0;32mI (23071) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23071) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23081) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23081) mqtt_client: Error transport connect[0m
+[1;31mE (23091) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23091) LORA_RX: MQTT desconectado[0m
+[0;32mI (23091) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23101) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23111) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23111) mqtt_client: Error transport connect[0m
+[1;31mE (23121) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23121) LORA_RX: MQTT desconectado[0m
+[0;32mI (23121) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23131) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23131) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23141) mqtt_client: Error transport connect[0m
+[1;31mE (23141) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23151) LORA_RX: MQTT desconectado[0m
+[0;32mI (23151) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23161) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23161) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23171) mqtt_client: Error transport connect[0m
+[1;31mE (23171) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23171) LORA_RX: MQTT desconectado[0m
+[0;32mI (23181) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23191) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23191) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23191) mqtt_client: Error transport connect[0m
+[1;31mE (23201) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23201) LORA_RX: MQTT desconectado[0m
+[0;32mI (23211) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23211) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23221) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23221) mqtt_client: Error transport connect[0m
+[1;31mE (23231) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23231) LORA_RX: MQTT desconectado[0m
+[0;32mI (23231) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23241) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23241) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23251) mqtt_client: Error transport connect[0m
+[1;31mE (23251) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23261) LORA_RX: MQTT desconectado[0m
+[0;32mI (23261) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23271) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23271) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23281) mqtt_client: Error transport connect[0m
+[1;31mE (23281) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23291) LORA_RX: MQTT desconectado[0m
+[0;32mI (23291) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23301) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23301) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23311) mqtt_client: Error transport connect[0m
+[1;31mE (23311) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23311) LORA_RX: MQTT desconectado[0m
+[0;32mI (23321) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23321) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23331) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23331) mqtt_client: Error transport connect[0m
+[1;31mE (23341) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23341) LORA_RX: MQTT desconectado[0m
+[0;32mI (23341) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23351) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23361) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23361) mqtt_client: Error transport connect[0m
+[1;31mE (23371) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23371) LORA_RX: MQTT desconectado[0m
+[0;32mI (23371) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23381) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23381) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23391) mqtt_client: Error transport connect[0m
+[1;31mE (23391) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23401) LORA_RX: MQTT desconectado[0m
+[0;32mI (23401) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23411) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23411) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23421) mqtt_client: Error transport connect[0m
+[1;31mE (23421) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23421) LORA_RX: MQTT desconectado[0m
+[0;32mI (23431) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23431) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23441) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23441) mqtt_client: Error transport connect[0m
+[1;31mE (23451) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23451) LORA_RX: MQTT desconectado[0m
+[0;32mI (23461) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23461) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23471) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23471) mqtt_client: Error transport connect[0m
+[1;31mE (23481) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23481) LORA_RX: MQTT desconectado[0m
+[0;32mI (23481) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23491) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23491) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23501) mqtt_client: Error transport connect[0m
+[1;31mE (23501) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23511) LORA_RX: MQTT desconectado[0m
+[0;32mI (23511) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23521) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23521) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23531) mqtt_client: Error transport connect[0m
+[1;31mE (23531) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23541) LORA_RX: MQTT desconectado[0m
+[0;32mI (23541) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23551) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23551) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23561) mqtt_client: Error transport connect[0m
+[1;31mE (23561) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23561) LORA_RX: MQTT desconectado[0m
+[0;32mI (23571) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23571) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23581) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23581) mqtt_client: Error transport connect[0m
+[1;31mE (23591) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23591) LORA_RX: MQTT desconectado[0m
+[0;32mI (23591) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23601) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23611) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23611) mqtt_client: Error transport connect[0m
+[1;31mE (23621) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23621) LORA_RX: MQTT desconectado[0m
+[0;32mI (23621) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23631) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23631) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23641) mqtt_client: Error transport connect[0m
+[1;31mE (23641) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23651) LORA_RX: MQTT desconectado[0m
+[0;32mI (23651) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23661) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23661) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23671) mqtt_client: Error transport connect[0m
+[1;31mE (23671) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23671) LORA_RX: MQTT desconectado[0m
+[0;32mI (23681) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23681) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23691) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23691) mqtt_client: Error transport connect[0m
+[1;31mE (23701) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23701) LORA_RX: MQTT desconectado[0m
+[0;32mI (23711) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23711) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23721) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23721) mqtt_client: Error transport connect[0m
+[1;31mE (23731) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23731) LORA_RX: MQTT desconectado[0m
+[0;32mI (23731) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23741) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23741) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23751) mqtt_client: Error transport connect[0m
+[1;31mE (23751) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23761) LORA_RX: MQTT desconectado[0m
+[0;32mI (23761) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23771) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23771) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23781) mqtt_client: Error transport connect[0m
+[1;31mE (23781) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23791) LORA_RX: MQTT desconectado[0m
+[0;32mI (23791) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23801) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23801) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23811) mqtt_client: Error transport connect[0m
+[1;31mE (23811) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23811) LORA_RX: MQTT desconectado[0m
+[0;32mI (23821) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23821) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23831) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23831) mqtt_client: Error transport connect[0m
+[1;31mE (23841) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23841) LORA_RX: MQTT desconectado[0m
+[0;32mI (23841) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23851) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23861) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23861) mqtt_client: Error transport connect[0m
+[1;31mE (23871) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23871) LORA_RX: MQTT desconectado[0m
+[0;32mI (23871) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23881) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23881) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23891) mqtt_client: Error transport connect[0m
+[1;31mE (23891) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23901) LORA_RX: MQTT desconectado[0m
+[0;32mI (23901) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23911) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23911) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23921) mqtt_client: Error transport connect[0m
+[1;31mE (23921) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23921) LORA_RX: MQTT desconectado[0m
+[0;32mI (23931) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23931) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23941) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23941) mqtt_client: Error transport connect[0m
+[1;31mE (23951) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23951) LORA_RX: MQTT desconectado[0m
+[0;32mI (23961) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23961) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23971) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23971) mqtt_client: Error transport connect[0m
+[1;31mE (23981) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (23981) LORA_RX: MQTT desconectado[0m
+[0;32mI (23981) mqtt_client: Client force reconnect requested[0m
+[1;31mE (23991) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (23991) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24001) mqtt_client: Error transport connect[0m
+[1;31mE (24001) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24011) LORA_RX: MQTT desconectado[0m
+[0;32mI (24011) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24021) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24021) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24031) mqtt_client: Error transport connect[0m
+[1;31mE (24031) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24041) LORA_RX: MQTT desconectado[0m
+[0;32mI (24041) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24051) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24051) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24061) mqtt_client: Error transport connect[0m
+[1;31mE (24061) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24061) LORA_RX: MQTT desconectado[0m
+[0;32mI (24071) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24071) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24081) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24081) mqtt_client: Error transport connect[0m
+[1;31mE (24091) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24091) LORA_RX: MQTT desconectado[0m
+[0;32mI (24091) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24101) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24111) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24111) mqtt_client: Error transport connect[0m
+[1;31mE (24121) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24121) LORA_RX: MQTT desconectado[0m
+[0;32mI (24121) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24131) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24131) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24141) mqtt_client: Error transport connect[0m
+[1;31mE (24141) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24151) LORA_RX: MQTT desconectado[0m
+[0;32mI (24151) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24161) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24161) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24171) mqtt_client: Error transport connect[0m
+[1;31mE (24171) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24171) LORA_RX: MQTT desconectado[0m
+[0;32mI (24181) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24181) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24191) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24191) mqtt_client: Error transport connect[0m
+[1;31mE (24201) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24201) LORA_RX: MQTT desconectado[0m
+[0;32mI (24211) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24211) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24221) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24221) mqtt_client: Error transport connect[0m
+[1;31mE (24231) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24231) LORA_RX: MQTT desconectado[0m
+[0;32mI (24231) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24241) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24241) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24251) mqtt_client: Error transport connect[0m
+[1;31mE (24251) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24261) LORA_RX: MQTT desconectado[0m
+[0;32mI (24261) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24271) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24271) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24281) mqtt_client: Error transport connect[0m
+[1;31mE (24281) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24291) LORA_RX: MQTT desconectado[0m
+[0;32mI (24291) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24301) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24301) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24311) mqtt_client: Error transport connect[0m
+[1;31mE (24311) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24311) LORA_RX: MQTT desconectado[0m
+[0;32mI (24321) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24321) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24331) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24331) mqtt_client: Error transport connect[0m
+[1;31mE (24341) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24341) LORA_RX: MQTT desconectado[0m
+[0;32mI (24341) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24351) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24361) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24361) mqtt_client: Error transport connect[0m
+[1;31mE (24371) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24371) LORA_RX: MQTT desconectado[0m
+[0;32mI (24371) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24381) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24381) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24391) mqtt_client: Error transport connect[0m
+[1;31mE (24391) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24401) LORA_RX: MQTT desconectado[0m
+[0;32mI (24401) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24411) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24411) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24421) mqtt_client: Error transport connect[0m
+[1;31mE (24421) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24421) LORA_RX: MQTT desconectado[0m
+[0;32mI (24431) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24431) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24441) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24441) mqtt_client: Error transport connect[0m
+[1;31mE (24451) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24451) LORA_RX: MQTT desconectado[0m
+[0;32mI (24461) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24461) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24471) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24471) mqtt_client: Error transport connect[0m
+[1;31mE (24481) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24481) LORA_RX: MQTT desconectado[0m
+[0;32mI (24481) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24491) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24491) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24501) mqtt_client: Error transport connect[0m
+[1;31mE (24501) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24511) LORA_RX: MQTT desconectado[0m
+[0;32mI (24511) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24521) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24521) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24531) mqtt_client: Error transport connect[0m
+[1;31mE (24531) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24541) LORA_RX: MQTT desconectado[0m
+[0;32mI (24541) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24551) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24551) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24561) mqtt_client: Error transport connect[0m
+[1;31mE (24561) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24561) LORA_RX: MQTT desconectado[0m
+[0;32mI (24571) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24571) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24581) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24581) mqtt_client: Error transport connect[0m
+[1;31mE (24591) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24591) LORA_RX: MQTT desconectado[0m
+[0;32mI (24591) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24601) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24611) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24611) mqtt_client: Error transport connect[0m
+[1;31mE (24621) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24621) LORA_RX: MQTT desconectado[0m
+[0;32mI (24621) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24631) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24631) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24641) mqtt_client: Error transport connect[0m
+[1;31mE (24641) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24651) LORA_RX: MQTT desconectado[0m
+[0;32mI (24651) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24661) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24661) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24671) mqtt_client: Error transport connect[0m
+[1;31mE (24671) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24671) LORA_RX: MQTT desconectado[0m
+[0;32mI (24681) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24681) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24691) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24691) mqtt_client: Error transport connect[0m
+[1;31mE (24701) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24701) LORA_RX: MQTT desconectado[0m
+[0;32mI (24711) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24711) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24721) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24721) mqtt_client: Error transport connect[0m
+[1;31mE (24731) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24731) LORA_RX: MQTT desconectado[0m
+[0;32mI (24731) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24741) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24741) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24751) mqtt_client: Error transport connect[0m
+[1;31mE (24751) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24761) LORA_RX: MQTT desconectado[0m
+[0;32mI (24761) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24771) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24771) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24781) mqtt_client: Error transport connect[0m
+[1;31mE (24781) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24791) LORA_RX: MQTT desconectado[0m
+[0;32mI (24791) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24801) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24801) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24811) mqtt_client: Error transport connect[0m
+[1;31mE (24811) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24811) LORA_RX: MQTT desconectado[0m
+[0;32mI (24821) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24821) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24831) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24831) mqtt_client: Error transport connect[0m
+[1;31mE (24841) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24841) LORA_RX: MQTT desconectado[0m
+[0;32mI (24841) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24851) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24861) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24861) mqtt_client: Error transport connect[0m
+[1;31mE (24871) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24871) LORA_RX: MQTT desconectado[0m
+[0;32mI (24871) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24881) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24881) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24891) mqtt_client: Error transport connect[0m
+[1;31mE (24891) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24901) LORA_RX: MQTT desconectado[0m
+[0;32mI (24901) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24911) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24911) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24921) mqtt_client: Error transport connect[0m
+[1;31mE (24921) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24921) LORA_RX: MQTT desconectado[0m
+[0;32mI (24931) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24931) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24941) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24941) mqtt_client: Error transport connect[0m
+[1;31mE (24951) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24951) LORA_RX: MQTT desconectado[0m
+[0;32mI (24961) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24961) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (24971) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24971) mqtt_client: Error transport connect[0m
+[1;31mE (24981) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (24981) LORA_RX: MQTT desconectado[0m
+[0;32mI (24981) mqtt_client: Client force reconnect requested[0m
+[1;31mE (24991) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[0;33mW (24991) LORA_RX: WiFi desconectado, reconectando...[0m
+[1;31mE (24991) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25001) mqtt_client: Error transport connect[0m
+[1;31mE (25011) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25011) LORA_RX: MQTT desconectado[0m
+[0;32mI (25021) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25021) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25031) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25031) mqtt_client: Error transport connect[0m
+[1;31mE (25041) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25041) LORA_RX: MQTT desconectado[0m
+[0;32mI (25041) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25051) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25051) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25061) mqtt_client: Error transport connect[0m
+[1;31mE (25061) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25071) LORA_RX: MQTT desconectado[0m
+[0;32mI (25071) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25081) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25081) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25091) mqtt_client: Error transport connect[0m
+[1;31mE (25091) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25101) LORA_RX: MQTT desconectado[0m
+[0;32mI (25101) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25111) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25111) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25121) mqtt_client: Error transport connect[0m
+[1;31mE (25121) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25121) LORA_RX: MQTT desconectado[0m
+[0;32mI (25131) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25131) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25141) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25141) mqtt_client: Error transport connect[0m
+[1;31mE (25151) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25151) LORA_RX: MQTT desconectado[0m
+[0;32mI (25151) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25161) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25171) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25171) mqtt_client: Error transport connect[0m
+[1;31mE (25181) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25181) LORA_RX: MQTT desconectado[0m
+[0;32mI (25181) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25191) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25191) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25201) mqtt_client: Error transport connect[0m
+[1;31mE (25201) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25211) LORA_RX: MQTT desconectado[0m
+[0;32mI (25211) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25221) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25221) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25231) mqtt_client: Error transport connect[0m
+[1;31mE (25231) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25231) LORA_RX: MQTT desconectado[0m
+[0;32mI (25241) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25251) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25251) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25251) mqtt_client: Error transport connect[0m
+[1;31mE (25261) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25261) LORA_RX: MQTT desconectado[0m
+[0;32mI (25271) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25271) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25281) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25281) mqtt_client: Error transport connect[0m
+[1;31mE (25291) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25291) LORA_RX: MQTT desconectado[0m
+[0;32mI (25291) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25301) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25301) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25311) mqtt_client: Error transport connect[0m
+[1;31mE (25311) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25321) LORA_RX: MQTT desconectado[0m
+[0;32mI (25321) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25331) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25331) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25341) mqtt_client: Error transport connect[0m
+[1;31mE (25341) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25351) LORA_RX: MQTT desconectado[0m
+[0;32mI (25351) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25361) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25361) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25371) mqtt_client: Error transport connect[0m
+[1;31mE (25371) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25371) LORA_RX: MQTT desconectado[0m
+[0;32mI (25381) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25381) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25391) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25391) mqtt_client: Error transport connect[0m
+[1;31mE (25401) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25401) LORA_RX: MQTT desconectado[0m
+[0;32mI (25401) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25411) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25421) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25421) mqtt_client: Error transport connect[0m
+[1;31mE (25431) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25431) LORA_RX: MQTT desconectado[0m
+[0;32mI (25431) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25441) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25441) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25451) mqtt_client: Error transport connect[0m
+[1;31mE (25451) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25461) LORA_RX: MQTT desconectado[0m
+[0;32mI (25461) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25471) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25471) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25481) mqtt_client: Error transport connect[0m
+[1;31mE (25481) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25481) LORA_RX: MQTT desconectado[0m
+[0;32mI (25491) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25501) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25501) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25501) mqtt_client: Error transport connect[0m
+[1;31mE (25511) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25511) LORA_RX: MQTT desconectado[0m
+[0;32mI (25521) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25521) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25531) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25531) mqtt_client: Error transport connect[0m
+[1;31mE (25541) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25541) LORA_RX: MQTT desconectado[0m
+[0;32mI (25541) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25551) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25561) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25561) mqtt_client: Error transport connect[0m
+[1;31mE (25561) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25571) LORA_RX: MQTT desconectado[0m
+[0;32mI (25571) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25581) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25581) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25591) mqtt_client: Error transport connect[0m
+[1;31mE (25591) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25601) LORA_RX: MQTT desconectado[0m
+[0;32mI (25601) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25611) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25611) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25621) mqtt_client: Error transport connect[0m
+[1;31mE (25621) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25621) LORA_RX: MQTT desconectado[0m
+[0;32mI (25631) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25631) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25641) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25641) mqtt_client: Error transport connect[0m
+[1;31mE (25651) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25651) LORA_RX: MQTT desconectado[0m
+[0;32mI (25651) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25661) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25671) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25671) mqtt_client: Error transport connect[0m
+[1;31mE (25681) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25681) LORA_RX: MQTT desconectado[0m
+[0;32mI (25681) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25691) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25691) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25701) mqtt_client: Error transport connect[0m
+[1;31mE (25701) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25711) LORA_RX: MQTT desconectado[0m
+[0;32mI (25711) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25721) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25721) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25731) mqtt_client: Error transport connect[0m
+[1;31mE (25731) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25731) LORA_RX: MQTT desconectado[0m
+[0;32mI (25741) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25751) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25751) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25751) mqtt_client: Error transport connect[0m
+[1;31mE (25761) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25761) LORA_RX: MQTT desconectado[0m
+[0;32mI (25771) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25771) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25781) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25781) mqtt_client: Error transport connect[0m
+[1;31mE (25791) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25791) LORA_RX: MQTT desconectado[0m
+[0;32mI (25791) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25801) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25801) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25811) mqtt_client: Error transport connect[0m
+[1;31mE (25811) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25821) LORA_RX: MQTT desconectado[0m
+[0;32mI (25821) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25831) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25831) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25841) mqtt_client: Error transport connect[0m
+[1;31mE (25841) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25851) LORA_RX: MQTT desconectado[0m
+[0;32mI (25851) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25861) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25861) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25871) mqtt_client: Error transport connect[0m
+[1;31mE (25871) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25871) LORA_RX: MQTT desconectado[0m
+[0;32mI (25881) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25881) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25891) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25891) mqtt_client: Error transport connect[0m
+[1;31mE (25901) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25901) LORA_RX: MQTT desconectado[0m
+[0;32mI (25901) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25911) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25921) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25921) mqtt_client: Error transport connect[0m
+[1;31mE (25931) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25931) LORA_RX: MQTT desconectado[0m
+[0;32mI (25931) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25941) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25941) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25951) mqtt_client: Error transport connect[0m
+[1;31mE (25951) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25961) LORA_RX: MQTT desconectado[0m
+[0;32mI (25961) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25971) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25971) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25981) mqtt_client: Error transport connect[0m
+[1;31mE (25981) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25981) LORA_RX: MQTT desconectado[0m
+[0;32mI (25991) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26001) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26001) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26001) mqtt_client: Error transport connect[0m
+[1;31mE (26011) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26011) LORA_RX: MQTT desconectado[0m
+[0;32mI (26021) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26021) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26031) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26031) mqtt_client: Error transport connect[0m
+[1;31mE (26041) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26041) LORA_RX: MQTT desconectado[0m
+[0;32mI (26041) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26051) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26051) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26061) mqtt_client: Error transport connect[0m
+[1;31mE (26061) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26071) LORA_RX: MQTT desconectado[0m
+[0;32mI (26071) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26081) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26081) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26091) mqtt_client: Error transport connect[0m
+[1;31mE (26091) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26101) LORA_RX: MQTT desconectado[0m
+[0;32mI (26101) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26111) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26111) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26121) mqtt_client: Error transport connect[0m
+[1;31mE (26121) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26121) LORA_RX: MQTT desconectado[0m
+[0;32mI (26131) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26131) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26141) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26141) mqtt_client: Error transport connect[0m
+[1;31mE (26151) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26151) LORA_RX: MQTT desconectado[0m
+[0;32mI (26151) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26161) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26171) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26171) mqtt_client: Error transport connect[0m
+[1;31mE (26181) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26181) LORA_RX: MQTT desconectado[0m
+[0;32mI (26181) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26191) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26191) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26201) mqtt_client: Error transport connect[0m
+[1;31mE (26201) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26211) LORA_RX: MQTT desconectado[0m
+[0;32mI (26211) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26221) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26221) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26231) mqtt_client: Error transport connect[0m
+[1;31mE (26231) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26231) LORA_RX: MQTT desconectado[0m
+[0;32mI (26241) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26251) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26251) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26251) mqtt_client: Error transport connect[0m
+[1;31mE (26261) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26261) LORA_RX: MQTT desconectado[0m
+[0;32mI (26271) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26271) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26281) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26281) mqtt_client: Error transport connect[0m
+[1;31mE (26291) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26291) LORA_RX: MQTT desconectado[0m
+[0;32mI (26291) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26301) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26301) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26311) mqtt_client: Error transport connect[0m
+[1;31mE (26311) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26321) LORA_RX: MQTT desconectado[0m
+[0;32mI (26321) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26331) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26331) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26341) mqtt_client: Error transport connect[0m
+[1;31mE (26341) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26351) LORA_RX: MQTT desconectado[0m
+[0;32mI (26351) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26361) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26361) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26371) mqtt_client: Error transport connect[0m
+[1;31mE (26371) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26371) LORA_RX: MQTT desconectado[0m
+[0;32mI (26381) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26381) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26391) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26391) mqtt_client: Error transport connect[0m
+[1;31mE (26401) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26401) LORA_RX: MQTT desconectado[0m
+[0;32mI (26401) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26411) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26421) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26421) mqtt_client: Error transport connect[0m
+[1;31mE (26431) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26431) LORA_RX: MQTT desconectado[0m
+[0;32mI (26431) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26441) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26441) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26451) mqtt_client: Error transport connect[0m
+[1;31mE (26451) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26461) LORA_RX: MQTT desconectado[0m
+[0;32mI (26461) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26471) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26471) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26481) mqtt_client: Error transport connect[0m
+[1;31mE (26481) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26481) LORA_RX: MQTT desconectado[0m
+[0;32mI (26491) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26501) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26501) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26501) mqtt_client: Error transport connect[0m
+[1;31mE (26511) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26511) LORA_RX: MQTT desconectado[0m
+[0;32mI (26521) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26521) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26531) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26531) mqtt_client: Error transport connect[0m
+[1;31mE (26541) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26541) LORA_RX: MQTT desconectado[0m
+[0;32mI (26541) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26551) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26551) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26561) mqtt_client: Error transport connect[0m
+[1;31mE (26561) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26571) LORA_RX: MQTT desconectado[0m
+[0;32mI (26571) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26581) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26581) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26591) mqtt_client: Error transport connect[0m
+[1;31mE (26591) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26601) LORA_RX: MQTT desconectado[0m
+[0;32mI (26601) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26611) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26611) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26621) mqtt_client: Error transport connect[0m
+[1;31mE (26621) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26621) LORA_RX: MQTT desconectado[0m
+[0;32mI (26631) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26631) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26641) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26641) mqtt_client: Error transport connect[0m
+[1;31mE (26651) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26651) LORA_RX: MQTT desconectado[0m
+[0;32mI (26651) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26661) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26671) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26671) mqtt_client: Error transport connect[0m
+[1;31mE (26681) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26681) LORA_RX: MQTT desconectado[0m
+[0;32mI (26681) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26691) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26691) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26701) mqtt_client: Error transport connect[0m
+[1;31mE (26701) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26711) LORA_RX: MQTT desconectado[0m
+[0;32mI (26711) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26721) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26721) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26731) mqtt_client: Error transport connect[0m
+[1;31mE (26731) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26731) LORA_RX: MQTT desconectado[0m
+[0;32mI (26741) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26751) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26751) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26751) mqtt_client: Error transport connect[0m
+[1;31mE (26761) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26761) LORA_RX: MQTT desconectado[0m
+[0;32mI (26771) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26771) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26781) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26781) mqtt_client: Error transport connect[0m
+[1;31mE (26791) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26791) LORA_RX: MQTT desconectado[0m
+[0;32mI (26791) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26801) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26801) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26811) mqtt_client: Error transport connect[0m
+[1;31mE (26811) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26821) LORA_RX: MQTT desconectado[0m
+[0;32mI (26821) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26831) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26831) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26841) mqtt_client: Error transport connect[0m
+[1;31mE (26841) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26851) LORA_RX: MQTT desconectado[0m
+[0;32mI (26851) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26861) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26861) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26871) mqtt_client: Error transport connect[0m
+[1;31mE (26871) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26871) LORA_RX: MQTT desconectado[0m
+[0;32mI (26881) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26881) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26891) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26891) mqtt_client: Error transport connect[0m
+[1;31mE (26901) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26901) LORA_RX: MQTT desconectado[0m
+[0;32mI (26901) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26911) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26921) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26921) mqtt_client: Error transport connect[0m
+[1;31mE (26931) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26931) LORA_RX: MQTT desconectado[0m
+[0;32mI (26931) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26941) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26941) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26951) mqtt_client: Error transport connect[0m
+[1;31mE (26951) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26961) LORA_RX: MQTT desconectado[0m
+[0;32mI (26961) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26971) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26971) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26981) mqtt_client: Error transport connect[0m
+[1;31mE (26981) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26981) LORA_RX: MQTT desconectado[0m
+[0;32mI (26991) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27001) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27001) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27001) mqtt_client: Error transport connect[0m
+[1;31mE (27011) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27011) LORA_RX: MQTT desconectado[0m
+[0;32mI (27021) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27021) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27031) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27031) mqtt_client: Error transport connect[0m
+[1;31mE (27041) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27041) LORA_RX: MQTT desconectado[0m
+[0;32mI (27041) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27051) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27051) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27061) mqtt_client: Error transport connect[0m
+[1;31mE (27061) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27071) LORA_RX: MQTT desconectado[0m
+[0;32mI (27071) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27081) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27081) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27091) mqtt_client: Error transport connect[0m
+[1;31mE (27091) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27101) LORA_RX: MQTT desconectado[0m
+[0;32mI (27101) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27111) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27111) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27121) mqtt_client: Error transport connect[0m
+[1;31mE (27121) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27121) LORA_RX: MQTT desconectado[0m
+[0;32mI (27131) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27131) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27141) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27141) mqtt_client: Error transport connect[0m
+[1;31mE (27151) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27151) LORA_RX: MQTT desconectado[0m
+[0;32mI (27151) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27161) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27171) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27171) mqtt_client: Error transport connect[0m
+[1;31mE (27181) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27181) LORA_RX: MQTT desconectado[0m
+[0;32mI (27181) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27191) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27191) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27201) mqtt_client: Error transport connect[0m
+[1;31mE (27201) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27211) LORA_RX: MQTT desconectado[0m
+[0;32mI (27211) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27221) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27221) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27231) mqtt_client: Error transport connect[0m
+[1;31mE (27231) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27231) LORA_RX: MQTT desconectado[0m
+[0;32mI (27241) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27251) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27251) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27251) mqtt_client: Error transport connect[0m
+[1;31mE (27261) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27261) LORA_RX: MQTT desconectado[0m
+[0;32mI (27271) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27271) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27281) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27281) mqtt_client: Error transport connect[0m
+[1;31mE (27291) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27291) LORA_RX: MQTT desconectado[0m
+[0;32mI (27291) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27301) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27301) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27311) mqtt_client: Error transport connect[0m
+[1;31mE (27311) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27321) LORA_RX: MQTT desconectado[0m
+[0;32mI (27321) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27331) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27331) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27341) mqtt_client: Error transport connect[0m
+[1;31mE (27341) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27351) LORA_RX: MQTT desconectado[0m
+[0;32mI (27351) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27361) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27361) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27371) mqtt_client: Error transport connect[0m
+[1;31mE (27371) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27371) LORA_RX: MQTT desconectado[0m
+[0;32mI (27381) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27381) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27391) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27391) mqtt_client: Error transport connect[0m
+[1;31mE (27401) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27401) LORA_RX: MQTT desconectado[0m
+[0;32mI (27401) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27411) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27421) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27421) mqtt_client: Error transport connect[0m
+[0;33mW (27421) LORA_RX: WiFi desconectado, reconectando...[0m
+[1;31mE (27431) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27431) LORA_RX: MQTT desconectado[0m
+[0;32mI (27441) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27441) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27451) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27451) mqtt_client: Error transport connect[0m
+[1;31mE (27461) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27461) LORA_RX: MQTT desconectado[0m
+[0;32mI (27471) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27471) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27481) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27481) mqtt_client: Error transport connect[0m
+[1;31mE (27491) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27491) LORA_RX: MQTT desconectado[0m
+[0;32mI (27491) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27501) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27501) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27511) mqtt_client: Error transport connect[0m
+[1;31mE (27511) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27521) LORA_RX: MQTT desconectado[0m
+[0;32mI (27521) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27531) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27531) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27541) mqtt_client: Error transport connect[0m
+[1;31mE (27541) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27551) LORA_RX: MQTT desconectado[0m
+[0;32mI (27551) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27561) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27561) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27561) mqtt_client: Error transport connect[0m
+[1;31mE (27571) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27571) LORA_RX: MQTT desconectado[0m
+[0;32mI (27581) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27581) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27591) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27591) mqtt_client: Error transport connect[0m
+[1;31mE (27601) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27601) LORA_RX: MQTT desconectado[0m
+[0;32mI (27601) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27611) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27621) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27621) mqtt_client: Error transport connect[0m
+[1;31mE (27621) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27631) LORA_RX: MQTT desconectado[0m
+[0;32mI (27631) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27641) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27641) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27651) mqtt_client: Error transport connect[0m
+[1;31mE (27651) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27661) LORA_RX: MQTT desconectado[0m
+[0;32mI (27661) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27671) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27671) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27681) mqtt_client: Error transport connect[0m
+[1;31mE (27681) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27681) LORA_RX: MQTT desconectado[0m
+[0;32mI (27691) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27691) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27701) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27701) mqtt_client: Error transport connect[0m
+[1;31mE (27711) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27711) LORA_RX: MQTT desconectado[0m
+[0;32mI (27721) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27721) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27731) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27731) mqtt_client: Error transport connect[0m
+[1;31mE (27741) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27741) LORA_RX: MQTT desconectado[0m
+[0;32mI (27741) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27751) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27751) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27761) mqtt_client: Error transport connect[0m
+[1;31mE (27761) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27771) LORA_RX: MQTT desconectado[0m
+[0;32mI (27771) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27781) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27781) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27791) mqtt_client: Error transport connect[0m
+[1;31mE (27791) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27801) LORA_RX: MQTT desconectado[0m
+[0;32mI (27801) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27811) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27811) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27811) mqtt_client: Error transport connect[0m
+[1;31mE (27821) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27821) LORA_RX: MQTT desconectado[0m
+[0;32mI (27831) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27831) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27841) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27841) mqtt_client: Error transport connect[0m
+[1;31mE (27851) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27851) LORA_RX: MQTT desconectado[0m
+[0;32mI (27851) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27861) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27871) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27871) mqtt_client: Error transport connect[0m
+[1;31mE (27871) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27881) LORA_RX: MQTT desconectado[0m
+[0;32mI (27881) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27891) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27891) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27901) mqtt_client: Error transport connect[0m
+[1;31mE (27901) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27911) LORA_RX: MQTT desconectado[0m
+[0;32mI (27911) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27921) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27921) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27931) mqtt_client: Error transport connect[0m
+[1;31mE (27931) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27931) LORA_RX: MQTT desconectado[0m
+[0;32mI (27941) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27941) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27951) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27951) mqtt_client: Error transport connect[0m
+[1;31mE (27961) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27961) LORA_RX: MQTT desconectado[0m
+[0;32mI (27971) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27971) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27981) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27981) mqtt_client: Error transport connect[0m
+[1;31mE (27991) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27991) LORA_RX: MQTT desconectado[0m
+[0;32mI (27991) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28001) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28001) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28011) mqtt_client: Error transport connect[0m
+[1;31mE (28011) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28021) LORA_RX: MQTT desconectado[0m
+[0;32mI (28021) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28031) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28031) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28041) mqtt_client: Error transport connect[0m
+[1;31mE (28041) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28051) LORA_RX: MQTT desconectado[0m
+[0;32mI (28051) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28061) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28061) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28061) mqtt_client: Error transport connect[0m
+[1;31mE (28071) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28071) LORA_RX: MQTT desconectado[0m
+[0;32mI (28081) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28081) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28091) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28091) mqtt_client: Error transport connect[0m
+[1;31mE (28101) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28101) LORA_RX: MQTT desconectado[0m
+[0;32mI (28101) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28111) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28121) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28121) mqtt_client: Error transport connect[0m
+[1;31mE (28121) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28131) LORA_RX: MQTT desconectado[0m
+[0;32mI (28131) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28141) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28141) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28151) mqtt_client: Error transport connect[0m
+[1;31mE (28151) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28161) LORA_RX: MQTT desconectado[0m
+[0;32mI (28161) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28171) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28171) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28181) mqtt_client: Error transport connect[0m
+[1;31mE (28181) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28181) LORA_RX: MQTT desconectado[0m
+[0;32mI (28191) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28191) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28201) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28201) mqtt_client: Error transport connect[0m
+[1;31mE (28211) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28211) LORA_RX: MQTT desconectado[0m
+[0;32mI (28221) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28221) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28231) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28231) mqtt_client: Error transport connect[0m
+[1;31mE (28241) LORA_RX: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28241) LORA_RX: MQTT desconectado[0m
+[0;32mI (28241) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28251) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28251) transport_base: Failed to open a new connection: 32772[0m

@@ -1,0 +1,183 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM10 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanTransmissor\build\LorawanTransmissor.elf C:\Users\rafae\workspace\LorawanTransmissor\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM10'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 31 2026 11:08:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c21ch ( 49692) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001c244 vaddr=3ffb0000 size=02c20h ( 11296) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001ee6c vaddr=40080000 size=011ach (  4524) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=13ac0h ( 80576) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=00033ae8 vaddr=400811ac size=0cb68h ( 52072) load[0m
+[0;32mI (165) esp_image: segment 5: paddr=00040658 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (172) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (173) boot: Disabling RNG early entropy source...[0m
+[0;32mI (183) cpu_start: Multicore app[0m
+[0;32mI (191) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (192) cpu_start: Pro cpu start user code[0m
+[0;32mI (192) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (194) app_init: Application information:[0m
+[0;32mI (197) app_init: Project name:     LorawanTransmissor[0m
+[0;32mI (202) app_init: App version:      1[0m
+[0;32mI (206) app_init: Compile time:     May 31 2026 11:08:39[0m
+[0;32mI (211) app_init: ELF file SHA256:  3609fea84...[0m
+[0;32mI (215) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB3A30 len 0002C5D0 (177 KiB): DRAM[0m
+[0;32mI (247) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (258) heap_init: At 4008DD14 len 000122EC (72 KiB): IRAM[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (270) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (283) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (293) main_task: Started on CPU0[0m
+[0;32mI (303) main_task: Calling app_main()[0m
+[0;32mI (303) LORA_TX: Scanning I2C bus...[0m
+[0;32mI (423) LORA_TX: OLED SSD1306 inicializado[0m
+[0;33mW (423) LORA_TX: DS3231 não encontrado — timestamps serão "--:--:--"[0m
+[0;32mI (443) LORA_TX: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (453) LORA_TX: LoRa inicializado OK[0m
+[0;32mI (1053) LORA_TX: Raw:0[0m
+[0;32mI (1053) LORA_TX: MV:107[0m
+[0;32mI (1053) LORA_TX: Enviando pacote #1 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1093) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (11493) LORA_TX: Raw:0[0m
+[0;32mI (11493) LORA_TX: MV:107[0m
+[0;32mI (11493) LORA_TX: Enviando pacote #2 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (11533) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (21933) LORA_TX: Raw:0[0m
+[0;32mI (21933) LORA_TX: MV:107[0m
+[0;32mI (21933) LORA_TX: Enviando pacote #3 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (21973) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (32373) LORA_TX: Raw:0[0m
+[0;32mI (32373) LORA_TX: MV:107[0m
+[0;32mI (32373) LORA_TX: Enviando pacote #4 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (32413) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (42813) LORA_TX: Raw:0[0m
+[0;32mI (42813) LORA_TX: MV:107[0m
+[0;32mI (42813) LORA_TX: Enviando pacote #5 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (42853) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (53253) LORA_TX: Raw:0[0m
+[0;32mI (53253) LORA_TX: MV:107[0m
+[0;32mI (53253) LORA_TX: Enviando pacote #6 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (53293) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (63693) LORA_TX: Raw:0[0m
+[0;32mI (63693) LORA_TX: MV:107[0m
+[0;32mI (63693) LORA_TX: Enviando pacote #7 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (63733) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (74133) LORA_TX: Raw:0[0m
+[0;32mI (74133) LORA_TX: MV:107[0m
+[0;32mI (74133) LORA_TX: Enviando pacote #8 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (74173) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (84573) LORA_TX: Raw:0[0m
+[0;32mI (84573) LORA_TX: MV:107[0m
+[0;32mI (84573) LORA_TX: Enviando pacote #9 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (84613) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (95013) LORA_TX: Raw:0[0m
+[0;32mI (95013) LORA_TX: MV:107[0m
+[0;32mI (95013) LORA_TX: Enviando pacote #10 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (95053) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (105453) LORA_TX: Raw:0[0m
+[0;32mI (105453) LORA_TX: MV:107[0m
+[0;32mI (105453) LORA_TX: Enviando pacote #11 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (105493) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (115893) LORA_TX: Raw:0[0m
+[0;32mI (115893) LORA_TX: MV:107[0m
+[0;32mI (115893) LORA_TX: Enviando pacote #12 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (115933) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (126333) LORA_TX: Raw:0[0m
+[0;32mI (126333) LORA_TX: MV:107[0m
+[0;32mI (126333) LORA_TX: Enviando pacote #13 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (126373) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (136773) LORA_TX: Raw:0[0m
+[0;32mI (136773) LORA_TX: MV:107[0m
+[0;32mI (136773) LORA_TX: Enviando pacote #14 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (136813) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (147213) LORA_TX: Raw:0[0m
+[0;32mI (147213) LORA_TX: MV:107[0m
+[0;32mI (147213) LORA_TX: Enviando pacote #15 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (147253) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (157653) LORA_TX: Raw:0[0m
+[0;32mI (157653) LORA_TX: MV:107[0m
+[0;32mI (157653) LORA_TX: Enviando pacote #16 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (157693) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (168093) LORA_TX: Raw:0[0m
+[0;32mI (168093) LORA_TX: MV:107[0m
+[0;32mI (168093) LORA_TX: Enviando pacote #17 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (168133) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (178533) LORA_TX: Raw:0[0m
+[0;32mI (178533) LORA_TX: MV:107[0m
+[0;32mI (178533) LORA_TX: Enviando pacote #18 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (178573) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (188973) LORA_TX: Raw:0[0m
+[0;32mI (188973) LORA_TX: MV:107[0m
+[0;32mI (188973) LORA_TX: Enviando pacote #19 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (189013) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (199413) LORA_TX: Raw:0[0m
+[0;32mI (199413) LORA_TX: MV:107[0m
+[0;32mI (199413) LORA_TX: Enviando pacote #20 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (199453) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (209853) LORA_TX: Raw:0[0m
+[0;32mI (209853) LORA_TX: MV:107[0m
+[0;32mI (209853) LORA_TX: Enviando pacote #21 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (209893) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (220293) LORA_TX: Raw:0[0m
+[0;32mI (220293) LORA_TX: MV:107[0m
+[0;32mI (220293) LORA_TX: Enviando pacote #22 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (220333) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (230733) LORA_TX: Raw:0[0m
+[0;32mI (230733) LORA_TX: MV:107[0m
+[0;32mI (230733) LORA_TX: Enviando pacote #23 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (230773) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (241173) LORA_TX: Raw:0[0m
+[0;32mI (241173) LORA_TX: MV:107[0m
+[0;32mI (241173) LORA_TX: Enviando pacote #24 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (241213) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (251613) LORA_TX: Raw:0[0m
+[0;32mI (251613) LORA_TX: MV:107[0m
+[0;32mI (251613) LORA_TX: Enviando pacote #25 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (251653) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (262053) LORA_TX: Raw:0[0m
+[0;32mI (262053) LORA_TX: MV:107[0m
+[0;32mI (262053) LORA_TX: Enviando pacote #26 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (262093) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (272493) LORA_TX: Raw:0[0m
+[0;32mI (272493) LORA_TX: MV:107[0m
+[0;32mI (272493) LORA_TX: Enviando pacote #27 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (272533) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (282933) LORA_TX: Raw:0[0m
+[0;32mI (282933) LORA_TX: MV:107[0m
+[0;32mI (282933) LORA_TX: Enviando pacote #28 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (282973) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (293373) LORA_TX: Raw:0[0m
+[0;32mI (293373) LORA_TX: MV:107[0m
+[0;32mI (293373) LORA_TX: Enviando pacote #29 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (293413) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (303813) LORA_TX: Raw:0[0m
+[0;32mI (303813) LORA_TX: MV:107[0m
+[0;32mI (303813) LORA_TX: Enviando pacote #30 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (303853) LORA_TX: Pacote enviado (10 bytes)[0m

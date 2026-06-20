@@ -1,0 +1,391 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanGateway\build\LorawanGateway.elf C:\Users\rafae\workspace\LorawanGateway\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py'
+ At 3FF�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (26) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun  8 2026 17:49:41[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22104h (139524) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=0003212c vaddr=3ffb0000 size=04760h ( 18272) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00036894 vaddr=40080000 size=09784h ( 38788) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2404h (664580) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e242c vaddr=40089784 size=0efcch ( 61388) load[0m
+[0;32mI (421) esp_image: segment 5: paddr=000f1400 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (433) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (433) boot: Disabling RNG early entropy source...[0m
+[0;32mI (444) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (452) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (454) app_init: Application information:[0m
+[0;32mI (458) app_init: Project name:     LorawanGateway[0m
+[0;32mI (463) app_init: App version:      1[0m
+[0;32mI (466) app_init: Compile time:     Jun 12 2026 16:44:25[0m
+[0;32mI (471) app_init: ELF file SHA256:  bfeabef9c...[0m
+[0;32mI (475) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (480) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (483) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (487) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (492) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (498) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFB9748 len 000268B8 (154 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (513) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (519) heap_init: At 40098750 len 000078B0 (30 KiB): IRAM[0m
+[0;32mI (526) spi_flash: detected chip: generic[0m
+[0;32mI (528) spi_flash: flash io: dio[0m
+[0;33mW (531) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (543) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (614) wifi:wifi driver task: 3ffc1268, prio:23, stack:6656, core=0[0m
+[0;32mI (624) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (624) wifi:wifi certification version: v7.0[0m
+[0;32mI (624) wifi:config NVS flash: enabled[0m
+[0;32mI (624) wifi:config nano formatting: disabled[0m
+[0;32mI (634) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (644) wifi:Init management short buffer num: 32[0m
+[0;32mI (644) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (654) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (654) wifi:Init static rx buffer num: 10[0m
+[0;32mI (654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (664) wifi_init: rx ba win: 6[0m
+[0;32mI (664) wifi_init: accept mbox: 6[0m
+[0;32mI (664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (674) wifi_init: udp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp tx win: 5760[0m
+[0;32mI (684) wifi_init: tcp rx win: 5760[0m
+[0;32mI (684) wifi_init: tcp mss: 1440[0m
+[0;32mI (684) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (694) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (694) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (704) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (784) wifi:mode : sta (5c:01:3b:09:29:68)[0m
+[0;32mI (784) wifi:enable tsf[0m
+[0;32mI (784) I2C_SCAN: Aguardando conexão WiFi...[0m
+[0;32mI (854) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (864) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1864) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1874) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (1874) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[0;32mI (1884) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1884) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1894) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1904) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1934) wifi:connected with IoT-local, aid = 1, channel 6, BW20, bssid = e8:26:89:be:53:21[0m
+[0;32mI (1934) wifi:security: WPA2-PSK, phy: bgn, rssi: -82[0m
+[0;32mI (1944) wifi:pm start, type: 1[0m
+
+[0;32mI (1944) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2004) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2034) wifi:<ba-add>idx:0 (ifx:0, e8:26:89:be:53:21), tid:0, ssn:2, winSize:64[0m
+[0;32mI (6494) esp_netif_handlers: sta ip: 100.64.33.29, mask: 255.255.255.0, gw: 100.64.33.1[0m
+[0;32mI (6494) I2C_SCAN: WiFi conectado, IP: 100.64.33.29[0m
+[0;32mI (6494) I2C_SCAN: Aguardando sincronização NTP...[0m
+[0;32mI (16494) I2C_SCAN: NTP sincronizado[0m
+[0;32mI (26504) I2C_SCAN: I2C instalado com sucesso[0m
+[0;32mI (26504) I2C_SCAN: === SCAN I2C ===[0m
+[0;32mI (26504) I2C_SCAN: Scanning I2C bus...[0m
+[1;31mE (26514) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (26514) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (26514) mqtt_client: Error transport connect[0m
+[1;31mE (26514) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (26514) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26524) mqtt_client: Client force reconnect requested[0m
+[0;32mI (27524) I2C_SCAN: === FIM SCAN ===[0m
+[0;32mI (27564) I2C_SCAN: OLED SSD1306 inicializado com Reset físico.[0m
+[0;32mI (29584) I2C_SCAN: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (29594) I2C_SCAN: LoRa inicializado — aguardando pacotes...[0m
+[1;31mE (36544) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (36544) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (36544) mqtt_client: Error transport connect[0m
+[1;31mE (36544) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (36544) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (36554) mqtt_client: Client force reconnect requested[0m
+[0;32mI (40774) I2C_SCAN: MQTT conectado[0m
+[1;31mE (42734) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (42734) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (42734) I2C_SCAN: 00 00 00 7a 10 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (42734) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (42744) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (42744) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (43084) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (43084) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (43084) I2C_SCAN: 00 00 00 9d 10 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (43084) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (43094) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (43094) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (92224) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (92224) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (92924) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (92924) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (92924) I2C_SCAN: 00 00 00 15 24 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (92924) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (92934) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (92934) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (93264) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (93264) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (93264) I2C_SCAN: 00 00 00 37 24 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (93264) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (93274) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (93274) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (93444) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (93444) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (132154) mqtt_client: No PING_RESP, disconnected[0m
+[0;33mW (132154) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (132154) mqtt_client: Client force reconnect requested[0m
+[1;31mE (142174) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (142174) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (142174) mqtt_client: Error transport connect[0m
+[1;31mE (142174) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (142174) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (142184) mqtt_client: Client force reconnect requested[0m
+[1;31mE (142234) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (142234) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (142404) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (142404) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (142404) I2C_SCAN: 00 00 00 69 37 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (142404) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (142414) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (142424) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (143104) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (143104) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (143104) I2C_SCAN: 00 00 00 af 37 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (143104) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (143114) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (143124) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (143284) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (143284) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (143454) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (143454) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (143454) I2C_SCAN: 00 00 00 d2 37 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (143454) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (143464) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (143474) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (143624) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (143624) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (143624) I2C_SCAN: 00 00 00 e3 37 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (143624) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (143634) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (143644) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (152204) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (152204) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (152204) mqtt_client: Error transport connect[0m
+[1;31mE (152204) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (152204) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (152214) mqtt_client: Client force reconnect requested[0m
+[0;32mI (152724) I2C_SCAN: Novo nó registrado: 0x01 (total: 1)[0m
+[0;32mI (152724) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (152724) I2C_SCAN:   Pacote #1 do nó 0x01  [--:--:--][0m
+[0;32mI (152734) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (152734) I2C_SCAN:   RSSI        : -63 dBm[0m
+[0;32mI (152734) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (152744) I2C_SCAN:   Pkts ok/lost: 1 / 0[0m
+[0;32mI (152744) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (152754) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (152804) I2C_SCAN: Hora enviada ao TX: 21:02:32 31/12/1969[0m
+[1;31mE (162234) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (162234) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (162234) mqtt_client: Error transport connect[0m
+[1;31mE (162234) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (162234) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (162244) mqtt_client: Client force reconnect requested[0m
+[0;32mI (162274) I2C_SCAN: MQTT conectado[0m
+[0;32mI (162864) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (162864) I2C_SCAN:   Pacote #2 do nó 0x01  [--:--:--][0m
+[0;32mI (162864) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (162874) I2C_SCAN:   RSSI        : -62 dBm[0m
+[0;32mI (162874) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (162874) I2C_SCAN:   Pkts ok/lost: 2 / 0[0m
+[0;32mI (162884) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (162904) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (162944) I2C_SCAN: Hora enviada ao TX: 21:02:42 31/12/1969[0m
+[0;32mI (173004) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (173004) I2C_SCAN:   Pacote #3 do nó 0x01  [--:--:--][0m
+[0;32mI (173004) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (173014) I2C_SCAN:   RSSI        : -62 dBm[0m
+[0;32mI (173014) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (173014) I2C_SCAN:   Pkts ok/lost: 3 / 0[0m
+[0;32mI (173024) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (173044) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (173084) I2C_SCAN: Hora enviada ao TX: 21:02:52 31/12/1969[0m
+[0;32mI (183144) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (183144) I2C_SCAN:   Pacote #4 do nó 0x01  [--:--:--][0m
+[0;32mI (183144) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (183154) I2C_SCAN:   RSSI        : -63 dBm[0m
+[0;32mI (183154) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (183164) I2C_SCAN:   Pkts ok/lost: 4 / 0[0m
+[0;32mI (183164) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (183184) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (183224) I2C_SCAN: Hora enviada ao TX: 21:03:02 31/12/1969[0m
+[1;31mE (192424) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (192424) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (192594) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (192594) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (192594) I2C_SCAN: 00 00 00 04 4b 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (192594) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (192604) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (192614) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (192774) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (192774) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (193124) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (193124) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (193124) I2C_SCAN: 00 00 00 39 4b 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (193124) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (193134) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (193144) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (193294) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (193294) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (193474) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (193474) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (193474) I2C_SCAN: 00 00 00 5c 4b 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (193474) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (193484) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (193494) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (193644) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (193644) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (193644) I2C_SCAN: 00 00 00 6d 4b 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (193644) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (193654) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (193664) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (193814) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (193814) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (193814) I2C_SCAN: 00 00 00 7e 4b 00 00 00 00 00 00 23 06 06 00 ff[0m
+[0;32mI (193814) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (193824) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (193834) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;33mW (203694) I2C_SCAN: Nó 0x01: 1 pacote(s) perdido(s) (esperado 5, recebido 6)[0m
+[0;32mI (203694) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (203694) I2C_SCAN:   Pacote #6 do nó 0x01  [--:--:--][0m
+[0;32mI (203704) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (203704) I2C_SCAN:   RSSI        : -62 dBm[0m
+[0;32mI (203714) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (203714) I2C_SCAN:   Pkts ok/lost: 5 / 1[0m
+[0;32mI (203714) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (203734) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (203774) I2C_SCAN: Hora enviada ao TX: 21:03:23 31/12/1969[0m
+[0;32mI (213834) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (213834) I2C_SCAN:   Pacote #7 do nó 0x01  [--:--:--][0m
+[0;32mI (213834) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (213844) I2C_SCAN:   RSSI        : -63 dBm[0m
+[0;32mI (213844) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (213844) I2C_SCAN:   Pkts ok/lost: 6 / 1[0m
+[0;33mW (213854) transport_base: Poll timeout or error, errno=Connection already in progress, fd=54, timeout_ms=10000[0m
+[0;32mI (213864) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[1;31mE (213864) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (213884) mqtt_client: Error to resend data [0m
+[0;33mW (213884) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (213884) mqtt_client: Client force reconnect requested[0m
+[0;33mW (213894) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (213934) I2C_SCAN: Hora enviada ao TX: 21:03:33 31/12/1969[0m
+[0;33mW (223904) transport_base: Poll timeout or error, errno=Connection already in progress, fd=-1, timeout_ms=10000[0m
+[1;31mE (223904) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (223904) mqtt_client: Error sending ping[0m
+[1;31mE (223914) mqtt_client: Can't send ping, disconnected[0m
+[0;33mW (223914) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (223914) mqtt_client: Client force reconnect requested[0m
+[0;32mI (223994) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (223994) I2C_SCAN:   Pacote #8 do nó 0x01  [--:--:--][0m
+[0;32mI (223994) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (224004) I2C_SCAN:   RSSI        : -63 dBm[0m
+[0;32mI (224004) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (224004) I2C_SCAN:   Pkts ok/lost: 7 / 1[0m
+[0;32mI (224014) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (224024) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (224064) I2C_SCAN: Hora enviada ao TX: 21:03:43 31/12/1969[0m
+[1;31mE (233944) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (233944) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (233944) mqtt_client: Error transport connect[0m
+[1;31mE (233944) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (233944) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (233954) mqtt_client: Client force reconnect requested[0m
+[0;32mI (234124) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (234124) I2C_SCAN:   Pacote #9 do nó 0x01  [--:--:--][0m
+[0;32mI (234124) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (234134) I2C_SCAN:   RSSI        : -63 dBm[0m
+[0;32mI (234134) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (234134) I2C_SCAN:   Pkts ok/lost: 8 / 1[0m
+[0;32mI (234144) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (234154) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (234194) I2C_SCAN: Hora enviada ao TX: 21:03:53 31/12/1969[0m
+[1;31mE (242614) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (242614) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (242964) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (242964) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (243474) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (243474) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (243474) I2C_SCAN: 00 00 00 e4 5e 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (243474) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (243484) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (243494) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (243824) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (243824) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (243824) I2C_SCAN: 00 00 00 07 5f 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (243824) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 94[0m
+[0;32mI (243834) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 55[0m
+[0;32mI (243844) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (243974) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (243974) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (243974) mqtt_client: Error transport connect[0m
+[1;31mE (243974) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (243974) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (243984) mqtt_client: Client force reconnect requested[0m
+[0;32mI (244254) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (244254) I2C_SCAN:   Pacote #10 do nó 0x01  [--:--:--][0m
+[0;32mI (244254) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (244264) I2C_SCAN:   RSSI        : -65 dBm[0m
+[0;32mI (244264) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (244264) I2C_SCAN:   Pkts ok/lost: 9 / 1[0m
+[0;32mI (244274) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (244284) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (244324) I2C_SCAN: Hora enviada ao TX: 21:04:03 31/12/1969[0m
+[1;31mE (254004) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (254004) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (254004) mqtt_client: Error transport connect[0m
+[1;31mE (254004) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (254004) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (254014) mqtt_client: Client force reconnect requested[0m
+[0;32mI (254384) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (254384) I2C_SCAN:   Pacote #11 do nó 0x01  [--:--:--][0m
+[0;32mI (254384) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (254394) I2C_SCAN:   RSSI        : -64 dBm[0m
+[0;32mI (254394) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (254394) I2C_SCAN:   Pkts ok/lost: 10 / 1[0m
+[0;32mI (254404) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (254414) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (254454) I2C_SCAN: Hora enviada ao TX: 21:04:13 31/12/1969[0m
+[1;31mE (264034) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (264034) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (264034) mqtt_client: Error transport connect[0m
+[1;31mE (264034) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (264034) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (264044) mqtt_client: Client force reconnect requested[0m
+[0;32mI (264514) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (264514) I2C_SCAN:   Pacote #12 do nó 0x01  [--:--:--][0m
+[0;32mI (264514) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (264524) I2C_SCAN:   RSSI        : -64 dBm[0m
+[0;32mI (264524) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (264524) I2C_SCAN:   Pkts ok/lost: 11 / 1[0m
+[0;32mI (264534) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (264544) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (264584) I2C_SCAN: Hora enviada ao TX: 21:04:24 31/12/1969[0m

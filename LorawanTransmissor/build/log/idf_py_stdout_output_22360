@@ -1,0 +1,27 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\rafae\workspace\LorawanTransmissor\build\bootloader && C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:/esp/v6.0/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/rafae/workspace/LorawanTransmissor/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6610 bytes. 0x9f0 bytes (9%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+C:/Users/rafae/workspace/LorawanTransmissor/main/main.c:209:13: warning: 'ds3231_format_time' defined but not used [-Wunused-function]
+  209 | static void ds3231_format_time(const ds3231_time_t *t, char *buf, size_t len)
+      |             ^~~~~~~~~~~~~~~~~~
+C:/Users/rafae/workspace/LorawanTransmissor/main/main.c:201:13: warning: 'ds3231_format' defined but not used [-Wunused-function]
+  201 | static void ds3231_format(const ds3231_time_t *t, char *buf, size_t len)
+      |             ^~~~~~~~~~~~~
+C:/Users/rafae/workspace/LorawanTransmissor/main/main.c:130:18: warning: 'ds3231_get_time' defined but not used [-Wunused-function]
+  130 | static esp_err_t ds3231_get_time(ds3231_time_t *t)
+      |                  ^~~~~~~~~~~~~~~
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable LorawanTransmissor.elf
+[8/9] Generating binary image from built executable
+esptool v5.3.0
+Creating ESP32 image...
+Merged 2 ELF sections.
+Successfully created ESP32 image.
+Generated C:/Users/rafae/workspace/LorawanTransmissor/build/LorawanTransmissor.bin
+[9/9] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\rafae\workspace\LorawanTransmissor\build && C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:/esp/v6.0/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/rafae/workspace/LorawanTransmissor/build/partition_table/partition-table.bin C:/Users/rafae/workspace/LorawanTransmissor/build/LorawanTransmissor.bin"
+LorawanTransmissor.bin binary size 0x306a0 bytes. Smallest app partition is 0x100000 bytes. 0xcf960 bytes (81%) free.

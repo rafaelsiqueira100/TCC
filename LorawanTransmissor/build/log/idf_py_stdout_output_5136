@@ -1,0 +1,1009 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM10 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanTransmissor\build\LorawanTransmissor.elf C:\Users\rafae\workspace\LorawanTransmissor\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 31 2026 11:08:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c24ch ( 49740) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001c274 vaddr=3ffb0000 size=02c20h ( 11296) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001ee9c vaddr=40080000 size=0117ch (  4476) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=13a64h ( 80484) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=00033a8c vaddr=4008117c size=0cb98h ( 52120) load[0m
+[0;32mI (165) esp_image: segment 5: paddr=0004062c vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (173) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (173) boot: Disabling RNG early entropy source...[0m
+[0;32mI (183) cpu_start: Multicore app[0m
+[0;32mI (192) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (192) cpu_start: Pro cpu start user code[0m
+[0;32mI (192) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (194) app_init: Application information:[0m
+[0;32mI (198) app_init: Project name:     LorawanTransmissor[0m
+[0;32mI (202) app_init: App version:      1[0m
+[0;32mI (206) app_init: Compile time:     Jun 12 2026 16:50:52[0m
+[0;32mI (211) app_init: ELF file SHA256:  1a4019141...[0m
+[0;32mI (215) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB3A30 len 0002C5D0 (177 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 4008DD14 len 000122EC (72 KiB): IRAM[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (270) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (283) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (293) main_task: Started on CPU0[0m
+[0;32mI (303) main_task: Calling app_main()[0m
+[0;32mI (303) I2C_SCAN: Scanning I2C bus...[0m
+[0;32mI (423) I2C_SCAN: OLED SSD1306 inicializado[0m
+[0;33mW (423) I2C_SCAN: DS3231 não encontrado [0m
+[1;31mE (423) i2c: i2c driver install error[0m
+[0;32mI (423) I2C_SCAN: === SCAN I2C ===[0m
+[0;32mI (423) I2C_SCAN: Scanning I2C bus...[0m
+[0;32mI (453) I2C_SCAN: === FIM SCAN ===[0m
+[0;32mI (473) I2C_SCAN: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (483) I2C_SCAN: LoRa inicializado OK[0m
+[0;32mI (1083) I2C_SCAN: Raw:0[0m
+[0;32mI (1083) I2C_SCAN: MV:107[0m
+[0;32mI (1083) I2C_SCAN: Enviando pacote #1 | temp=10.7°C | --:--:--[0m
+[0;32mI (1123) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1223) I2C_SCAN: Hora sincronizada: 21:14:07 31/12/1969[0m
+[0;32mI (11223) I2C_SCAN: Raw:0[0m
+[0;32mI (11223) I2C_SCAN: MV:107[0m
+[0;32mI (11223) I2C_SCAN: Enviando pacote #2 | temp=10.7°C | 21:14:17[0m
+[0;32mI (11263) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (11363) I2C_SCAN: Hora sincronizada: 21:14:17 31/12/1969[0m
+[0;32mI (21363) I2C_SCAN: Raw:0[0m
+[0;32mI (21363) I2C_SCAN: MV:107[0m
+[0;32mI (21363) I2C_SCAN: Enviando pacote #3 | temp=10.7°C | 21:14:27[0m
+[0;32mI (21403) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (21503) I2C_SCAN: Hora sincronizada: 21:14:27 31/12/1969[0m
+[0;32mI (31503) I2C_SCAN: Raw:0[0m
+[0;32mI (31503) I2C_SCAN: MV:107[0m
+[0;32mI (31503) I2C_SCAN: Enviando pacote #4 | temp=10.7°C | 21:14:37[0m
+[0;32mI (31543) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (34543) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (44543) I2C_SCAN: Raw:0[0m
+[0;32mI (44543) I2C_SCAN: MV:107[0m
+[0;32mI (44543) I2C_SCAN: Enviando pacote #5 | temp=10.7°C | 21:14:47[0m
+[0;32mI (44583) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (47583) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (57583) I2C_SCAN: Raw:0[0m
+[0;32mI (57583) I2C_SCAN: MV:107[0m
+[0;32mI (57583) I2C_SCAN: Enviando pacote #6 | temp=10.7°C | 21:14:57[0m
+[0;32mI (57623) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (60623) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (70623) I2C_SCAN: Raw:0[0m
+[0;32mI (70623) I2C_SCAN: MV:107[0m
+[0;32mI (70623) I2C_SCAN: Enviando pacote #7 | temp=10.7°C | 21:15:07[0m
+[0;32mI (70663) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (73663) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (83663) I2C_SCAN: Raw:0[0m
+[0;32mI (83663) I2C_SCAN: MV:107[0m
+[0;32mI (83663) I2C_SCAN: Enviando pacote #8 | temp=10.7°C | 21:15:17[0m
+[0;32mI (83703) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (83803) I2C_SCAN: Hora sincronizada: 21:00:36 31/12/1969[0m
+[0;32mI (93803) I2C_SCAN: Raw:0[0m
+[0;32mI (93803) I2C_SCAN: MV:107[0m
+[0;32mI (93803) I2C_SCAN: Enviando pacote #9 | temp=10.7°C | 21:00:46[0m
+[0;32mI (93843) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (93943) I2C_SCAN: Hora sincronizada: 21:00:46 31/12/1969[0m
+[0;32mI (103943) I2C_SCAN: Raw:0[0m
+[0;32mI (103943) I2C_SCAN: MV:107[0m
+[0;32mI (103943) I2C_SCAN: Enviando pacote #10 | temp=10.7°C | 21:00:56[0m
+[0;32mI (103983) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (104133) I2C_SCAN: CRC error no pacote de hora[0m
+[0;32mI (114133) I2C_SCAN: Raw:0[0m
+[0;32mI (114133) I2C_SCAN: MV:107[0m
+[0;32mI (114133) I2C_SCAN: Enviando pacote #11 | temp=10.7°C | 21:01:06[0m
+[0;32mI (114173) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (114273) I2C_SCAN: Hora sincronizada: 21:01:07 31/12/1969[0m
+[0;32mI (124273) I2C_SCAN: Raw:0[0m
+[0;32mI (124273) I2C_SCAN: MV:107[0m
+[0;32mI (124273) I2C_SCAN: Enviando pacote #12 | temp=10.7°C | 21:01:17[0m
+[0;32mI (124313) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (127313) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (137313) I2C_SCAN: Raw:0[0m
+[0;32mI (137313) I2C_SCAN: MV:107[0m
+[0;32mI (137313) I2C_SCAN: Enviando pacote #13 | temp=10.7°C | 21:01:27[0m
+[0;32mI (137353) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (137453) I2C_SCAN: Hora sincronizada: 21:01:30 31/12/1969[0m
+[0;32mI (147453) I2C_SCAN: Raw:0[0m
+[0;32mI (147453) I2C_SCAN: MV:107[0m
+[0;32mI (147453) I2C_SCAN: Enviando pacote #14 | temp=10.7°C | 21:01:40[0m
+[0;32mI (147493) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (147593) I2C_SCAN: Hora sincronizada: 21:01:40 31/12/1969[0m
+[0;32mI (157593) I2C_SCAN: Raw:0[0m
+[0;32mI (157593) I2C_SCAN: MV:107[0m
+[0;32mI (157593) I2C_SCAN: Enviando pacote #15 | temp=10.7°C | 21:01:50[0m
+[0;32mI (157633) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (157733) I2C_SCAN: Hora sincronizada: 21:01:50 31/12/1969[0m
+[0;32mI (167733) I2C_SCAN: Raw:0[0m
+[0;32mI (167733) I2C_SCAN: MV:107[0m
+[0;32mI (167733) I2C_SCAN: Enviando pacote #16 | temp=10.7°C | 21:02:00[0m
+[0;32mI (167773) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (167873) I2C_SCAN: Hora sincronizada: 21:02:00 31/12/1969[0m
+[0;32mI (177873) I2C_SCAN: Raw:0[0m
+[0;32mI (177873) I2C_SCAN: MV:107[0m
+[0;32mI (177873) I2C_SCAN: Enviando pacote #17 | temp=10.7°C | 21:02:10[0m
+[0;32mI (177913) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (180913) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (190913) I2C_SCAN: Raw:0[0m
+[0;32mI (190913) I2C_SCAN: MV:107[0m
+[0;32mI (190913) I2C_SCAN: Enviando pacote #18 | temp=10.7°C | 21:02:20[0m
+[0;32mI (190953) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (202633) I2C_SCAN: Raw:0[0m
+[0;32mI (202633) I2C_SCAN: MV:107[0m
+[0;32mI (202633) I2C_SCAN: Enviando pacote #19 | temp=10.7°C | 21:02:30[0m
+[0;32mI (202673) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (205673) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (215673) I2C_SCAN: Raw:0[0m
+[0;32mI (215673) I2C_SCAN: MV:107[0m
+[0;32mI (215673) I2C_SCAN: Enviando pacote #20 | temp=10.7°C | 21:02:40[0m
+[0;32mI (215713) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (215813) I2C_SCAN: Hora sincronizada: 21:00:24 31/12/1969[0m
+[0;32mI (225813) I2C_SCAN: Raw:0[0m
+[0;32mI (225813) I2C_SCAN: MV:107[0m
+[0;32mI (225813) I2C_SCAN: Enviando pacote #21 | temp=10.7°C | 21:00:34[0m
+[0;32mI (225853) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (225953) I2C_SCAN: Hora sincronizada: 21:00:34 31/12/1969[0m
+[0;32mI (235953) I2C_SCAN: Raw:0[0m
+[0;32mI (235953) I2C_SCAN: MV:107[0m
+[0;32mI (235953) I2C_SCAN: Enviando pacote #22 | temp=10.7°C | 21:00:44[0m
+[0;32mI (235993) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (236093) I2C_SCAN: Hora sincronizada: 21:00:45 31/12/1969[0m
+[0;32mI (246093) I2C_SCAN: Raw:0[0m
+[0;32mI (246093) I2C_SCAN: MV:107[0m
+[0;32mI (246093) I2C_SCAN: Enviando pacote #23 | temp=10.7°C | 21:00:55[0m
+[0;32mI (246133) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (246233) I2C_SCAN: Hora sincronizada: 21:00:55 31/12/1969[0m
+[0;32mI (256233) I2C_SCAN: Raw:0[0m
+[0;32mI (256233) I2C_SCAN: MV:107[0m
+[0;32mI (256233) I2C_SCAN: Enviando pacote #24 | temp=10.7°C | 21:01:05[0m
+[0;32mI (256273) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (256373) I2C_SCAN: Hora sincronizada: 21:01:05 31/12/1969[0m
+[0;32mI (266373) I2C_SCAN: Raw:0[0m
+[0;32mI (266373) I2C_SCAN: MV:107[0m
+[0;32mI (266373) I2C_SCAN: Enviando pacote #25 | temp=10.7°C | 21:01:15[0m
+[0;32mI (266413) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (266513) I2C_SCAN: Hora sincronizada: 21:01:15 31/12/1969[0m
+[0;32mI (276513) I2C_SCAN: Raw:0[0m
+[0;32mI (276513) I2C_SCAN: MV:107[0m
+[0;32mI (276513) I2C_SCAN: Enviando pacote #26 | temp=10.7°C | 21:01:25[0m
+[0;32mI (276553) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (276653) I2C_SCAN: Hora sincronizada: 21:01:25 31/12/1969[0m
+[0;32mI (286653) I2C_SCAN: Raw:0[0m
+[0;32mI (286653) I2C_SCAN: MV:107[0m
+[0;32mI (286653) I2C_SCAN: Enviando pacote #27 | temp=10.7°C | 21:01:35[0m
+[0;32mI (286693) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (286793) I2C_SCAN: Hora sincronizada: 21:01:35 31/12/1969[0m
+[0;32mI (296793) I2C_SCAN: Raw:0[0m
+[0;32mI (296793) I2C_SCAN: MV:107[0m
+[0;32mI (296793) I2C_SCAN: Enviando pacote #28 | temp=10.7°C | 21:01:45[0m
+[0;32mI (296833) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (299833) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (309833) I2C_SCAN: Raw:0[0m
+[0;32mI (309833) I2C_SCAN: MV:107[0m
+[0;32mI (309833) I2C_SCAN: Enviando pacote #29 | temp=10.7°C | 21:01:55[0m
+[0;32mI (309873) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (312873) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (322873) I2C_SCAN: Raw:0[0m
+[0;32mI (322873) I2C_SCAN: MV:107[0m
+[0;32mI (322873) I2C_SCAN: Enviando pacote #30 | temp=10.7°C | 21:02:05[0m
+[0;32mI (322913) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (325913) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (335913) I2C_SCAN: Raw:0[0m
+[0;32mI (335913) I2C_SCAN: MV:107[0m
+[0;32mI (335913) I2C_SCAN: Enviando pacote #31 | temp=10.7°C | 21:02:15[0m
+[0;32mI (335953) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (338953) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (348953) I2C_SCAN: Raw:0[0m
+[0;32mI (348953) I2C_SCAN: MV:107[0m
+[0;32mI (348953) I2C_SCAN: Enviando pacote #32 | temp=10.7°C | 21:02:25[0m
+[0;32mI (348993) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (351993) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (361993) I2C_SCAN: Raw:0[0m
+[0;32mI (361993) I2C_SCAN: MV:107[0m
+[0;32mI (361993) I2C_SCAN: Enviando pacote #33 | temp=10.7°C | 21:02:35[0m
+[0;32mI (362033) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (362133) I2C_SCAN: Hora sincronizada: 21:02:51 31/12/1969[0m
+[0;32mI (372133) I2C_SCAN: Raw:0[0m
+[0;32mI (372133) I2C_SCAN: MV:107[0m
+[0;32mI (372133) I2C_SCAN: Enviando pacote #34 | temp=10.7°C | 21:03:01[0m
+[0;32mI (372173) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (372273) I2C_SCAN: Hora sincronizada: 21:03:01 31/12/1969[0m
+[0;32mI (382273) I2C_SCAN: Raw:0[0m
+[0;32mI (382273) I2C_SCAN: MV:107[0m
+[0;32mI (382273) I2C_SCAN: Enviando pacote #35 | temp=10.7°C | 21:03:11[0m
+[0;32mI (382313) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (382413) I2C_SCAN: Hora sincronizada: 21:03:11 31/12/1969[0m
+[0;32mI (392413) I2C_SCAN: Raw:0[0m
+[0;32mI (392413) I2C_SCAN: MV:107[0m
+[0;32mI (392413) I2C_SCAN: Enviando pacote #36 | temp=10.7°C | 21:03:21[0m
+[0;32mI (392453) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (392553) I2C_SCAN: Hora sincronizada: 21:03:21 31/12/1969[0m
+[0;32mI (402553) I2C_SCAN: Raw:0[0m
+[0;32mI (402553) I2C_SCAN: MV:107[0m
+[0;32mI (402553) I2C_SCAN: Enviando pacote #37 | temp=10.7°C | 21:03:31[0m
+[0;32mI (402593) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (402693) I2C_SCAN: Hora sincronizada: 21:03:31 31/12/1969[0m
+[0;32mI (412693) I2C_SCAN: Raw:0[0m
+[0;32mI (412693) I2C_SCAN: MV:107[0m
+[0;32mI (412693) I2C_SCAN: Enviando pacote #38 | temp=10.7°C | 21:03:41[0m
+[0;32mI (412733) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (412833) I2C_SCAN: Hora sincronizada: 21:03:41 31/12/1969[0m
+[0;32mI (422833) I2C_SCAN: Raw:0[0m
+[0;32mI (422833) I2C_SCAN: MV:107[0m
+[0;32mI (422833) I2C_SCAN: Enviando pacote #39 | temp=10.7°C | 21:03:51[0m
+[0;32mI (422873) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (422973) I2C_SCAN: Hora sincronizada: 21:03:51 31/12/1969[0m
+[0;32mI (432973) I2C_SCAN: Raw:0[0m
+[0;32mI (432973) I2C_SCAN: MV:107[0m
+[0;32mI (432973) I2C_SCAN: Enviando pacote #40 | temp=10.7°C | 21:04:01[0m
+[0;32mI (433013) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (433113) I2C_SCAN: Hora sincronizada: 21:04:02 31/12/1969[0m
+[0;32mI (443113) I2C_SCAN: Raw:0[0m
+[0;32mI (443113) I2C_SCAN: MV:107[0m
+[0;32mI (443113) I2C_SCAN: Enviando pacote #41 | temp=10.7°C | 21:04:12[0m
+[0;32mI (443153) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (443253) I2C_SCAN: Hora sincronizada: 21:04:12 31/12/1969[0m
+[0;32mI (453253) I2C_SCAN: Raw:0[0m
+[0;32mI (453253) I2C_SCAN: MV:107[0m
+[0;32mI (453253) I2C_SCAN: Enviando pacote #42 | temp=10.7°C | 21:04:22[0m
+[0;32mI (453293) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (453393) I2C_SCAN: Hora sincronizada: 21:04:22 31/12/1969[0m
+[0;32mI (463393) I2C_SCAN: Raw:0[0m
+[0;32mI (463393) I2C_SCAN: MV:107[0m
+[0;32mI (463393) I2C_SCAN: Enviando pacote #43 | temp=10.7°C | 21:04:32[0m
+[0;32mI (463433) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (463533) I2C_SCAN: Hora sincronizada: 21:04:32 31/12/1969[0m
+[0;32mI (473533) I2C_SCAN: Raw:0[0m
+[0;32mI (473533) I2C_SCAN: MV:107[0m
+[0;32mI (473533) I2C_SCAN: Enviando pacote #44 | temp=10.7°C | 21:04:42[0m
+[0;32mI (473573) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (473673) I2C_SCAN: Hora sincronizada: 21:04:42 31/12/1969[0m
+[0;32mI (483673) I2C_SCAN: Raw:0[0m
+[0;32mI (483673) I2C_SCAN: MV:107[0m
+[0;32mI (483673) I2C_SCAN: Enviando pacote #45 | temp=10.7°C | 21:04:52[0m
+[0;32mI (483713) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (483813) I2C_SCAN: Hora sincronizada: 21:04:52 31/12/1969[0m
+[0;32mI (493813) I2C_SCAN: Raw:0[0m
+[0;32mI (493813) I2C_SCAN: MV:107[0m
+[0;32mI (493813) I2C_SCAN: Enviando pacote #46 | temp=10.7°C | 21:05:02[0m
+[0;32mI (493853) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (504213) I2C_SCAN: Raw:0[0m
+[0;32mI (504213) I2C_SCAN: MV:107[0m
+[0;32mI (504213) I2C_SCAN: Enviando pacote #47 | temp=10.7°C | 21:05:12[0m
+[0;32mI (504253) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (504353) I2C_SCAN: Hora sincronizada: 21:05:13 31/12/1969[0m
+[0;32mI (514353) I2C_SCAN: Raw:0[0m
+[0;32mI (514353) I2C_SCAN: MV:107[0m
+[0;32mI (514353) I2C_SCAN: Enviando pacote #48 | temp=10.7°C | 21:05:23[0m
+[0;32mI (514393) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (514493) I2C_SCAN: Hora sincronizada: 21:05:23 31/12/1969[0m
+[0;32mI (524493) I2C_SCAN: Raw:0[0m
+[0;32mI (524493) I2C_SCAN: MV:107[0m
+[0;32mI (524493) I2C_SCAN: Enviando pacote #49 | temp=10.7°C | 21:05:33[0m
+[0;32mI (524533) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (524633) I2C_SCAN: Hora sincronizada: 21:05:33 31/12/1969[0m
+[0;32mI (534633) I2C_SCAN: Raw:0[0m
+[0;32mI (534633) I2C_SCAN: MV:107[0m
+[0;32mI (534633) I2C_SCAN: Enviando pacote #50 | temp=10.7°C | 21:05:43[0m
+[0;32mI (534673) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (534773) I2C_SCAN: Hora sincronizada: 21:05:43 31/12/1969[0m
+[0;32mI (544773) I2C_SCAN: Raw:0[0m
+[0;32mI (544773) I2C_SCAN: MV:107[0m
+[0;32mI (544773) I2C_SCAN: Enviando pacote #51 | temp=10.7°C | 21:05:53[0m
+[0;32mI (544813) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (555053) I2C_SCAN: Raw:0[0m
+[0;32mI (555053) I2C_SCAN: MV:107[0m
+[0;32mI (555053) I2C_SCAN: Enviando pacote #52 | temp=10.7°C | 21:06:03[0m
+[0;32mI (555093) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (555193) I2C_SCAN: Hora sincronizada: 21:06:04 31/12/1969[0m
+[0;32mI (565193) I2C_SCAN: Raw:0[0m
+[0;32mI (565193) I2C_SCAN: MV:107[0m
+[0;32mI (565193) I2C_SCAN: Enviando pacote #53 | temp=10.7°C | 21:06:14[0m
+[0;32mI (565233) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (565333) I2C_SCAN: Hora sincronizada: 21:06:14 31/12/1969[0m
+[0;32mI (575333) I2C_SCAN: Raw:0[0m
+[0;32mI (575333) I2C_SCAN: MV:107[0m
+[0;32mI (575333) I2C_SCAN: Enviando pacote #54 | temp=10.7°C | 21:06:24[0m
+[0;32mI (575373) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (575473) I2C_SCAN: Hora sincronizada: 21:06:24 31/12/1969[0m
+[0;32mI (585473) I2C_SCAN: Raw:0[0m
+[0;32mI (585473) I2C_SCAN: MV:107[0m
+[0;32mI (585473) I2C_SCAN: Enviando pacote #55 | temp=10.7°C | 21:06:34[0m
+[0;32mI (585513) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (585613) I2C_SCAN: Hora sincronizada: 21:06:34 31/12/1969[0m
+[0;32mI (595613) I2C_SCAN: Raw:0[0m
+[0;32mI (595613) I2C_SCAN: MV:107[0m
+[0;32mI (595613) I2C_SCAN: Enviando pacote #56 | temp=10.7°C | 21:06:44[0m
+[0;32mI (595653) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (595753) I2C_SCAN: Hora sincronizada: 21:06:44 31/12/1969[0m
+[0;32mI (605753) I2C_SCAN: Raw:0[0m
+[0;32mI (605753) I2C_SCAN: MV:107[0m
+[0;32mI (605753) I2C_SCAN: Enviando pacote #57 | temp=10.7°C | 21:06:54[0m
+[0;32mI (605793) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (605893) I2C_SCAN: Hora sincronizada: 21:06:54 31/12/1969[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 31 2026 11:08:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c24ch ( 49740) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001c274 vaddr=3ffb0000 size=02c20h ( 11296) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001ee9c vaddr=40080000 size=0117ch (  4476) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=13a64h ( 80484) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=00033a8c vaddr=4008117c size=0cb98h ( 52120) load[0m
+[0;32mI (165) esp_image: segment 5: paddr=0004062c vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (173) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (173) boot: Disabling RNG early entropy source...[0m
+[0;32mI (183) cpu_start: Multicore app[0m
+[0;32mI (192) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (192) cpu_start: Pro cpu start user code[0m
+[0;32mI (192) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (194) app_init: Application information:[0m
+[0;32mI (198) app_init: Project name:     LorawanTransmissor[0m
+[0;32mI (202) app_init: App version:      1[0m
+[0;32mI (206) app_init: Compile time:     Jun 12 2026 16:50:52[0m
+[0;32mI (211) app_init: ELF file SHA256:  1a4019141...[0m
+[0;32mI (215) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB3A30 len 0002C5D0 (177 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 4008DD14 len 000122EC (72 KiB): IRAM[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (270) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (283) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (293) main_task: Started on CPU0[0m
+[0;32mI (303) main_task: Calling app_main()[0m
+[0;32mI (303) I2C_SCAN: Scanning I2C bus...[0m
+[0;32mI (423) I2C_SCAN: OLED SSD1306 inicializado[0m
+[0;33mW (423) I2C_SCAN: DS3231 não encontrado [0m
+[1;31mE (423) i2c: i2c driver install error[0m
+[0;32mI (423) I2C_SCAN: === SCAN I2C ===[0m
+[0;32mI (423) I2C_SCAN: Scanning I2C bus...[0m
+[0;32mI (453) I2C_SCAN: === FIM SCAN ===[0m
+[0;32mI (473) I2C_SCAN: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (483) I2C_SCAN: LoRa inicializado OK[0m
+[0;32mI (1083) I2C_SCAN: Raw:0[0m
+[0;32mI (1083) I2C_SCAN: MV:107[0m
+[0;32mI (1083) I2C_SCAN: Enviando pacote #1 | temp=10.7°C | --:--:--[0m
+[0;32mI (1123) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1223) I2C_SCAN: Hora sincronizada: 21:07:19 31/12/1969[0m
+[0;32mI (11223) I2C_SCAN: Raw:0[0m
+[0;32mI (11223) I2C_SCAN: MV:107[0m
+[0;32mI (11223) I2C_SCAN: Enviando pacote #2 | temp=10.7°C | 21:07:29[0m
+[0;32mI (11263) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (11363) I2C_SCAN: Hora sincronizada: 21:07:29 31/12/1969[0m
+[0;32mI (21363) I2C_SCAN: Raw:0[0m
+[0;32mI (21363) I2C_SCAN: MV:107[0m
+[0;32mI (21363) I2C_SCAN: Enviando pacote #3 | temp=10.7°C | 21:07:39[0m
+[0;32mI (21403) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (21503) I2C_SCAN: Hora sincronizada: 21:07:39 31/12/1969[0m
+[0;32mI (31503) I2C_SCAN: Raw:0[0m
+[0;32mI (31503) I2C_SCAN: MV:107[0m
+[0;32mI (31503) I2C_SCAN: Enviando pacote #4 | temp=10.7°C | 21:07:49[0m
+[0;32mI (31543) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (31643) I2C_SCAN: Hora sincronizada: 21:07:49 31/12/1969[0m
+[0;32mI (41643) I2C_SCAN: Raw:0[0m
+[0;32mI (41643) I2C_SCAN: MV:107[0m
+[0;32mI (41643) I2C_SCAN: Enviando pacote #5 | temp=10.7°C | 21:07:59[0m
+[0;32mI (41683) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (44683) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (54683) I2C_SCAN: Raw:0[0m
+[0;32mI (54683) I2C_SCAN: MV:107[0m
+[0;32mI (54683) I2C_SCAN: Enviando pacote #6 | temp=10.7°C | 21:08:09[0m
+[0;32mI (54723) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (57723) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (67723) I2C_SCAN: Raw:0[0m
+[0;32mI (67723) I2C_SCAN: MV:107[0m
+[0;32mI (67723) I2C_SCAN: Enviando pacote #7 | temp=10.7°C | 21:08:19[0m
+[0;32mI (67763) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (70763) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (80763) I2C_SCAN: Raw:0[0m
+[0;32mI (80763) I2C_SCAN: MV:107[0m
+[0;32mI (80763) I2C_SCAN: Enviando pacote #8 | temp=10.7°C | 21:08:29[0m
+[0;32mI (80803) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (83803) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (93803) I2C_SCAN: Raw:0[0m
+[0;32mI (93803) I2C_SCAN: MV:107[0m
+[0;32mI (93803) I2C_SCAN: Enviando pacote #9 | temp=10.7°C | 21:08:39[0m
+[0;32mI (93843) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (93953) I2C_SCAN: Hora sincronizada: 21:08:51 31/12/1969[0m
+[0;32mI (103953) I2C_SCAN: Raw:0[0m
+[0;32mI (103953) I2C_SCAN: MV:107[0m
+[0;32mI (103953) I2C_SCAN: Enviando pacote #10 | temp=10.7°C | 21:09:01[0m
+[0;32mI (103993) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (104093) I2C_SCAN: Hora sincronizada: 21:09:02 31/12/1969[0m
+[0;32mI (114093) I2C_SCAN: Raw:0[0m
+[0;32mI (114093) I2C_SCAN: MV:107[0m
+[0;32mI (114093) I2C_SCAN: Enviando pacote #11 | temp=10.7°C | 21:09:12[0m
+[0;32mI (114133) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (114233) I2C_SCAN: Hora sincronizada: 21:09:12 31/12/1969[0m
+[0;32mI (124233) I2C_SCAN: Raw:0[0m
+[0;32mI (124233) I2C_SCAN: MV:107[0m
+[0;32mI (124233) I2C_SCAN: Enviando pacote #12 | temp=10.7°C | 21:09:22[0m
+[0;32mI (124273) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (124373) I2C_SCAN: Hora sincronizada: 21:09:22 31/12/1969[0m
+[0;32mI (134373) I2C_SCAN: Raw:0[0m
+[0;32mI (134373) I2C_SCAN: MV:107[0m
+[0;32mI (134373) I2C_SCAN: Enviando pacote #13 | temp=10.7°C | 21:09:32[0m
+[0;32mI (134413) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (134513) I2C_SCAN: Hora sincronizada: 21:09:32 31/12/1969[0m
+[0;32mI (144513) I2C_SCAN: Raw:0[0m
+[0;32mI (144513) I2C_SCAN: MV:107[0m
+[0;32mI (144513) I2C_SCAN: Enviando pacote #14 | temp=10.7°C | 21:09:42[0m
+[0;32mI (144553) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (144653) I2C_SCAN: Hora sincronizada: 21:09:42 31/12/1969[0m
+[0;32mI (154653) I2C_SCAN: Raw:0[0m
+[0;32mI (154653) I2C_SCAN: MV:107[0m
+[0;32mI (154653) I2C_SCAN: Enviando pacote #15 | temp=10.7°C | 21:09:52[0m
+[0;32mI (154693) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (154793) I2C_SCAN: Hora sincronizada: 21:09:52 31/12/1969[0m
+[0;32mI (164793) I2C_SCAN: Raw:0[0m
+[0;32mI (164793) I2C_SCAN: MV:107[0m
+[0;32mI (164793) I2C_SCAN: Enviando pacote #16 | temp=10.7°C | 21:10:02[0m
+[0;32mI (164833) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (164933) I2C_SCAN: Hora sincronizada: 21:10:02 31/12/1969[0m
+[0;32mI (174933) I2C_SCAN: Raw:0[0m
+[0;32mI (174933) I2C_SCAN: MV:107[0m
+[0;32mI (174933) I2C_SCAN: Enviando pacote #17 | temp=10.7°C | 21:10:12[0m
+[0;32mI (174973) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (175073) I2C_SCAN: Hora sincronizada: 21:10:13 31/12/1969[0m
+[0;32mI (185073) I2C_SCAN: Raw:0[0m
+[0;32mI (185073) I2C_SCAN: MV:107[0m
+[0;32mI (185073) I2C_SCAN: Enviando pacote #18 | temp=10.7°C | 21:10:23[0m
+[0;32mI (185113) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (185213) I2C_SCAN: Hora sincronizada: 21:10:23 31/12/1969[0m
+[0;32mI (195213) I2C_SCAN: Raw:0[0m
+[0;32mI (195213) I2C_SCAN: MV:107[0m
+[0;32mI (195213) I2C_SCAN: Enviando pacote #19 | temp=10.7°C | 21:10:33[0m
+[0;32mI (195253) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (195353) I2C_SCAN: Hora sincronizada: 21:10:33 31/12/1969[0m
+[0;32mI (205353) I2C_SCAN: Raw:0[0m
+[0;32mI (205353) I2C_SCAN: MV:107[0m
+[0;32mI (205353) I2C_SCAN: Enviando pacote #20 | temp=10.7°C | 21:10:43[0m
+[0;32mI (205393) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (205493) I2C_SCAN: Hora sincronizada: 21:10:43 31/12/1969[0m
+[0;32mI (215493) I2C_SCAN: Raw:0[0m
+[0;32mI (215493) I2C_SCAN: MV:107[0m
+[0;32mI (215493) I2C_SCAN: Enviando pacote #21 | temp=10.7°C | 21:10:53[0m
+[0;32mI (215533) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (215633) I2C_SCAN: Hora sincronizada: 21:10:53 31/12/1969[0m
+[0;32mI (225633) I2C_SCAN: Raw:0[0m
+[0;32mI (225633) I2C_SCAN: MV:107[0m
+[0;32mI (225633) I2C_SCAN: Enviando pacote #22 | temp=10.7°C | 21:11:03[0m
+[0;32mI (225673) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (228673) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (238673) I2C_SCAN: Raw:0[0m
+[0;32mI (238673) I2C_SCAN: MV:107[0m
+[0;32mI (238673) I2C_SCAN: Enviando pacote #23 | temp=10.7°C | 21:11:13[0m
+[0;32mI (238713) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (241713) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (251713) I2C_SCAN: Raw:0[0m
+[0;32mI (251713) I2C_SCAN: MV:107[0m
+[0;32mI (251713) I2C_SCAN: Enviando pacote #24 | temp=10.7°C | 21:11:23[0m
+[0;32mI (251753) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (254753) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (264753) I2C_SCAN: Raw:0[0m
+[0;32mI (264753) I2C_SCAN: MV:107[0m
+[0;32mI (264753) I2C_SCAN: Enviando pacote #25 | temp=10.7°C | 21:11:33[0m
+[0;32mI (264793) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (265853) I2C_SCAN: Hora sincronizada: 21:11:43 31/12/1969[0m
+[0;32mI (275853) I2C_SCAN: Raw:0[0m
+[0;32mI (275853) I2C_SCAN: MV:107[0m
+[0;32mI (275853) I2C_SCAN: Enviando pacote #26 | temp=10.7°C | 21:11:53[0m
+[0;32mI (275893) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (276003) I2C_SCAN: Hora sincronizada: 21:11:54 31/12/1969[0m
+[0;32mI (286003) I2C_SCAN: Raw:0[0m
+[0;32mI (286003) I2C_SCAN: MV:107[0m
+[0;32mI (286003) I2C_SCAN: Enviando pacote #27 | temp=10.7°C | 21:12:04[0m
+[0;32mI (286043) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (286133) I2C_SCAN: Hora sincronizada: 21:12:04 31/12/1969[0m
+[0;32mI (296133) I2C_SCAN: Raw:0[0m
+[0;32mI (296133) I2C_SCAN: MV:107[0m
+[0;32mI (296133) I2C_SCAN: Enviando pacote #28 | temp=10.7°C | 21:12:14[0m
+[0;32mI (296173) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (296263) I2C_SCAN: Hora sincronizada: 21:12:14 31/12/1969[0m
+[0;32mI (306263) I2C_SCAN: Raw:0[0m
+[0;32mI (306263) I2C_SCAN: MV:107[0m
+[0;32mI (306263) I2C_SCAN: Enviando pacote #29 | temp=10.7°C | 21:12:24[0m
+[0;32mI (306303) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (306393) I2C_SCAN: Hora sincronizada: 21:12:24 31/12/1969[0m
+[0;32mI (316393) I2C_SCAN: Raw:0[0m
+[0;32mI (316393) I2C_SCAN: MV:107[0m
+[0;32mI (316393) I2C_SCAN: Enviando pacote #30 | temp=10.7°C | 21:12:34[0m
+[0;32mI (316433) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (316533) I2C_SCAN: Hora sincronizada: 21:12:34 31/12/1969[0m
+[0;32mI (326533) I2C_SCAN: Raw:0[0m
+[0;32mI (326533) I2C_SCAN: MV:107[0m
+[0;32mI (326533) I2C_SCAN: Enviando pacote #31 | temp=10.7°C | 21:12:44[0m
+[0;32mI (326573) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (326673) I2C_SCAN: Hora sincronizada: 21:12:44 31/12/1969[0m
+[0;32mI (336673) I2C_SCAN: Raw:0[0m
+[0;32mI (336673) I2C_SCAN: MV:107[0m
+[0;32mI (336673) I2C_SCAN: Enviando pacote #32 | temp=10.7°C | 21:12:54[0m
+[0;32mI (336713) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (336813) I2C_SCAN: Hora sincronizada: 21:12:54 31/12/1969[0m
+[0;32mI (346813) I2C_SCAN: Raw:0[0m
+[0;32mI (346813) I2C_SCAN: MV:107[0m
+[0;32mI (346813) I2C_SCAN: Enviando pacote #33 | temp=10.7°C | 21:13:04[0m
+[0;32mI (346853) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (346943) I2C_SCAN: Hora sincronizada: 21:13:04 31/12/1969[0m
+[0;32mI (356943) I2C_SCAN: Raw:0[0m
+[0;32mI (356943) I2C_SCAN: MV:107[0m
+[0;32mI (356943) I2C_SCAN: Enviando pacote #34 | temp=10.7°C | 21:13:14[0m
+[0;32mI (356983) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (357083) I2C_SCAN: Hora sincronizada: 21:13:15 31/12/1969[0m
+[0;32mI (367083) I2C_SCAN: Raw:0[0m
+[0;32mI (367083) I2C_SCAN: MV:107[0m
+[0;32mI (367083) I2C_SCAN: Enviando pacote #35 | temp=10.7°C | 21:13:25[0m
+[0;32mI (367123) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (367213) I2C_SCAN: Hora sincronizada: 21:13:25 31/12/1969[0m
+[0;32mI (377213) I2C_SCAN: Raw:0[0m
+[0;32mI (377213) I2C_SCAN: MV:107[0m
+[0;32mI (377213) I2C_SCAN: Enviando pacote #36 | temp=10.7°C | 21:13:35[0m
+[0;32mI (377253) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (377403) I2C_SCAN: CRC error no pacote de hora[0m
+[0;32mI (387403) I2C_SCAN: Raw:0[0m
+[0;32mI (387403) I2C_SCAN: MV:107[0m
+[0;32mI (387403) I2C_SCAN: Enviando pacote #37 | temp=10.7°C | 21:13:45[0m
+[0;32mI (387443) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (387533) I2C_SCAN: Hora sincronizada: 21:13:45 31/12/1969[0m
+[0;32mI (397533) I2C_SCAN: Raw:0[0m
+[0;32mI (397533) I2C_SCAN: MV:107[0m
+[0;32mI (397533) I2C_SCAN: Enviando pacote #38 | temp=10.7°C | 21:13:55[0m
+[0;32mI (397573) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (397663) I2C_SCAN: Hora sincronizada: 21:13:55 31/12/1969[0m
+[0;32mI (407663) I2C_SCAN: Raw:0[0m
+[0;32mI (407663) I2C_SCAN: MV:107[0m
+[0;32mI (407663) I2C_SCAN: Enviando pacote #39 | temp=10.7°C | 21:14:05[0m
+[0;32mI (407703) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (407793) I2C_SCAN: Hora sincronizada: 21:14:05 31/12/1969[0m
+[0;32mI (417793) I2C_SCAN: Raw:0[0m
+[0;32mI (417793) I2C_SCAN: MV:107[0m
+[0;32mI (417793) I2C_SCAN: Enviando pacote #40 | temp=10.7°C | 21:14:15[0m
+[0;32mI (417833) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (417923) I2C_SCAN: Hora sincronizada: 21:14:15 31/12/1969[0m
+[0;32mI (427923) I2C_SCAN: Raw:0[0m
+[0;32mI (427923) I2C_SCAN: MV:107[0m
+[0;32mI (427923) I2C_SCAN: Enviando pacote #41 | temp=10.7°C | 21:14:25[0m
+[0;32mI (427963) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (428053) I2C_SCAN: Hora sincronizada: 21:14:26 31/12/1969[0m
+[0;32mI (438053) I2C_SCAN: Raw:0[0m
+[0;32mI (438053) I2C_SCAN: MV:107[0m
+[0;32mI (438053) I2C_SCAN: Enviando pacote #42 | temp=10.7°C | 21:14:36[0m
+[0;32mI (438093) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (438183) I2C_SCAN: Hora sincronizada: 21:14:36 31/12/1969[0m
+[0;32mI (448183) I2C_SCAN: Raw:0[0m
+[0;32mI (448183) I2C_SCAN: MV:107[0m
+[0;32mI (448183) I2C_SCAN: Enviando pacote #43 | temp=10.7°C | 21:14:46[0m
+[0;32mI (448223) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (448313) I2C_SCAN: Hora sincronizada: 21:14:46 31/12/1969[0m
+[0;32mI (458313) I2C_SCAN: Raw:0[0m
+[0;32mI (458313) I2C_SCAN: MV:107[0m
+[0;32mI (458313) I2C_SCAN: Enviando pacote #44 | temp=10.7°C | 21:14:56[0m
+[0;32mI (458353) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (458453) I2C_SCAN: Hora sincronizada: 21:14:56 31/12/1969[0m
+[0;32mI (468453) I2C_SCAN: Raw:0[0m
+[0;32mI (468453) I2C_SCAN: MV:107[0m
+[0;32mI (468453) I2C_SCAN: Enviando pacote #45 | temp=10.7°C | 21:15:06[0m
+[0;32mI (468493) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (468593) I2C_SCAN: Hora sincronizada: 21:15:06 31/12/1969[0m
+[0;32mI (478593) I2C_SCAN: Raw:0[0m
+[0;32mI (478593) I2C_SCAN: MV:107[0m
+[0;32mI (478593) I2C_SCAN: Enviando pacote #46 | temp=10.7°C | 21:15:16[0m
+[0;32mI (478633) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (478733) I2C_SCAN: Hora sincronizada: 21:15:16 31/12/1969[0m
+[0;32mI (488733) I2C_SCAN: Raw:0[0m
+[0;32mI (488733) I2C_SCAN: MV:107[0m
+[0;32mI (488733) I2C_SCAN: Enviando pacote #47 | temp=10.7°C | 21:15:26[0m
+[0;32mI (488773) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (488873) I2C_SCAN: Hora sincronizada: 21:15:26 31/12/1969[0m
+[0;32mI (498873) I2C_SCAN: Raw:0[0m
+[0;32mI (498873) I2C_SCAN: MV:107[0m
+[0;32mI (498873) I2C_SCAN: Enviando pacote #48 | temp=10.7°C | 21:15:36[0m
+[0;32mI (498913) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (499013) I2C_SCAN: Hora sincronizada: 21:15:37 31/12/1969[0m
+[0;32mI (509013) I2C_SCAN: Raw:0[0m
+[0;32mI (509013) I2C_SCAN: MV:107[0m
+[0;32mI (509013) I2C_SCAN: Enviando pacote #49 | temp=10.7°C | 21:15:47[0m
+[0;32mI (509053) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (509153) I2C_SCAN: Hora sincronizada: 21:15:47 31/12/1969[0m
+[0;32mI (519153) I2C_SCAN: Raw:0[0m
+[0;32mI (519153) I2C_SCAN: MV:107[0m
+[0;32mI (519153) I2C_SCAN: Enviando pacote #50 | temp=10.7°C | 21:15:57[0m
+[0;32mI (519193) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (529393) I2C_SCAN: Raw:0[0m
+[0;32mI (529393) I2C_SCAN: MV:107[0m
+[0;32mI (529393) I2C_SCAN: Enviando pacote #51 | temp=10.7°C | 21:16:07[0m
+[0;32mI (529433) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (529533) I2C_SCAN: Hora sincronizada: 21:16:07 31/12/1969[0m
+[0;32mI (539533) I2C_SCAN: Raw:0[0m
+[0;32mI (539533) I2C_SCAN: MV:107[0m
+[0;32mI (539533) I2C_SCAN: Enviando pacote #52 | temp=10.7°C | 21:16:17[0m
+[0;32mI (539573) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (539663) I2C_SCAN: Hora sincronizada: 21:16:17 31/12/1969[0m
+[0;32mI (549663) I2C_SCAN: Raw:0[0m
+[0;32mI (549663) I2C_SCAN: MV:107[0m
+[0;32mI (549663) I2C_SCAN: Enviando pacote #53 | temp=10.7°C | 21:16:27[0m
+[0;32mI (549703) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (549803) I2C_SCAN: Hora sincronizada: 21:16:27 31/12/1969[0m
+[0;32mI (559803) I2C_SCAN: Raw:0[0m
+[0;32mI (559803) I2C_SCAN: MV:107[0m
+[0;32mI (559803) I2C_SCAN: Enviando pacote #54 | temp=10.7°C | 21:16:37[0m
+[0;32mI (559843) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (559933) I2C_SCAN: Hora sincronizada: 21:16:37 31/12/1969[0m
+[0;32mI (569933) I2C_SCAN: Raw:0[0m
+[0;32mI (569933) I2C_SCAN: MV:107[0m
+[0;32mI (569933) I2C_SCAN: Enviando pacote #55 | temp=10.7°C | 21:16:47[0m
+[0;32mI (569973) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (570073) I2C_SCAN: Hora sincronizada: 21:16:48 31/12/1969[0m
+[0;32mI (580073) I2C_SCAN: Raw:0[0m
+[0;32mI (580073) I2C_SCAN: MV:107[0m
+[0;32mI (580073) I2C_SCAN: Enviando pacote #56 | temp=10.7°C | 21:16:58[0m
+[0;32mI (580113) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (583113) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (593113) I2C_SCAN: Raw:0[0m
+[0;32mI (593113) I2C_SCAN: MV:107[0m
+[0;32mI (593113) I2C_SCAN: Enviando pacote #57 | temp=10.7°C | 21:17:08[0m
+[0;32mI (593153) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (596153) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (606153) I2C_SCAN: Raw:0[0m
+[0;32mI (606153) I2C_SCAN: MV:107[0m
+[0;32mI (606153) I2C_SCAN: Enviando pacote #58 | temp=10.7°C | 21:17:18[0m
+[0;32mI (606193) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (609193) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (619193) I2C_SCAN: Raw:0[0m
+[0;32mI (619193) I2C_SCAN: MV:107[0m
+[0;32mI (619193) I2C_SCAN: Enviando pacote #59 | temp=10.7°C | 21:17:28[0m
+[0;32mI (619233) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (622233) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (632233) I2C_SCAN: Raw:0[0m
+[0;32mI (632233) I2C_SCAN: MV:107[0m
+[0;32mI (632233) I2C_SCAN: Enviando pacote #60 | temp=10.7°C | 21:17:38[0m
+[0;32mI (632273) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (632373) I2C_SCAN: Hora sincronizada: 21:17:50 31/12/1969[0m
+[0;32mI (642373) I2C_SCAN: Raw:0[0m
+[0;32mI (642373) I2C_SCAN: MV:107[0m
+[0;32mI (642373) I2C_SCAN: Enviando pacote #61 | temp=10.7°C | 21:18:00[0m
+[0;32mI (642413) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (642513) I2C_SCAN: Hora sincronizada: 21:18:00 31/12/1969[0m
+[0;32mI (652513) I2C_SCAN: Raw:0[0m
+[0;32mI (652513) I2C_SCAN: MV:107[0m
+[0;32mI (652513) I2C_SCAN: Enviando pacote #62 | temp=10.7°C | 21:18:10[0m
+[0;32mI (652553) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (652653) I2C_SCAN: Hora sincronizada: 21:18:10 31/12/1969[0m
+[0;32mI (662653) I2C_SCAN: Raw:0[0m
+[0;32mI (662653) I2C_SCAN: MV:107[0m
+[0;32mI (662653) I2C_SCAN: Enviando pacote #63 | temp=10.7°C | 21:18:20[0m
+[0;32mI (662693) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (662793) I2C_SCAN: Hora sincronizada: 21:18:20 31/12/1969[0m
+[0;32mI (672793) I2C_SCAN: Raw:0[0m
+[0;32mI (672793) I2C_SCAN: MV:107[0m
+[0;32mI (672793) I2C_SCAN: Enviando pacote #64 | temp=10.7°C | 21:18:30[0m
+[0;32mI (672833) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (672933) I2C_SCAN: Hora sincronizada: 21:18:30 31/12/1969[0m
+[0;32mI (682933) I2C_SCAN: Raw:0[0m
+[0;32mI (682933) I2C_SCAN: MV:107[0m
+[0;32mI (682933) I2C_SCAN: Enviando pacote #65 | temp=10.7°C | 21:18:40[0m
+[0;32mI (682973) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (683073) I2C_SCAN: Hora sincronizada: 21:18:41 31/12/1969[0m
+[0;32mI (693073) I2C_SCAN: Raw:0[0m
+[0;32mI (693073) I2C_SCAN: MV:107[0m
+[0;32mI (693073) I2C_SCAN: Enviando pacote #66 | temp=10.7°C | 21:18:51[0m
+[0;32mI (693113) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (693213) I2C_SCAN: Hora sincronizada: 21:18:51 31/12/1969[0m
+[0;32mI (703213) I2C_SCAN: Raw:0[0m
+[0;32mI (703213) I2C_SCAN: MV:107[0m
+[0;32mI (703213) I2C_SCAN: Enviando pacote #67 | temp=10.7°C | 21:19:01[0m
+[0;32mI (703253) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (703353) I2C_SCAN: Hora sincronizada: 21:19:01 31/12/1969[0m
+[0;32mI (713353) I2C_SCAN: Raw:0[0m
+[0;32mI (713353) I2C_SCAN: MV:107[0m
+[0;32mI (713353) I2C_SCAN: Enviando pacote #68 | temp=10.7°C | 21:19:11[0m
+[0;32mI (713393) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (713493) I2C_SCAN: Hora sincronizada: 21:19:11 31/12/1969[0m
+[0;32mI (723493) I2C_SCAN: Raw:0[0m
+[0;32mI (723493) I2C_SCAN: MV:107[0m
+[0;32mI (723493) I2C_SCAN: Enviando pacote #69 | temp=10.7°C | 21:19:21[0m
+[0;32mI (723533) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (723633) I2C_SCAN: Hora sincronizada: 21:19:21 31/12/1969[0m
+[0;32mI (733633) I2C_SCAN: Raw:0[0m
+[0;32mI (733633) I2C_SCAN: MV:107[0m
+[0;32mI (733633) I2C_SCAN: Enviando pacote #70 | temp=10.7°C | 21:19:31[0m
+[0;32mI (733673) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (733773) I2C_SCAN: Hora sincronizada: 21:19:31 31/12/1969[0m
+[0;32mI (743773) I2C_SCAN: Raw:0[0m
+[0;32mI (743773) I2C_SCAN: MV:107[0m
+[0;32mI (743773) I2C_SCAN: Enviando pacote #71 | temp=10.7°C | 21:19:41[0m
+[0;32mI (743813) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (743913) I2C_SCAN: Hora sincronizada: 21:19:41 31/12/1969[0m
+[0;32mI (753913) I2C_SCAN: Raw:0[0m
+[0;32mI (753913) I2C_SCAN: MV:107[0m
+[0;32mI (753913) I2C_SCAN: Enviando pacote #72 | temp=10.7°C | 21:19:51[0m
+[0;32mI (753953) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (754053) I2C_SCAN: Hora sincronizada: 21:19:52 31/12/1969[0m
+[0;32mI (764053) I2C_SCAN: Raw:0[0m
+[0;32mI (764053) I2C_SCAN: MV:107[0m
+[0;32mI (764053) I2C_SCAN: Enviando pacote #73 | temp=10.7°C | 21:20:02[0m
+[0;32mI (764093) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (767093) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (777093) I2C_SCAN: Raw:0[0m
+[0;32mI (777093) I2C_SCAN: MV:107[0m
+[0;32mI (777093) I2C_SCAN: Enviando pacote #74 | temp=10.7°C | 21:20:12[0m
+[0;32mI (777133) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (780133) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (790133) I2C_SCAN: Raw:0[0m
+[0;32mI (790133) I2C_SCAN: MV:107[0m
+[0;32mI (790133) I2C_SCAN: Enviando pacote #75 | temp=10.7°C | 21:20:22[0m
+[0;32mI (790173) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (793173) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (803173) I2C_SCAN: Raw:0[0m
+[0;32mI (803173) I2C_SCAN: MV:107[0m
+[0;32mI (803173) I2C_SCAN: Enviando pacote #76 | temp=10.7°C | 21:20:32[0m
+[0;32mI (803213) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (806213) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (816213) I2C_SCAN: Raw:0[0m
+[0;32mI (816213) I2C_SCAN: MV:107[0m
+[0;32mI (816213) I2C_SCAN: Enviando pacote #77 | temp=10.7°C | 21:20:42[0m
+[0;32mI (816253) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (816353) I2C_SCAN: Hora sincronizada: 21:20:54 31/12/1969[0m
+[0;32mI (826353) I2C_SCAN: Raw:0[0m
+[0;32mI (826353) I2C_SCAN: MV:107[0m
+[0;32mI (826353) I2C_SCAN: Enviando pacote #78 | temp=10.7°C | 21:21:04[0m
+[0;32mI (826393) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (826493) I2C_SCAN: Hora sincronizada: 21:21:04 31/12/1969[0m
+[0;32mI (836493) I2C_SCAN: Raw:0[0m
+[0;32mI (836493) I2C_SCAN: MV:107[0m
+[0;32mI (836493) I2C_SCAN: Enviando pacote #79 | temp=10.7°C | 21:21:14[0m
+[0;32mI (836533) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (836633) I2C_SCAN: Hora sincronizada: 21:21:14 31/12/1969[0m
+[0;32mI (846633) I2C_SCAN: Raw:0[0m
+[0;32mI (846633) I2C_SCAN: MV:107[0m
+[0;32mI (846633) I2C_SCAN: Enviando pacote #80 | temp=10.7°C | 21:21:24[0m
+[0;32mI (846673) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (846773) I2C_SCAN: Hora sincronizada: 21:21:24 31/12/1969[0m
+[0;32mI (856773) I2C_SCAN: Raw:0[0m
+[0;32mI (856773) I2C_SCAN: MV:107[0m
+[0;32mI (856773) I2C_SCAN: Enviando pacote #81 | temp=10.7°C | 21:21:34[0m
+[0;32mI (856813) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (856913) I2C_SCAN: Hora sincronizada: 21:21:34 31/12/1969[0m
+[0;32mI (866913) I2C_SCAN: Raw:0[0m
+[0;32mI (866913) I2C_SCAN: MV:107[0m
+[0;32mI (866913) I2C_SCAN: Enviando pacote #82 | temp=10.7°C | 21:21:44[0m
+[0;32mI (866953) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (867053) I2C_SCAN: Hora sincronizada: 21:21:45 31/12/1969[0m
+[0;32mI (877053) I2C_SCAN: Raw:0[0m
+[0;32mI (877053) I2C_SCAN: MV:107[0m
+[0;32mI (877053) I2C_SCAN: Enviando pacote #83 | temp=10.7°C | 21:21:55[0m
+[0;32mI (877093) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (877193) I2C_SCAN: Hora sincronizada: 21:21:55 31/12/1969[0m
+[0;32mI (887193) I2C_SCAN: Raw:0[0m
+[0;32mI (887193) I2C_SCAN: MV:107[0m
+[0;32mI (887193) I2C_SCAN: Enviando pacote #84 | temp=10.7°C | 21:22:05[0m
+[0;32mI (887233) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (887333) I2C_SCAN: Hora sincronizada: 21:22:05 31/12/1969[0m
+[0;32mI (897333) I2C_SCAN: Raw:0[0m
+[0;32mI (897333) I2C_SCAN: MV:107[0m
+[0;32mI (897333) I2C_SCAN: Enviando pacote #85 | temp=10.7°C | 21:22:15[0m
+[0;32mI (897373) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (897473) I2C_SCAN: Hora sincronizada: 21:22:15 31/12/1969[0m
+[0;32mI (907473) I2C_SCAN: Raw:0[0m
+[0;32mI (907473) I2C_SCAN: MV:107[0m
+[0;32mI (907473) I2C_SCAN: Enviando pacote #86 | temp=10.7°C | 21:22:25[0m
+[0;32mI (907513) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (910513) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (920513) I2C_SCAN: Raw:0[0m
+[0;32mI (920513) I2C_SCAN: MV:107[0m
+[0;32mI (920513) I2C_SCAN: Enviando pacote #87 | temp=10.7°C | 21:22:35[0m
+[0;32mI (920553) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (923553) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (933553) I2C_SCAN: Raw:0[0m
+[0;32mI (933553) I2C_SCAN: MV:107[0m
+[0;32mI (933553) I2C_SCAN: Enviando pacote #88 | temp=10.7°C | 21:22:45[0m
+[0;32mI (933593) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (936593) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (946593) I2C_SCAN: Raw:0[0m
+[0;32mI (946593) I2C_SCAN: MV:107[0m
+[0;32mI (946593) I2C_SCAN: Enviando pacote #89 | temp=10.7°C | 21:22:55[0m
+[0;32mI (946633) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (949633) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (959633) I2C_SCAN: Raw:0[0m
+[0;32mI (959633) I2C_SCAN: MV:107[0m
+[0;32mI (959633) I2C_SCAN: Enviando pacote #90 | temp=10.7°C | 21:23:05[0m
+[0;32mI (959673) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (962673) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (972673) I2C_SCAN: Raw:0[0m
+[0;32mI (972673) I2C_SCAN: MV:107[0m
+[0;32mI (972673) I2C_SCAN: Enviando pacote #91 | temp=10.7°C | 21:23:15[0m
+[0;32mI (972713) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (972813) I2C_SCAN: Hora sincronizada: 21:23:30 31/12/1969[0m
+[0;32mI (982813) I2C_SCAN: Raw:0[0m
+[0;32mI (982813) I2C_SCAN: MV:107[0m
+[0;32mI (982813) I2C_SCAN: Enviando pacote #92 | temp=10.7°C | 21:23:40[0m
+[0;32mI (982853) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (982953) I2C_SCAN: Hora sincronizada: 21:23:40 31/12/1969[0m
+[0;32mI (992953) I2C_SCAN: Raw:0[0m
+[0;32mI (992953) I2C_SCAN: MV:107[0m
+[0;32mI (992953) I2C_SCAN: Enviando pacote #93 | temp=10.7°C | 21:23:50[0m
+[0;32mI (992993) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (993093) I2C_SCAN: Hora sincronizada: 21:23:51 31/12/1969[0m
+[0;32mI (1003093) I2C_SCAN: Raw:0[0m
+[0;32mI (1003093) I2C_SCAN: MV:107[0m
+[0;32mI (1003093) I2C_SCAN: Enviando pacote #94 | temp=10.7°C | 21:24:01[0m
+[0;32mI (1003133) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1003233) I2C_SCAN: Hora sincronizada: 21:24:01 31/12/1969[0m
+[0;32mI (1013233) I2C_SCAN: Raw:0[0m
+[0;32mI (1013233) I2C_SCAN: MV:107[0m
+[0;32mI (1013233) I2C_SCAN: Enviando pacote #95 | temp=10.7°C | 21:24:11[0m
+[0;32mI (1013273) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1013373) I2C_SCAN: Hora sincronizada: 21:24:11 31/12/1969[0m
+[0;32mI (1023373) I2C_SCAN: Raw:0[0m
+[0;32mI (1023373) I2C_SCAN: MV:107[0m
+[0;32mI (1023373) I2C_SCAN: Enviando pacote #96 | temp=10.7°C | 21:24:21[0m
+[0;32mI (1023413) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1023513) I2C_SCAN: Hora sincronizada: 21:24:21 31/12/1969[0m
+[0;32mI (1033513) I2C_SCAN: Raw:0[0m
+[0;32mI (1033513) I2C_SCAN: MV:107[0m
+[0;32mI (1033513) I2C_SCAN: Enviando pacote #97 | temp=10.7°C | 21:24:31[0m
+[0;32mI (1033553) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1033653) I2C_SCAN: Hora sincronizada: 21:24:31 31/12/1969[0m
+[0;32mI (1043653) I2C_SCAN: Raw:0[0m
+[0;32mI (1043653) I2C_SCAN: MV:107[0m
+[0;32mI (1043653) I2C_SCAN: Enviando pacote #98 | temp=10.7°C | 21:24:41[0m
+[0;32mI (1043693) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1043793) I2C_SCAN: Hora sincronizada: 21:24:41 31/12/1969[0m
+[0;32mI (1053793) I2C_SCAN: Raw:0[0m
+[0;32mI (1053793) I2C_SCAN: MV:107[0m
+[0;32mI (1053793) I2C_SCAN: Enviando pacote #99 | temp=10.7°C | 21:24:51[0m
+[0;32mI (1053833) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1053933) I2C_SCAN: Hora sincronizada: 21:24:51 31/12/1969[0m
+[0;32mI (1063933) I2C_SCAN: Raw:0[0m
+[0;32mI (1063933) I2C_SCAN: MV:107[0m
+[0;32mI (1063933) I2C_SCAN: Enviando pacote #100 | temp=10.7°C | 21:25:01[0m
+[0;32mI (1063973) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (1066973) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (1076973) I2C_SCAN: Raw:0[0m
+[0;32mI (1076973) I2C_SCAN: MV:107[0m
+[0;32mI (1076973) I2C_SCAN: Enviando pacote #101 | temp=10.7°C | 21:25:11[0m
+[0;32mI (1077013) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1077113) I2C_SCAN: Hora sincronizada: 21:25:15 31/12/1969[0m
+[0;32mI (1087113) I2C_SCAN: Raw:0[0m
+[0;32mI (1087113) I2C_SCAN: MV:107[0m
+[0;32mI (1087113) I2C_SCAN: Enviando pacote #102 | temp=10.7°C | 21:25:25[0m
+[0;32mI (1087153) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1087253) I2C_SCAN: Hora sincronizada: 21:25:25 31/12/1969[0m
+[0;32mI (1097253) I2C_SCAN: Raw:0[0m
+[0;32mI (1097253) I2C_SCAN: MV:107[0m
+[0;32mI (1097253) I2C_SCAN: Enviando pacote #103 | temp=10.7°C | 21:25:35[0m
+[0;32mI (1097293) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1097393) I2C_SCAN: Hora sincronizada: 21:25:35 31/12/1969[0m
+[0;32mI (1107393) I2C_SCAN: Raw:0[0m
+[0;32mI (1107393) I2C_SCAN: MV:107[0m
+[0;32mI (1107393) I2C_SCAN: Enviando pacote #104 | temp=10.7°C | 21:25:45[0m
+[0;32mI (1107433) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1107533) I2C_SCAN: Hora sincronizada: 21:25:45 31/12/1969[0m
+[0;32mI (1117533) I2C_SCAN: Raw:0[0m
+[0;32mI (1117533) I2C_SCAN: MV:107[0m
+[0;32mI (1117533) I2C_SCAN: Enviando pacote #105 | temp=10.7°C | 21:25:55[0m
+[0;32mI (1117573) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1117673) I2C_SCAN: Hora sincronizada: 21:25:55 31/12/1969[0m
+[0;32mI (1127673) I2C_SCAN: Raw:0[0m
+[0;32mI (1127673) I2C_SCAN: MV:107[0m
+[0;32mI (1127673) I2C_SCAN: Enviando pacote #106 | temp=10.7°C | 21:26:05[0m
+[0;32mI (1127713) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1127813) I2C_SCAN: Hora sincronizada: 21:26:05 31/12/1969[0m
+[0;32mI (1137813) I2C_SCAN: Raw:0[0m
+[0;32mI (1137813) I2C_SCAN: MV:107[0m
+[0;32mI (1137813) I2C_SCAN: Enviando pacote #107 | temp=10.7°C | 21:26:15[0m
+[0;32mI (1137853) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1137953) I2C_SCAN: Hora sincronizada: 21:26:15 31/12/1969[0m
+[0;32mI (1147953) I2C_SCAN: Raw:0[0m
+[0;32mI (1147953) I2C_SCAN: MV:107[0m
+[0;32mI (1147953) I2C_SCAN: Enviando pacote #108 | temp=10.7°C | 21:26:25[0m
+[0;32mI (1147993) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1148093) I2C_SCAN: Hora sincronizada: 21:26:26 31/12/1969[0m
+[0;32mI (1158093) I2C_SCAN: Raw:0[0m
+[0;32mI (1158093) I2C_SCAN: MV:107[0m
+[0;32mI (1158093) I2C_SCAN: Enviando pacote #109 | temp=10.7°C | 21:26:36[0m
+[0;32mI (1158133) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1158233) I2C_SCAN: Hora sincronizada: 21:26:36 31/12/1969[0m
+[0;32mI (1168233) I2C_SCAN: Raw:0[0m
+[0;32mI (1168233) I2C_SCAN: MV:107[0m
+[0;32mI (1168233) I2C_SCAN: Enviando pacote #110 | temp=10.7°C | 21:26:46[0m
+[0;32mI (1168273) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1168373) I2C_SCAN: Hora sincronizada: 21:26:46 31/12/1969[0m
+[0;32mI (1178373) I2C_SCAN: Raw:0[0m
+[0;32mI (1178373) I2C_SCAN: MV:107[0m
+[0;32mI (1178373) I2C_SCAN: Enviando pacote #111 | temp=10.7°C | 21:26:56[0m
+[0;32mI (1178413) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1178513) I2C_SCAN: Hora sincronizada: 21:26:56 31/12/1969[0m
+[0;32mI (1188513) I2C_SCAN: Raw:0[0m
+[0;32mI (1188513) I2C_SCAN: MV:107[0m
+[0;32mI (1188513) I2C_SCAN: Enviando pacote #112 | temp=10.7°C | 21:27:06[0m
+[0;32mI (1188553) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (1191553) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (1201553) I2C_SCAN: Raw:0[0m
+[0;32mI (1201553) I2C_SCAN: MV:107[0m
+[0;32mI (1201553) I2C_SCAN: Enviando pacote #113 | temp=10.7°C | 21:27:16[0m
+[0;32mI (1201593) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (1204593) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (1214593) I2C_SCAN: Raw:0[0m
+[0;32mI (1214593) I2C_SCAN: MV:107[0m
+[0;32mI (1214593) I2C_SCAN: Enviando pacote #114 | temp=10.7°C | 21:27:26[0m
+[0;32mI (1214633) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (1217633) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (1227633) I2C_SCAN: Raw:0[0m
+[0;32mI (1227633) I2C_SCAN: MV:107[0m
+[0;32mI (1227633) I2C_SCAN: Enviando pacote #115 | temp=10.7°C | 21:27:36[0m
+[0;32mI (1227673) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (1230673) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (1240673) I2C_SCAN: Raw:0[0m
+[0;32mI (1240673) I2C_SCAN: MV:107[0m
+[0;32mI (1240673) I2C_SCAN: Enviando pacote #116 | temp=10.7°C | 21:27:46[0m
+[0;32mI (1240713) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1240813) I2C_SCAN: Hora sincronizada: 21:27:58 31/12/1969[0m
+[0;32mI (1250813) I2C_SCAN: Raw:0[0m
+[0;32mI (1250813) I2C_SCAN: MV:107[0m
+[0;32mI (1250813) I2C_SCAN: Enviando pacote #117 | temp=10.7°C | 21:28:08[0m
+[0;32mI (1250853) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1250953) I2C_SCAN: Hora sincronizada: 21:28:08 31/12/1969[0m
+[0;32mI (1260953) I2C_SCAN: Raw:0[0m
+[0;32mI (1260953) I2C_SCAN: MV:107[0m
+[0;32mI (1260953) I2C_SCAN: Enviando pacote #118 | temp=10.7°C | 21:28:18[0m
+[0;32mI (1260993) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1261093) I2C_SCAN: Hora sincronizada: 21:28:19 31/12/1969[0m
+[0;32mI (1271093) I2C_SCAN: Raw:0[0m
+[0;32mI (1271093) I2C_SCAN: MV:107[0m
+[0;32mI (1271093) I2C_SCAN: Enviando pacote #119 | temp=10.7°C | 21:28:29[0m
+[0;32mI (1271133) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (1271233) I2C_SCAN: Hora sincronizada: 21:28:29 31/12/1969[0m

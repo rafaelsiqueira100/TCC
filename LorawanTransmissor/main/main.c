@@ -14,7 +14,8 @@
 #include "esp_adc/adc_oneshot.h"
 #include "esp_adc/adc_cali.h"
 #include "esp_adc/adc_cali_scheme.h"
-
+#define REG_RX_NB_BYTES          0x13
+#define REG_FIFO_RX_CURRENT_ADDR 0x10
 // ── Pinos TTGO LoRa32 V2.0 ───────────────────────────────────────────────────
 #define PIN_SCLK   5
 #define PIN_MOSI   27
@@ -26,11 +27,18 @@
 
 // ── Pinos I2C / OLED + DS3231 ────────────────────────────────────────────────
 // OLED e DS3231 compartilham o mesmo barramento I2C (endereços diferentes)
-#define OLED_SDA        21
-#define OLED_SCL        22
-#define OLED_ADDR       0x3C   // endereço I2C do SSD1306
+#define OLED_SDA        4
+#define OLED_SCL        15
+#define OLED_ADDR       0x3D   // endereço I2C do SSD1306
 #define I2C_PORT        I2C_NUM_0
 #define I2C_FREQ_HZ     400000
+
+#define I2C_MASTER_SCL_IO           22
+#define I2C_MASTER_SDA_IO           21
+#define I2C_MASTER_NUM              I2C_NUM_0
+#define I2C_MASTER_FREQ_HZ          100000
+#define I2C_MASTER_TIMEOUT_MS       1000
+static const char *TAG = "I2C_SCAN";
 #define OLED_WIDTH      128
 #define OLED_HEIGHT     64
 #define OLED_PAGES      (OLED_HEIGHT / 8)
@@ -85,7 +93,6 @@ static inline uint8_t dec2bcd(uint8_t d) { return ((d / 10) << 4) | (d % 10); }
 #define LORA_SYNC_WORD           0x12
 #define TX_INTERVAL_MS           10000
 
-static const char *TAG = "LORA_TX";
 static spi_device_handle_t spi;
 
 // ── Payload de sensores ───────────────────────────────────────────────────────
@@ -93,15 +100,33 @@ typedef struct __attribute__((packed)) {
     uint8_t  node_id;
     int16_t  temperature_x10;
     uint32_t counter;
+    uint8_t  hours;
+    uint8_t  minutes;
+    uint8_t  seconds;
 } sensor_payload_t;
 
+typedef struct __attribute__((packed)) {
+    uint8_t  type;
+    uint8_t  hours;
+    uint8_t  minutes;
+    uint8_t  seconds;
+    uint8_t  date;
+    uint8_t  month;
+    uint16_t year;
+} time_payload_t;
 // ═════════════════════════════════════════════════════════════════════════════
 // ── DS3231 ───────────────────────────────────────────────────────────────────
 // ═════════════════════════════════════════════════════════════════════════════
 
 // NOTA: i2c_driver_install() é chamado apenas em oled_init().
 // O DS3231 compartilha o mesmo barramento — não inicializa I2C novamente.
-
+static uint8_t  rtc_hours   = 0;
+static uint8_t  rtc_minutes = 0;
+static uint8_t  rtc_seconds = 0;
+static uint8_t  rtc_date    = 1;
+static uint8_t  rtc_month   = 1;
+static uint16_t rtc_year    = 2025;
+static bool     rtc_synced  = false;
 static esp_err_t ds3231_get_time(ds3231_time_t *t)
 {
     // Aponta para registrador 0x00
@@ -155,7 +180,23 @@ static esp_err_t ds3231_set_time(const ds3231_time_t *t)
     return ret;
 }
 */
+static void rtc_tick(void)
+{
+    if (!rtc_synced) return;
+    rtc_seconds++;
+    if (rtc_seconds >= 60) { rtc_seconds = 0; rtc_minutes++; }
+    if (rtc_minutes >= 60) { rtc_minutes = 0; rtc_hours++;   }
+    if (rtc_hours   >= 24) { rtc_hours   = 0;                }
+}
 
+static void rtc_get_time_str(char *buf, size_t len)
+{
+    if (!rtc_synced)
+        snprintf(buf, len, "--:--:--");
+    else
+        snprintf(buf, len, "%02d:%02d:%02d",
+                 rtc_hours, rtc_minutes, rtc_seconds);
+}
 // Formata como "2025-06-10 14:32:05" — buf deve ter ao menos 32 bytes
 static void ds3231_format(const ds3231_time_t *t, char *buf, size_t len)
 {
@@ -314,7 +355,20 @@ static const uint8_t font5x7[][5] = {
     {0x10,0x08,0x08,0x10,0x08}, // 126 '~'
     {0x00,0x00,0x00,0x00,0x00}, // 127 DEL
 };
-
+static void i2c_scan(void)
+{
+    ESP_LOGI(TAG, "Scanning I2C bus...");
+    for (uint8_t addr = 1; addr < 127; addr++) {
+        i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+        i2c_master_start(cmd);
+        i2c_master_write_byte(cmd, (addr << 1) | I2C_MASTER_WRITE, true);
+        i2c_master_stop(cmd);
+        esp_err_t ret = i2c_master_cmd_begin(I2C_PORT, cmd, pdMS_TO_TICKS(50));
+        i2c_cmd_link_delete(cmd);
+        if (ret == ESP_OK)
+            ESP_LOGI(TAG, "  Dispositivo encontrado: 0x%02X", addr);
+    }
+}
 static void oled_cmd(uint8_t cmd)
 {
     uint8_t buf[2] = { 0x00, cmd };
@@ -341,7 +395,7 @@ static void oled_init(void)
     };
     ESP_ERROR_CHECK(i2c_param_config(I2C_PORT, &conf));
     ESP_ERROR_CHECK(i2c_driver_install(I2C_PORT, I2C_MODE_MASTER, 0, 0, 0));
-
+    i2c_scan();
     vTaskDelay(pdMS_TO_TICKS(100));
 
     const uint8_t init_seq[] = {
@@ -366,7 +420,7 @@ static void oled_init(void)
     if (ret == ESP_OK)
         ESP_LOGI(TAG, "DS3231 detectado no barramento I2C");
     else
-        ESP_LOGW(TAG, "DS3231 não encontrado — timestamps serão \"--:--:--\"");
+        ESP_LOGW(TAG, "DS3231 não encontrado ");
 }
 
 static void oled_flush(void)
@@ -483,6 +537,52 @@ static void spi_init(void)
     ESP_ERROR_CHECK(spi_bus_initialize(SPI2_HOST, &bus, SPI_DMA_DISABLED));
     ESP_ERROR_CHECK(spi_bus_add_device(SPI2_HOST, &dev, &spi));
 }
+static void lora_receive_time(void)
+{
+    // Coloca em modo RX
+    spi_write(REG_OP_MODE, MODE_LONG_RANGE_MODE | MODE_RX_CONTINUOUS);
+
+    // Aguarda até 3 segundos por uma resposta
+    for (int ms = 0; ms < 3000; ms += 10) {
+        uint8_t irq = spi_read(REG_IRQ_FLAGS);
+        if (irq & 0x40) {
+            spi_write(REG_IRQ_FLAGS, 0xFF);
+
+            if (irq & 0x20) {   // erro CRC
+                ESP_LOGW(TAG, "CRC error no pacote de hora");
+                return;
+            }
+
+            uint8_t nb  = spi_read(REG_RX_NB_BYTES);
+            uint8_t ptr = spi_read(REG_FIFO_RX_CURRENT_ADDR);
+            spi_write(REG_FIFO_ADDR_PTR, ptr);
+
+            if (nb == sizeof(time_payload_t)) {
+                time_payload_t tp;
+                uint8_t *raw = (uint8_t *)&tp;
+                for (size_t i = 0; i < sizeof(tp); i++)
+                    raw[i] = spi_read(REG_FIFO);
+
+                if (tp.type == 0xAA) {
+                    rtc_hours   = tp.hours;
+                    rtc_minutes = tp.minutes;
+                    rtc_seconds = tp.seconds;
+                    rtc_date    = tp.date;
+                    rtc_month   = tp.month;
+                    rtc_year    = tp.year;
+                    rtc_synced  = true;
+
+                    ESP_LOGI(TAG, "Hora sincronizada: %02d:%02d:%02d %02d/%02d/%04d",
+                             rtc_hours, rtc_minutes, rtc_seconds,
+                             rtc_date, rtc_month, rtc_year);
+                }
+            }
+            return;
+        }
+        vTaskDelay(pdMS_TO_TICKS(10));
+    }
+    ESP_LOGW(TAG, "Timeout — sem resposta de hora do receptor");
+}
 
 static void lora_reset(void)
 {
@@ -544,6 +644,41 @@ static void led_blink(int times)
         gpio_set_level(PIN_LED, 0); vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
+void i2c_master_init(void)
+{
+    i2c_config_t conf = {
+        .mode = I2C_MODE_MASTER,
+        .sda_io_num = I2C_MASTER_SDA_IO,
+        .scl_io_num = I2C_MASTER_SCL_IO,
+        .sda_pullup_en = GPIO_PULLUP_ENABLE,
+        .scl_pullup_en = GPIO_PULLUP_ENABLE,
+        .master.clk_speed = I2C_MASTER_FREQ_HZ,
+    };
+
+    i2c_param_config(I2C_MASTER_NUM, &conf);
+    i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0);
+}
+void i2c_scan_bus(void)
+{
+    ESP_LOGI(TAG, "Scanning I2C bus...");
+
+    for (uint8_t address = 1; address < 127; address++) {
+        i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+
+        i2c_master_start(cmd);
+        i2c_master_write_byte(cmd, (address << 1) | I2C_MASTER_WRITE, true);
+        i2c_master_stop(cmd);
+
+        esp_err_t ret = i2c_master_cmd_begin(I2C_MASTER_NUM, cmd,
+                                             pdMS_TO_TICKS(I2C_MASTER_TIMEOUT_MS));
+
+        i2c_cmd_link_delete(cmd);
+
+        if (ret == ESP_OK) {
+            ESP_LOGI(TAG, "Device found at 0x%02X", address);
+        }
+    }
+}
 
 // ═════════════════════════════════════════════════════════════════════════════
 // ── app_main ─────────────────────────────────────────────────────────────────
@@ -557,12 +692,16 @@ void app_main(void)
     gpio_config(&io);
 
     spi_init();
-    oled_init();   // ← inicializa I2C + OLED + verifica DS3231
+    oled_init();
+    i2c_master_init();// ← inicializa I2C + OLED + verifica DS3231
 
     // ── (Opcional) Acerto inicial do RTC — descomente se necessário ──────────
     // ds3231_time_t t = { .seconds=0, .minutes=30, .hours=14,
     //                     .day=2, .date=10, .month=6, .year=25 };
     // ds3231_set_time(&t);
+    ESP_LOGI(TAG, "=== SCAN I2C ===");
+    i2c_scan_bus();
+    ESP_LOGI(TAG, "=== FIM SCAN ===");
 
     oled_clear();
     oled_draw_str(0, 0, "LoRa Transmissor");
@@ -593,28 +732,33 @@ void app_main(void)
         payload.temperature_x10 = (int16_t)(temp * 10);
         payload.counter++;
 
-        // Lê RTC
-        ds3231_time_t rtc;
-        char ts_full[32] = "----.--.-- --:--:--";
-        char ts_time[12] = "--:--:--";
-        if (ds3231_get_time(&rtc) == ESP_OK) {
-            ds3231_format(&rtc, ts_full, sizeof(ts_full));
-            ds3231_format_time(&rtc, ts_time, sizeof(ts_time));
-        }
+        // Usa hora local (sincronizada pelo rádio)
+        char ts_time[12];
+        rtc_get_time_str(ts_time, sizeof(ts_time));
+
+        // Preenche payload com hora atual
+        payload.hours   = rtc_hours;
+        payload.minutes = rtc_minutes;
+        payload.seconds = rtc_seconds;
 
         ESP_LOGI(TAG, "Enviando pacote #%lu | temp=%.1f°C | %s",
                  (unsigned long)payload.counter,
                  payload.temperature_x10 / 10.0f,
-                 ts_full);
+                 ts_time);
 
-        // Atualiza display com hora na última linha
         oled_show_sensor(&payload, ts_time);
 
         gpio_set_level(PIN_LED, 1);
         lora_send((uint8_t *)&payload, sizeof(payload));
         gpio_set_level(PIN_LED, 0);
 
-        led_blink(2);
-        vTaskDelay(pdMS_TO_TICKS(TX_INTERVAL_MS));
+        // Aguarda resposta com hora do receptor
+        lora_receive_time();
+
+        // Incrementa segundos localmente até próxima sincronização
+        for (int i = 0; i < TX_INTERVAL_MS / 1000; i++) {
+            vTaskDelay(pdMS_TO_TICKS(1000));
+            rtc_tick();
+        }
     }
 }

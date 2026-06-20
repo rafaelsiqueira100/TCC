@@ -1,0 +1,528 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanGateway\build\LorawanGateway.elf C:\Users\rafae\workspace\LorawanGateway\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM9'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun  8 2026 17:49:41[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22124h (139556) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=0003214c vaddr=3ffb0000 size=04760h ( 18272) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=000368b4 vaddr=40080000 size=09764h ( 38756) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a234ch (664396) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e2374 vaddr=40089764 size=0efech ( 61420) load[0m
+[0;32mI (421) esp_image: segment 5: paddr=000f1368 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (433) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (434) boot: Disabling RNG early entropy source...[0m
+[0;32mI (444) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (453) cpu_start: Pro cpu start user code[0m
+[0;32mI (453) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (454) app_init: Application information:[0m
+[0;32mI (458) app_init: Project name:     LorawanGateway[0m
+[0;32mI (463) app_init: App version:      1[0m
+[0;32mI (466) app_init: Compile time:     Jun 12 2026 16:44:25[0m
+[0;32mI (471) app_init: ELF file SHA256:  aaeea8b44...[0m
+[0;32mI (475) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (480) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (483) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (487) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (492) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (498) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFB9748 len 000268B8 (154 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (513) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (519) heap_init: At 40098750 len 000078B0 (30 KiB): IRAM[0m
+[0;32mI (526) spi_flash: detected chip: generic[0m
+[0;32mI (528) spi_flash: flash io: dio[0m
+[0;33mW (531) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (543) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (614) wifi:wifi driver task: 3ffc12ec, prio:23, stack:6656, core=0[0m
+[0;32mI (624) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (624) wifi:wifi certification version: v7.0[0m
+[0;32mI (624) wifi:config NVS flash: enabled[0m
+[0;32mI (624) wifi:config nano formatting: disabled[0m
+[0;32mI (634) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (644) wifi:Init management short buffer num: 32[0m
+[0;32mI (644) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (654) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (654) wifi:Init static rx buffer num: 10[0m
+[0;32mI (654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (664) wifi_init: rx ba win: 6[0m
+[0;32mI (664) wifi_init: accept mbox: 6[0m
+[0;32mI (664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (674) wifi_init: udp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp tx win: 5760[0m
+[0;32mI (684) wifi_init: tcp rx win: 5760[0m
+[0;32mI (684) wifi_init: tcp mss: 1440[0m
+[0;32mI (684) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (694) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (694) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (704) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (784) wifi:mode : sta (5c:01:3b:09:29:68)[0m
+[0;32mI (784) wifi:enable tsf[0m
+[0;32mI (784) LORA_RX: Aguardando conexão WiFi...[0m
+[0;32mI (794) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (794) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (804) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (814) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (834) wifi:connected with IoT-local, aid = 1, channel 1, BW20, bssid = d0:d3:e0:b6:b7:42[0m
+[0;32mI (844) wifi:security: WPA2-PSK, phy: bgn, rssi: -68[0m
+[0;32mI (844) wifi:pm start, type: 1[0m
+
+[0;32mI (844) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (864) wifi:<ba-add>idx:0 (ifx:0, d0:d3:e0:b6:b7:42), tid:0, ssn:2, winSize:64[0m
+[0;32mI (914) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1874) esp_netif_handlers: sta ip: 100.64.33.29, mask: 255.255.255.0, gw: 100.64.33.1[0m
+[0;32mI (1874) LORA_RX: WiFi conectado, IP: 100.64.33.29[0m
+[0;32mI (1874) LORA_RX: Aguardando sincronização NTP...[0m
+[0;32mI (11874) LORA_RX: NTP sincronizado[0m
+[0;32mI (11894) LORA_RX: MQTT conectado[0m
+[0;32mI (11984) LORA_RX: Scanning I2C bus...[0m
+[1;31mE (12004) LORA_RX: DS3231 não encontrado (err=0xffffffff)[0m
+[0;33mW (12004) LORA_RX: DS3231 indisponível — timestamps serão "unknown"[0m
+[0;32mI (12004) LORA_RX: === SCAN I2C ===[0m
+[0;32mI (12024) LORA_RX: === FIM SCAN ===[0m
+[0;32mI (12124) LORA_RX: OLED SSD1306 inicializado[0m
+[0;32mI (14144) LORA_RX: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (14154) LORA_RX: LoRa inicializado — aguardando pacotes...[0m
+[0;32mI (21924) LORA_RX: Novo nó registrado: 0x01 (total: 1)[0m
+[0;32mI (21924) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (21924) LORA_RX:   Pacote #164 do nó 0x01  [--:--:--][0m
+[0;32mI (21934) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (21934) LORA_RX:   RSSI        : -64 dBm[0m
+[0;32mI (21934) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (21944) LORA_RX:   Pkts ok/lost: 1 / 0[0m
+[0;32mI (21944) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (21964) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (22004) LORA_RX: Hora enviada ao TX: 21:00:21 31/12/1969[0m
+[1;31mE (23964) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (23964) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (23964) LORA_RX: 00 00 00 25 09 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (23964) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (23974) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (23974) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (24134) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (24134) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (24134) LORA_RX: 00 00 00 36 09 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (24134) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (24144) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (24144) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (24314) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (24314) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (24314) LORA_RX: 00 00 00 48 09 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (24314) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (24324) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (24324) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (24664) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (24664) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (24664) LORA_RX: 00 00 00 6b 09 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (24664) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (24674) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (24674) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (24834) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (24834) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (24834) LORA_RX: 00 00 00 7c 09 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (24834) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (24844) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (24844) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (25014) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (25014) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (25014) LORA_RX: 00 00 00 8e 09 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (25014) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (25024) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (25024) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (25184) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (25184) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (25184) LORA_RX: 00 00 00 9f 09 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (25184) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (25194) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (25194) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (25364) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (25364) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (25364) LORA_RX: 00 00 00 b1 09 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (25364) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (25374) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (25374) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (32064) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (32064) LORA_RX:   Pacote #165 do nó 0x01  [--:--:--][0m
+[0;32mI (32064) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (32074) LORA_RX:   RSSI        : -65 dBm[0m
+[0;32mI (32074) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (32074) LORA_RX:   Pkts ok/lost: 2 / 0[0m
+[0;32mI (32084) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (32104) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (32134) LORA_RX: Hora enviada ao TX: 21:00:31 31/12/1969[0m
+[0;32mI (42194) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (42194) LORA_RX:   Pacote #166 do nó 0x01  [--:--:--][0m
+[0;32mI (42194) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (42204) LORA_RX:   RSSI        : -62 dBm[0m
+[0;32mI (42204) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (42204) LORA_RX:   Pkts ok/lost: 3 / 0[0m
+[0;32mI (42214) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (42234) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (42284) LORA_RX: Hora enviada ao TX: 21:00:41 31/12/1969[0m
+[0;32mI (52334) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (52334) LORA_RX:   Pacote #167 do nó 0x01  [--:--:--][0m
+[0;32mI (52334) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (52344) LORA_RX:   RSSI        : -63 dBm[0m
+[0;32mI (52344) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (52344) LORA_RX:   Pkts ok/lost: 4 / 0[0m
+[0;32mI (52354) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (52374) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (52414) LORA_RX: Hora enviada ao TX: 21:00:51 31/12/1969[0m
+[0;32mI (62474) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (62474) LORA_RX:   Pacote #168 do nó 0x01  [--:--:--][0m
+[0;32mI (62484) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (62484) LORA_RX:   RSSI        : -62 dBm[0m
+[0;32mI (62484) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (62494) LORA_RX:   Pkts ok/lost: 5 / 0[0m
+[0;32mI (62494) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (62514) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (62554) LORA_RX: Hora enviada ao TX: 21:01:02 31/12/1969[0m
+[0;32mI (72604) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (72604) LORA_RX:   Pacote #169 do nó 0x01  [--:--:--][0m
+[0;32mI (72604) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (72614) LORA_RX:   RSSI        : -63 dBm[0m
+[0;32mI (72614) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (72614) LORA_RX:   Pkts ok/lost: 6 / 0[0m
+[0;32mI (72624) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (72644) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (72684) LORA_RX: Hora enviada ao TX: 21:01:12 31/12/1969[0m
+[1;31mE (74114) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (74114) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (74114) LORA_RX: 00 00 00 bc 1c 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (74114) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (74124) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (74124) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (74284) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (74284) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (74284) LORA_RX: 00 00 00 cd 1c 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (74284) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (74294) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (74294) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (74464) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (74464) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (74464) LORA_RX: 00 00 00 df 1c 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (74464) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (74474) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (74474) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (74804) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (74804) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (74804) LORA_RX: 00 00 00 01 1d 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (74804) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (74814) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (74814) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (74974) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (74974) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (74974) LORA_RX: 00 00 00 12 1d 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (74974) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (74984) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (74984) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (75154) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (75154) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (75154) LORA_RX: 00 00 00 24 1d 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (75154) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (75164) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (75164) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (75324) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (75324) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (75324) LORA_RX: 00 00 00 35 1d 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (75324) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (75334) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (75334) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (75504) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (75504) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (75504) LORA_RX: 00 00 00 47 1d 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (75504) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (75514) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (75514) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (75674) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (75674) LORA_RX: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[0;32mI (82744) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (82744) LORA_RX:   Pacote #170 do nó 0x01  [--:--:--][0m
+[0;32mI (82744) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (82754) LORA_RX:   RSSI        : -63 dBm[0m
+[0;32mI (82754) LORA_RX:   SNR         : 10 dB[0m
+[0;32mI (82754) LORA_RX:   Pkts ok/lost: 7 / 0[0m
+[0;32mI (82764) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (82784) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (82824) LORA_RX: Hora enviada ao TX: 21:01:22 31/12/1969[0m
+[0;32mI (92874) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (92874) LORA_RX:   Pacote #171 do nó 0x01  [--:--:--][0m
+[0;32mI (92874) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (92884) LORA_RX:   RSSI        : -63 dBm[0m
+[0;32mI (92884) LORA_RX:   SNR         : 10 dB[0m
+[0;32mI (92894) LORA_RX:   Pkts ok/lost: 8 / 0[0m
+[0;32mI (92894) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (92914) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (92954) LORA_RX: Hora enviada ao TX: 21:01:32 31/12/1969[0m
+[0;32mI (103024) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (103024) LORA_RX:   Pacote #172 do nó 0x01  [--:--:--][0m
+[0;32mI (103034) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (103034) LORA_RX:   RSSI        : -63 dBm[0m
+[0;32mI (103034) LORA_RX:   SNR         : 10 dB[0m
+[0;32mI (103044) LORA_RX:   Pkts ok/lost: 9 / 0[0m
+[0;32mI (103044) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (103064) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (103104) LORA_RX: Hora enviada ao TX: 21:01:42 31/12/1969[0m
+[0;32mI (113154) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (113154) LORA_RX:   Pacote #173 do nó 0x01  [--:--:--][0m
+[0;32mI (113154) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (113164) LORA_RX:   RSSI        : -63 dBm[0m
+[0;32mI (113164) LORA_RX:   SNR         : 10 dB[0m
+[0;32mI (113174) LORA_RX:   Pkts ok/lost: 10 / 0[0m
+[0;32mI (113174) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (113194) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (113234) LORA_RX: Hora enviada ao TX: 21:01:52 31/12/1969[0m
+[0;32mI (123284) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (123284) LORA_RX:   Pacote #174 do nó 0x01  [--:--:--][0m
+[0;32mI (123294) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (123294) LORA_RX:   RSSI        : -63 dBm[0m
+[0;32mI (123294) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (123304) LORA_RX:   Pkts ok/lost: 11 / 0[0m
+[0;32mI (123304) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (123324) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (123364) LORA_RX: Hora enviada ao TX: 21:02:02 31/12/1969[0m
+[1;31mE (124244) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (124244) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (124244) LORA_RX: 00 00 00 51 30 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (124244) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (124254) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (124254) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (124414) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (124414) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (124414) LORA_RX: 00 00 00 62 30 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (124414) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (124424) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (124424) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (124594) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (124594) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (124594) LORA_RX: 00 00 00 74 30 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (124594) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (124604) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (124614) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (124944) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (124944) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (124944) LORA_RX: 00 00 00 97 30 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (124944) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (124954) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (124954) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (125104) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (125104) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (125104) LORA_RX: 00 00 00 a7 30 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (125104) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (125114) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (125124) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (125284) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (125284) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (125284) LORA_RX: 00 00 00 b9 30 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (125284) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (125294) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (125294) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (125454) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (125454) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (125454) LORA_RX: 00 00 00 ca 30 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (125454) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (125464) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (125464) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (125634) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (125634) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (125634) LORA_RX: 00 00 00 dc 30 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (125634) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (125644) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (125644) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (133424) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (133424) LORA_RX:   Pacote #175 do nó 0x01  [--:--:--][0m
+[0;32mI (133434) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (133434) LORA_RX:   RSSI        : -64 dBm[0m
+[0;32mI (133444) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (133444) LORA_RX:   Pkts ok/lost: 12 / 0[0m
+[0;32mI (133444) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (133464) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (133504) LORA_RX: Hora enviada ao TX: 21:02:13 31/12/1969[0m
+[0;32mI (143564) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (143564) LORA_RX:   Pacote #176 do nó 0x01  [--:--:--][0m
+[0;32mI (143564) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (143574) LORA_RX:   RSSI        : -62 dBm[0m
+[0;32mI (143574) LORA_RX:   SNR         : 10 dB[0m
+[0;32mI (143584) LORA_RX:   Pkts ok/lost: 13 / 0[0m
+[0;32mI (143584) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (143604) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (143644) LORA_RX: Hora enviada ao TX: 21:02:23 31/12/1969[0m
+[0;32mI (153704) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (153704) LORA_RX:   Pacote #177 do nó 0x01  [--:--:--][0m
+[0;32mI (153714) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (153714) LORA_RX:   RSSI        : -63 dBm[0m
+[0;32mI (153714) LORA_RX:   SNR         : 10 dB[0m
+[0;32mI (153724) LORA_RX:   Pkts ok/lost: 14 / 0[0m
+[0;32mI (153724) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (153744) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (153784) LORA_RX: Hora enviada ao TX: 21:02:33 31/12/1969[0m
+[0;32mI (163844) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (163844) LORA_RX:   Pacote #178 do nó 0x01  [--:--:--][0m
+[0;32mI (163844) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (163854) LORA_RX:   RSSI        : -63 dBm[0m
+[0;32mI (163864) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (163864) LORA_RX:   Pkts ok/lost: 15 / 0[0m
+[0;32mI (163864) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (163884) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (163924) LORA_RX: Hora enviada ao TX: 21:02:43 31/12/1969[0m
+[0;32mI (173994) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (173994) LORA_RX:   Pacote #179 do nó 0x01  [--:--:--][0m
+[0;32mI (173994) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (174004) LORA_RX:   RSSI        : -62 dBm[0m
+[0;32mI (174004) LORA_RX:   SNR         : 10 dB[0m
+[0;32mI (174014) LORA_RX:   Pkts ok/lost: 16 / 0[0m
+[0;32mI (174014) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (174034) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (174074) LORA_RX: Hora enviada ao TX: 21:02:53 31/12/1969[0m
+[1;31mE (174484) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (174484) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (174484) LORA_RX: 00 00 00 f1 43 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (174484) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (174494) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (174494) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (174554) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (174554) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (174554) LORA_RX: 00 00 00 f8 43 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (174554) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (174564) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (174564) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (174734) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (174734) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (174734) LORA_RX: 00 00 00 0a 44 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (174734) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (174744) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (174744) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (175074) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (175074) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (175074) LORA_RX: 00 00 00 2c 44 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (175074) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (175084) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (175094) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (175244) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (175244) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (175244) LORA_RX: 00 00 00 3d 44 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (175244) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (175254) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (175254) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (175424) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (175424) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (175424) LORA_RX: 00 00 00 4f 44 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (175424) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (175434) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (175434) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (175594) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (175594) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (175594) LORA_RX: 00 00 00 60 44 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (175594) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (175604) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (175614) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (175774) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (175774) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (175774) LORA_RX: 00 00 00 72 44 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (175774) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (175784) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (175784) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (184124) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (184124) LORA_RX:   Pacote #180 do nó 0x01  [--:--:--][0m
+[0;32mI (184124) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (184134) LORA_RX:   RSSI        : -63 dBm[0m
+[0;32mI (184134) LORA_RX:   SNR         : 10 dB[0m
+[0;32mI (184144) LORA_RX:   Pkts ok/lost: 17 / 0[0m
+[0;32mI (184144) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (184164) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (184204) LORA_RX: Hora enviada ao TX: 21:03:03 31/12/1969[0m
+[0;32mI (194264) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (194264) LORA_RX:   Pacote #181 do nó 0x01  [--:--:--][0m
+[0;32mI (194264) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (194274) LORA_RX:   RSSI        : -66 dBm[0m
+[0;32mI (194274) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (194284) LORA_RX:   Pkts ok/lost: 18 / 0[0m
+[0;32mI (194284) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (194304) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (194344) LORA_RX: Hora enviada ao TX: 21:03:13 31/12/1969[0m
+[0;32mI (204404) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (204404) LORA_RX:   Pacote #182 do nó 0x01  [--:--:--][0m
+[0;32mI (204414) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (204414) LORA_RX:   RSSI        : -66 dBm[0m
+[0;32mI (204414) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (204424) LORA_RX:   Pkts ok/lost: 19 / 0[0m
+[0;32mI (204424) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (204444) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (204484) LORA_RX: Hora enviada ao TX: 21:03:23 31/12/1969[0m
+[0;32mI (214544) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (214544) LORA_RX:   Pacote #183 do nó 0x01  [--:--:--][0m
+[0;32mI (214544) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (214554) LORA_RX:   RSSI        : -65 dBm[0m
+[0;32mI (214554) LORA_RX:   SNR         : 9 dB[0m
+[0;32mI (214564) LORA_RX:   Pkts ok/lost: 20 / 0[0m
+[0;32mI (214564) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (214584) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (214614) LORA_RX: Hora enviada ao TX: 21:03:34 31/12/1969[0m
+[1;31mE (224514) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (224514) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (224514) LORA_RX: 00 00 00 7c 57 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (224514) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (224524) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (224524) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (224684) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (224684) LORA_RX: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (224864) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (224864) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (224864) LORA_RX: 00 00 00 9f 57 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (224864) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (224874) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (224874) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (225214) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (225214) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (225214) LORA_RX: 00 00 00 c2 57 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (225214) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (225224) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (225224) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (225374) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (225374) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (225374) LORA_RX: 00 00 00 d2 57 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (225384) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (225384) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (225394) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (225554) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (225554) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (225554) LORA_RX: 00 00 00 e4 57 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (225554) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (225564) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (225564) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (225724) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (225724) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (225724) LORA_RX: 00 00 00 f5 57 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (225724) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (225734) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (225734) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (225904) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (225904) LORA_RX: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (225904) LORA_RX: 00 00 00 07 58 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (225904) LORA_RX: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 30[0m
+[0;32mI (225914) LORA_RX: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (225914) LORA_RX: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m

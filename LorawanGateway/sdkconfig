@@ -834,8 +834,7 @@ CONFIG_COMPILER_CXX_GLIBCXX_CONSTEXPR_NO_CHANGE=y
 #
 # Legacy I2C Driver Configurations
 #
-# default:
-# CONFIG_I2C_SUPPRESS_DEPRECATE_WARN is not set
+CONFIG_I2C_SUPPRESS_DEPRECATE_WARN=y
 # default:
 # CONFIG_I2C_SKIP_LEGACY_CONFLICT_CHECK is not set
 # end of Legacy I2C Driver Configurations

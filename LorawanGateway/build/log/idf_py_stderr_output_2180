@@ -1,0 +1,7 @@
+Command: ninja all
+CMake Error at CMakeLists.txt:8:
+  Parse error.  Expected a command name, got unquoted argument with text
+  "CONFIG_I2C_SUPPRESS_DEPRECATE_WARN=y".
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

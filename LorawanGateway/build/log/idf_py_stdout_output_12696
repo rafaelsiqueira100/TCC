@@ -1,0 +1,118 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanGateway\build\LorawanGateway.elf C:\Users\rafae\workspace\LorawanGateway\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM9'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (26) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun  8 2026 17:49:41[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=220c4h (139460) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=000320ec vaddr=3ffb0000 size=04760h ( 18272) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00036854 vaddr=40080000 size=097c4h ( 38852) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2424h (664612) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e244c vaddr=400897c4 size=0ef8ch ( 61324) load[0m
+[0;32mI (421) esp_image: segment 5: paddr=000f13e0 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (433) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (433) boot: Disabling RNG early entropy source...[0m
+[0;32mI (444) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (453) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (454) app_init: Application information:[0m
+[0;32mI (458) app_init: Project name:     LorawanGateway[0m
+[0;32mI (463) app_init: App version:      1[0m
+[0;32mI (466) app_init: Compile time:     Jun 12 2026 16:44:25[0m
+[0;32mI (471) app_init: ELF file SHA256:  2d37a2a94...[0m
+[0;32mI (475) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (480) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (483) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (487) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (492) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (498) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFB9748 len 000268B8 (154 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (513) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (519) heap_init: At 40098750 len 000078B0 (30 KiB): IRAM[0m
+[0;32mI (526) spi_flash: detected chip: generic[0m
+[0;32mI (528) spi_flash: flash io: dio[0m
+[0;33mW (531) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (543) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (614) wifi:wifi driver task: 3ffc12ec, prio:23, stack:6656, core=0[0m
+[0;32mI (624) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (624) wifi:wifi certification version: v7.0[0m
+[0;32mI (624) wifi:config NVS flash: enabled[0m
+[0;32mI (624) wifi:config nano formatting: disabled[0m
+[0;32mI (634) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (644) wifi:Init management short buffer num: 32[0m
+[0;32mI (644) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (654) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (654) wifi:Init static rx buffer num: 10[0m
+[0;32mI (654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (664) wifi_init: rx ba win: 6[0m
+[0;32mI (664) wifi_init: accept mbox: 6[0m
+[0;32mI (664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (674) wifi_init: udp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp tx win: 5760[0m
+[0;32mI (684) wifi_init: tcp rx win: 5760[0m
+[0;32mI (684) wifi_init: tcp mss: 1440[0m
+[0;32mI (684) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (684) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (694) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (704) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (784) wifi:mode : sta (5c:01:3b:09:29:68)[0m
+[0;32mI (784) wifi:enable tsf[0m
+[0;32mI (784) LORA_RX: Aguardando conexão WiFi...[0m
+[0;32mI (794) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (794) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (804) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (804) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (824) wifi:connected with IoT-local, aid = 1, channel 1, BW20, bssid = d0:d3:e0:b6:b7:42[0m
+[0;32mI (834) wifi:security: WPA2-PSK, phy: bgn, rssi: -58[0m
+[0;32mI (834) wifi:pm start, type: 1[0m
+
+[0;32mI (834) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (844) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (854) wifi:<ba-add>idx:0 (ifx:0, d0:d3:e0:b6:b7:42), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1864) esp_netif_handlers: sta ip: 100.64.33.29, mask: 255.255.255.0, gw: 100.64.33.1[0m
+[0;32mI (1864) LORA_RX: WiFi conectado, IP: 100.64.33.29[0m
+[0;32mI (1864) LORA_RX: Aguardando sincronização NTP...[0m
+[0;32mI (11864) LORA_RX: NTP sincronizado[0m
+[0;32mI (11884) LORA_RX: MQTT conectado[0m
+[1;31mE (11974) i2c: i2c_driver_delete(495): i2c driver install error[0m
+[0;32mI (11974) LORA_RX: I2C instalado com sucesso[0m
+[0;32mI (11974) LORA_RX: === SCAN I2C ===[0m
+[0;32mI (11994) LORA_RX: === FIM SCAN ===[0m
+[0;32mI (12094) LORA_RX: OLED SSD1306 inicializado[0m
+[0;32mI (14114) LORA_RX: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (14124) LORA_RX: LoRa inicializado — aguardando pacotes...[0m
+[0;32mI (18994) LORA_RX: Novo nó registrado: 0x01 (total: 1)[0m
+[0;32mI (18994) LORA_RX: ╔══════════════════════════════════╗[0m
+[0;32mI (18994) LORA_RX:   Pacote #350 do nó 0x01  [--:--:--][0m
+[0;32mI (19004) LORA_RX:   Temperatura : 10.7 °C[0m
+[0;32mI (19004) LORA_RX:   RSSI        : -82 dBm[0m
+[0;32mI (19004) LORA_RX:   SNR         : 10 dB[0m
+[0;32mI (19014) LORA_RX:   Pkts ok/lost: 1 / 0[0m
+[0;32mI (19014) LORA_RX: ╚══════════════════════════════════╝[0m
+[0;33mW (19034) LORA_RX: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (19074) LORA_RX: Hora enviada ao TX: 21:00:18 31/12/1969[0m

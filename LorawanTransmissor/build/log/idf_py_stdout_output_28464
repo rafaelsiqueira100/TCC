@@ -1,0 +1,74 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM10 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanTransmissor\build\LorawanTransmissor.elf C:\Users\rafae\workspace\LorawanTransmissor\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM10'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 31 2026 11:08:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c1cch ( 49612) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001c1f4 vaddr=3ffb0000 size=02c20h ( 11296) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001ee1c vaddr=40080000 size=011fch (  4604) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=13a48h ( 80456) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=00033a70 vaddr=400811fc size=0cb18h ( 51992) load[0m
+[0;32mI (166) esp_image: segment 5: paddr=00040590 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (173) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (173) boot: Disabling RNG early entropy source...[0m
+[0;32mI (184) cpu_start: Multicore app[0m
+[0;32mI (192) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (192) cpu_start: Pro cpu start user code[0m
+[0;32mI (192) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (194) app_init: Application information:[0m
+[0;32mI (198) app_init: Project name:     LorawanTransmissor[0m
+[0;32mI (203) app_init: App version:      1[0m
+[0;32mI (206) app_init: Compile time:     May 31 2026 11:08:39[0m
+[0;32mI (211) app_init: ELF file SHA256:  b3408045b...[0m
+[0;32mI (215) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (220) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (243) heap_init: At 3FFB3A30 len 0002C5D0 (177 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 4008DD14 len 000122EC (72 KiB): IRAM[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (283) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (294) main_task: Started on CPU0[0m
+[0;32mI (304) main_task: Calling app_main()[0m
+[0;32mI (404) LORA_TX: OLED SSD1306 inicializado[0m
+[0;33mW (404) LORA_TX: DS3231 não encontrado — timestamps serão "--:--:--"[0m
+[0;32mI (424) LORA_TX: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (434) LORA_TX: LoRa inicializado OK[0m
+[0;32mI (1034) LORA_TX: Raw:0[0m
+[0;32mI (1034) LORA_TX: MV:107[0m
+[0;32mI (1034) LORA_TX: Enviando pacote #1 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1074) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (11474) LORA_TX: Raw:0[0m
+[0;32mI (11474) LORA_TX: MV:107[0m
+[0;32mI (11474) LORA_TX: Enviando pacote #2 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (11514) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (21914) LORA_TX: Raw:0[0m
+[0;32mI (21914) LORA_TX: MV:107[0m
+[0;32mI (21914) LORA_TX: Enviando pacote #3 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (21954) LORA_TX: Pacote enviado (10 bytes)[0m

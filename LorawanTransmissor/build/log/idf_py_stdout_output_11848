@@ -1,0 +1,156 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM10 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanTransmissor\build\LorawanTransmissor.elf C:\Users\rafae\workspace\LorawanTransmissor\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 31 2026 11:08:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c24ch ( 49740) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001c274 vaddr=3ffb0000 size=02c20h ( 11296) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001ee9c vaddr=40080000 size=0117ch (  4476) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=13a64h ( 80484) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=00033a8c vaddr=4008117c size=0cb98h ( 52120) load[0m
+[0;32mI (165) esp_image: segment 5: paddr=0004062c vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (173) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (173) boot: Disabling RNG early entropy source...[0m
+[0;32mI (183) cpu_start: Multicore app[0m
+[0;32mI (192) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (192) cpu_start: Pro cpu start user code[0m
+[0;32mI (192) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (194) app_init: Application information:[0m
+[0;32mI (198) app_init: Project name:     LorawanTransmissor[0m
+[0;32mI (202) app_init: App version:      1[0m
+[0;32mI (206) app_init: Compile time:     Jun 12 2026 16:50:52[0m
+[0;32mI (211) app_init: ELF file SHA256:  1a4019141...[0m
+[0;32mI (215) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (219) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFB3A30 len 0002C5D0 (177 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 4008DD14 len 000122EC (72 KiB): IRAM[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (270) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (283) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (293) main_task: Started on CPU0[0m
+[0;32mI (303) main_task: Calling app_main()[0m
+[0;32mI (303) I2C_SCAN: Scanning I2C bus...[0m
+[0;32mI (423) I2C_SCAN: OLED SSD1306 inicializado[0m
+[0;33mW (423) I2C_SCAN: DS3231 não encontrado [0m
+[1;31mE (423) i2c: i2c driver install error[0m
+[0;32mI (423) I2C_SCAN: === SCAN I2C ===[0m
+[0;32mI (423) I2C_SCAN: Scanning I2C bus...[0m
+[0;32mI (453) I2C_SCAN: === FIM SCAN ===[0m
+[0;32mI (473) I2C_SCAN: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (483) I2C_SCAN: LoRa inicializado OK[0m
+[0;32mI (1083) I2C_SCAN: Raw:0[0m
+[0;32mI (1083) I2C_SCAN: MV:107[0m
+[0;32mI (1083) I2C_SCAN: Enviando pacote #1 | temp=10.7°C | --:--:--[0m
+[0;32mI (1123) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (4123) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (14123) I2C_SCAN: Raw:0[0m
+[0;32mI (14123) I2C_SCAN: MV:107[0m
+[0;32mI (14123) I2C_SCAN: Enviando pacote #2 | temp=10.7°C | --:--:--[0m
+[0;32mI (14163) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (17163) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (27163) I2C_SCAN: Raw:0[0m
+[0;32mI (27163) I2C_SCAN: MV:107[0m
+[0;32mI (27163) I2C_SCAN: Enviando pacote #3 | temp=10.7°C | --:--:--[0m
+[0;32mI (27203) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (27303) I2C_SCAN: Hora sincronizada: 21:00:22 31/12/1969[0m
+[0;32mI (37303) I2C_SCAN: Raw:0[0m
+[0;32mI (37303) I2C_SCAN: MV:107[0m
+[0;32mI (37303) I2C_SCAN: Enviando pacote #4 | temp=10.7°C | 21:00:32[0m
+[0;32mI (37343) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (37443) I2C_SCAN: Hora sincronizada: 21:00:32 31/12/1969[0m
+[0;32mI (47443) I2C_SCAN: Raw:0[0m
+[0;32mI (47443) I2C_SCAN: MV:107[0m
+[0;32mI (47443) I2C_SCAN: Enviando pacote #5 | temp=10.7°C | 21:00:42[0m
+[0;32mI (47483) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (47583) I2C_SCAN: Hora sincronizada: 21:00:43 31/12/1969[0m
+[0;32mI (57583) I2C_SCAN: Raw:0[0m
+[0;32mI (57583) I2C_SCAN: MV:107[0m
+[0;32mI (57583) I2C_SCAN: Enviando pacote #6 | temp=10.7°C | 21:00:53[0m
+[0;32mI (57623) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (57723) I2C_SCAN: Hora sincronizada: 21:00:53 31/12/1969[0m
+[0;32mI (67723) I2C_SCAN: Raw:0[0m
+[0;32mI (67723) I2C_SCAN: MV:107[0m
+[0;32mI (67723) I2C_SCAN: Enviando pacote #7 | temp=10.7°C | 21:01:03[0m
+[0;32mI (67763) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (67863) I2C_SCAN: Hora sincronizada: 21:01:03 31/12/1969[0m
+[0;32mI (77863) I2C_SCAN: Raw:0[0m
+[0;32mI (77863) I2C_SCAN: MV:107[0m
+[0;32mI (77863) I2C_SCAN: Enviando pacote #8 | temp=10.7°C | 21:01:13[0m
+[0;32mI (77903) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (78003) I2C_SCAN: Hora sincronizada: 21:01:13 31/12/1969[0m
+[0;32mI (88003) I2C_SCAN: Raw:0[0m
+[0;32mI (88003) I2C_SCAN: MV:107[0m
+[0;32mI (88003) I2C_SCAN: Enviando pacote #9 | temp=10.7°C | 21:01:23[0m
+[0;32mI (88043) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (88143) I2C_SCAN: Hora sincronizada: 21:01:23 31/12/1969[0m
+[0;32mI (98143) I2C_SCAN: Raw:0[0m
+[0;32mI (98143) I2C_SCAN: MV:107[0m
+[0;32mI (98143) I2C_SCAN: Enviando pacote #10 | temp=10.7°C | 21:01:33[0m
+[0;32mI (98183) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (98283) I2C_SCAN: Hora sincronizada: 21:01:33 31/12/1969[0m
+[0;32mI (108283) I2C_SCAN: Raw:0[0m
+[0;32mI (108283) I2C_SCAN: MV:107[0m
+[0;32mI (108283) I2C_SCAN: Enviando pacote #11 | temp=10.7°C | 21:01:43[0m
+[0;32mI (108323) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (108423) I2C_SCAN: Hora sincronizada: 21:01:43 31/12/1969[0m
+[0;32mI (118423) I2C_SCAN: Raw:0[0m
+[0;32mI (118423) I2C_SCAN: MV:107[0m
+[0;32mI (118423) I2C_SCAN: Enviando pacote #12 | temp=10.7°C | 21:01:53[0m
+[0;32mI (118463) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;33mW (121463) I2C_SCAN: Timeout — sem resposta de hora do receptor[0m
+[0;32mI (131463) I2C_SCAN: Raw:0[0m
+[0;32mI (131463) I2C_SCAN: MV:107[0m
+[0;32mI (131463) I2C_SCAN: Enviando pacote #13 | temp=10.7°C | 21:02:03[0m
+[0;32mI (131503) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (141813) I2C_SCAN: Raw:0[0m
+[0;32mI (141813) I2C_SCAN: MV:107[0m
+[0;32mI (141813) I2C_SCAN: Enviando pacote #14 | temp=10.7°C | 21:02:13[0m
+[0;32mI (141853) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (141953) I2C_SCAN: Hora sincronizada: 21:02:17 31/12/1969[0m
+[0;32mI (151953) I2C_SCAN: Raw:0[0m
+[0;32mI (151953) I2C_SCAN: MV:107[0m
+[0;32mI (151953) I2C_SCAN: Enviando pacote #15 | temp=10.7°C | 21:02:27[0m
+[0;32mI (151993) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (152093) I2C_SCAN: Hora sincronizada: 21:02:27 31/12/1969[0m
+[0;32mI (162093) I2C_SCAN: Raw:0[0m
+[0;32mI (162093) I2C_SCAN: MV:107[0m
+[0;32mI (162093) I2C_SCAN: Enviando pacote #16 | temp=10.7°C | 21:02:37[0m
+[0;32mI (162133) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (162233) I2C_SCAN: Hora sincronizada: 21:02:37 31/12/1969[0m
+[0;32mI (172233) I2C_SCAN: Raw:0[0m
+[0;32mI (172233) I2C_SCAN: MV:107[0m
+[0;32mI (172233) I2C_SCAN: Enviando pacote #17 | temp=10.7°C | 21:02:47[0m
+[0;32mI (172273) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (172373) I2C_SCAN: Hora sincronizada: 21:02:47 31/12/1969[0m
+[0;32mI (182373) I2C_SCAN: Raw:0[0m
+[0;32mI (182373) I2C_SCAN: MV:107[0m
+[0;32mI (182373) I2C_SCAN: Enviando pacote #18 | temp=10.7°C | 21:02:57[0m
+[0;32mI (182413) I2C_SCAN: Pacote enviado (10 bytes)[0m
+[0;32mI (182513) I2C_SCAN: Hora sincronizada: 21:02:57 31/12/1969[0m

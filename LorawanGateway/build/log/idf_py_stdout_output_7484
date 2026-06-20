@@ -1,0 +1,2408 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanGateway\build\LorawanGateway.elf C:\Users\rafae\workspace\LorawanGateway\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM9'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (26) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun  8 2026 17:49:41[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=220e4h (139492) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=0003210c vaddr=3ffb0000 size=04760h ( 18272) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00036874 vaddr=40080000 size=097a4h ( 38820) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2490h (664720) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e24b8 vaddr=400897a4 size=0efach ( 61356) load[0m
+[0;32mI (421) esp_image: segment 5: paddr=000f146c vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (433) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (434) boot: Disabling RNG early entropy source...[0m
+[0;32mI (444) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (453) cpu_start: Pro cpu start user code[0m
+[0;32mI (453) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (454) app_init: Application information:[0m
+[0;32mI (458) app_init: Project name:     LorawanGateway[0m
+[0;32mI (463) app_init: App version:      1[0m
+[0;32mI (466) app_init: Compile time:     Jun 12 2026 16:44:25[0m
+[0;32mI (471) app_init: ELF file SHA256:  fdb945bd4...[0m
+[0;32mI (475) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (480) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (483) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (487) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (492) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (498) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFB9748 len 000268B8 (154 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (513) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (519) heap_init: At 40098750 len 000078B0 (30 KiB): IRAM[0m
+[0;32mI (526) spi_flash: detected chip: generic[0m
+[0;32mI (528) spi_flash: flash io: dio[0m
+[0;33mW (531) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (543) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (614) wifi:wifi driver task: 3ffc1268, prio:23, stack:6656, core=0[0m
+[0;32mI (624) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (634) wifi:wifi certification version: v7.0[0m
+[0;32mI (634) wifi:config NVS flash: enabled[0m
+[0;32mI (634) wifi:config nano formatting: disabled[0m
+[0;32mI (634) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (644) wifi:Init management short buffer num: 32[0m
+[0;32mI (644) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (654) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (654) wifi:Init static rx buffer num: 10[0m
+[0;32mI (654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (664) wifi_init: rx ba win: 6[0m
+[0;32mI (664) wifi_init: accept mbox: 6[0m
+[0;32mI (664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (674) wifi_init: udp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp tx win: 5760[0m
+[0;32mI (684) wifi_init: tcp rx win: 5760[0m
+[0;32mI (684) wifi_init: tcp mss: 1440[0m
+[0;32mI (684) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (694) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (694) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (704) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (784) wifi:mode : sta (5c:01:3b:09:29:68)[0m
+[0;32mI (784) wifi:enable tsf[0m
+[0;32mI (784) I2C_SCAN: Aguardando conexão WiFi...[0m
+[0;32mI (824) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (834) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (834) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (844) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (864) wifi:connected with IoT-local, aid = 1, channel 6, BW20, bssid = e8:26:89:bd:4c:21[0m
+[0;32mI (864) wifi:security: WPA2-PSK, phy: bgn, rssi: -86[0m
+[0;32mI (874) wifi:pm start, type: 1[0m
+
+[0;32mI (874) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (894) wifi:<ba-add>idx:0 (ifx:0, e8:26:89:bd:4c:21), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1024) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2594) esp_netif_handlers: sta ip: 100.64.33.29, mask: 255.255.255.0, gw: 100.64.33.1[0m
+[0;32mI (2594) I2C_SCAN: WiFi conectado, IP: 100.64.33.29[0m
+[0;32mI (2594) I2C_SCAN: Aguardando sincronização NTP...[0m
+[0;32mI (12594) I2C_SCAN: NTP sincronizado[0m
+[0;32mI (12744) I2C_SCAN: MQTT conectado[0m
+[0;32mI (12804) I2C_SCAN: I2C instalado com sucesso[0m
+[0;32mI (12804) I2C_SCAN: === SCAN I2C ===[0m
+[0;32mI (12804) I2C_SCAN: Scanning I2C bus...[0m
+[0;32mI (13824) I2C_SCAN: === FIM SCAN ===[0m
+[0;32mI (13924) I2C_SCAN: OLED SSD1306 inicializado[0m
+[0;32mI (15944) I2C_SCAN: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (15954) I2C_SCAN: LoRa inicializado — aguardando pacotes...[0m
+[0;32mI (25154) I2C_SCAN: Novo nó registrado: 0x01 (total: 1)[0m
+[0;32mI (25154) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (25154) I2C_SCAN:   Pacote #20 do nó 0x01  [--:--:--][0m
+[0;32mI (25164) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (25164) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (25164) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (25174) I2C_SCAN:   Pkts ok/lost: 1 / 0[0m
+[0;32mI (25174) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (25194) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (25234) I2C_SCAN: Hora enviada ao TX: 21:00:24 31/12/1969[0m
+[0;32mI (35294) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (35294) I2C_SCAN:   Pacote #21 do nó 0x01  [--:--:--][0m
+[0;32mI (35294) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (35304) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (35304) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (35314) I2C_SCAN:   Pkts ok/lost: 2 / 0[0m
+[0;32mI (35314) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (35334) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (35374) I2C_SCAN: Hora enviada ao TX: 21:00:34 31/12/1969[0m
+[0;32mI (45434) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (45434) I2C_SCAN:   Pacote #22 do nó 0x01  [--:--:--][0m
+[0;32mI (45434) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (45444) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (45444) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (45454) I2C_SCAN:   Pkts ok/lost: 3 / 0[0m
+[0;32mI (45454) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (45464) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (45514) I2C_SCAN: Hora enviada ao TX: 21:00:45 31/12/1969[0m
+[1;31mE (52214) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (52214) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (52214) I2C_SCAN: 00 00 00 2e 14 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (52214) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (52224) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (52224) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (52384) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (52384) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (52384) I2C_SCAN: 00 00 00 3f 14 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (52384) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (52394) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (52394) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (52564) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (52564) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (52564) I2C_SCAN: 00 00 00 51 14 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (52564) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (52574) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (52574) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (52904) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (52904) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (52904) I2C_SCAN: 00 00 00 73 14 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (52904) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (52914) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (52914) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (53074) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (53074) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (53074) I2C_SCAN: 00 00 00 84 14 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (53074) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (53084) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (53084) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (53254) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (53254) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (53254) I2C_SCAN: 00 00 00 96 14 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (53254) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (53264) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (53264) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (53424) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (53424) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (53424) I2C_SCAN: 00 00 00 a7 14 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (53424) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (53434) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (53434) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (53604) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (53604) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (53604) I2C_SCAN: 00 00 00 b9 14 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (53604) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (53614) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (53614) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (55574) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (55574) I2C_SCAN:   Pacote #23 do nó 0x01  [--:--:--][0m
+[0;32mI (55574) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (55584) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (55584) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (55594) I2C_SCAN:   Pkts ok/lost: 4 / 0[0m
+[0;32mI (55594) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (55614) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (55654) I2C_SCAN: Hora enviada ao TX: 21:00:55 31/12/1969[0m
+[0;32mI (65714) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (65714) I2C_SCAN:   Pacote #24 do nó 0x01  [--:--:--][0m
+[0;32mI (65714) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (65724) I2C_SCAN:   RSSI        : -65 dBm[0m
+[0;32mI (65724) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (65734) I2C_SCAN:   Pkts ok/lost: 5 / 0[0m
+[0;32mI (65734) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (65754) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (65794) I2C_SCAN: Hora enviada ao TX: 21:01:05 31/12/1969[0m
+[0;32mI (75854) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (75854) I2C_SCAN:   Pacote #25 do nó 0x01  [--:--:--][0m
+[0;32mI (75854) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (75864) I2C_SCAN:   RSSI        : -61 dBm[0m
+[0;32mI (75864) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (75874) I2C_SCAN:   Pkts ok/lost: 6 / 0[0m
+[0;32mI (75874) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (75894) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (75924) I2C_SCAN: Hora enviada ao TX: 21:01:15 31/12/1969[0m
+[0;32mI (85994) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (85994) I2C_SCAN:   Pacote #26 do nó 0x01  [--:--:--][0m
+[0;32mI (85994) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (86004) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (86004) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (86014) I2C_SCAN:   Pkts ok/lost: 7 / 0[0m
+[0;32mI (86014) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (86034) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (86064) I2C_SCAN: Hora enviada ao TX: 21:01:25 31/12/1969[0m
+[0;32mI (96134) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (96134) I2C_SCAN:   Pacote #27 do nó 0x01  [--:--:--][0m
+[0;32mI (96134) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (96144) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (96144) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (96154) I2C_SCAN:   Pkts ok/lost: 8 / 0[0m
+[0;32mI (96154) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (96164) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (96204) I2C_SCAN: Hora enviada ao TX: 21:01:35 31/12/1969[0m
+[1;31mE (102354) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (102354) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (102354) I2C_SCAN: 00 00 00 c4 27 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (102354) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (102364) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (102374) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (102524) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (102524) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (102524) I2C_SCAN: 00 00 00 d5 27 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (102524) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (102534) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (102544) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (102704) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (102704) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (102704) I2C_SCAN: 00 00 00 e7 27 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (102704) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (102714) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (102724) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (103044) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (103044) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (103044) I2C_SCAN: 00 00 00 09 28 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (103044) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (103054) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (103064) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (103214) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (103214) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (103214) I2C_SCAN: 00 00 00 1a 28 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (103214) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (103224) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (103234) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (103394) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (103394) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (103394) I2C_SCAN: 00 00 00 2c 28 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (103394) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (103404) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (103414) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (103564) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (103564) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (103564) I2C_SCAN: 00 00 00 3d 28 00 00 00 00 00 00 23 08 06 00 ff[0m
+[0;32mI (103564) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (103574) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (103584) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (103744) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (103744) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (103744) I2C_SCAN: 00 00 00 4f 28 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (103744) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (103754) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (103764) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (106274) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (106274) I2C_SCAN:   Pacote #28 do nó 0x01  [--:--:--][0m
+[0;32mI (106274) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (106284) I2C_SCAN:   RSSI        : -72 dBm[0m
+[0;32mI (106284) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (106294) I2C_SCAN:   Pkts ok/lost: 9 / 0[0m
+[0;32mI (106294) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (115964) transport_base: Poll timeout or error, errno=Success, fd=54, timeout_ms=10000[0m
+[1;31mE (115964) mqtt_client: Writing didn't complete in specified timeout: errno=0[0m
+[0;33mW (115964) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (115964) mqtt_client: Client force reconnect requested[0m
+[1;31mE (125984) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (125984) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (125984) mqtt_client: Error transport connect[0m
+[1;31mE (125984) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (125984) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (125994) mqtt_client: Client force reconnect requested[0m
+[1;31mE (136014) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (136014) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (136014) mqtt_client: Error transport connect[0m
+[1;31mE (136014) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (136014) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (136024) mqtt_client: Client force reconnect requested[0m
+[1;31mE (146044) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (146044) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (146044) mqtt_client: Error transport connect[0m
+[1;31mE (146044) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (146044) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (146054) mqtt_client: Client force reconnect requested[0m
+[1;31mE (156074) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (156074) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (156074) mqtt_client: Error transport connect[0m
+[1;31mE (156074) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (156074) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (156084) mqtt_client: Client force reconnect requested[0m
+[0;32mI (163624) I2C_SCAN: MQTT conectado[0m
+[0;33mW (163634) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (163674) I2C_SCAN: Hora enviada ao TX: 21:02:43 31/12/1969[0m
+[0;33mW (171474) I2C_SCAN: Nó 0x01: 4 pacote(s) perdido(s) (esperado 29, recebido 33)[0m
+[0;32mI (171474) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (171474) I2C_SCAN:   Pacote #33 do nó 0x01  [--:--:--][0m
+[0;32mI (171484) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (171484) I2C_SCAN:   RSSI        : -72 dBm[0m
+[0;32mI (171494) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (171494) I2C_SCAN:   Pkts ok/lost: 10 / 4[0m
+[0;32mI (171494) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (171514) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (171554) I2C_SCAN: Hora enviada ao TX: 21:02:51 31/12/1969[0m
+[0;32mI (181614) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (181614) I2C_SCAN:   Pacote #34 do nó 0x01  [--:--:--][0m
+[0;32mI (181614) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (181624) I2C_SCAN:   RSSI        : -75 dBm[0m
+[0;32mI (181624) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (181634) I2C_SCAN:   Pkts ok/lost: 11 / 4[0m
+[0;32mI (181634) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (181654) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (181694) I2C_SCAN: Hora enviada ao TX: 21:03:01 31/12/1969[0m
+[0;32mI (191754) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (191754) I2C_SCAN:   Pacote #35 do nó 0x01  [--:--:--][0m
+[0;32mI (191754) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (191764) I2C_SCAN:   RSSI        : -71 dBm[0m
+[0;32mI (191764) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (191774) I2C_SCAN:   Pkts ok/lost: 12 / 4[0m
+[0;32mI (191774) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (191794) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (191834) I2C_SCAN: Hora enviada ao TX: 21:03:11 31/12/1969[0m
+[0;32mI (201894) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (201894) I2C_SCAN:   Pacote #36 do nó 0x01  [--:--:--][0m
+[0;32mI (201894) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (201904) I2C_SCAN:   RSSI        : -70 dBm[0m
+[0;32mI (201904) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (201914) I2C_SCAN:   Pkts ok/lost: 13 / 4[0m
+[0;32mI (201914) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (201934) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (201974) I2C_SCAN: Hora enviada ao TX: 21:03:21 31/12/1969[0m
+[1;31mE (202664) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (202664) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (202664) I2C_SCAN: 00 00 00 f3 4e 00 00 00 00 00 00 23 06 06 00 ff[0m
+[0;32mI (202664) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (202674) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (202684) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (202834) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (202834) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (202834) I2C_SCAN: 00 00 00 04 4f 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (202834) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (202844) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (202854) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (203004) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (203004) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (203004) I2C_SCAN: 00 00 00 15 4f 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (203004) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (203014) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (203024) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (203354) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (203354) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (203354) I2C_SCAN: 00 00 00 38 4f 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (203354) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (203364) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (203374) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (203524) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (203524) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (203524) I2C_SCAN: 00 00 00 49 4f 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (203524) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (203534) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (203544) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (203704) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (203704) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (203704) I2C_SCAN: 00 00 00 5b 4f 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (203704) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (203714) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (203724) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (203874) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (203874) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (203874) I2C_SCAN: 00 00 00 6c 4f 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (203874) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (203884) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (203894) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (204054) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (204054) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (204054) I2C_SCAN: 00 00 00 7e 4f 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (204054) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (204064) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (204074) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (204214) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (204214) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[0;32mI (212034) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (212034) I2C_SCAN:   Pacote #37 do nó 0x01  [--:--:--][0m
+[0;32mI (212034) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (212044) I2C_SCAN:   RSSI        : -72 dBm[0m
+[0;32mI (212044) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (212054) I2C_SCAN:   Pkts ok/lost: 14 / 4[0m
+[0;32mI (212054) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (212074) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (212114) I2C_SCAN: Hora enviada ao TX: 21:03:31 31/12/1969[0m
+[0;32mI (222174) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (222174) I2C_SCAN:   Pacote #38 do nó 0x01  [--:--:--][0m
+[0;32mI (222174) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (222184) I2C_SCAN:   RSSI        : -71 dBm[0m
+[0;32mI (222184) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (222194) I2C_SCAN:   Pkts ok/lost: 15 / 4[0m
+[0;32mI (222194) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (222214) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (222254) I2C_SCAN: Hora enviada ao TX: 21:03:41 31/12/1969[0m
+[0;32mI (232314) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (232314) I2C_SCAN:   Pacote #39 do nó 0x01  [--:--:--][0m
+[0;32mI (232314) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (232324) I2C_SCAN:   RSSI        : -73 dBm[0m
+[0;32mI (232324) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (232334) I2C_SCAN:   Pkts ok/lost: 16 / 4[0m
+[0;32mI (232334) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (232354) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (232394) I2C_SCAN: Hora enviada ao TX: 21:03:51 31/12/1969[0m
+[0;32mI (242454) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (242454) I2C_SCAN:   Pacote #40 do nó 0x01  [--:--:--][0m
+[0;32mI (242454) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (242464) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (242464) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (242474) I2C_SCAN:   Pkts ok/lost: 17 / 4[0m
+[0;32mI (242474) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (242494) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (242534) I2C_SCAN: Hora enviada ao TX: 21:04:02 31/12/1969[0m
+[0;32mI (252594) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (252594) I2C_SCAN:   Pacote #41 do nó 0x01  [--:--:--][0m
+[0;32mI (252594) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (252604) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (252604) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (252614) I2C_SCAN:   Pkts ok/lost: 18 / 4[0m
+[0;32mI (252614) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (252634) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (252674) I2C_SCAN: Hora enviada ao TX: 21:04:12 31/12/1969[0m
+[1;31mE (253084) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (253084) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (253084) I2C_SCAN: 00 00 00 a5 62 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (253084) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (253094) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (253104) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (253144) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (253144) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (253144) I2C_SCAN: 00 00 00 ab 62 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (253144) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (253154) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (253164) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (253494) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (253494) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (253494) I2C_SCAN: 00 00 00 ce 62 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (253494) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (253504) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (253514) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (253664) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (253664) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (253664) I2C_SCAN: 00 00 00 df 62 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (253664) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (253674) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (253684) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (253844) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (253844) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (253844) I2C_SCAN: 00 00 00 f1 62 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (253844) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (253854) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (253864) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (254014) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (254014) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (254014) I2C_SCAN: 00 00 00 02 63 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (254014) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (254024) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (254034) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (254194) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (254194) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (254194) I2C_SCAN: 00 00 00 14 63 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (254194) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (254204) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (254214) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (262734) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (262734) I2C_SCAN:   Pacote #42 do nó 0x01  [--:--:--][0m
+[0;32mI (262734) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (262744) I2C_SCAN:   RSSI        : -86 dBm[0m
+[0;32mI (262744) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (262754) I2C_SCAN:   Pkts ok/lost: 19 / 4[0m
+[0;32mI (262754) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (262774) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (262814) I2C_SCAN: Hora enviada ao TX: 21:04:22 31/12/1969[0m
+[0;32mI (272874) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (272874) I2C_SCAN:   Pacote #43 do nó 0x01  [--:--:--][0m
+[0;32mI (272874) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (272884) I2C_SCAN:   RSSI        : -78 dBm[0m
+[0;32mI (272884) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (272894) I2C_SCAN:   Pkts ok/lost: 20 / 4[0m
+[0;32mI (272894) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (272914) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (272954) I2C_SCAN: Hora enviada ao TX: 21:04:32 31/12/1969[0m
+[0;32mI (283014) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (283014) I2C_SCAN:   Pacote #44 do nó 0x01  [--:--:--][0m
+[0;32mI (283014) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (283024) I2C_SCAN:   RSSI        : -74 dBm[0m
+[0;32mI (283024) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (283034) I2C_SCAN:   Pkts ok/lost: 21 / 4[0m
+[0;32mI (283034) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (283054) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (283094) I2C_SCAN: Hora enviada ao TX: 21:04:42 31/12/1969[0m
+[0;32mI (293154) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (293154) I2C_SCAN:   Pacote #45 do nó 0x01  [--:--:--][0m
+[0;32mI (293154) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (293164) I2C_SCAN:   RSSI        : -71 dBm[0m
+[0;32mI (293164) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (293174) I2C_SCAN:   Pkts ok/lost: 22 / 4[0m
+[0;32mI (293174) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (293194) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (293234) I2C_SCAN: Hora enviada ao TX: 21:04:52 31/12/1969[0m
+[1;31mE (302944) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (302944) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (302944) I2C_SCAN: 00 00 00 1f 76 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (302944) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (302954) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (302964) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (303114) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (303114) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (303114) I2C_SCAN: 00 00 00 30 76 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (303114) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (303124) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (303134) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (303294) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (303294) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (303644) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (303644) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (303644) I2C_SCAN: 00 00 00 65 76 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (303644) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (303654) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (303664) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (303814) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (303814) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (303814) I2C_SCAN: 00 00 00 76 76 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (303814) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (303824) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (303834) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (303984) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (303984) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (303984) I2C_SCAN: 00 00 00 87 76 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (303984) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (303994) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (304004) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (304154) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (304154) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (304154) I2C_SCAN: 00 00 00 98 76 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (304154) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (304164) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (304174) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (304334) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (304334) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (304334) I2C_SCAN: 00 00 00 aa 76 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (304334) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (304344) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (304354) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;33mW (312264) transport_base: Poll timeout or error, errno=Connection already in progress, fd=54, timeout_ms=10000[0m
+[1;31mE (312264) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (312264) mqtt_client: Error to resend data [0m
+[0;33mW (312274) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (312274) mqtt_client: Client force reconnect requested[0m
+[0;33mW (313694) I2C_SCAN: Nó 0x01: 1 pacote(s) perdido(s) (esperado 46, recebido 47)[0m
+[0;32mI (313694) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (313694) I2C_SCAN:   Pacote #47 do nó 0x01  [--:--:--][0m
+[0;32mI (313704) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (313704) I2C_SCAN:   RSSI        : -74 dBm[0m
+[0;32mI (313714) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (313714) I2C_SCAN:   Pkts ok/lost: 23 / 5[0m
+[0;32mI (313714) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (313734) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (313774) I2C_SCAN: Hora enviada ao TX: 21:05:13 31/12/1969[0m
+[0;33mW (322284) transport_base: Poll timeout or error, errno=Connection already in progress, fd=-1, timeout_ms=10000[0m
+[1;31mE (322284) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (322284) mqtt_client: Error sending ping[0m
+[1;31mE (322294) mqtt_client: Can't send ping, disconnected[0m
+[0;33mW (322294) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (322294) mqtt_client: Client force reconnect requested[0m
+[0;32mI (323834) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (323834) I2C_SCAN:   Pacote #48 do nó 0x01  [--:--:--][0m
+[0;32mI (323834) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (323844) I2C_SCAN:   RSSI        : -74 dBm[0m
+[0;32mI (323844) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (323854) I2C_SCAN:   Pkts ok/lost: 24 / 5[0m
+[0;32mI (323854) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (323864) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (323914) I2C_SCAN: Hora enviada ao TX: 21:05:23 31/12/1969[0m
+[1;31mE (332324) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (332324) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (332324) mqtt_client: Error transport connect[0m
+[1;31mE (332324) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (332324) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (332334) mqtt_client: Client force reconnect requested[0m
+[0;32mI (333974) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (333974) I2C_SCAN:   Pacote #49 do nó 0x01  [--:--:--][0m
+[0;32mI (333974) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (333984) I2C_SCAN:   RSSI        : -73 dBm[0m
+[0;32mI (333984) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (333994) I2C_SCAN:   Pkts ok/lost: 25 / 5[0m
+[0;32mI (333994) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (334004) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (334054) I2C_SCAN: Hora enviada ao TX: 21:05:33 31/12/1969[0m
+[1;31mE (342354) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (342354) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (342354) mqtt_client: Error transport connect[0m
+[1;31mE (342354) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (342354) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (342364) mqtt_client: Client force reconnect requested[0m
+[0;32mI (343884) I2C_SCAN: MQTT conectado[0m
+[0;32mI (344114) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (344114) I2C_SCAN:   Pacote #50 do nó 0x01  [--:--:--][0m
+[0;32mI (344114) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (344124) I2C_SCAN:   RSSI        : -73 dBm[0m
+[0;32mI (344124) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (344134) I2C_SCAN:   Pkts ok/lost: 26 / 5[0m
+[0;32mI (344134) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (344154) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (344194) I2C_SCAN: Hora enviada ao TX: 21:05:43 31/12/1969[0m
+[1;31mE (353094) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (353094) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (353094) I2C_SCAN: 00 00 00 b6 89 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (353094) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (353104) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (353114) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (353264) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (353264) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (353264) I2C_SCAN: 00 00 00 c7 89 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (353274) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (353274) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (353284) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (353444) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (353444) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (353444) I2C_SCAN: 00 00 00 d9 89 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (353444) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (353454) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (353464) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (353794) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (353794) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (353794) I2C_SCAN: 00 00 00 fc 89 00 00 00 00 00 00 23 06 06 00 ff[0m
+[0;32mI (353794) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (353804) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (353814) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (353964) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (353964) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (353964) I2C_SCAN: 00 00 00 0d 8a 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (353964) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (353974) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (353984) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (354134) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (354134) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (354134) I2C_SCAN: 00 00 00 1e 8a 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (354134) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (354144) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (354154) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (354304) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (354304) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (354484) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (354484) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (354484) I2C_SCAN: 00 00 00 41 8a 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (354484) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (354494) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (354504) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;33mW (364534) I2C_SCAN: Nó 0x01: 1 pacote(s) perdido(s) (esperado 51, recebido 52)[0m
+[0;32mI (364534) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (364534) I2C_SCAN:   Pacote #52 do nó 0x01  [--:--:--][0m
+[0;32mI (364544) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (364544) I2C_SCAN:   RSSI        : -72 dBm[0m
+[0;32mI (364554) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (364554) I2C_SCAN:   Pkts ok/lost: 27 / 6[0m
+[0;32mI (364554) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (364574) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (364614) I2C_SCAN: Hora enviada ao TX: 21:06:04 31/12/1969[0m
+[0;32mI (374674) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (374674) I2C_SCAN:   Pacote #53 do nó 0x01  [--:--:--][0m
+[0;32mI (374674) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (374684) I2C_SCAN:   RSSI        : -74 dBm[0m
+[0;32mI (374684) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (374694) I2C_SCAN:   Pkts ok/lost: 28 / 6[0m
+[0;32mI (374694) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (374714) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (374754) I2C_SCAN: Hora enviada ao TX: 21:06:14 31/12/1969[0m
+[0;32mI (384814) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (384814) I2C_SCAN:   Pacote #54 do nó 0x01  [--:--:--][0m
+[0;32mI (384814) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (384824) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (384824) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (384834) I2C_SCAN:   Pkts ok/lost: 29 / 6[0m
+[0;32mI (384834) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (384854) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (384894) I2C_SCAN: Hora enviada ao TX: 21:06:24 31/12/1969[0m
+[0;32mI (394954) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (394954) I2C_SCAN:   Pacote #55 do nó 0x01  [--:--:--][0m
+[0;32mI (394954) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (394964) I2C_SCAN:   RSSI        : -70 dBm[0m
+[0;32mI (394964) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (394974) I2C_SCAN:   Pkts ok/lost: 30 / 6[0m
+[0;32mI (394974) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (394994) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (395034) I2C_SCAN: Hora enviada ao TX: 21:06:34 31/12/1969[0m
+[1;31mE (403244) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (403244) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (403414) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (403414) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (403414) I2C_SCAN: 00 00 00 5e 9d 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (403414) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (403424) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (403434) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (403584) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (403584) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (404104) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (404104) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (404104) I2C_SCAN: 00 00 00 a3 9d 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (404104) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (404114) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (404124) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (404284) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (404284) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (404454) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (404454) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (404454) I2C_SCAN: 00 00 00 c6 9d 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (404454) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (404464) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (404474) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (404624) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (404624) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[0;32mI (405094) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (405094) I2C_SCAN:   Pacote #56 do nó 0x01  [--:--:--][0m
+[0;32mI (405104) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (405104) I2C_SCAN:   RSSI        : -73 dBm[0m
+[0;32mI (405104) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (405114) I2C_SCAN:   Pkts ok/lost: 31 / 6[0m
+[0;32mI (405114) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (405134) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (405174) I2C_SCAN: Hora enviada ao TX: 21:06:44 31/12/1969[0m
+[0;32mI (415234) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (415234) I2C_SCAN:   Pacote #57 do nó 0x01  [--:--:--][0m
+[0;32mI (415234) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (415244) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (415244) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (415254) I2C_SCAN:   Pkts ok/lost: 32 / 6[0m
+[0;32mI (415254) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (415274) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (415314) I2C_SCAN: Hora enviada ao TX: 21:06:54 31/12/1969[0m
+[0;32mI (434084) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (434084) I2C_SCAN:   Pacote #1 do nó 0x01  [--:--:--][0m
+[0;32mI (434084) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (434094) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (434094) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (434104) I2C_SCAN:   Pkts ok/lost: 33 / 6[0m
+[0;32mI (434104) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (434124) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (434164) I2C_SCAN: Hora enviada ao TX: 21:07:13 31/12/1969[0m
+[0;32mI (439684) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (439684) I2C_SCAN:   Pacote #1 do nó 0x01  [--:--:--][0m
+[0;32mI (439684) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (439694) I2C_SCAN:   RSSI        : -70 dBm[0m
+[0;32mI (439694) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (439704) I2C_SCAN:   Pkts ok/lost: 34 / 6[0m
+[0;32mI (439704) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (439724) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (439764) I2C_SCAN: Hora enviada ao TX: 21:07:19 31/12/1969[0m
+[0;32mI (449824) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (449824) I2C_SCAN:   Pacote #2 do nó 0x01  [--:--:--][0m
+[0;32mI (449824) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (449834) I2C_SCAN:   RSSI        : -70 dBm[0m
+[0;32mI (449834) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (449844) I2C_SCAN:   Pkts ok/lost: 35 / 6[0m
+[0;32mI (449844) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (449864) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (449904) I2C_SCAN: Hora enviada ao TX: 21:07:29 31/12/1969[0m
+[1;31mE (453564) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (453564) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (453564) I2C_SCAN: 00 00 00 f5 b0 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (453564) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (453574) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (453584) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (454254) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (454254) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (454254) I2C_SCAN: 00 00 00 3a b1 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (454254) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (454264) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (454274) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (454604) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (454604) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (454604) I2C_SCAN: 00 00 00 5d b1 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (454604) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (454614) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (454624) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (459964) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (459964) I2C_SCAN:   Pacote #3 do nó 0x01  [--:--:--][0m
+[0;32mI (459964) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (459974) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (459974) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (459984) I2C_SCAN:   Pkts ok/lost: 36 / 6[0m
+[0;32mI (459984) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (460004) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (460044) I2C_SCAN: Hora enviada ao TX: 21:07:39 31/12/1969[0m
+[1;31mE (461454) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (461454) I2C_SCAN: Pacote inesperado: 88 bytes (esperado: 10)[0m
+[0;32mI (461454) I2C_SCAN: 06 06 00 14 b5 fc 3f 00 00 00 00 23 06 06 00 40[0m
+[0;32mI (461454) I2C_SCAN: 14 0e 80 f0 b5 fb 3f e4 b3 fc 3f 20 b6 fb 3f 00[0m
+[0;32mI (461464) I2C_SCAN: 00 00 00 0a b4 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (461474) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (461474) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (461484) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00[0m
+[0;32mI (470104) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (470104) I2C_SCAN:   Pacote #4 do nó 0x01  [--:--:--][0m
+[0;32mI (470114) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (470114) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (470114) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (470124) I2C_SCAN:   Pkts ok/lost: 37 / 6[0m
+[0;32mI (470124) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (470134) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (470184) I2C_SCAN: Hora enviada ao TX: 21:07:49 31/12/1969[0m
+[0;32mI (480244) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (480244) I2C_SCAN:   Pacote #5 do nó 0x01  [--:--:--][0m
+[0;32mI (480244) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (480254) I2C_SCAN:   RSSI        : -70 dBm[0m
+[0;32mI (480254) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (480264) I2C_SCAN:   Pkts ok/lost: 38 / 6[0m
+[0;32mI (480264) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (490184) transport_base: Poll timeout or error, errno=Connection already in progress, fd=54, timeout_ms=10000[0m
+[1;31mE (490184) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (490184) mqtt_client: Error to resend data [0m
+[0;33mW (490194) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (490194) mqtt_client: Client force reconnect requested[0m
+[0;33mW (500204) transport_base: Poll timeout or error, errno=Connection already in progress, fd=-1, timeout_ms=10000[0m
+[1;31mE (500204) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (500204) mqtt_client: Error sending ping[0m
+[1;31mE (500214) mqtt_client: Can't send ping, disconnected[0m
+[0;33mW (500214) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (500214) mqtt_client: Client force reconnect requested[0m
+[1;31mE (510244) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (510244) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (510244) mqtt_client: Error transport connect[0m
+[1;31mE (510244) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (510244) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (510254) mqtt_client: Client force reconnect requested[0m
+[1;31mE (520274) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (520274) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (520274) mqtt_client: Error transport connect[0m
+[1;31mE (520274) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (520274) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (520284) mqtt_client: Client force reconnect requested[0m
+[0;32mI (524544) I2C_SCAN: MQTT conectado[0m
+[0;33mW (524544) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (524584) I2C_SCAN: Hora enviada ao TX: 21:08:44 31/12/1969[0m
+[0;33mW (532404) I2C_SCAN: Nó 0x01: 3 pacote(s) perdido(s) (esperado 6, recebido 9)[0m
+[0;32mI (532404) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (532404) I2C_SCAN:   Pacote #9 do nó 0x01  [--:--:--][0m
+[0;32mI (532414) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (532414) I2C_SCAN:   RSSI        : -70 dBm[0m
+[0;32mI (532424) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (532424) I2C_SCAN:   Pkts ok/lost: 39 / 9[0m
+[0;32mI (532424) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (532444) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (532484) I2C_SCAN: Hora enviada ao TX: 21:08:51 31/12/1969[0m
+[0;32mI (542554) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (542554) I2C_SCAN:   Pacote #10 do nó 0x01  [--:--:--][0m
+[0;32mI (542554) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (542564) I2C_SCAN:   RSSI        : -70 dBm[0m
+[0;32mI (542564) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (542574) I2C_SCAN:   Pkts ok/lost: 40 / 9[0m
+[0;32mI (542574) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (542594) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (542634) I2C_SCAN: Hora enviada ao TX: 21:09:02 31/12/1969[0m
+[0;32mI (552694) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (552694) I2C_SCAN:   Pacote #11 do nó 0x01  [--:--:--][0m
+[0;32mI (552694) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (552704) I2C_SCAN:   RSSI        : -71 dBm[0m
+[0;32mI (552704) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (552714) I2C_SCAN:   Pkts ok/lost: 41 / 9[0m
+[0;32mI (552714) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (552734) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (552774) I2C_SCAN: Hora enviada ao TX: 21:09:12 31/12/1969[0m
+[1;31mE (553864) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (553864) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (554034) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (554034) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (554034) I2C_SCAN: 00 00 00 34 d8 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (554034) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (554044) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (554054) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (554384) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (554384) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (554554) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (554554) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (554554) I2C_SCAN: 00 00 00 68 d8 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (554554) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (554564) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (554574) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (554734) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (554734) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (554904) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (554904) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (554904) I2C_SCAN: 00 00 00 8b d8 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (554904) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (554914) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (554924) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (555084) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (555084) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (555254) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (555254) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[0;32mI (562834) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (562834) I2C_SCAN:   Pacote #12 do nó 0x01  [--:--:--][0m
+[0;32mI (562834) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (562844) I2C_SCAN:   RSSI        : -71 dBm[0m
+[0;32mI (562844) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (562854) I2C_SCAN:   Pkts ok/lost: 42 / 9[0m
+[0;32mI (562854) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (562874) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (562914) I2C_SCAN: Hora enviada ao TX: 21:09:22 31/12/1969[0m
+[0;32mI (572974) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (572974) I2C_SCAN:   Pacote #13 do nó 0x01  [--:--:--][0m
+[0;32mI (572974) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (572984) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (572984) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (572994) I2C_SCAN:   Pkts ok/lost: 43 / 9[0m
+[0;32mI (572994) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (573014) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (573054) I2C_SCAN: Hora enviada ao TX: 21:09:32 31/12/1969[0m
+[0;32mI (583114) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (583114) I2C_SCAN:   Pacote #14 do nó 0x01  [--:--:--][0m
+[0;32mI (583114) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (583124) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (583124) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (583134) I2C_SCAN:   Pkts ok/lost: 44 / 9[0m
+[0;32mI (583134) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (583154) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (583194) I2C_SCAN: Hora enviada ao TX: 21:09:42 31/12/1969[0m
+[0;32mI (593254) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (593254) I2C_SCAN:   Pacote #15 do nó 0x01  [--:--:--][0m
+[0;32mI (593254) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (593264) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (593264) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (593274) I2C_SCAN:   Pkts ok/lost: 45 / 9[0m
+[0;32mI (593274) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (593294) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (593334) I2C_SCAN: Hora enviada ao TX: 21:09:52 31/12/1969[0m
+[0;32mI (603394) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (603394) I2C_SCAN:   Pacote #16 do nó 0x01  [--:--:--][0m
+[0;32mI (603394) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (603404) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (603404) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (603414) I2C_SCAN:   Pkts ok/lost: 46 / 9[0m
+[0;32mI (603414) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (603434) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (603474) I2C_SCAN: Hora enviada ao TX: 21:10:02 31/12/1969[0m
+[1;31mE (603884) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (603884) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (603884) I2C_SCAN: 00 00 00 ad eb 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (603884) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (603894) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (603904) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (604014) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (604014) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (604014) I2C_SCAN: 00 00 00 ba eb 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (604014) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (604024) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (604034) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (604184) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (604184) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (604184) I2C_SCAN: 00 00 00 cb eb 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (604184) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (604194) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (604204) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (604534) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (604534) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (604534) I2C_SCAN: 00 00 00 ee eb 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (604534) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (604544) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (604554) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (604704) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (604704) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (604704) I2C_SCAN: 00 00 00 ff eb 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (604704) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (604714) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (604724) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (604884) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (604884) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (604884) I2C_SCAN: 00 00 00 11 ec 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (604884) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (604894) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (604904) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (605054) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (605054) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (605054) I2C_SCAN: 00 00 00 22 ec 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (605054) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (605064) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (605074) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (605224) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (605224) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[0;32mI (613534) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (613534) I2C_SCAN:   Pacote #17 do nó 0x01  [--:--:--][0m
+[0;32mI (613534) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (613544) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (613544) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (613554) I2C_SCAN:   Pkts ok/lost: 47 / 9[0m
+[0;32mI (613554) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (613574) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (613614) I2C_SCAN: Hora enviada ao TX: 21:10:13 31/12/1969[0m
+[1;31mE (620494) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (620494) I2C_SCAN: Pacote inesperado: 248 bytes (esperado: 10)[0m
+[0;32mI (620494) I2C_SCAN: 00 00 00 00 00 00 00 90 dc fb 3f 00 00 00 00 0d[0m
+[0;32mI (620494) I2C_SCAN: 6a 0d 80 a0 b4 fb 3f 58 e9 fa 3f 00 00 00 00 d0[0m
+[0;32mI (620504) I2C_SCAN: 4e fb 3f 10 00 00 00 00 10 00 00 00 00 00 00 f8[0m
+[0;32mI (620514) I2C_SCAN: 44 08 40 f0 bf 00 40 30 0e 06 00 11 cb 08 80 40[0m
+[0;32mI (620514) I2C_SCAN: b5 fb 3f 00 00 00 00 23 0e 06 00 20 0e 06 00 ee[0m
+[0;32mI (620524) I2C_SCAN: 5c 09 00 10 c6 40 3f 02 00 00 00 65 d0 0d 80 20[0m
+[0;32mI (620524) I2C_SCAN: b6 fb 3f e4 b3 fc 3f 50 b6 fb 3f 24 00 00 00 f8[0m
+[0;32mI (620534) I2C_SCAN: 44 08 40 f0 bf 00 40 30 04 06 00 11 cb 08 80 80[0m
+[0;32mI (620544) I2C_SCAN: b5 fb 3f 00 00 00 00 23 04 06 00 20 04 06 00 50[0m
+[0;32mI (620544) I2C_SCAN: 01 fb 3f 2a f2 00 00 01 00 00 00 dc 00 f0 3f 01[0m
+[0;32mI (620554) I2C_SCAN: 00 00 00 dc 09 fb 3f cd cd 00 00 23 04 06 00 dc[0m
+[0;32mI (620554) I2C_SCAN: 09 fb 3f c0 b6 fb 3f 23 04 06 00 07 00 00 00 00[0m
+[0;32mI (620564) I2C_SCAN: 00 00 00 00 00 00 00 e0 c2 00 40 f6 c2 00 40 ff[0m
+[0;32mI (620574) I2C_SCAN: ff ff ff 16 47 08 40 dc 09 fb 3f 3e cd 08 40 9c[0m
+[0;32mI (620574) I2C_SCAN: 9a f9 3f 00 00 00 00 00 00 00 00 00 00 00 00 ff[0m
+[0;32mI (620584) I2C_SCAN: ff 3f b3 00 00 00 00 00[0m
+[0;32mI (623674) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (623674) I2C_SCAN:   Pacote #18 do nó 0x01  [--:--:--][0m
+[0;32mI (623674) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (623684) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (623684) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (623694) I2C_SCAN:   Pkts ok/lost: 48 / 9[0m
+[0;32mI (623694) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (623714) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (623754) I2C_SCAN: Hora enviada ao TX: 21:10:23 31/12/1969[0m
+[0;32mI (633814) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (633814) I2C_SCAN:   Pacote #19 do nó 0x01  [--:--:--][0m
+[0;32mI (633814) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (633824) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (633824) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (633834) I2C_SCAN:   Pkts ok/lost: 49 / 9[0m
+[0;32mI (633834) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (633854) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (633894) I2C_SCAN: Hora enviada ao TX: 21:10:33 31/12/1969[0m
+[0;32mI (643954) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (643954) I2C_SCAN:   Pacote #20 do nó 0x01  [--:--:--][0m
+[0;32mI (643954) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (643964) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (643964) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (643974) I2C_SCAN:   Pkts ok/lost: 50 / 9[0m
+[0;32mI (643974) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (643994) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (644034) I2C_SCAN: Hora enviada ao TX: 21:10:43 31/12/1969[0m
+[1;31mE (654004) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (654004) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (654004) I2C_SCAN: 00 00 00 41 ff 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (654004) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (654014) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (654024) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (654094) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (654094) I2C_SCAN:   Pacote #21 do nó 0x01  [--:--:--][0m
+[0;32mI (654094) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (654104) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (654104) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (654114) I2C_SCAN:   Pkts ok/lost: 51 / 9[0m
+[0;32mI (654114) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (654124) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (654174) I2C_SCAN: Hora enviada ao TX: 21:10:53 31/12/1969[0m
+[1;31mE (654584) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (654584) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (654584) I2C_SCAN: 9a f9 3f 00 00 00 00 00 00 00 00 00 00 00 00 ff[0m
+[0;32mI (654584) I2C_SCAN: ff 3f b3 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (654594) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 65[0m
+[0;32mI (654604) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 49[0m
+[1;31mE (654694) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (654694) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (654884) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (654884) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (654884) I2C_SCAN: 00 00 00 99 ff 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (654884) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (654894) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (654904) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (655064) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (655064) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (655064) I2C_SCAN: 00 00 00 ab ff 00 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (655064) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (655074) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (655084) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (655234) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (655234) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (655234) I2C_SCAN: 00 00 00 bc ff 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (655234) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (655244) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (655254) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (655414) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (655414) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (655414) I2C_SCAN: 00 00 00 ce ff 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (655414) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (655424) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (655434) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (664234) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (664234) I2C_SCAN:   Pacote #22 do nó 0x01  [--:--:--][0m
+[0;32mI (664234) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (664244) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (664244) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (664254) I2C_SCAN:   Pkts ok/lost: 52 / 9[0m
+[0;32mI (664254) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (674174) transport_base: Poll timeout or error, errno=Connection already in progress, fd=54, timeout_ms=10000[0m
+[1;31mE (674174) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (674174) mqtt_client: Error to resend data [0m
+[0;33mW (674184) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (674184) mqtt_client: Client force reconnect requested[0m
+[0;33mW (684194) transport_base: Poll timeout or error, errno=Connection already in progress, fd=-1, timeout_ms=10000[0m
+[1;31mE (684194) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (684194) mqtt_client: Error sending ping[0m
+[1;31mE (684204) mqtt_client: Can't send ping, disconnected[0m
+[0;33mW (684204) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (684204) mqtt_client: Client force reconnect requested[0m
+[1;31mE (694234) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (694234) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (694234) mqtt_client: Error transport connect[0m
+[1;31mE (694234) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (694234) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (694244) mqtt_client: Client force reconnect requested[0m
+[1;31mE (704264) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (704264) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (704264) mqtt_client: Error transport connect[0m
+[1;31mE (704264) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (704264) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (704274) mqtt_client: Client force reconnect requested[0m
+[0;32mI (704344) I2C_SCAN: MQTT conectado[0m
+[0;33mW (704344) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (704384) I2C_SCAN: Hora enviada ao TX: 21:11:43 31/12/1969[0m
+[1;31mE (713514) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (713514) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (713514) I2C_SCAN: 00 00 00 80 16 01 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (713514) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (713524) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (713534) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (713684) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (713684) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (713684) I2C_SCAN: 00 00 00 91 16 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (713684) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (713694) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (713704) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (713864) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (713864) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (713864) I2C_SCAN: 00 00 00 a3 16 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (713864) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (713874) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (713884) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (714204) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (714204) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (714204) I2C_SCAN: 00 00 00 c5 16 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (714204) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (714214) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (714224) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (714374) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (714374) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (714374) I2C_SCAN: 00 00 00 d6 16 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (714374) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (714384) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (714394) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;33mW (714454) I2C_SCAN: Nó 0x01: 3 pacote(s) perdido(s) (esperado 23, recebido 26)[0m
+[0;32mI (714454) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (714454) I2C_SCAN:   Pacote #26 do nó 0x01  [--:--:--][0m
+[0;32mI (714464) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (714464) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (714474) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (714474) I2C_SCAN:   Pkts ok/lost: 53 / 12[0m
+[0;32mI (714474) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (714494) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (714534) I2C_SCAN: Hora enviada ao TX: 21:11:54 31/12/1969[0m
+[0;32mI (724594) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (724594) I2C_SCAN:   Pacote #27 do nó 0x01  [--:--:--][0m
+[0;32mI (724594) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (724604) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (724604) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (724614) I2C_SCAN:   Pkts ok/lost: 54 / 12[0m
+[0;32mI (724614) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (724634) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (724674) I2C_SCAN: Hora enviada ao TX: 21:12:04 31/12/1969[0m
+[0;32mI (734724) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (734724) I2C_SCAN:   Pacote #28 do nó 0x01  [--:--:--][0m
+[0;32mI (734724) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (734734) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (734734) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (734744) I2C_SCAN:   Pkts ok/lost: 55 / 12[0m
+[0;32mI (734744) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (734764) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (734804) I2C_SCAN: Hora enviada ao TX: 21:12:14 31/12/1969[0m
+[0;32mI (744854) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (744854) I2C_SCAN:   Pacote #29 do nó 0x01  [--:--:--][0m
+[0;32mI (744854) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (744864) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (744864) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (744874) I2C_SCAN:   Pkts ok/lost: 56 / 12[0m
+[0;32mI (744874) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (744894) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (744934) I2C_SCAN: Hora enviada ao TX: 21:12:24 31/12/1969[0m
+[1;31mE (754504) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (754504) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (754504) I2C_SCAN: 00 00 00 83 26 01 00 00 00 00 00 23 06 06 00 ff[0m
+[0;32mI (754504) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (754514) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (754524) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (754984) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (754984) I2C_SCAN:   Pacote #30 do nó 0x01  [--:--:--][0m
+[0;32mI (754984) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (754994) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (754994) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (755004) I2C_SCAN:   Pkts ok/lost: 57 / 12[0m
+[0;32mI (755004) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (755024) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (755064) I2C_SCAN: Hora enviada ao TX: 21:12:34 31/12/1969[0m
+[1;31mE (755474) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (755474) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (755554) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (755554) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (755554) I2C_SCAN: 00 00 00 ec 26 01 00 00 00 00 00 23 06 06 00 ff[0m
+[0;32mI (755554) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (755564) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (755574) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (765124) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (765124) I2C_SCAN:   Pacote #31 do nó 0x01  [--:--:--][0m
+[0;32mI (765124) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (765134) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (765134) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (765144) I2C_SCAN:   Pkts ok/lost: 58 / 12[0m
+[0;32mI (765144) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (765164) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (765204) I2C_SCAN: Hora enviada ao TX: 21:12:44 31/12/1969[0m
+[0;32mI (775264) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (775264) I2C_SCAN:   Pacote #32 do nó 0x01  [--:--:--][0m
+[0;32mI (775274) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (775274) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (775274) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (775284) I2C_SCAN:   Pkts ok/lost: 59 / 12[0m
+[0;32mI (775284) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (775304) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (775344) I2C_SCAN: Hora enviada ao TX: 21:12:54 31/12/1969[0m
+[0;32mI (785404) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (785404) I2C_SCAN:   Pacote #33 do nó 0x01  [--:--:--][0m
+[0;32mI (785404) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (785414) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (785414) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (785424) I2C_SCAN:   Pkts ok/lost: 60 / 12[0m
+[0;32mI (785424) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (785444) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (785484) I2C_SCAN: Hora enviada ao TX: 21:13:04 31/12/1969[0m
+[0;32mI (795534) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (795534) I2C_SCAN:   Pacote #34 do nó 0x01  [--:--:--][0m
+[0;32mI (795544) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (795544) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (795544) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (795554) I2C_SCAN:   Pkts ok/lost: 61 / 12[0m
+[0;32mI (795554) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (795574) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (795614) I2C_SCAN: Hora enviada ao TX: 21:13:15 31/12/1969[0m
+[0;32mI (805674) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (805674) I2C_SCAN:   Pacote #35 do nó 0x01  [--:--:--][0m
+[0;32mI (805674) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (805684) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (805684) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (805694) I2C_SCAN:   Pkts ok/lost: 62 / 12[0m
+[0;32mI (805694) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (805714) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (805754) I2C_SCAN: Hora enviada ao TX: 21:13:25 31/12/1969[0m
+[0;32mI (815804) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (815804) I2C_SCAN:   Pacote #36 do nó 0x01  [--:--:--][0m
+[0;32mI (815804) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (815814) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (815814) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (815824) I2C_SCAN:   Pkts ok/lost: 63 / 12[0m
+[0;32mI (815824) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (815844) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (815884) I2C_SCAN: Hora enviada ao TX: 21:13:35 31/12/1969[0m
+[1;31mE (816294) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (816294) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (816464) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (816464) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (816464) I2C_SCAN: 00 00 00 b7 3e 01 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (816464) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (816474) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (816484) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (816634) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (816634) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (816804) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (816804) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (816804) I2C_SCAN: 00 00 00 d9 3e 01 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (816804) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (816814) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (816824) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (825994) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (825994) I2C_SCAN:   Pacote #37 do nó 0x01  [--:--:--][0m
+[0;32mI (825994) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (826004) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (826004) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (826014) I2C_SCAN:   Pkts ok/lost: 64 / 12[0m
+[0;32mI (826014) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (826024) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (826074) I2C_SCAN: Hora enviada ao TX: 21:13:45 31/12/1969[0m
+[0;32mI (836124) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (836124) I2C_SCAN:   Pacote #38 do nó 0x01  [--:--:--][0m
+[0;32mI (836124) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (836134) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (836134) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (836144) I2C_SCAN:   Pkts ok/lost: 65 / 12[0m
+[0;32mI (836144) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (836154) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (836204) I2C_SCAN: Hora enviada ao TX: 21:13:55 31/12/1969[0m
+[0;32mI (846254) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (846254) I2C_SCAN:   Pacote #39 do nó 0x01  [--:--:--][0m
+[0;32mI (846254) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (846264) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (846264) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (846274) I2C_SCAN:   Pkts ok/lost: 66 / 12[0m
+[0;32mI (846274) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (846294) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (846334) I2C_SCAN: Hora enviada ao TX: 21:14:05 31/12/1969[0m
+[1;31mE (854674) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (854674) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (854674) I2C_SCAN: 00 00 00 a4 4d 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (854674) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (854684) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (854694) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (854844) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (854844) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (854844) I2C_SCAN: 00 00 00 b5 4d 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (854844) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (854854) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (854864) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (855024) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (855024) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (855364) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (855364) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (855364) I2C_SCAN: 00 00 00 e9 4d 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (855364) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (855374) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (855384) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (855534) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (855534) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (855534) I2C_SCAN: 00 00 00 fa 4d 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (855534) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (855544) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (855554) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (855714) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (855714) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (855714) I2C_SCAN: 00 00 00 0c 4e 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (855714) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (855724) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (855734) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (855884) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (855884) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (855884) I2C_SCAN: 00 00 00 1d 4e 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (855884) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (855894) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (855904) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (856064) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (856064) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[0;32mI (856384) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (856384) I2C_SCAN:   Pacote #40 do nó 0x01  [--:--:--][0m
+[0;32mI (856384) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (856394) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (856394) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (856404) I2C_SCAN:   Pkts ok/lost: 67 / 12[0m
+[0;32mI (856404) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (856424) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (856464) I2C_SCAN: Hora enviada ao TX: 21:14:15 31/12/1969[0m
+[0;32mI (866514) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (866514) I2C_SCAN:   Pacote #41 do nó 0x01  [--:--:--][0m
+[0;32mI (866514) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (866524) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (866524) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (866534) I2C_SCAN:   Pkts ok/lost: 68 / 12[0m
+[0;32mI (866534) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (866554) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (866594) I2C_SCAN: Hora enviada ao TX: 21:14:26 31/12/1969[0m
+[0;32mI (876644) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (876644) I2C_SCAN:   Pacote #42 do nó 0x01  [--:--:--][0m
+[0;32mI (876644) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (876654) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (876654) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (876664) I2C_SCAN:   Pkts ok/lost: 69 / 12[0m
+[0;32mI (876664) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (876684) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (876724) I2C_SCAN: Hora enviada ao TX: 21:14:36 31/12/1969[0m
+[0;32mI (886774) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (886774) I2C_SCAN:   Pacote #43 do nó 0x01  [--:--:--][0m
+[0;32mI (886774) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (886784) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (886784) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (886794) I2C_SCAN:   Pkts ok/lost: 70 / 12[0m
+[0;32mI (886794) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (886814) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (886854) I2C_SCAN: Hora enviada ao TX: 21:14:46 31/12/1969[0m
+[0;32mI (896904) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (896904) I2C_SCAN:   Pacote #44 do nó 0x01  [--:--:--][0m
+[0;32mI (896904) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (896914) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (896914) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (896924) I2C_SCAN:   Pkts ok/lost: 71 / 12[0m
+[0;32mI (896924) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (896944) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (896984) I2C_SCAN: Hora enviada ao TX: 21:14:56 31/12/1969[0m
+[1;31mE (904834) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (904834) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (904994) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (904994) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (904994) I2C_SCAN: 00 00 00 4c 61 01 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (904994) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (905004) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (905014) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (905524) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (905524) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (905694) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (905694) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (905694) I2C_SCAN: 00 00 00 92 61 01 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (905694) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (905704) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (905714) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (906044) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (906044) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (906044) I2C_SCAN: 00 00 00 b5 61 01 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (906044) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (906054) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (906064) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (907044) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (907044) I2C_SCAN:   Pacote #45 do nó 0x01  [--:--:--][0m
+[0;32mI (907054) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (907054) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (907054) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (907064) I2C_SCAN:   Pkts ok/lost: 72 / 12[0m
+[0;32mI (907064) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (907084) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (907124) I2C_SCAN: Hora enviada ao TX: 21:15:06 31/12/1969[0m
+[0;32mI (917184) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (917184) I2C_SCAN:   Pacote #46 do nó 0x01  [--:--:--][0m
+[0;32mI (917184) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (917194) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (917194) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (917204) I2C_SCAN:   Pkts ok/lost: 73 / 12[0m
+[0;32mI (917204) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (917224) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (917264) I2C_SCAN: Hora enviada ao TX: 21:15:16 31/12/1969[0m
+[0;32mI (927324) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (927324) I2C_SCAN:   Pacote #47 do nó 0x01  [--:--:--][0m
+[0;32mI (927334) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (927334) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (927334) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (927344) I2C_SCAN:   Pkts ok/lost: 74 / 12[0m
+[0;32mI (927344) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (927364) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (927404) I2C_SCAN: Hora enviada ao TX: 21:15:26 31/12/1969[0m
+[0;32mI (937464) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (937464) I2C_SCAN:   Pacote #48 do nó 0x01  [--:--:--][0m
+[0;32mI (937474) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (937474) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (937474) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (937484) I2C_SCAN:   Pkts ok/lost: 75 / 12[0m
+[0;32mI (937484) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (937504) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (937544) I2C_SCAN: Hora enviada ao TX: 21:15:37 31/12/1969[0m
+[0;32mI (947604) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (947604) I2C_SCAN:   Pacote #49 do nó 0x01  [--:--:--][0m
+[0;32mI (947604) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (947614) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (947614) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (947624) I2C_SCAN:   Pkts ok/lost: 76 / 12[0m
+[0;32mI (947624) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (947644) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (947684) I2C_SCAN: Hora enviada ao TX: 21:15:47 31/12/1969[0m
+[1;31mE (957774) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (957774) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (957934) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (957934) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (957934) I2C_SCAN: 00 00 00 fa 75 01 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (957934) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (957944) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (957954) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (958114) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (958114) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (958634) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (958634) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (958634) I2C_SCAN: 00 00 00 40 76 01 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (958634) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (958644) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (958654) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (958814) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (958814) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (958984) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (958984) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (958984) I2C_SCAN: 00 00 00 63 76 01 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (958984) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (958994) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (959004) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (959154) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (959154) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[0;33mW (967984) I2C_SCAN: Nó 0x01: 1 pacote(s) perdido(s) (esperado 50, recebido 51)[0m
+[0;32mI (967984) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (967984) I2C_SCAN:   Pacote #51 do nó 0x01  [--:--:--][0m
+[0;32mI (967994) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (967994) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (968004) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (968004) I2C_SCAN:   Pkts ok/lost: 77 / 13[0m
+[0;32mI (968004) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (968024) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (968064) I2C_SCAN: Hora enviada ao TX: 21:16:07 31/12/1969[0m
+[0;32mI (978124) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (978124) I2C_SCAN:   Pacote #52 do nó 0x01  [--:--:--][0m
+[0;32mI (978124) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (978134) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (978134) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (978144) I2C_SCAN:   Pkts ok/lost: 78 / 13[0m
+[0;32mI (978144) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (978164) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (978204) I2C_SCAN: Hora enviada ao TX: 21:16:17 31/12/1969[0m
+[0;32mI (988254) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (988254) I2C_SCAN:   Pacote #53 do nó 0x01  [--:--:--][0m
+[0;32mI (988264) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (988264) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (988264) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (988274) I2C_SCAN:   Pkts ok/lost: 79 / 13[0m
+[0;32mI (988274) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (988294) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (988334) I2C_SCAN: Hora enviada ao TX: 21:16:27 31/12/1969[0m
+[0;32mI (998394) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (998394) I2C_SCAN:   Pacote #54 do nó 0x01  [--:--:--][0m
+[0;32mI (998394) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (998404) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (998404) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (998414) I2C_SCAN:   Pkts ok/lost: 80 / 13[0m
+[0;32mI (998414) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (998434) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (998474) I2C_SCAN: Hora enviada ao TX: 21:16:37 31/12/1969[0m
+[1;31mE (1005144) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1005144) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1005144) I2C_SCAN: 00 00 00 6b 88 01 00 00 00 00 00 23 06 06 00 ff[0m
+[0;32mI (1005144) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1005154) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1005164) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1005314) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1005314) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1005314) I2C_SCAN: 00 00 00 7c 88 01 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (1005314) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1005324) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1005334) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1005844) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1005844) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (1006014) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1006014) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1006014) I2C_SCAN: 00 00 00 c2 88 01 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (1006014) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1006024) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1006034) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1006354) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1006354) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1006354) I2C_SCAN: 00 00 00 e4 88 01 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (1006354) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1006364) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1006374) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1006534) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1006534) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[0;32mI (1008524) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1008524) I2C_SCAN:   Pacote #55 do nó 0x01  [--:--:--][0m
+[0;32mI (1008524) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1008534) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1008534) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1008544) I2C_SCAN:   Pkts ok/lost: 81 / 13[0m
+[0;32mI (1008544) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1008564) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1008604) I2C_SCAN: Hora enviada ao TX: 21:16:48 31/12/1969[0m
+[0;32mI (1018664) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1018664) I2C_SCAN:   Pacote #56 do nó 0x01  [--:--:--][0m
+[0;32mI (1018674) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1018674) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1018674) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1018684) I2C_SCAN:   Pkts ok/lost: 82 / 13[0m
+[0;32mI (1018684) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1027804) transport_base: Poll timeout or error, errno=Connection already in progress, fd=54, timeout_ms=10000[0m
+[1;31mE (1027804) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (1027804) mqtt_client: Error to resend data [0m
+[0;33mW (1027814) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1027814) mqtt_client: Client force reconnect requested[0m
+[0;33mW (1037834) transport_base: Poll timeout or error, errno=Connection already in progress, fd=-1, timeout_ms=10000[0m
+[1;31mE (1037834) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (1037834) mqtt_client: Error sending ping[0m
+[1;31mE (1037844) mqtt_client: Can't send ping, disconnected[0m
+[0;33mW (1037844) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1037844) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1047874) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1047874) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1047874) mqtt_client: Error transport connect[0m
+[1;31mE (1047874) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1047874) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1047884) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1057904) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1057904) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1057904) mqtt_client: Error transport connect[0m
+[1;31mE (1057904) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1057904) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1057914) mqtt_client: Client force reconnect requested[0m
+[0;32mI (1065454) I2C_SCAN: MQTT conectado[0m
+[0;33mW (1065454) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1065494) I2C_SCAN: Hora enviada ao TX: 21:17:45 31/12/1969[0m
+[0;33mW (1070824) I2C_SCAN: Nó 0x01: 3 pacote(s) perdido(s) (esperado 57, recebido 60)[0m
+[0;32mI (1070824) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1070824) I2C_SCAN:   Pacote #60 do nó 0x01  [--:--:--][0m
+[0;32mI (1070834) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1070834) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1070844) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1070844) I2C_SCAN:   Pkts ok/lost: 83 / 16[0m
+[0;32mI (1070854) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1070864) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1070904) I2C_SCAN: Hora enviada ao TX: 21:17:50 31/12/1969[0m
+[0;32mI (1080964) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1080964) I2C_SCAN:   Pacote #61 do nó 0x01  [--:--:--][0m
+[0;32mI (1080964) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1080974) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1080974) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1080984) I2C_SCAN:   Pkts ok/lost: 84 / 16[0m
+[0;32mI (1080984) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1081004) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1081044) I2C_SCAN: Hora enviada ao TX: 21:18:00 31/12/1969[0m
+[0;32mI (1091104) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1091104) I2C_SCAN:   Pacote #62 do nó 0x01  [--:--:--][0m
+[0;32mI (1091104) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1091114) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1091114) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1091124) I2C_SCAN:   Pkts ok/lost: 85 / 16[0m
+[0;32mI (1091124) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1091144) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1091184) I2C_SCAN: Hora enviada ao TX: 21:18:10 31/12/1969[0m
+[0;32mI (1101244) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1101244) I2C_SCAN:   Pacote #63 do nó 0x01  [--:--:--][0m
+[0;32mI (1101244) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1101254) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (1101254) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1101264) I2C_SCAN:   Pkts ok/lost: 86 / 16[0m
+[0;32mI (1101264) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1101284) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1101324) I2C_SCAN: Hora enviada ao TX: 21:18:20 31/12/1969[0m
+[1;31mE (1105484) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1105484) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1105484) I2C_SCAN: 00 00 00 9d af 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (1105484) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1105494) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1105504) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1105654) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1105654) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1105654) I2C_SCAN: 00 00 00 ae af 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (1105654) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1105664) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1105674) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1105834) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1105834) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1105834) I2C_SCAN: 00 00 00 c0 af 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (1105834) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1105844) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1105854) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1106184) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1106184) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1106184) I2C_SCAN: 00 00 00 e3 af 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (1106184) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1106194) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1106204) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1106344) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1106344) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1106344) I2C_SCAN: 00 00 00 f3 af 01 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (1106344) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1106354) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1106364) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1106524) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1106524) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1106524) I2C_SCAN: 00 00 00 05 b0 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (1106524) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1106534) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1106544) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1106694) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1106694) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1106694) I2C_SCAN: 00 00 00 16 b0 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (1106694) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1106704) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1106714) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1106874) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1106874) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1106874) I2C_SCAN: 00 00 00 28 b0 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (1106874) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1106884) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1106894) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (1111384) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1111384) I2C_SCAN:   Pacote #64 do nó 0x01  [--:--:--][0m
+[0;32mI (1111384) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1111394) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1111394) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1111404) I2C_SCAN:   Pkts ok/lost: 87 / 16[0m
+[0;32mI (1111404) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1111424) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1111464) I2C_SCAN: Hora enviada ao TX: 21:18:30 31/12/1969[0m
+[0;32mI (1121524) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1121524) I2C_SCAN:   Pacote #65 do nó 0x01  [--:--:--][0m
+[0;32mI (1121524) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1121534) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (1121534) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (1121544) I2C_SCAN:   Pkts ok/lost: 88 / 16[0m
+[0;32mI (1121544) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1121564) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1121604) I2C_SCAN: Hora enviada ao TX: 21:18:41 31/12/1969[0m
+[0;32mI (1131664) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1131664) I2C_SCAN:   Pacote #66 do nó 0x01  [--:--:--][0m
+[0;32mI (1131664) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1131674) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (1131674) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1131684) I2C_SCAN:   Pkts ok/lost: 89 / 16[0m
+[0;32mI (1131684) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1131704) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1131744) I2C_SCAN: Hora enviada ao TX: 21:18:51 31/12/1969[0m
+[0;32mI (1141804) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1141804) I2C_SCAN:   Pacote #67 do nó 0x01  [--:--:--][0m
+[0;32mI (1141804) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1141814) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (1141814) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1141824) I2C_SCAN:   Pkts ok/lost: 90 / 16[0m
+[0;32mI (1141824) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1141844) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1141884) I2C_SCAN: Hora enviada ao TX: 21:19:01 31/12/1969[0m
+[0;32mI (1151944) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1151944) I2C_SCAN:   Pacote #68 do nó 0x01  [--:--:--][0m
+[0;32mI (1151944) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1151954) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (1151954) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1151964) I2C_SCAN:   Pkts ok/lost: 91 / 16[0m
+[0;32mI (1151964) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1151984) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1152024) I2C_SCAN: Hora enviada ao TX: 21:19:11 31/12/1969[0m
+[1;31mE (1155654) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1155654) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1155654) I2C_SCAN: 00 00 00 36 c3 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (1155654) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1155664) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1155674) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1155824) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1155824) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1155824) I2C_SCAN: 00 00 00 47 c3 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (1155824) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1155834) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1155844) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1155994) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1155994) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1155994) I2C_SCAN: 00 00 00 58 c3 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (1155994) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1156004) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1156014) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1156344) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1156344) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1156344) I2C_SCAN: 00 00 00 7b c3 01 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (1156344) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1156354) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1156364) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1156514) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1156514) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1156514) I2C_SCAN: 00 00 00 8c c3 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (1156514) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1156524) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1156534) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1156694) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1156694) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1156694) I2C_SCAN: 00 00 00 9e c3 01 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (1156694) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1156704) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1156714) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1156864) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1156864) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1156864) I2C_SCAN: 00 00 00 af c3 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (1156864) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1156874) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1156884) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1157044) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1157044) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1157044) I2C_SCAN: 00 00 00 c1 c3 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (1157044) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1157054) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1157064) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (1162084) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1162084) I2C_SCAN:   Pacote #69 do nó 0x01  [--:--:--][0m
+[0;32mI (1162084) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1162094) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1162094) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1162104) I2C_SCAN:   Pkts ok/lost: 92 / 16[0m
+[0;32mI (1162104) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1162124) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1162164) I2C_SCAN: Hora enviada ao TX: 21:19:21 31/12/1969[0m
+[0;32mI (1172224) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1172224) I2C_SCAN:   Pacote #70 do nó 0x01  [--:--:--][0m
+[0;32mI (1172224) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1172234) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (1172234) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1172244) I2C_SCAN:   Pkts ok/lost: 93 / 16[0m
+[0;32mI (1172244) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1172264) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1172304) I2C_SCAN: Hora enviada ao TX: 21:19:31 31/12/1969[0m
+[0;32mI (1182364) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1182364) I2C_SCAN:   Pacote #71 do nó 0x01  [--:--:--][0m
+[0;32mI (1182364) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1182374) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (1182374) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1182384) I2C_SCAN:   Pkts ok/lost: 94 / 16[0m
+[0;32mI (1182384) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1182404) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1182444) I2C_SCAN: Hora enviada ao TX: 21:19:41 31/12/1969[0m
+[0;32mI (1192504) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1192504) I2C_SCAN:   Pacote #72 do nó 0x01  [--:--:--][0m
+[0;32mI (1192504) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1192514) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1192514) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (1192524) I2C_SCAN:   Pkts ok/lost: 95 / 16[0m
+[0;32mI (1192524) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1192544) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1192584) I2C_SCAN: Hora enviada ao TX: 21:19:52 31/12/1969[0m
+[0;32mI (1202644) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1202644) I2C_SCAN:   Pacote #73 do nó 0x01  [--:--:--][0m
+[0;32mI (1202644) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1202654) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (1202654) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (1202664) I2C_SCAN:   Pkts ok/lost: 96 / 16[0m
+[0;32mI (1202664) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1212584) transport_base: Poll timeout or error, errno=Connection already in progress, fd=54, timeout_ms=10000[0m
+[1;31mE (1212584) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (1212584) mqtt_client: Error to resend data [0m
+[0;33mW (1212594) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1212594) mqtt_client: Client force reconnect requested[0m
+[0;33mW (1222614) transport_base: Poll timeout or error, errno=Connection already in progress, fd=-1, timeout_ms=10000[0m
+[1;31mE (1222614) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (1222614) mqtt_client: Error sending ping[0m
+[1;31mE (1222624) mqtt_client: Can't send ping, disconnected[0m
+[0;33mW (1222624) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1222624) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1232654) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1232654) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1232654) mqtt_client: Error transport connect[0m
+[1;31mE (1232654) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1232654) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1232664) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1242684) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1242684) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1242684) mqtt_client: Error transport connect[0m
+[1;31mE (1242684) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1242684) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1242694) mqtt_client: Client force reconnect requested[0m
+[0;32mI (1245374) I2C_SCAN: MQTT conectado[0m
+[0;33mW (1245384) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1245424) I2C_SCAN: Hora enviada ao TX: 21:20:44 31/12/1969[0m
+[0;33mW (1254804) I2C_SCAN: Nó 0x01: 3 pacote(s) perdido(s) (esperado 74, recebido 77)[0m
+[0;32mI (1254804) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1254804) I2C_SCAN:   Pacote #77 do nó 0x01  [--:--:--][0m
+[0;32mI (1254814) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1254814) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1254824) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1254824) I2C_SCAN:   Pkts ok/lost: 97 / 19[0m
+[0;32mI (1254834) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1254844) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1254884) I2C_SCAN: Hora enviada ao TX: 21:20:54 31/12/1969[0m
+[1;31mE (1256164) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1256164) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (1256344) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1256344) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (1256694) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1256694) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (1256854) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1256854) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1256854) I2C_SCAN: 00 00 00 be ea 01 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (1256854) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1256864) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1256874) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1257034) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1257034) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (1257204) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1257204) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1257204) I2C_SCAN: 00 00 00 e1 ea 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (1257204) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1257214) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1257224) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1257384) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1257384) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1257384) I2C_SCAN: 00 00 00 f3 ea 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (1257384) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1257394) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1257404) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (1264944) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1264944) I2C_SCAN:   Pacote #78 do nó 0x01  [--:--:--][0m
+[0;32mI (1264944) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1264954) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (1264954) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1264964) I2C_SCAN:   Pkts ok/lost: 98 / 19[0m
+[0;32mI (1264964) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1264984) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1265024) I2C_SCAN: Hora enviada ao TX: 21:21:04 31/12/1969[0m
+[0;32mI (1275084) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1275084) I2C_SCAN:   Pacote #79 do nó 0x01  [--:--:--][0m
+[0;32mI (1275084) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1275094) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (1275094) I2C_SCAN:   SNR         : 12 dB[0m
+[0;32mI (1275104) I2C_SCAN:   Pkts ok/lost: 99 / 19[0m
+[0;32mI (1275104) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1275124) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1275164) I2C_SCAN: Hora enviada ao TX: 21:21:14 31/12/1969[0m
+[0;32mI (1285224) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1285224) I2C_SCAN:   Pacote #80 do nó 0x01  [--:--:--][0m
+[0;32mI (1285224) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1285234) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1285234) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1285244) I2C_SCAN:   Pkts ok/lost: 100 / 19[0m
+[0;32mI (1285244) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1285264) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1285304) I2C_SCAN: Hora enviada ao TX: 21:21:24 31/12/1969[0m
+[0;32mI (1295364) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1295364) I2C_SCAN:   Pacote #81 do nó 0x01  [--:--:--][0m
+[0;32mI (1295364) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1295374) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1295374) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1295384) I2C_SCAN:   Pkts ok/lost: 101 / 19[0m
+[0;32mI (1295384) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1295404) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1295444) I2C_SCAN: Hora enviada ao TX: 21:21:34 31/12/1969[0m
+[0;32mI (1305504) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1305504) I2C_SCAN:   Pacote #82 do nó 0x01  [--:--:--][0m
+[0;32mI (1305504) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1305514) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (1305514) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1305524) I2C_SCAN:   Pkts ok/lost: 102 / 19[0m
+[0;32mI (1305524) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1305544) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1305584) I2C_SCAN: Hora enviada ao TX: 21:21:45 31/12/1969[0m
+[1;31mE (1306154) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1306154) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1306154) I2C_SCAN: 00 00 00 00 fe 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (1306154) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1306164) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1306174) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1306324) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1306324) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1306324) I2C_SCAN: 00 00 00 11 fe 01 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (1306324) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1306334) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1306344) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1306504) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1306504) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1306504) I2C_SCAN: 00 00 00 23 fe 01 00 00 00 00 00 23 04 06 00 ff[0m
+[0;32mI (1306504) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1306514) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1306524) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1306854) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1306854) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1306854) I2C_SCAN: 00 00 00 46 fe 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (1306854) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1306864) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1306874) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1307194) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1307194) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1307194) I2C_SCAN: 00 00 00 68 fe 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (1307194) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1307204) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1307214) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1307364) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1307364) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1307364) I2C_SCAN: 00 00 00 79 fe 01 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (1307364) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1307374) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1307384) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1307544) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1307544) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1307544) I2C_SCAN: 00 00 00 8b fe 01 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (1307544) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1307554) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1307564) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (1315644) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1315644) I2C_SCAN:   Pacote #83 do nó 0x01  [--:--:--][0m
+[0;32mI (1315644) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1315654) I2C_SCAN:   RSSI        : -67 dBm[0m
+[0;32mI (1315654) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (1315664) I2C_SCAN:   Pkts ok/lost: 103 / 19[0m
+[0;32mI (1315664) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1315684) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1315724) I2C_SCAN: Hora enviada ao TX: 21:21:55 31/12/1969[0m
+[0;32mI (1325784) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1325784) I2C_SCAN:   Pacote #84 do nó 0x01  [--:--:--][0m
+[0;32mI (1325784) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1325794) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1325794) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1325804) I2C_SCAN:   Pkts ok/lost: 104 / 19[0m
+[0;32mI (1325804) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1325824) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1325864) I2C_SCAN: Hora enviada ao TX: 21:22:05 31/12/1969[0m
+[0;32mI (1335924) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1335924) I2C_SCAN:   Pacote #85 do nó 0x01  [--:--:--][0m
+[0;32mI (1335924) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1335934) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1335934) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1335944) I2C_SCAN:   Pkts ok/lost: 105 / 19[0m
+[0;32mI (1335944) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1335954) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1336004) I2C_SCAN: Hora enviada ao TX: 21:22:15 31/12/1969[0m
+[0;32mI (1346064) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1346064) I2C_SCAN:   Pacote #86 do nó 0x01  [--:--:--][0m
+[0;32mI (1346064) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1346074) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1346074) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1346084) I2C_SCAN:   Pkts ok/lost: 106 / 19[0m
+[0;32mI (1346084) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1355984) transport_base: Poll timeout or error, errno=Success, fd=54, timeout_ms=10000[0m
+[1;31mE (1355984) mqtt_client: Writing didn't complete in specified timeout: errno=0[0m
+[0;33mW (1355984) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1355984) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1366004) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1366004) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1366004) mqtt_client: Error transport connect[0m
+[1;31mE (1366004) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1366004) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1366014) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1376034) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1376034) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1376034) mqtt_client: Error transport connect[0m
+[1;31mE (1376034) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1376034) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1376044) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1386064) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1386064) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1386064) mqtt_client: Error transport connect[0m
+[1;31mE (1386064) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1386064) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1386074) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1396094) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1396094) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1396094) mqtt_client: Error transport connect[0m
+[1;31mE (1396094) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1396094) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1396104) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1406124) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1406124) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1406124) mqtt_client: Error transport connect[0m
+[1;31mE (1406124) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1406124) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1406134) mqtt_client: Client force reconnect requested[0m
+[0;32mI (1407394) I2C_SCAN: MQTT conectado[0m
+[0;33mW (1407404) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1407444) I2C_SCAN: Hora enviada ao TX: 21:23:26 31/12/1969[0m
+[1;31mE (1407854) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1407854) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1407854) I2C_SCAN: 00 00 00 ba 25 02 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (1407854) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1407864) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1407874) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1407924) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1407924) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1407924) I2C_SCAN: 00 00 00 c1 25 02 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (1407924) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1407934) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1407944) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;33mW (1411264) I2C_SCAN: Nó 0x01: 4 pacote(s) perdido(s) (esperado 87, recebido 91)[0m
+[0;32mI (1411264) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1411264) I2C_SCAN:   Pacote #91 do nó 0x01  [--:--:--][0m
+[0;32mI (1411274) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1411274) I2C_SCAN:   RSSI        : -70 dBm[0m
+[0;32mI (1411284) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (1411284) I2C_SCAN:   Pkts ok/lost: 107 / 23[0m
+[0;32mI (1411294) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1411304) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1411344) I2C_SCAN: Hora enviada ao TX: 21:23:30 31/12/1969[0m
+[0;32mI (1421404) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1421404) I2C_SCAN:   Pacote #92 do nó 0x01  [--:--:--][0m
+[0;32mI (1421404) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1421414) I2C_SCAN:   RSSI        : -70 dBm[0m
+[0;32mI (1421414) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1421424) I2C_SCAN:   Pkts ok/lost: 108 / 23[0m
+[0;32mI (1421424) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1421444) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1421484) I2C_SCAN: Hora enviada ao TX: 21:23:40 31/12/1969[0m
+[0;32mI (1431544) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1431544) I2C_SCAN:   Pacote #93 do nó 0x01  [--:--:--][0m
+[0;32mI (1431544) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1431554) I2C_SCAN:   RSSI        : -70 dBm[0m
+[0;32mI (1431554) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1431564) I2C_SCAN:   Pkts ok/lost: 109 / 23[0m
+[0;32mI (1431564) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1431584) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1431624) I2C_SCAN: Hora enviada ao TX: 21:23:51 31/12/1969[0m
+[0;32mI (1441684) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1441684) I2C_SCAN:   Pacote #94 do nó 0x01  [--:--:--][0m
+[0;32mI (1441684) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1441694) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (1441694) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1441704) I2C_SCAN:   Pkts ok/lost: 110 / 23[0m
+[0;32mI (1441704) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1441724) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1441764) I2C_SCAN: Hora enviada ao TX: 21:24:01 31/12/1969[0m
+[0;32mI (1451824) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1451824) I2C_SCAN:   Pacote #95 do nó 0x01  [--:--:--][0m
+[0;32mI (1451824) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1451834) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (1451834) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (1451844) I2C_SCAN:   Pkts ok/lost: 111 / 23[0m
+[0;32mI (1451844) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1451864) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1451904) I2C_SCAN: Hora enviada ao TX: 21:24:11 31/12/1969[0m
+[1;31mE (1456634) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1456634) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (1456804) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1456804) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1456804) I2C_SCAN: 00 00 00 d9 38 02 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (1456804) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1456814) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1456824) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1457504) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1457504) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1457504) I2C_SCAN: 00 00 00 1f 39 02 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (1457504) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1457514) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1457524) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1457844) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1457844) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1457844) I2C_SCAN: 00 00 00 41 39 02 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (1457844) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1457854) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1457864) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1458024) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1458024) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[0;32mI (1461964) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1461964) I2C_SCAN:   Pacote #96 do nó 0x01  [--:--:--][0m
+[0;32mI (1461964) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1461974) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (1461974) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1461984) I2C_SCAN:   Pkts ok/lost: 112 / 23[0m
+[0;32mI (1461984) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1462004) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1462044) I2C_SCAN: Hora enviada ao TX: 21:24:21 31/12/1969[0m
+[0;32mI (1472104) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1472104) I2C_SCAN:   Pacote #97 do nó 0x01  [--:--:--][0m
+[0;32mI (1472104) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1472114) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (1472114) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (1472124) I2C_SCAN:   Pkts ok/lost: 113 / 23[0m
+[0;32mI (1472124) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1472144) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1472184) I2C_SCAN: Hora enviada ao TX: 21:24:31 31/12/1969[0m
+[0;32mI (1482244) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1482244) I2C_SCAN:   Pacote #98 do nó 0x01  [--:--:--][0m
+[0;32mI (1482244) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1482254) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (1482254) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1482264) I2C_SCAN:   Pkts ok/lost: 114 / 23[0m
+[0;32mI (1482264) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1482284) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1482324) I2C_SCAN: Hora enviada ao TX: 21:24:41 31/12/1969[0m
+[0;32mI (1492384) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1492384) I2C_SCAN:   Pacote #99 do nó 0x01  [--:--:--][0m
+[0;32mI (1492384) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1492394) I2C_SCAN:   RSSI        : -65 dBm[0m
+[0;32mI (1492394) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1492404) I2C_SCAN:   Pkts ok/lost: 115 / 23[0m
+[0;32mI (1492404) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1492424) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1492464) I2C_SCAN: Hora enviada ao TX: 21:24:51 31/12/1969[0m
+[0;32mI (1502524) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1502524) I2C_SCAN:   Pacote #100 do nó 0x01  [--:--:--][0m
+[0;32mI (1502524) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1502534) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (1502534) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1502544) I2C_SCAN:   Pkts ok/lost: 116 / 23[0m
+[0;32mI (1502544) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1512564) transport_base: Poll timeout or error, errno=Success, fd=54, timeout_ms=10000[0m
+[1;31mE (1512564) mqtt_client: Writing didn't complete in specified timeout: errno=0[0m
+[0;33mW (1512564) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1512564) mqtt_client: Client force reconnect requested[0m
+[0;32mI (1512614) I2C_SCAN: Hora enviada ao TX: 21:25:12 31/12/1969[0m
+[0;32mI (1515564) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1515564) I2C_SCAN:   Pacote #101 do nó 0x01  [--:--:--][0m
+[0;32mI (1515564) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1515574) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (1515574) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1515584) I2C_SCAN:   Pkts ok/lost: 117 / 23[0m
+[0;32mI (1515584) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1515594) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (1515644) I2C_SCAN: Hora enviada ao TX: 21:25:15 31/12/1969[0m
+[1;31mE (1522594) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1522594) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1522594) mqtt_client: Error transport connect[0m
+[1;31mE (1522594) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1522594) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1522604) mqtt_client: Client force reconnect requested[0m
+[0;32mI (1525704) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1525704) I2C_SCAN:   Pacote #102 do nó 0x01  [--:--:--][0m
+[0;32mI (1525704) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1525714) I2C_SCAN:   RSSI        : -65 dBm[0m
+[0;32mI (1525714) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (1525724) I2C_SCAN:   Pkts ok/lost: 118 / 23[0m
+[0;32mI (1525724) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1525734) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (1525784) I2C_SCAN: Hora enviada ao TX: 21:25:25 31/12/1969[0m
+[1;31mE (1532624) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1532624) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1532624) mqtt_client: Error transport connect[0m
+[1;31mE (1532624) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1532624) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1532634) mqtt_client: Client force reconnect requested[0m
+[0;32mI (1535844) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1535844) I2C_SCAN:   Pacote #103 do nó 0x01  [--:--:--][0m
+[0;32mI (1535844) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1535854) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (1535854) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (1535864) I2C_SCAN:   Pkts ok/lost: 119 / 23[0m
+[0;32mI (1535864) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1535874) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (1535924) I2C_SCAN: Hora enviada ao TX: 21:25:35 31/12/1969[0m
+[1;31mE (1542654) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1542654) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1542654) mqtt_client: Error transport connect[0m
+[1;31mE (1542654) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1542654) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1542664) mqtt_client: Client force reconnect requested[0m
+[0;32mI (1545984) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1545984) I2C_SCAN:   Pacote #104 do nó 0x01  [--:--:--][0m
+[0;32mI (1545984) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1545994) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (1545994) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (1546004) I2C_SCAN:   Pkts ok/lost: 120 / 23[0m
+[0;32mI (1546004) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1546014) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (1546064) I2C_SCAN: Hora enviada ao TX: 21:25:45 31/12/1969[0m
+[1;31mE (1552684) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1552684) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1552684) mqtt_client: Error transport connect[0m
+[1;31mE (1552684) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1552684) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1552694) mqtt_client: Client force reconnect requested[0m
+[0;32mI (1556124) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1556124) I2C_SCAN:   Pacote #105 do nó 0x01  [--:--:--][0m
+[0;32mI (1556124) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1556134) I2C_SCAN:   RSSI        : -64 dBm[0m
+[0;32mI (1556134) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1556144) I2C_SCAN:   Pkts ok/lost: 121 / 23[0m
+[0;32mI (1556144) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1556154) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (1556204) I2C_SCAN: Hora enviada ao TX: 21:25:55 31/12/1969[0m
+[1;31mE (1556954) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1556954) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (1557304) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1557304) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1557304) I2C_SCAN: 00 00 00 1b 60 02 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (1557304) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1557314) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1557324) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1557644) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1557644) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1557644) I2C_SCAN: 00 00 00 3d 60 02 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (1557644) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1557654) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1557664) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1557814) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1557814) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1557814) I2C_SCAN: 00 00 00 4e 60 02 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (1557814) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1557824) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1557834) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1557994) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1557994) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1557994) I2C_SCAN: 00 00 00 60 60 02 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (1557994) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1558004) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1558014) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1558164) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1558164) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1558164) I2C_SCAN: 00 00 00 71 60 02 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (1558164) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1558174) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1558184) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1558344) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1558344) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (1562714) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (1562714) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (1562714) mqtt_client: Error transport connect[0m
+[1;31mE (1562714) I2C_SCAN: MQTT erro (TLS: 0x8006)[0m
+[0;33mW (1562714) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1562724) mqtt_client: Client force reconnect requested[0m
+[0;32mI (1566264) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1566264) I2C_SCAN:   Pacote #106 do nó 0x01  [--:--:--][0m
+[0;32mI (1566264) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1566274) I2C_SCAN:   RSSI        : -65 dBm[0m
+[0;32mI (1566274) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1566284) I2C_SCAN:   Pkts ok/lost: 122 / 23[0m
+[0;32mI (1566284) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1566294) I2C_SCAN: MQTT não conectado, descartando pacote do nó 0x01[0m
+[0;32mI (1566344) I2C_SCAN: Hora enviada ao TX: 21:26:05 31/12/1969[0m
+[0;32mI (1566894) I2C_SCAN: MQTT conectado[0m
+[0;32mI (1576404) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1576404) I2C_SCAN:   Pacote #107 do nó 0x01  [--:--:--][0m
+[0;32mI (1576404) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1576414) I2C_SCAN:   RSSI        : -69 dBm[0m
+[0;32mI (1576414) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1576424) I2C_SCAN:   Pkts ok/lost: 123 / 23[0m
+[0;32mI (1576424) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1576444) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1576484) I2C_SCAN: Hora enviada ao TX: 21:26:15 31/12/1969[0m
+[0;32mI (1586544) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1586544) I2C_SCAN:   Pacote #108 do nó 0x01  [--:--:--][0m
+[0;32mI (1586544) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1586554) I2C_SCAN:   RSSI        : -66 dBm[0m
+[0;32mI (1586554) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1586564) I2C_SCAN:   Pkts ok/lost: 124 / 23[0m
+[0;32mI (1586564) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1586584) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1586624) I2C_SCAN: Hora enviada ao TX: 21:26:26 31/12/1969[0m
+[0;32mI (1596684) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1596684) I2C_SCAN:   Pacote #109 do nó 0x01  [--:--:--][0m
+[0;32mI (1596684) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1596694) I2C_SCAN:   RSSI        : -64 dBm[0m
+[0;32mI (1596694) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1596704) I2C_SCAN:   Pkts ok/lost: 125 / 23[0m
+[0;32mI (1596704) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1596724) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1596764) I2C_SCAN: Hora enviada ao TX: 21:26:36 31/12/1969[0m
+[0;32mI (1606824) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1606824) I2C_SCAN:   Pacote #110 do nó 0x01  [--:--:--][0m
+[0;32mI (1606824) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1606834) I2C_SCAN:   RSSI        : -65 dBm[0m
+[0;32mI (1606834) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (1606844) I2C_SCAN:   Pkts ok/lost: 126 / 23[0m
+[0;32mI (1606844) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1606864) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1606904) I2C_SCAN: Hora enviada ao TX: 21:26:46 31/12/1969[0m
+[1;31mE (1607974) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1607974) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1607974) I2C_SCAN: 00 00 00 e6 73 02 00 00 00 00 00 23 06 06 00 ff[0m
+[0;32mI (1607974) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1607984) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1607994) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[1;31mE (1608324) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (1608324) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (1608324) I2C_SCAN: 00 00 00 09 74 02 00 00 00 00 00 23 06 06 00 ff[0m
+[0;32mI (1608324) I2C_SCAN: ff ff ff f0 b5 fb 3f 00 00 00 00 50 b6 fb 3f 14[0m
+[0;32mI (1608334) I2C_SCAN: b5 fc 3f 00 00 00 00 f0 b5 fb 3f 01 00 00 00 65[0m
+[0;32mI (1608344) I2C_SCAN: d0 0d 80 20 b6 fb 3f 00 00 00 00 50 b6 fb 3f 50[0m
+[0;32mI (1616964) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1616964) I2C_SCAN:   Pacote #111 do nó 0x01  [--:--:--][0m
+[0;32mI (1616964) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1616974) I2C_SCAN:   RSSI        : -68 dBm[0m
+[0;32mI (1616974) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1616984) I2C_SCAN:   Pkts ok/lost: 127 / 23[0m
+[0;32mI (1616984) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1617004) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1617044) I2C_SCAN: Hora enviada ao TX: 21:26:56 31/12/1969[0m
+[0;32mI (1627104) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1627104) I2C_SCAN:   Pacote #112 do nó 0x01  [--:--:--][0m
+[0;32mI (1627104) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1627114) I2C_SCAN:   RSSI        : -61 dBm[0m
+[0;32mI (1627114) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1627124) I2C_SCAN:   Pkts ok/lost: 128 / 23[0m
+[0;32mI (1627124) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1636654) transport_base: Poll timeout or error, errno=Connection already in progress, fd=54, timeout_ms=10000[0m
+[1;31mE (1636654) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (1636654) mqtt_client: Error to resend data [0m
+[0;33mW (1636664) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1636664) mqtt_client: Client force reconnect requested[0m
+[0;33mW (1646684) transport_base: Poll timeout or error, errno=Connection already in progress, fd=-1, timeout_ms=10000[0m
+[1;31mE (1646684) mqtt_client: Writing didn't complete in specified timeout: errno=119[0m
+[1;31mE (1646684) mqtt_client: Error sending ping[0m
+[1;31mE (1646694) mqtt_client: Can't send ping, disconnected[0m
+[0;33mW (1646694) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1646694) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1664094) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned 0[0m
+[1;31mE (1664094) mqtt_client: MQTT connect failed[0m
+[0;33mW (1664094) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (1664094) mqtt_client: Client force reconnect requested[0m
+[0;32mI (1669974) I2C_SCAN: MQTT conectado[0m
+[0;33mW (1669974) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1670014) I2C_SCAN: Hora enviada ao TX: 21:27:49 31/12/1969[0m
+[0;33mW (1679264) I2C_SCAN: Nó 0x01: 3 pacote(s) perdido(s) (esperado 113, recebido 116)[0m
+[0;32mI (1679264) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1679264) I2C_SCAN:   Pacote #116 do nó 0x01  [--:--:--][0m
+[0;32mI (1679274) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1679274) I2C_SCAN:   RSSI        : -60 dBm[0m
+[0;32mI (1679284) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1679284) I2C_SCAN:   Pkts ok/lost: 129 / 26[0m
+[0;32mI (1679294) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1679304) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1679344) I2C_SCAN: Hora enviada ao TX: 21:27:58 31/12/1969[0m
+[0;32mI (1689404) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1689404) I2C_SCAN:   Pacote #117 do nó 0x01  [--:--:--][0m
+[0;32mI (1689404) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1689414) I2C_SCAN:   RSSI        : -60 dBm[0m
+[0;32mI (1689414) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1689424) I2C_SCAN:   Pkts ok/lost: 130 / 26[0m
+[0;32mI (1689424) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1689444) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1689484) I2C_SCAN: Hora enviada ao TX: 21:28:08 31/12/1969[0m
+[0;32mI (1699544) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (1699544) I2C_SCAN:   Pacote #118 do nó 0x01  [--:--:--][0m
+[0;32mI (1699544) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (1699554) I2C_SCAN:   RSSI        : -60 dBm[0m
+[0;32mI (1699554) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (1699564) I2C_SCAN:   Pkts ok/lost: 131 / 26[0m
+[0;32mI (1699564) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (1699584) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (1699624) I2C_SCAN: Hora enviada ao TX: 21:28:19 31/12/1969[0m

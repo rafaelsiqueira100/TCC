@@ -1,0 +1,1204 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanGateway\build\LorawanGateway.elf C:\Users\rafae\workspace\LorawanGateway\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM9'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (26) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Jun  8 2026 17:49:41[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=220d4h (139476) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=000320fc vaddr=3ffb0000 size=04760h ( 18272) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00036864 vaddr=40080000 size=097b4h ( 38836) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2490h (664720) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e24b8 vaddr=400897b4 size=0ef9ch ( 61340) load[0m
+[0;32mI (421) esp_image: segment 5: paddr=000f145c vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (433) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (433) boot: Disabling RNG early entropy source...[0m
+[0;32mI (444) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (453) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (454) app_init: Application information:[0m
+[0;32mI (458) app_init: Project name:     LorawanGateway[0m
+[0;32mI (463) app_init: App version:      1[0m
+[0;32mI (466) app_init: Compile time:     Jun 12 2026 16:44:25[0m
+[0;32mI (471) app_init: ELF file SHA256:  2b29a3b38...[0m
+[0;32mI (475) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (480) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (483) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (487) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (492) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (498) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFB9748 len 000268B8 (154 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (513) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (519) heap_init: At 40098750 len 000078B0 (30 KiB): IRAM[0m
+[0;32mI (526) spi_flash: detected chip: generic[0m
+[0;32mI (528) spi_flash: flash io: dio[0m
+[0;33mW (531) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (543) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (614) wifi:wifi driver task: 3ffc12ec, prio:23, stack:6656, core=0[0m
+[0;32mI (624) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (634) wifi:wifi certification version: v7.0[0m
+[0;32mI (634) wifi:config NVS flash: enabled[0m
+[0;32mI (634) wifi:config nano formatting: disabled[0m
+[0;32mI (634) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (644) wifi:Init management short buffer num: 32[0m
+[0;32mI (644) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (654) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (654) wifi:Init static rx buffer num: 10[0m
+[0;32mI (654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (664) wifi_init: rx ba win: 6[0m
+[0;32mI (664) wifi_init: accept mbox: 6[0m
+[0;32mI (664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (674) wifi_init: udp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp tx win: 5760[0m
+[0;32mI (684) wifi_init: tcp rx win: 5760[0m
+[0;32mI (684) wifi_init: tcp mss: 1440[0m
+[0;32mI (684) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (694) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (694) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (704) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (784) wifi:mode : sta (5c:01:3b:09:29:68)[0m
+[0;32mI (784) wifi:enable tsf[0m
+[0;32mI (784) I2C_SCAN: Aguardando conexão WiFi...[0m
+[0;33mW (3204) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[0;33mW (5624) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[0;33mW (8044) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[0;33mW (10464) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[0;33mW (12874) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[0;33mW (15294) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[1;31mE (15784) I2C_SCAN: Timeout DHCP — continuando mesmo assim[0m
+[0;32mI (15784) I2C_SCAN: Aguardando sincronização NTP...[0m
+[0;33mW (17714) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[0;33mW (20134) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[0;33mW (22554) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[0;33mW (24974) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[0;32mI (25784) I2C_SCAN: NTP sincronizado[0m
+[1;31mE (25784) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25784) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25784) mqtt_client: Error transport connect[0m
+[1;31mE (25794) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25794) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (25794) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25804) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25804) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25814) mqtt_client: Error transport connect[0m
+[1;31mE (25814) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25824) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (25824) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25834) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25834) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25844) mqtt_client: Error transport connect[0m
+[1;31mE (25844) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25854) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (25854) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25864) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25864) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25874) mqtt_client: Error transport connect[0m
+[1;31mE (25874) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25874) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (25884) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25884) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25894) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25894) mqtt_client: Error transport connect[0m
+[1;31mE (25904) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25904) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (25914) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25914) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25924) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25924) mqtt_client: Error transport connect[0m
+[1;31mE (25934) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25934) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (25934) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25944) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25944) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25954) mqtt_client: Error transport connect[0m
+[1;31mE (25954) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25964) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (25964) mqtt_client: Client force reconnect requested[0m
+[1;31mE (25974) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (25974) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25984) mqtt_client: Error transport connect[0m
+[1;31mE (25984) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (25994) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (25994) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26004) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26004) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26014) mqtt_client: Error transport connect[0m
+[1;31mE (26014) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26014) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26024) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26024) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26034) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26034) mqtt_client: Error transport connect[0m
+[1;31mE (26044) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26044) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26044) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26054) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26064) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26064) mqtt_client: Error transport connect[0m
+[1;31mE (26074) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26074) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26074) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26084) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26084) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26094) mqtt_client: Error transport connect[0m
+[1;31mE (26094) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26104) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26104) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26114) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26114) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26124) mqtt_client: Error transport connect[0m
+[1;31mE (26124) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26134) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26134) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26144) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26144) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26154) mqtt_client: Error transport connect[0m
+[1;31mE (26154) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26154) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26164) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26164) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26174) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26174) mqtt_client: Error transport connect[0m
+[1;31mE (26184) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26184) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26184) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26194) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26204) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26204) mqtt_client: Error transport connect[0m
+[1;31mE (26214) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26214) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26214) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26224) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26224) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26234) mqtt_client: Error transport connect[0m
+[1;31mE (26234) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26244) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26244) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26254) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26254) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26264) mqtt_client: Error transport connect[0m
+[1;31mE (26264) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26274) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26274) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26284) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26284) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26284) mqtt_client: Error transport connect[0m
+[1;31mE (26294) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26294) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26304) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26304) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26314) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26314) mqtt_client: Error transport connect[0m
+[1;31mE (26324) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26324) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26324) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26334) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26344) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26344) mqtt_client: Error transport connect[0m
+[1;31mE (26354) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26354) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26354) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26364) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26364) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26374) mqtt_client: Error transport connect[0m
+[1;31mE (26374) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26384) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26384) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26394) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26394) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26404) mqtt_client: Error transport connect[0m
+[1;31mE (26404) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26404) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26414) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26424) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26424) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26424) mqtt_client: Error transport connect[0m
+[1;31mE (26434) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26434) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26444) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26444) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26454) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26454) mqtt_client: Error transport connect[0m
+[1;31mE (26464) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26464) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26464) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26474) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26484) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26484) mqtt_client: Error transport connect[0m
+[1;31mE (26484) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26494) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26494) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26504) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26504) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26514) mqtt_client: Error transport connect[0m
+[1;31mE (26514) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26524) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26524) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26534) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26534) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26544) mqtt_client: Error transport connect[0m
+[1;31mE (26544) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26544) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26554) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26554) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26564) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26564) mqtt_client: Error transport connect[0m
+[1;31mE (26574) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26574) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26584) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26584) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26594) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26594) mqtt_client: Error transport connect[0m
+[1;31mE (26604) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26604) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26604) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26614) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26624) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26624) mqtt_client: Error transport connect[0m
+[1;31mE (26624) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26634) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26634) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26644) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26644) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26654) mqtt_client: Error transport connect[0m
+[1;31mE (26654) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26664) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26664) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26674) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26674) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26684) mqtt_client: Error transport connect[0m
+[1;31mE (26684) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26684) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26694) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26694) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26704) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26704) mqtt_client: Error transport connect[0m
+[1;31mE (26714) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26714) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26724) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26724) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26734) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26734) mqtt_client: Error transport connect[0m
+[1;31mE (26744) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26744) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26744) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26754) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26764) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26764) mqtt_client: Error transport connect[0m
+[1;31mE (26764) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26774) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26774) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26784) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26784) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26794) mqtt_client: Error transport connect[0m
+[1;31mE (26794) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26804) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26804) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26814) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26814) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26824) mqtt_client: Error transport connect[0m
+[1;31mE (26824) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26824) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26834) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26834) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26844) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26844) mqtt_client: Error transport connect[0m
+[1;31mE (26854) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26854) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26864) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26864) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26874) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26874) mqtt_client: Error transport connect[0m
+[1;31mE (26884) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26884) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26884) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26894) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26894) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26904) mqtt_client: Error transport connect[0m
+[1;31mE (26904) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26914) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26914) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26924) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26924) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26934) mqtt_client: Error transport connect[0m
+[1;31mE (26934) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26944) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26944) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26954) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26954) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26964) mqtt_client: Error transport connect[0m
+[1;31mE (26964) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26964) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (26974) mqtt_client: Client force reconnect requested[0m
+[1;31mE (26974) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (26984) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26984) mqtt_client: Error transport connect[0m
+[1;31mE (26994) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (26994) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27004) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27004) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27014) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27014) mqtt_client: Error transport connect[0m
+[1;31mE (27024) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27024) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27024) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27034) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27034) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27044) mqtt_client: Error transport connect[0m
+[1;31mE (27044) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27054) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27054) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27064) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27064) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27074) mqtt_client: Error transport connect[0m
+[1;31mE (27074) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27084) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27084) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27094) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27094) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27104) mqtt_client: Error transport connect[0m
+[1;31mE (27104) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27104) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27114) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27114) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27124) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27124) mqtt_client: Error transport connect[0m
+[1;31mE (27134) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27134) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27134) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27144) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27154) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27154) mqtt_client: Error transport connect[0m
+[1;31mE (27164) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27164) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27164) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27174) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27174) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27184) mqtt_client: Error transport connect[0m
+[1;31mE (27184) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27194) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27194) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27204) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27204) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27214) mqtt_client: Error transport connect[0m
+[1;31mE (27214) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27224) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27224) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27234) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27234) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27244) mqtt_client: Error transport connect[0m
+[1;31mE (27244) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27244) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27254) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27254) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27264) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27264) mqtt_client: Error transport connect[0m
+[1;31mE (27274) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27274) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27274) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27284) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27294) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27294) mqtt_client: Error transport connect[0m
+[1;31mE (27304) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27304) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27304) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27314) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27314) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27324) mqtt_client: Error transport connect[0m
+[1;31mE (27324) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27334) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27334) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27344) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27344) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27354) mqtt_client: Error transport connect[0m
+[1;31mE (27354) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27364) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27364) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27374) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27374) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27384) mqtt_client: Error transport connect[0m
+[1;31mE (27384) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27384) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27394) mqtt_client: Client force reconnect requested[0m
+[0;33mW (27394) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[1;31mE (27394) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27404) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27414) mqtt_client: Error transport connect[0m
+[1;31mE (27414) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27424) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27424) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27434) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27434) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27444) mqtt_client: Error transport connect[0m
+[1;31mE (27444) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27444) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27454) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27454) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27464) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27464) mqtt_client: Error transport connect[0m
+[1;31mE (27474) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27474) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27484) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27484) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27494) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27494) mqtt_client: Error transport connect[0m
+[1;31mE (27504) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27504) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27504) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27514) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27514) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27524) mqtt_client: Error transport connect[0m
+[1;31mE (27524) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27534) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27534) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27544) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27544) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27554) mqtt_client: Error transport connect[0m
+[1;31mE (27554) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27564) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27564) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27574) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27574) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27584) mqtt_client: Error transport connect[0m
+[1;31mE (27584) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27584) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27594) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27594) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27604) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27604) mqtt_client: Error transport connect[0m
+[1;31mE (27614) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27614) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27624) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27624) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27634) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27634) mqtt_client: Error transport connect[0m
+[1;31mE (27644) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27644) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27644) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27654) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27654) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27664) mqtt_client: Error transport connect[0m
+[1;31mE (27664) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27674) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27674) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27684) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27684) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27694) mqtt_client: Error transport connect[0m
+[1;31mE (27694) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27704) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27704) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27714) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27714) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27724) mqtt_client: Error transport connect[0m
+[1;31mE (27724) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27724) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27734) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27734) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27744) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27744) mqtt_client: Error transport connect[0m
+[1;31mE (27754) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27754) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27754) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27764) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27774) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27774) mqtt_client: Error transport connect[0m
+[1;31mE (27784) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27784) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27784) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27794) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27794) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27804) mqtt_client: Error transport connect[0m
+[1;31mE (27804) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27814) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27814) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27824) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27824) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27834) mqtt_client: Error transport connect[0m
+[1;31mE (27834) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27844) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27844) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27854) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27854) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27864) mqtt_client: Error transport connect[0m
+[1;31mE (27864) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27864) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27874) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27874) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27884) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27884) mqtt_client: Error transport connect[0m
+[1;31mE (27894) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27894) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27894) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27904) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27914) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27914) mqtt_client: Error transport connect[0m
+[1;31mE (27924) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27924) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27924) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27934) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27934) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27944) mqtt_client: Error transport connect[0m
+[1;31mE (27944) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27954) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27954) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27964) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27964) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27974) mqtt_client: Error transport connect[0m
+[1;31mE (27974) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (27984) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (27984) mqtt_client: Client force reconnect requested[0m
+[1;31mE (27994) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (27994) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27994) mqtt_client: Error transport connect[0m
+[1;31mE (28004) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28004) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28014) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28014) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28024) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28024) mqtt_client: Error transport connect[0m
+[1;31mE (28034) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28034) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28034) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28044) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28054) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28054) mqtt_client: Error transport connect[0m
+[1;31mE (28064) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28064) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28064) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28074) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28074) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28084) mqtt_client: Error transport connect[0m
+[1;31mE (28084) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28094) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28094) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28104) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28104) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28114) mqtt_client: Error transport connect[0m
+[1;31mE (28114) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28114) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28124) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28134) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28134) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28134) mqtt_client: Error transport connect[0m
+[1;31mE (28144) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28144) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28154) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28154) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28164) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28164) mqtt_client: Error transport connect[0m
+[1;31mE (28174) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28174) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28174) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28184) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28194) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28194) mqtt_client: Error transport connect[0m
+[1;31mE (28194) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28204) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28204) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28214) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28214) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28224) mqtt_client: Error transport connect[0m
+[1;31mE (28224) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28234) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28234) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28244) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28244) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28254) mqtt_client: Error transport connect[0m
+[1;31mE (28254) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28254) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28264) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28274) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28274) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28274) mqtt_client: Error transport connect[0m
+[1;31mE (28284) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28284) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28294) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28294) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28304) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28304) mqtt_client: Error transport connect[0m
+[1;31mE (28314) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28314) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28314) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28324) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28334) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28334) mqtt_client: Error transport connect[0m
+[1;31mE (28334) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28344) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28344) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28354) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28354) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28364) mqtt_client: Error transport connect[0m
+[1;31mE (28364) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28374) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28374) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28384) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28384) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28394) mqtt_client: Error transport connect[0m
+[1;31mE (28394) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28394) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28404) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28404) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28414) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28414) mqtt_client: Error transport connect[0m
+[1;31mE (28424) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28424) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28434) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28434) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28444) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28444) mqtt_client: Error transport connect[0m
+[1;31mE (28454) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28454) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28454) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28464) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28464) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28474) mqtt_client: Error transport connect[0m
+[1;31mE (28474) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28484) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28484) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28494) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28494) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28504) mqtt_client: Error transport connect[0m
+[1;31mE (28504) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28514) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28514) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28524) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28524) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28534) mqtt_client: Error transport connect[0m
+[1;31mE (28534) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28534) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28544) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28544) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28554) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28554) mqtt_client: Error transport connect[0m
+[1;31mE (28564) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28564) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28574) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28574) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28584) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28584) mqtt_client: Error transport connect[0m
+[1;31mE (28594) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28594) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28594) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28604) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28604) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28614) mqtt_client: Error transport connect[0m
+[1;31mE (28614) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28624) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28624) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28634) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28634) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28644) mqtt_client: Error transport connect[0m
+[1;31mE (28644) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28654) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28654) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28664) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28664) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28674) mqtt_client: Error transport connect[0m
+[1;31mE (28674) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28674) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28684) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28684) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28694) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28694) mqtt_client: Error transport connect[0m
+[1;31mE (28704) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28704) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28714) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28714) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28724) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28724) mqtt_client: Error transport connect[0m
+[1;31mE (28734) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28734) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28734) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28744) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28744) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28754) mqtt_client: Error transport connect[0m
+[1;31mE (28754) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28764) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28764) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28774) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28774) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28784) mqtt_client: Error transport connect[0m
+[1;31mE (28784) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28794) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28794) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28804) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28804) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28814) mqtt_client: Error transport connect[0m
+[1;31mE (28814) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28814) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28824) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28824) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28834) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28834) mqtt_client: Error transport connect[0m
+[1;31mE (28844) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28844) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28844) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28854) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28864) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28864) mqtt_client: Error transport connect[0m
+[1;31mE (28874) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28874) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28874) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28884) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28884) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28894) mqtt_client: Error transport connect[0m
+[1;31mE (28894) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28904) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28904) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28914) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28914) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28924) mqtt_client: Error transport connect[0m
+[1;31mE (28924) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28934) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28934) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28944) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28944) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28954) mqtt_client: Error transport connect[0m
+[1;31mE (28954) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28954) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28964) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28964) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (28974) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28974) mqtt_client: Error transport connect[0m
+[1;31mE (28984) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (28984) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (28984) mqtt_client: Client force reconnect requested[0m
+[1;31mE (28994) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29004) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29004) mqtt_client: Error transport connect[0m
+[1;31mE (29014) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29014) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29014) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29024) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29024) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29034) mqtt_client: Error transport connect[0m
+[1;31mE (29034) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29044) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29044) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29054) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29054) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29064) mqtt_client: Error transport connect[0m
+[1;31mE (29064) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29074) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29074) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29084) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29084) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29084) mqtt_client: Error transport connect[0m
+[1;31mE (29094) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29094) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29104) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29104) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29114) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29114) mqtt_client: Error transport connect[0m
+[1;31mE (29124) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29124) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29124) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29134) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29144) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29144) mqtt_client: Error transport connect[0m
+[1;31mE (29154) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29154) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29154) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29164) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29164) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29174) mqtt_client: Error transport connect[0m
+[1;31mE (29174) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29184) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29184) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29194) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29194) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29204) mqtt_client: Error transport connect[0m
+[1;31mE (29204) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29204) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29214) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29224) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29224) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29224) mqtt_client: Error transport connect[0m
+[1;31mE (29234) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29234) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29244) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29244) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29254) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29254) mqtt_client: Error transport connect[0m
+[1;31mE (29264) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29264) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29264) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29274) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29284) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29284) mqtt_client: Error transport connect[0m
+[1;31mE (29284) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29294) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29294) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29304) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29304) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29314) mqtt_client: Error transport connect[0m
+[1;31mE (29314) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29324) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29324) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29334) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29334) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29344) mqtt_client: Error transport connect[0m
+[1;31mE (29344) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29344) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29354) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29354) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29364) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29364) mqtt_client: Error transport connect[0m
+[1;31mE (29374) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29374) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29384) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29384) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29394) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29394) mqtt_client: Error transport connect[0m
+[1;31mE (29404) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29404) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29404) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29414) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29424) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29424) mqtt_client: Error transport connect[0m
+[1;31mE (29424) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29434) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29434) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29444) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29444) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29454) mqtt_client: Error transport connect[0m
+[1;31mE (29454) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29464) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29464) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29474) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29474) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29484) mqtt_client: Error transport connect[0m
+[1;31mE (29484) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29484) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29494) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29494) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29504) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29504) mqtt_client: Error transport connect[0m
+[1;31mE (29514) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29514) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29524) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29524) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29534) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29534) mqtt_client: Error transport connect[0m
+[1;31mE (29544) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29544) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29544) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29554) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29554) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29564) mqtt_client: Error transport connect[0m
+[1;31mE (29564) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29574) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29574) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29584) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29584) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29594) mqtt_client: Error transport connect[0m
+[1;31mE (29594) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29604) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29604) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29614) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29614) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29624) mqtt_client: Error transport connect[0m
+[1;31mE (29624) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29624) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29634) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29634) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29644) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29644) mqtt_client: Error transport connect[0m
+[1;31mE (29654) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29654) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29664) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29664) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29674) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29674) mqtt_client: Error transport connect[0m
+[1;31mE (29684) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29684) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29684) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29694) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29694) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29704) mqtt_client: Error transport connect[0m
+[1;31mE (29704) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29714) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29714) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29724) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29724) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29734) mqtt_client: Error transport connect[0m
+[1;31mE (29734) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29744) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29744) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29754) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29754) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29764) mqtt_client: Error transport connect[0m
+[1;31mE (29764) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29764) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29774) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29774) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29784) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29784) mqtt_client: Error transport connect[0m
+[1;31mE (29794) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29794) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29804) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29804) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29814) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29814) mqtt_client: Error transport connect[0m
+[1;31mE (29824) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29824) I2C_SCAN: WiFi desconectado, reconectando...[0m
+[0;33mW (29824) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29834) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29844) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29844) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29844) mqtt_client: Error transport connect[0m
+[1;31mE (29854) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29854) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29864) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29864) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29874) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29874) mqtt_client: Error transport connect[0m
+[1;31mE (29884) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29884) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29884) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29894) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29904) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29904) mqtt_client: Error transport connect[0m
+[1;31mE (29904) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29914) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29914) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29924) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29924) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29934) mqtt_client: Error transport connect[0m
+[1;31mE (29934) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29944) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29944) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29954) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29954) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29964) mqtt_client: Error transport connect[0m
+[1;31mE (29964) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29964) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (29974) mqtt_client: Client force reconnect requested[0m
+[1;31mE (29984) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (29984) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29984) mqtt_client: Error transport connect[0m
+[1;31mE (29994) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (29994) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30004) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30004) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30014) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30014) mqtt_client: Error transport connect[0m
+[1;31mE (30024) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30024) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30024) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30034) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30044) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30044) mqtt_client: Error transport connect[0m
+[1;31mE (30044) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30054) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30054) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30064) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30064) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30074) mqtt_client: Error transport connect[0m
+[1;31mE (30074) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30084) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30084) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30094) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30094) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30104) mqtt_client: Error transport connect[0m
+[1;31mE (30104) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30104) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30114) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30114) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30124) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30124) mqtt_client: Error transport connect[0m
+[1;31mE (30134) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30134) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30144) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30144) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30154) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30154) mqtt_client: Error transport connect[0m
+[1;31mE (30164) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30164) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30164) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30174) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30174) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30184) mqtt_client: Error transport connect[0m
+[1;31mE (30184) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30194) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30194) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30204) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30204) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30214) mqtt_client: Error transport connect[0m
+[1;31mE (30214) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30224) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30224) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30234) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30234) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30244) mqtt_client: Error transport connect[0m
+[1;31mE (30244) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30244) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30254) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30254) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30264) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30264) mqtt_client: Error transport connect[0m
+[1;31mE (30274) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30274) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30284) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30284) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30294) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30294) mqtt_client: Error transport connect[0m
+[1;31mE (30304) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30304) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30304) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30314) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30314) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30324) mqtt_client: Error transport connect[0m
+[1;31mE (30324) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30334) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30334) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30344) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30344) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30354) mqtt_client: Error transport connect[0m
+[1;31mE (30354) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30364) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30364) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30374) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30374) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30384) mqtt_client: Error transport connect[0m
+[1;31mE (30384) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30384) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30394) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30394) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30404) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30404) mqtt_client: Error transport connect[0m
+[1;31mE (30414) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30414) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30414) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30424) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30434) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30434) mqtt_client: Error transport connect[0m
+[1;31mE (30444) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30444) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30444) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30454) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30454) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30464) mqtt_client: Error transport connect[0m
+[1;31mE (30464) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30474) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30474) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30484) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30484) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30494) mqtt_client: Error transport connect[0m
+[1;31mE (30494) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30504) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30504) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30514) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30514) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30524) mqtt_client: Error transport connect[0m
+[1;31mE (30524) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30524) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30534) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30534) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30544) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30544) mqtt_client: Error transport connect[0m
+[1;31mE (30554) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30554) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30564) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30564) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30574) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30574) mqtt_client: Error transport connect[0m
+[1;31mE (30584) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30584) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30584) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30594) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30594) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30604) mqtt_client: Error transport connect[0m
+[1;31mE (30604) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30614) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30614) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30624) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30624) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30634) mqtt_client: Error transport connect[0m
+[1;31mE (30634) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30644) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30644) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30654) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30654) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30664) mqtt_client: Error transport connect[0m
+[1;31mE (30664) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30664) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30674) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30674) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30684) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30684) mqtt_client: Error transport connect[0m
+[1;31mE (30694) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30694) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30694) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30704) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30714) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30714) mqtt_client: Error transport connect[0m
+[1;31mE (30724) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30724) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30724) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30734) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30734) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30744) mqtt_client: Error transport connect[0m
+[1;31mE (30744) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30754) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30754) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30764) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30764) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30774) mqtt_client: Error transport connect[0m
+[1;31mE (30774) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30784) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30784) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30794) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30794) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30794) mqtt_client: Error transport connect[0m
+[1;31mE (30804) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30804) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30814) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30814) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30824) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30824) mqtt_client: Error transport connect[0m
+[1;31mE (30834) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30834) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30834) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30844) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30854) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30854) mqtt_client: Error transport connect[0m
+[1;31mE (30864) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30864) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30864) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30874) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30874) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30884) mqtt_client: Error transport connect[0m
+[1;31mE (30884) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30894) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30894) mqtt_client: Client force reconnect requested[0m
+[1;31mE (30904) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (30904) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (30914) mqtt_client: Error transport connect[0m
+[1;31mE (30914) I2C_SCAN: MQTT erro (TLS: 0x8004)[0m
+[0;33mW (30914) I2C_SCAN: MQTT desconectado[0m
+[0;32mI (30924) mqtt_client: Client force reconnect requested[0m

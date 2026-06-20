@@ -1,0 +1,28 @@
+Command: ninja all
+Configuration Report                                                           
++-----------------------------------------------------------------------------+
+|  Parser Version: 1                                                          |
+|  Verbosity: default                                                         |
+|  Defaults policy: sdkconfig                                                 |
+|  Status: Finished with notifications                                        |
+|                                                                             |
+| Miscellaneous                                                               |
+| +-------------------------------------------------------------------------+ |
+| | * BT_NIMBLE_MESH_PROVISIONER (defined at                                | |
+| | C:/esp/v6.0/esp-idf/components/bt/host/nimble/Kconfig.in:1420):         | |
+| | 'default 0' is not a valid bool value (only 'y' and 'n' are allowed).   | |
+| | Value is treated as 'n'.                                                | |
+| | * BTDM_CTRL_LEGACY_AUTH_VENDOR_EVT_EFF (defined at                      | |
+| | C:/esp/v6.0/esp-idf/components/bt/controller/esp32/Kconfig.in:177):     | |
+| | 'default 0' is not a valid bool value (only 'y' and 'n' are allowed).   | |
+| | Value is treated as 'n'.                                                | |
+| | * FATFS_PRINT_LLI (defined at                                           | |
+| | C:/esp/v6.0/esp-idf/components/fatfs/Kconfig:230): 'default 0' is not a | |
+| | valid bool value (only 'y' and 'n' are allowed). Value is treated as    | |
+| | 'n'.                                                                    | |
+| | * FATFS_PRINT_FLOAT (defined at                                         | |
+| | C:/esp/v6.0/esp-idf/components/fatfs/Kconfig:235): 'default 0' is not a | |
+| | valid bool value (only 'y' and 'n' are allowed). Value is treated as    | |
+| | 'n'.                                                                    | |
+| +-------------------------------------------------------------------------+ |
++-----------------------------------------------------------------------------+

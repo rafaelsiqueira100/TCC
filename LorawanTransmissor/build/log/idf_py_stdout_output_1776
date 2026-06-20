@@ -1,0 +1,486 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM10 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanTransmissor\build\LorawanTransmissor.elf C:\Users\rafae\workspace\LorawanTransmissor\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py' '-p' 'COM10'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 31 2026 11:08:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c1cch ( 49612) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001c1f4 vaddr=3ffb0000 size=02c20h ( 11296) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001ee1c vaddr=40080000 size=011fch (  4604) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=13a48h ( 80456) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=00033a70 vaddr=400811fc size=0cb18h ( 51992) load[0m
+[0;32mI (166) esp_image: segment 5: paddr=00040590 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (173) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (173) boot: Disabling RNG early entropy source...[0m
+[0;32mI (184) cpu_start: Multicore app[0m
+[0;32mI (192) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (192) cpu_start: Pro cpu start user code[0m
+[0;32mI (192) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (194) app_init: Application information:[0m
+[0;32mI (198) app_init: Project name:     LorawanTransmissor[0m
+[0;32mI (203) app_init: App version:      1[0m
+[0;32mI (206) app_init: Compile time:     May 31 2026 11:08:39[0m
+[0;32mI (211) app_init: ELF file SHA256:  b3408045b...[0m
+[0;32mI (215) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (220) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (223) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (227) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (232) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (243) heap_init: At 3FFB3A30 len 0002C5D0 (177 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 4008DD14 len 000122EC (72 KiB): IRAM[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (283) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (294) main_task: Started on CPU0[0m
+[0;32mI (304) main_task: Calling app_main()[0m
+[0;32mI (404) LORA_TX: OLED SSD1306 inicializado[0m
+[0;33mW (404) LORA_TX: DS3231 não encontrado — timestamps serão "--:--:--"[0m
+[0;32mI (424) LORA_TX: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (434) LORA_TX: LoRa inicializado OK[0m
+[0;32mI (1034) LORA_TX: Raw:0[0m
+[0;32mI (1034) LORA_TX: MV:107[0m
+[0;32mI (1034) LORA_TX: Enviando pacote #1 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1074) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (11474) LORA_TX: Raw:0[0m
+[0;32mI (11474) LORA_TX: MV:107[0m
+[0;32mI (11474) LORA_TX: Enviando pacote #2 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (11514) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (21914) LORA_TX: Raw:0[0m
+[0;32mI (21914) LORA_TX: MV:107[0m
+[0;32mI (21914) LORA_TX: Enviando pacote #3 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (21954) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (32354) LORA_TX: Raw:0[0m
+[0;32mI (32354) LORA_TX: MV:107[0m
+[0;32mI (32354) LORA_TX: Enviando pacote #4 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (32394) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (42794) LORA_TX: Raw:0[0m
+[0;32mI (42794) LORA_TX: MV:107[0m
+[0;32mI (42794) LORA_TX: Enviando pacote #5 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (42834) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (53234) LORA_TX: Raw:0[0m
+[0;32mI (53234) LORA_TX: MV:107[0m
+[0;32mI (53234) LORA_TX: Enviando pacote #6 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (53274) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (63674) LORA_TX: Raw:0[0m
+[0;32mI (63674) LORA_TX: MV:107[0m
+[0;32mI (63674) LORA_TX: Enviando pacote #7 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (63714) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (74114) LORA_TX: Raw:0[0m
+[0;32mI (74114) LORA_TX: MV:107[0m
+[0;32mI (74114) LORA_TX: Enviando pacote #8 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (74154) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (84554) LORA_TX: Raw:0[0m
+[0;32mI (84554) LORA_TX: MV:107[0m
+[0;32mI (84554) LORA_TX: Enviando pacote #9 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (84594) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (94994) LORA_TX: Raw:0[0m
+[0;32mI (94994) LORA_TX: MV:107[0m
+[0;32mI (94994) LORA_TX: Enviando pacote #10 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (95034) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (105434) LORA_TX: Raw:0[0m
+[0;32mI (105434) LORA_TX: MV:107[0m
+[0;32mI (105434) LORA_TX: Enviando pacote #11 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (105474) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (115874) LORA_TX: Raw:0[0m
+[0;32mI (115874) LORA_TX: MV:107[0m
+[0;32mI (115874) LORA_TX: Enviando pacote #12 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (115914) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (126314) LORA_TX: Raw:0[0m
+[0;32mI (126314) LORA_TX: MV:107[0m
+[0;32mI (126314) LORA_TX: Enviando pacote #13 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (126354) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (136754) LORA_TX: Raw:0[0m
+[0;32mI (136754) LORA_TX: MV:107[0m
+[0;32mI (136754) LORA_TX: Enviando pacote #14 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (136794) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (147194) LORA_TX: Raw:0[0m
+[0;32mI (147194) LORA_TX: MV:107[0m
+[0;32mI (147194) LORA_TX: Enviando pacote #15 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (147234) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (157634) LORA_TX: Raw:0[0m
+[0;32mI (157634) LORA_TX: MV:107[0m
+[0;32mI (157634) LORA_TX: Enviando pacote #16 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (157674) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (168074) LORA_TX: Raw:0[0m
+[0;32mI (168074) LORA_TX: MV:107[0m
+[0;32mI (168074) LORA_TX: Enviando pacote #17 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (168114) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (178514) LORA_TX: Raw:0[0m
+[0;32mI (178514) LORA_TX: MV:107[0m
+[0;32mI (178514) LORA_TX: Enviando pacote #18 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (178554) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (188954) LORA_TX: Raw:0[0m
+[0;32mI (188954) LORA_TX: MV:107[0m
+[0;32mI (188954) LORA_TX: Enviando pacote #19 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (188994) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (199394) LORA_TX: Raw:0[0m
+[0;32mI (199394) LORA_TX: MV:107[0m
+[0;32mI (199394) LORA_TX: Enviando pacote #20 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (199434) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (209834) LORA_TX: Raw:0[0m
+[0;32mI (209834) LORA_TX: MV:107[0m
+[0;32mI (209834) LORA_TX: Enviando pacote #21 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (209874) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (220274) LORA_TX: Raw:0[0m
+[0;32mI (220274) LORA_TX: MV:107[0m
+[0;32mI (220274) LORA_TX: Enviando pacote #22 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (220314) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (230714) LORA_TX: Raw:0[0m
+[0;32mI (230714) LORA_TX: MV:107[0m
+[0;32mI (230714) LORA_TX: Enviando pacote #23 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (230754) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (241154) LORA_TX: Raw:0[0m
+[0;32mI (241154) LORA_TX: MV:107[0m
+[0;32mI (241154) LORA_TX: Enviando pacote #24 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (241194) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (251594) LORA_TX: Raw:0[0m
+[0;32mI (251594) LORA_TX: MV:107[0m
+[0;32mI (251594) LORA_TX: Enviando pacote #25 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (251634) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (262034) LORA_TX: Raw:0[0m
+[0;32mI (262034) LORA_TX: MV:107[0m
+[0;32mI (262034) LORA_TX: Enviando pacote #26 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (262074) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (272474) LORA_TX: Raw:0[0m
+[0;32mI (272474) LORA_TX: MV:107[0m
+[0;32mI (272474) LORA_TX: Enviando pacote #27 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (272514) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (282914) LORA_TX: Raw:0[0m
+[0;32mI (282914) LORA_TX: MV:107[0m
+[0;32mI (282914) LORA_TX: Enviando pacote #28 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (282954) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (293354) LORA_TX: Raw:0[0m
+[0;32mI (293354) LORA_TX: MV:107[0m
+[0;32mI (293354) LORA_TX: Enviando pacote #29 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (293394) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (303794) LORA_TX: Raw:0[0m
+[0;32mI (303794) LORA_TX: MV:107[0m
+[0;32mI (303794) LORA_TX: Enviando pacote #30 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (303834) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (314234) LORA_TX: Raw:0[0m
+[0;32mI (314234) LORA_TX: MV:107[0m
+[0;32mI (314234) LORA_TX: Enviando pacote #31 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (314274) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (324674) LORA_TX: Raw:0[0m
+[0;32mI (324674) LORA_TX: MV:107[0m
+[0;32mI (324674) LORA_TX: Enviando pacote #32 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (324714) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (335114) LORA_TX: Raw:0[0m
+[0;32mI (335114) LORA_TX: MV:107[0m
+[0;32mI (335114) LORA_TX: Enviando pacote #33 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (335154) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (345554) LORA_TX: Raw:0[0m
+[0;32mI (345554) LORA_TX: MV:107[0m
+[0;32mI (345554) LORA_TX: Enviando pacote #34 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (345594) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (355994) LORA_TX: Raw:0[0m
+[0;32mI (355994) LORA_TX: MV:107[0m
+[0;32mI (355994) LORA_TX: Enviando pacote #35 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (356034) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (366434) LORA_TX: Raw:0[0m
+[0;32mI (366434) LORA_TX: MV:107[0m
+[0;32mI (366434) LORA_TX: Enviando pacote #36 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (366474) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (376874) LORA_TX: Raw:0[0m
+[0;32mI (376874) LORA_TX: MV:107[0m
+[0;32mI (376874) LORA_TX: Enviando pacote #37 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (376914) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (387314) LORA_TX: Raw:0[0m
+[0;32mI (387314) LORA_TX: MV:107[0m
+[0;32mI (387314) LORA_TX: Enviando pacote #38 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (387354) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (397754) LORA_TX: Raw:0[0m
+[0;32mI (397754) LORA_TX: MV:107[0m
+[0;32mI (397754) LORA_TX: Enviando pacote #39 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (397794) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (408194) LORA_TX: Raw:0[0m
+[0;32mI (408194) LORA_TX: MV:107[0m
+[0;32mI (408194) LORA_TX: Enviando pacote #40 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (408234) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (418634) LORA_TX: Raw:0[0m
+[0;32mI (418634) LORA_TX: MV:107[0m
+[0;32mI (418634) LORA_TX: Enviando pacote #41 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (418674) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (429074) LORA_TX: Raw:0[0m
+[0;32mI (429074) LORA_TX: MV:107[0m
+[0;32mI (429074) LORA_TX: Enviando pacote #42 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (429114) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (439514) LORA_TX: Raw:0[0m
+[0;32mI (439514) LORA_TX: MV:107[0m
+[0;32mI (439514) LORA_TX: Enviando pacote #43 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (439554) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (449954) LORA_TX: Raw:0[0m
+[0;32mI (449954) LORA_TX: MV:107[0m
+[0;32mI (449954) LORA_TX: Enviando pacote #44 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (449994) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (460394) LORA_TX: Raw:0[0m
+[0;32mI (460394) LORA_TX: MV:107[0m
+[0;32mI (460394) LORA_TX: Enviando pacote #45 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (460434) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (470834) LORA_TX: Raw:0[0m
+[0;32mI (470834) LORA_TX: MV:107[0m
+[0;32mI (470834) LORA_TX: Enviando pacote #46 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (470874) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (481274) LORA_TX: Raw:0[0m
+[0;32mI (481274) LORA_TX: MV:107[0m
+[0;32mI (481274) LORA_TX: Enviando pacote #47 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (481314) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (491714) LORA_TX: Raw:0[0m
+[0;32mI (491714) LORA_TX: MV:107[0m
+[0;32mI (491714) LORA_TX: Enviando pacote #48 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (491754) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (502154) LORA_TX: Raw:0[0m
+[0;32mI (502154) LORA_TX: MV:107[0m
+[0;32mI (502154) LORA_TX: Enviando pacote #49 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (502194) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (512594) LORA_TX: Raw:0[0m
+[0;32mI (512594) LORA_TX: MV:107[0m
+[0;32mI (512594) LORA_TX: Enviando pacote #50 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (512634) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (523034) LORA_TX: Raw:0[0m
+[0;32mI (523034) LORA_TX: MV:107[0m
+[0;32mI (523034) LORA_TX: Enviando pacote #51 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (523074) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (533474) LORA_TX: Raw:0[0m
+[0;32mI (533474) LORA_TX: MV:107[0m
+[0;32mI (533474) LORA_TX: Enviando pacote #52 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (533514) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (543914) LORA_TX: Raw:0[0m
+[0;32mI (543914) LORA_TX: MV:107[0m
+[0;32mI (543914) LORA_TX: Enviando pacote #53 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (543954) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (554354) LORA_TX: Raw:0[0m
+[0;32mI (554354) LORA_TX: MV:107[0m
+[0;32mI (554354) LORA_TX: Enviando pacote #54 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (554394) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (564794) LORA_TX: Raw:0[0m
+[0;32mI (564794) LORA_TX: MV:107[0m
+[0;32mI (564794) LORA_TX: Enviando pacote #55 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (564834) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (575234) LORA_TX: Raw:0[0m
+[0;32mI (575234) LORA_TX: MV:107[0m
+[0;32mI (575234) LORA_TX: Enviando pacote #56 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (575274) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (585674) LORA_TX: Raw:0[0m
+[0;32mI (585674) LORA_TX: MV:107[0m
+[0;32mI (585674) LORA_TX: Enviando pacote #57 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (585714) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (596114) LORA_TX: Raw:0[0m
+[0;32mI (596114) LORA_TX: MV:107[0m
+[0;32mI (596114) LORA_TX: Enviando pacote #58 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (596154) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (606554) LORA_TX: Raw:0[0m
+[0;32mI (606554) LORA_TX: MV:107[0m
+[0;32mI (606554) LORA_TX: Enviando pacote #59 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (606594) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (616994) LORA_TX: Raw:0[0m
+[0;32mI (616994) LORA_TX: MV:107[0m
+[0;32mI (616994) LORA_TX: Enviando pacote #60 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (617034) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (627434) LORA_TX: Raw:0[0m
+[0;32mI (627434) LORA_TX: MV:107[0m
+[0;32mI (627434) LORA_TX: Enviando pacote #61 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (627474) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (637874) LORA_TX: Raw:0[0m
+[0;32mI (637874) LORA_TX: MV:107[0m
+[0;32mI (637874) LORA_TX: Enviando pacote #62 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (637914) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (648314) LORA_TX: Raw:0[0m
+[0;32mI (648314) LORA_TX: MV:107[0m
+[0;32mI (648314) LORA_TX: Enviando pacote #63 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (648354) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (658754) LORA_TX: Raw:0[0m
+[0;32mI (658754) LORA_TX: MV:107[0m
+[0;32mI (658754) LORA_TX: Enviando pacote #64 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (658794) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (669194) LORA_TX: Raw:0[0m
+[0;32mI (669194) LORA_TX: MV:107[0m
+[0;32mI (669194) LORA_TX: Enviando pacote #65 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (669234) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (679634) LORA_TX: Raw:0[0m
+[0;32mI (679634) LORA_TX: MV:107[0m
+[0;32mI (679634) LORA_TX: Enviando pacote #66 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (679674) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (690074) LORA_TX: Raw:0[0m
+[0;32mI (690074) LORA_TX: MV:107[0m
+[0;32mI (690074) LORA_TX: Enviando pacote #67 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (690114) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (700514) LORA_TX: Raw:0[0m
+[0;32mI (700514) LORA_TX: MV:107[0m
+[0;32mI (700514) LORA_TX: Enviando pacote #68 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (700554) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (710954) LORA_TX: Raw:0[0m
+[0;32mI (710954) LORA_TX: MV:107[0m
+[0;32mI (710954) LORA_TX: Enviando pacote #69 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (710994) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (721394) LORA_TX: Raw:0[0m
+[0;32mI (721394) LORA_TX: MV:107[0m
+[0;32mI (721394) LORA_TX: Enviando pacote #70 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (721434) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (731834) LORA_TX: Raw:0[0m
+[0;32mI (731834) LORA_TX: MV:107[0m
+[0;32mI (731834) LORA_TX: Enviando pacote #71 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (731874) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (742274) LORA_TX: Raw:0[0m
+[0;32mI (742274) LORA_TX: MV:107[0m
+[0;32mI (742274) LORA_TX: Enviando pacote #72 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (742314) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (752714) LORA_TX: Raw:0[0m
+[0;32mI (752714) LORA_TX: MV:107[0m
+[0;32mI (752714) LORA_TX: Enviando pacote #73 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (752754) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (763154) LORA_TX: Raw:0[0m
+[0;32mI (763154) LORA_TX: MV:107[0m
+[0;32mI (763154) LORA_TX: Enviando pacote #74 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (763194) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (773594) LORA_TX: Raw:0[0m
+[0;32mI (773594) LORA_TX: MV:107[0m
+[0;32mI (773594) LORA_TX: Enviando pacote #75 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (773634) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (784034) LORA_TX: Raw:0[0m
+[0;32mI (784034) LORA_TX: MV:107[0m
+[0;32mI (784034) LORA_TX: Enviando pacote #76 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (784074) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (794474) LORA_TX: Raw:0[0m
+[0;32mI (794474) LORA_TX: MV:107[0m
+[0;32mI (794474) LORA_TX: Enviando pacote #77 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (794514) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (804914) LORA_TX: Raw:0[0m
+[0;32mI (804914) LORA_TX: MV:107[0m
+[0;32mI (804914) LORA_TX: Enviando pacote #78 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (804954) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (815354) LORA_TX: Raw:0[0m
+[0;32mI (815354) LORA_TX: MV:107[0m
+[0;32mI (815354) LORA_TX: Enviando pacote #79 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (815394) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (825794) LORA_TX: Raw:0[0m
+[0;32mI (825794) LORA_TX: MV:107[0m
+[0;32mI (825794) LORA_TX: Enviando pacote #80 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (825834) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (836234) LORA_TX: Raw:0[0m
+[0;32mI (836234) LORA_TX: MV:107[0m
+[0;32mI (836234) LORA_TX: Enviando pacote #81 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (836274) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (846674) LORA_TX: Raw:0[0m
+[0;32mI (846674) LORA_TX: MV:107[0m
+[0;32mI (846674) LORA_TX: Enviando pacote #82 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (846714) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (857114) LORA_TX: Raw:0[0m
+[0;32mI (857114) LORA_TX: MV:107[0m
+[0;32mI (857114) LORA_TX: Enviando pacote #83 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (857154) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (867554) LORA_TX: Raw:0[0m
+[0;32mI (867554) LORA_TX: MV:107[0m
+[0;32mI (867554) LORA_TX: Enviando pacote #84 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (867594) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (877994) LORA_TX: Raw:0[0m
+[0;32mI (877994) LORA_TX: MV:107[0m
+[0;32mI (877994) LORA_TX: Enviando pacote #85 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (878034) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (888434) LORA_TX: Raw:0[0m
+[0;32mI (888434) LORA_TX: MV:107[0m
+[0;32mI (888434) LORA_TX: Enviando pacote #86 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (888474) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (898874) LORA_TX: Raw:0[0m
+[0;32mI (898874) LORA_TX: MV:107[0m
+[0;32mI (898874) LORA_TX: Enviando pacote #87 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (898914) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (909314) LORA_TX: Raw:0[0m
+[0;32mI (909314) LORA_TX: MV:107[0m
+[0;32mI (909314) LORA_TX: Enviando pacote #88 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (909354) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (919754) LORA_TX: Raw:0[0m
+[0;32mI (919754) LORA_TX: MV:107[0m
+[0;32mI (919754) LORA_TX: Enviando pacote #89 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (919794) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (930194) LORA_TX: Raw:0[0m
+[0;32mI (930194) LORA_TX: MV:107[0m
+[0;32mI (930194) LORA_TX: Enviando pacote #90 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (930234) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (940634) LORA_TX: Raw:0[0m
+[0;32mI (940634) LORA_TX: MV:107[0m
+[0;32mI (940634) LORA_TX: Enviando pacote #91 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (940674) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (951074) LORA_TX: Raw:0[0m
+[0;32mI (951074) LORA_TX: MV:107[0m
+[0;32mI (951074) LORA_TX: Enviando pacote #92 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (951114) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (961514) LORA_TX: Raw:0[0m
+[0;32mI (961514) LORA_TX: MV:107[0m
+[0;32mI (961514) LORA_TX: Enviando pacote #93 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (961554) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (971954) LORA_TX: Raw:0[0m
+[0;32mI (971954) LORA_TX: MV:107[0m
+[0;32mI (971954) LORA_TX: Enviando pacote #94 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (971994) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (982394) LORA_TX: Raw:0[0m
+[0;32mI (982394) LORA_TX: MV:107[0m
+[0;32mI (982394) LORA_TX: Enviando pacote #95 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (982434) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (992834) LORA_TX: Raw:0[0m
+[0;32mI (992834) LORA_TX: MV:107[0m
+[0;32mI (992834) LORA_TX: Enviando pacote #96 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (992874) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (1003274) LORA_TX: Raw:0[0m
+[0;32mI (1003274) LORA_TX: MV:107[0m
+[0;32mI (1003274) LORA_TX: Enviando pacote #97 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1003314) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (1013714) LORA_TX: Raw:0[0m
+[0;32mI (1013714) LORA_TX: MV:107[0m
+[0;32mI (1013714) LORA_TX: Enviando pacote #98 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1013754) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (1024154) LORA_TX: Raw:0[0m
+[0;32mI (1024154) LORA_TX: MV:107[0m
+[0;32mI (1024154) LORA_TX: Enviando pacote #99 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1024194) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (1034594) LORA_TX: Raw:0[0m
+[0;32mI (1034594) LORA_TX: MV:107[0m
+[0;32mI (1034594) LORA_TX: Enviando pacote #100 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1034634) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (1045034) LORA_TX: Raw:0[0m
+[0;32mI (1045034) LORA_TX: MV:107[0m
+[0;32mI (1045034) LORA_TX: Enviando pacote #101 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1045074) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (1055474) LORA_TX: Raw:0[0m
+[0;32mI (1055474) LORA_TX: MV:107[0m
+[0;32mI (1055474) LORA_TX: Enviando pacote #102 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1055514) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (1065914) LORA_TX: Raw:0[0m
+[0;32mI (1065914) LORA_TX: MV:107[0m
+[0;32mI (1065914) LORA_TX: Enviando pacote #103 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1065954) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (1076354) LORA_TX: Raw:0[0m
+[0;32mI (1076354) LORA_TX: MV:107[0m
+[0;32mI (1076354) LORA_TX: Enviando pacote #104 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1076394) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (1086794) LORA_TX: Raw:0[0m
+[0;32mI (1086794) LORA_TX: MV:107[0m
+[0;32mI (1086794) LORA_TX: Enviando pacote #105 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1086834) LORA_TX: Pacote enviado (10 bytes)[0m
+[0;32mI (1097234) LORA_TX: Raw:0[0m
+[0;32mI (1097234) LORA_TX: MV:107[0m
+[0;32mI (1097234) LORA_TX: Enviando pacote #106 | temp=10.7°C | ----.--.-- --:--:--[0m
+[0;32mI (1097274) LORA_TX: Pacote enviado (10 bytes)[0m
