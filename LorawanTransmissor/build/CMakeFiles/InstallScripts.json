@@ -157,6 +157,7 @@
 		"C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/rt/cmake_install.cmake",
 		"C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/spiffs/cmake_install.cmake",
 		"C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/ulp/cmake_install.cmake",
+		"C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/ssd1306/cmake_install.cmake",
 		"C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/main/cmake_install.cmake",
 		"C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/ttn-esp32/cmake_install.cmake"
 	],

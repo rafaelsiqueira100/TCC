@@ -705,6 +705,31 @@ CONFIG_PARTITION_TABLE_MD5=y
 # end of Partition Table
 
 #
+# SSD1306 Configuration
+#
+# default:
+CONFIG_I2C_INTERFACE=y
+# default:
+# CONFIG_SPI_INTERFACE is not set
+# default:
+# CONFIG_SSD1306_128x32 is not set
+# default:
+CONFIG_SSD1306_128x64=y
+# default:
+CONFIG_OFFSETX=0
+# default:
+# CONFIG_FLIP is not set
+CONFIG_SCL_GPIO=15
+CONFIG_SDA_GPIO=4
+CONFIG_RESET_GPIO=16
+# default:
+CONFIG_I2C_PORT_0=y
+# default:
+# CONFIG_I2C_PORT_1 is not set
+CONFIG_LEGACY_DRIVER=y
+# end of SSD1306 Configuration
+
+#
 # Compiler options
 #
 # default:

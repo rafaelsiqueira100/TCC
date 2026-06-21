@@ -1093,6 +1093,13 @@ C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ttn-esp32/CMakeFiles/list_
 C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ttn-esp32/CMakeFiles/install.dir
 C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ttn-esp32/CMakeFiles/install/local.dir
 C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ttn-esp32/CMakeFiles/install/strip.dir
+C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir
+C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ssd1306/CMakeFiles/edit_cache.dir
+C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ssd1306/CMakeFiles/rebuild_cache.dir
+C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ssd1306/CMakeFiles/list_install_components.dir
+C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ssd1306/CMakeFiles/install.dir
+C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ssd1306/CMakeFiles/install/local.dir
+C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ssd1306/CMakeFiles/install/strip.dir
 C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/main/CMakeFiles/__idf_main.dir
 C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/main/CMakeFiles/edit_cache.dir
 C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

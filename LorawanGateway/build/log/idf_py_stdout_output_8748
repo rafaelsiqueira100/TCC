@@ -1,0 +1,230 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanGateway\build\LorawanGateway.elf C:\Users\rafae\workspace\LorawanGateway\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun 21 2026 15:14:04[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21fa4h (139172) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=00031fcc vaddr=3ffb0000 size=04b60h ( 19296) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00036b34 vaddr=40080000 size=094e4h ( 38116) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a29bch (666044) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e29e4 vaddr=400894e4 size=0f2cch ( 62156) load[0m
+[0;32mI (422) esp_image: segment 5: paddr=000f1cb8 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (435) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (435) boot: Disabling RNG early entropy source...[0m
+[0;32mI (445) cpu_start: Multicore app[0m
+[0;32mI (453) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (454) cpu_start: Pro cpu start user code[0m
+[0;32mI (454) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (456) app_init: Application information:[0m
+[0;32mI (459) app_init: Project name:     LorawanGateway[0m
+[0;32mI (464) app_init: App version:      1[0m
+[0;32mI (467) app_init: Compile time:     Jun 21 2026 15:13:06[0m
+[0;32mI (472) app_init: ELF file SHA256:  2522452d7...[0m
+[0;32mI (477) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (481) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (485) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (489) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (493) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (499) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (504) heap_init: At 3FFB9BC8 len 00026438 (153 KiB): DRAM[0m
+[0;32mI (509) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (520) heap_init: At 400987B0 len 00007850 (30 KiB): IRAM[0m
+[0;32mI (527) spi_flash: detected chip: generic[0m
+[0;32mI (529) spi_flash: flash io: dio[0m
+[0;33mW (532) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (544) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (625) wifi:wifi driver task: 3ffc176c, prio:23, stack:6656, core=0[0m
+[0;32mI (645) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (645) wifi:wifi certification version: v7.0[0m
+[0;32mI (645) wifi:config NVS flash: enabled[0m
+[0;32mI (645) wifi:config nano formatting: disabled[0m
+[0;32mI (645) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (655) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (655) wifi:Init management short buffer num: 32[0m
+[0;32mI (655) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (665) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (665) wifi:Init static rx buffer num: 10[0m
+[0;32mI (675) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (675) wifi_init: rx ba win: 6[0m
+[0;32mI (675) wifi_init: accept mbox: 6[0m
+[0;32mI (685) wifi_init: tcpip mbox: 32[0m
+[0;32mI (685) wifi_init: udp mbox: 6[0m
+[0;32mI (685) wifi_init: tcp mbox: 6[0m
+[0;32mI (695) wifi_init: tcp tx win: 5760[0m
+[0;32mI (695) wifi_init: tcp rx win: 5760[0m
+[0;32mI (695) wifi_init: tcp mss: 1440[0m
+[0;32mI (695) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (705) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (705) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (715) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (795) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (885) wifi:mode : sta (5c:01:3b:09:26:38)[0m
+[0;32mI (885) wifi:enable tsf[0m
+[0;32mI (885) I2C_SCAN: Aguardando conexão WiFi...[0m
+[0;32mI (905) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (905) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (955) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (965) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1035) wifi:connected with HUAWEI SQ, aid = 7, channel 1, BW20, bssid = 98:b3:ef:09:8c:50[0m
+[0;32mI (1035) wifi:security: WPA2-PSK, phy: bgn, rssi: -63[0m
+[0;32mI (1045) wifi:pm start, type: 1[0m
+
+[0;32mI (1045) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1075) wifi:<ba-add>idx:0 (ifx:0, 98:b3:ef:09:8c:50), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1105) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2125) esp_netif_handlers: sta ip: 192.168.3.143, mask: 255.255.255.0, gw: 192.168.3.1[0m
+[0;32mI (2125) I2C_SCAN: WiFi conectado, IP: 192.168.3.143[0m
+[0;32mI (2125) I2C_SCAN: Aguardando sincronização NTP...[0m
+[0;32mI (3625) I2C_SCAN: NTP sincronizado[0m
+[0;32mI (3635) SSD1306: Legacy i2c driver is used[0m
+[0;32mI (3685) I2C_SCAN: Panel is 128x64[0m
+[0;32mI (3685) SSD1306: OLED configured successfully[0m
+[0;32mI (3885) I2C_SCAN: MQTT conectado[0m
+[0;32mI (5795) I2C_SCAN: DS3231 pronto para uso no barramento I2C compartilhado[0m
+[0;32mI (5795) I2C_SCAN: === SCAN I2C ===[0m
+[0;32mI (5795) I2C_SCAN: Scanning I2C bus...[0m
+[0;32mI (5805) I2C_SCAN: Device found at 0x3C[0m
+[0;32mI (5815) I2C_SCAN: === FIM SCAN ===[0m
+[0;32mI (5835) I2C_SCAN: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (5845) I2C_SCAN: LoRa inicializado — aguardando pacotes...[0m
+[0;32mI (13955) I2C_SCAN: Novo nó registrado: 0x01 (total: 1)[0m
+[0;32mI (13975) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (13975) I2C_SCAN:   Pacote #64 do nó 0x01  [--:--:--][0m
+[0;32mI (13985) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (13985) I2C_SCAN:   RSSI        : -44 dBm[0m
+[0;32mI (13995) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (13995) I2C_SCAN:   Pkts ok/lost: 1 / 0[0m
+[0;32mI (14005) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (14015) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (14055) I2C_SCAN: Hora enviada ao TX: 16:08:28 21/06/2026[0m
+[0;32mI (24265) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (24275) I2C_SCAN:   Pacote #65 do nó 0x01  [--:--:--][0m
+[0;32mI (24275) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (24275) I2C_SCAN:   RSSI        : -36 dBm[0m
+[0;32mI (24285) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (24285) I2C_SCAN:   Pkts ok/lost: 2 / 0[0m
+[0;32mI (24295) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (24305) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (24345) I2C_SCAN: Hora enviada ao TX: 16:08:38 21/06/2026[0m
+[0;32mI (34555) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (34565) I2C_SCAN:   Pacote #66 do nó 0x01  [--:--:--][0m
+[0;32mI (34565) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (34565) I2C_SCAN:   RSSI        : -37 dBm[0m
+[0;32mI (34575) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (34575) I2C_SCAN:   Pkts ok/lost: 3 / 0[0m
+[0;32mI (34585) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (34595) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (34635) I2C_SCAN: Hora enviada ao TX: 16:08:48 21/06/2026[0m
+[0;32mI (44855) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (44855) I2C_SCAN:   Pacote #67 do nó 0x01  [--:--:--][0m
+[0;32mI (44855) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (44865) I2C_SCAN:   RSSI        : -43 dBm[0m
+[0;32mI (44865) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (44865) I2C_SCAN:   Pkts ok/lost: 4 / 0[0m
+[0;32mI (44875) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (44895) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (44925) I2C_SCAN: Hora enviada ao TX: 16:08:59 21/06/2026[0m
+[0;32mI (55135) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (55135) I2C_SCAN:   Pacote #68 do nó 0x01  [--:--:--][0m
+[0;32mI (55145) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (55145) I2C_SCAN:   RSSI        : -43 dBm[0m
+[0;32mI (55155) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (55155) I2C_SCAN:   Pkts ok/lost: 5 / 0[0m
+[0;32mI (55155) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (55175) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (55215) I2C_SCAN: Hora enviada ao TX: 16:09:09 21/06/2026[0m
+[0;32mI (65435) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (65435) I2C_SCAN:   Pacote #69 do nó 0x01  [--:--:--][0m
+[0;32mI (65435) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (65445) I2C_SCAN:   RSSI        : -44 dBm[0m
+[0;32mI (65445) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (65445) I2C_SCAN:   Pkts ok/lost: 6 / 0[0m
+[0;32mI (65455) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (65475) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (65505) I2C_SCAN: Hora enviada ao TX: 16:09:19 21/06/2026[0m
+[0;32mI (75715) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (75725) I2C_SCAN:   Pacote #70 do nó 0x01  [--:--:--][0m
+[0;32mI (75725) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (75725) I2C_SCAN:   RSSI        : -44 dBm[0m
+[0;32mI (75735) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (75735) I2C_SCAN:   Pkts ok/lost: 7 / 0[0m
+[0;32mI (75745) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (75755) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (75795) I2C_SCAN: Hora enviada ao TX: 16:09:30 21/06/2026[0m
+[0;32mI (86015) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (86015) I2C_SCAN:   Pacote #71 do nó 0x01  [--:--:--][0m
+[0;32mI (86015) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (86025) I2C_SCAN:   RSSI        : -44 dBm[0m
+[0;32mI (86025) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (86035) I2C_SCAN:   Pkts ok/lost: 8 / 0[0m
+[0;32mI (86035) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (86055) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (86095) I2C_SCAN: Hora enviada ao TX: 16:09:40 21/06/2026[0m
+[0;32mI (96295) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (96295) I2C_SCAN:   Pacote #72 do nó 0x01  [--:--:--][0m
+[0;32mI (96305) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (96305) I2C_SCAN:   RSSI        : -44 dBm[0m
+[0;32mI (96315) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (96315) I2C_SCAN:   Pkts ok/lost: 9 / 0[0m
+[0;32mI (96315) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (96335) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (96375) I2C_SCAN: Hora enviada ao TX: 16:09:50 21/06/2026[0m
+[0;32mI (106595) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (106595) I2C_SCAN:   Pacote #73 do nó 0x01  [--:--:--][0m
+[0;32mI (106595) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (106605) I2C_SCAN:   RSSI        : -38 dBm[0m
+[0;32mI (106605) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (106605) I2C_SCAN:   Pkts ok/lost: 10 / 0[0m
+[0;32mI (106615) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (106635) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (106665) I2C_SCAN: Hora enviada ao TX: 16:10:00 21/06/2026[0m
+[0;32mI (116875) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (116875) I2C_SCAN:   Pacote #74 do nó 0x01  [--:--:--][0m
+[0;32mI (116885) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (116885) I2C_SCAN:   RSSI        : -44 dBm[0m
+[0;32mI (116895) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (116895) I2C_SCAN:   Pkts ok/lost: 11 / 0[0m
+[0;32mI (116895) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (116915) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (116955) I2C_SCAN: Hora enviada ao TX: 16:10:11 21/06/2026[0m
+[0;32mI (127175) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (127175) I2C_SCAN:   Pacote #75 do nó 0x01  [--:--:--][0m
+[0;32mI (127175) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (127185) I2C_SCAN:   RSSI        : -44 dBm[0m
+[0;32mI (127185) I2C_SCAN:   SNR         : 10 dB[0m
+[0;32mI (127185) I2C_SCAN:   Pkts ok/lost: 12 / 0[0m
+[0;32mI (127195) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (127205) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (127245) I2C_SCAN: Hora enviada ao TX: 16:10:21 21/06/2026[0m
+[0;32mI (137455) I2C_SCAN: ╔══════════════════════════════════╗[0m
+[0;32mI (137455) I2C_SCAN:   Pacote #76 do nó 0x01  [--:--:--][0m
+[0;32mI (137465) I2C_SCAN:   Temperatura : 10.7 °C[0m
+[0;32mI (137465) I2C_SCAN:   RSSI        : -44 dBm[0m
+[0;32mI (137475) I2C_SCAN:   SNR         : 9 dB[0m
+[0;32mI (137475) I2C_SCAN:   Pkts ok/lost: 13 / 0[0m
+[0;32mI (137475) I2C_SCAN: ╚══════════════════════════════════╝[0m
+[0;33mW (137495) I2C_SCAN: Média aguardando dados dos 2 nós (1/2 prontos)[0m
+[0;32mI (137535) I2C_SCAN: Hora enviada ao TX: 16:10:31 21/06/2026[0m

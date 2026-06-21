@@ -158,6 +158,7 @@
 		"C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/spiffs/cmake_install.cmake",
 		"C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ulp/cmake_install.cmake",
 		"C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ttn-esp32/cmake_install.cmake",
+		"C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/ssd1306/cmake_install.cmake",
 		"C:/Users/rafae/workspace/LorawanGateway/build/esp-idf/main/cmake_install.cmake"
 	],
 	"Parallel" : false

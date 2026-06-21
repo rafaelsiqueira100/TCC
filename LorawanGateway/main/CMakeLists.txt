@@ -13,6 +13,8 @@ idf_component_register(
         mbedtls
         mqtt
         ttn-esp32
+    PRIV_REQUIRES
+    	ssd1306
 )
 
 idf_component_get_property(ttn_lib ttn-esp32 COMPONENT_LIB)

@@ -4877,6 +4877,246 @@
                 "children": [
                     {
                         "children": [],
+                        "depends_on": "<choice INTERFACE>",
+                        "help": "I2C Interface.",
+                        "id": "I2C_INTERFACE",
+                        "name": "I2C_INTERFACE",
+                        "range": null,
+                        "title": "I2C Interface",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "<choice INTERFACE>",
+                        "help": "SPI Interface.",
+                        "id": "SPI_INTERFACE",
+                        "name": "SPI_INTERFACE",
+                        "range": null,
+                        "title": "SPI Interface",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": null,
+                "help": "Select Interface.",
+                "id": "ssd1306-configuration-interface-C:-Users-rafae-workspace-LorawanTransmissor-components-ssd1306-Kconfig.projbuild-3",
+                "name": "INTERFACE",
+                "title": "Interface",
+                "type": "choice"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": "<choice PANEL>",
+                        "help": "Panel is 128x32.",
+                        "id": "SSD1306_128x32",
+                        "name": "SSD1306_128x32",
+                        "range": null,
+                        "title": "128x32 Panel",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "<choice PANEL>",
+                        "help": "Panel is 128x64.",
+                        "id": "SSD1306_128x64",
+                        "name": "SSD1306_128x64",
+                        "range": null,
+                        "title": "128x64 Panel",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": null,
+                "help": "Select Panel Type.",
+                "id": "ssd1306-configuration-panel-type-C:-Users-rafae-workspace-LorawanTransmissor-components-ssd1306-Kconfig.projbuild-18",
+                "name": "PANEL",
+                "title": "Panel Type",
+                "type": "choice"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "When your TFT have offset(X), set it.",
+                "id": "OFFSETX",
+                "name": "OFFSETX",
+                "range": [
+                    0,
+                    99
+                ],
+                "title": "GRAM X OFFSET",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "Flip upside down.",
+                "id": "FLIP",
+                "name": "FLIP",
+                "range": null,
+                "title": "Flip upside down",
+                "type": "bool"
+            },
+            {
+                "children": [],
+                "depends_on": "I2C_INTERFACE",
+                "help": "GPIO number (IOxx) to I2C SCL.\nSome GPIOs are used for other purposes (flash connections, etc.) and cannot be used to I2C.\nGPIOs 35-39 are input-only so cannot be used as outputs.",
+                "id": "SCL_GPIO",
+                "name": "SCL_GPIO",
+                "range": [
+                    0,
+                    33
+                ],
+                "title": "SCL GPIO number",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": "I2C_INTERFACE",
+                "help": "GPIO number (IOxx) to I2C SDA.\nSome GPIOs are used for other purposes (flash connections, etc.) and cannot be used to I2C.\nGPIOs 35-39 are input-only so cannot be used as outputs.",
+                "id": "SDA_GPIO",
+                "name": "SDA_GPIO",
+                "range": [
+                    0,
+                    33
+                ],
+                "title": "SDA GPIO number",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": "SPI_INTERFACE",
+                "help": "GPIO number (IOxx) to SPI MOSI.\nSome GPIOs are used for other purposes (flash connections, etc.) and cannot be used to MOSI.\nOn the ESP32, GPIOs 35-39 are input-only so cannot be used as outputs.\nOn the ESP32-S2, GPIO 46 is input-only so cannot be used as outputs.",
+                "id": "MOSI_GPIO",
+                "name": "MOSI_GPIO",
+                "range": null,
+                "title": "MOSI GPIO number",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": "SPI_INTERFACE",
+                "help": "GPIO number (IOxx) to SPI SCLK.\nSome GPIOs are used for other purposes (flash connections, etc.) and cannot be used to SCLK.\nOn the ESP32, GPIOs 35-39 are input-only so cannot be used as outputs.\nOn the ESP32-S2, GPIO 46 is input-only so cannot be used as outputs.",
+                "id": "SCLK_GPIO",
+                "name": "SCLK_GPIO",
+                "range": null,
+                "title": "SCLK GPIO number",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": "SPI_INTERFACE",
+                "help": "GPIO number (IOxx) to SPI CS.\nSome GPIOs are used for other purposes (flash connections, etc.) and cannot be used to CS.\nGPIOs 35-39 are input-only so cannot be used as outputs.",
+                "id": "CS_GPIO",
+                "name": "CS_GPIO",
+                "range": null,
+                "title": "CS GPIO number",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": "SPI_INTERFACE",
+                "help": "GPIO number (IOxx) to SPI DC.\nSome GPIOs are used for other purposes (flash connections, etc.) and cannot be used to DC.\nGPIOs 35-39 are input-only so cannot be used as outputs.",
+                "id": "DC_GPIO",
+                "name": "DC_GPIO",
+                "range": null,
+                "title": "DC GPIO number",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number (IOxx) to RESET.\nWhen it is -1, RESET isn't performed.\nSome GPIOs are used for other purposes (flash connections, etc.) and cannot be used to RESET.\nGPIOs 35-39 are input-only so cannot be used as outputs.",
+                "id": "RESET_GPIO",
+                "name": "RESET_GPIO",
+                "range": [
+                    -1,
+                    33
+                ],
+                "title": "RESET GPIO number",
+                "type": "int"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": "<choice I2C_PORT>",
+                        "help": "Use I2C_PORT_0.",
+                        "id": "I2C_PORT_0",
+                        "name": "I2C_PORT_0",
+                        "range": null,
+                        "title": "I2C_PORT_0",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_HP_I2C_NUM > 1 && <choice I2C_PORT>",
+                        "help": "Use I2C_PORT_1.",
+                        "id": "I2C_PORT_1",
+                        "name": "I2C_PORT_1",
+                        "range": null,
+                        "title": "I2C_PORT_1",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": "I2C_INTERFACE",
+                "help": "Select I2C port that controls this bus.",
+                "id": "ssd1306-configuration-i2c-port-that-controls-this-bus-C:-Users-rafae-workspace-LorawanTransmissor-components-ssd1306-Kconfig.projbuild-132",
+                "name": "I2C_PORT",
+                "title": "I2C port that controls this bus",
+                "type": "choice"
+            },
+            {
+                "children": [],
+                "depends_on": "I2C_INTERFACE",
+                "help": "Force legacy i2c driver.",
+                "id": "LEGACY_DRIVER",
+                "name": "LEGACY_DRIVER",
+                "range": null,
+                "title": "Force legacy i2c driver",
+                "type": "bool"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": "<choice SPI_HOST>",
+                        "help": "Use SPI2_HOST. This is also called HSPI_HOST.",
+                        "id": "SPI2_HOST",
+                        "name": "SPI2_HOST",
+                        "range": null,
+                        "title": "SPI2_HOST",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "SOC_SPI_PERIPH_NUM > 2 && <choice SPI_HOST>",
+                        "help": "USE SPI3_HOST. This is also called VSPI_HOST.",
+                        "id": "SPI3_HOST",
+                        "name": "SPI3_HOST",
+                        "range": null,
+                        "title": "SPI3_HOST",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": "SPI_INTERFACE",
+                "help": "Select SPI peripheral that controls this bus.",
+                "id": "ssd1306-configuration-spi-peripheral-that-controls-this-bus-C:-Users-rafae-workspace-LorawanTransmissor-components-ssd1306-Kconfig.projbuild-156",
+                "name": "SPI_HOST",
+                "title": "SPI peripheral that controls this bus",
+                "type": "choice"
+            }
+        ],
+        "depends_on": null,
+        "id": "ssd1306-configuration-C:-Users-rafae-workspace-LorawanTransmissor-components-ssd1306-Kconfig.projbuild-1",
+        "title": "SSD1306 Configuration",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
                         "depends_on": "<choice COMPILER_OPTIMIZATION>",
                         "help": null,
                         "id": "COMPILER_OPTIMIZATION_DEBUG",

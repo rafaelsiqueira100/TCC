@@ -23,6 +23,7 @@
 #include "esp_timer.h"
 #include "esp_sntp.h"
 #include <time.h>
+#include "ssd1306.h"
 
 #define I2C_MASTER_SCL_IO           15
 #define I2C_MASTER_SDA_IO           4
@@ -35,16 +36,16 @@ static const char *TAG = "I2C_SCAN";
 // ── WiFi / MQTT ───────────────────────────────────────────────────────────────
 #define WIFI_CONNECTED_BIT     BIT0
 
-#define WIFI_SSID      "IoT-local"
-#define WIFI_PASS      "ApenasCoisas!@Local"
-//#define WIFI_SSID "HUAWEI SQ"
-//#define WIFI_PASS "Siqueira@10"
-//#define MQTT_URI 	"mqtt://192.168.3.82:1883"
-//#define MQTT_USER 	"admin"
-//#define MQTT_PASS	"hivemq"
-#define MQTT_URI       "mqtt://143.106.12.206:1883"
-#define MQTT_USER      "FEEC-broker"
-#define MQTT_PASS      "Iotfeecgo"
+//#define WIFI_SSID      "IoT-local"
+//#define WIFI_PASS      "ApenasCoisas!@Local"
+#define WIFI_SSID "HUAWEI SQ"
+#define WIFI_PASS "Siqueira@10"
+#define MQTT_URI 	"mqtt://192.168.3.82:1883"
+#define MQTT_USER 	"admin"
+#define MQTT_PASS	"hivemq"
+//#define MQTT_URI       "mqtt://143.106.12.206:1883"
+//#define MQTT_USER      "FEEC-broker"
+//#define MQTT_PASS      "Iotfeecgo"
 
 #define MQTT_TOPIC_BASE        "rafael/dados"
 
@@ -65,6 +66,8 @@ typedef struct __attribute__((packed)) {
 #define DS3231_PIN_SDA      4
 #define DS3231_PIN_SCL      15
 #define DS3231_I2C_FREQ_HZ  400000
+
+#define tag "SSD1306"
 
 typedef struct {
     uint8_t seconds;   // 0–59
@@ -99,31 +102,9 @@ static void ntp_init(void)
 // ── Inicializa I2C e verifica presença do DS3231 ──────────────────────────────
 static esp_err_t ds3231_init(void)
 {
-    i2c_config_t conf = {
-        .mode             = I2C_MODE_MASTER,
-        .sda_io_num       = DS3231_PIN_SDA,
-        .scl_io_num       = DS3231_PIN_SCL,
-        .sda_pullup_en    = GPIO_PULLUP_ENABLE,
-        .scl_pullup_en    = GPIO_PULLUP_ENABLE,
-        .master.clk_speed = 400000,   // ← 400kHz para o OLED integrado
-    };
-
-    esp_err_t ret = i2c_param_config(DS3231_I2C_PORT, &conf);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "i2c_param_config falhou: 0x%x", ret);
-        return ret;
-    }
-
-    // Desinstala se já estava instalado (evita erro em reboot sem power cycle)
-    i2c_driver_delete(DS3231_I2C_PORT);
-
-    ret = i2c_driver_install(DS3231_I2C_PORT, I2C_MODE_MASTER, 0, 0, 0);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "i2c_driver_install falhou: 0x%x", ret);
-        return ret;
-    }
-
-    ESP_LOGI(TAG, "I2C instalado com sucesso");
+    // O barramento I2C_NUM_0 já é inicializado pelo driver SSD1306
+    // (i2c_master_init chamado em app_main antes do ds3231_init).
+    ESP_LOGI(TAG, "DS3231 pronto para uso no barramento I2C compartilhado");
     return ESP_OK;
 }
 // ── Lê data/hora do DS3231 ────────────────────────────────────────────────────
@@ -164,29 +145,6 @@ static esp_err_t ds3231_get_time(ds3231_time_t *t)
 
 // ── (Opcional) Ajusta data/hora no DS3231 ────────────────────────────────────
 //    Descomente e chame uma vez em app_main() se o módulo precisar ser acertado.
-/*
-static esp_err_t ds3231_set_time(const ds3231_time_t *t)
-{
-    uint8_t data[8] = {
-        0x00,
-        dec2bcd(t->seconds),
-        dec2bcd(t->minutes),
-        dec2bcd(t->hours),
-        dec2bcd(t->day),
-        dec2bcd(t->date),
-        dec2bcd(t->month),
-        dec2bcd(t->year),
-    };
-    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (DS3231_I2C_ADDR << 1) | I2C_MASTER_WRITE, true);
-    i2c_master_write(cmd, data, sizeof(data), true);
-    i2c_master_stop(cmd);
-    esp_err_t ret = i2c_master_cmd_begin(DS3231_I2C_PORT, cmd, pdMS_TO_TICKS(100));
-    i2c_cmd_link_delete(cmd);
-    return ret;
-}
-*/
 
 // ── Helper: formata timestamp como string ISO-like ────────────────────────────
 //    Saída: "2025-06-10 14:32:05"  (20 chars + \0)
@@ -270,6 +228,7 @@ static SemaphoreHandle_t stats_mutex;
 // ── Configurações LoRa ────────────────────────────────────────────────────────
 #define LORA_FREQUENCY           915000000
 #define LORA_SYNC_WORD           0x12
+static SSD1306_t dev;
 
 static spi_device_handle_t spi;
 static esp_mqtt_client_handle_t mqtt_client = NULL;
@@ -311,189 +270,6 @@ static bool node_is_allowed(uint8_t id)
 #define OLED_PAGES   (OLED_HEIGHT / 8)
 #define MODE_TX                  0x03   // ← adicione esta linha
 
-static uint8_t oled_buf[OLED_WIDTH * OLED_PAGES];
-
-static const uint8_t font5x7[][5] = {
-    {0x00,0x00,0x00,0x00,0x00}, // 32 ' '
-    {0x00,0x00,0x5F,0x00,0x00}, // 33 '!'
-    {0x00,0x07,0x00,0x07,0x00}, // 34 '"'
-    {0x14,0x7F,0x14,0x7F,0x14}, // 35 '#'
-    {0x24,0x2A,0x7F,0x2A,0x12}, // 36 '$'
-    {0x23,0x13,0x08,0x64,0x62}, // 37 '%'
-    {0x36,0x49,0x55,0x22,0x50}, // 38 '&'
-    {0x00,0x05,0x03,0x00,0x00}, // 39 '\''
-    {0x00,0x1C,0x22,0x41,0x00}, // 40 '('
-    {0x00,0x41,0x22,0x1C,0x00}, // 41 ')'
-    {0x14,0x08,0x3E,0x08,0x14}, // 42 '*'
-    {0x08,0x08,0x3E,0x08,0x08}, // 43 '+'
-    {0x00,0x50,0x30,0x00,0x00}, // 44 ','
-    {0x08,0x08,0x08,0x08,0x08}, // 45 '-'
-    {0x00,0x60,0x60,0x00,0x00}, // 46 '.'
-    {0x20,0x10,0x08,0x04,0x02}, // 47 '/'
-    {0x3E,0x51,0x49,0x45,0x3E}, // 48 '0'
-    {0x00,0x42,0x7F,0x40,0x00}, // 49 '1'
-    {0x42,0x61,0x51,0x49,0x46}, // 50 '2'
-    {0x21,0x41,0x45,0x4B,0x31}, // 51 '3'
-    {0x18,0x14,0x12,0x7F,0x10}, // 52 '4'
-    {0x27,0x45,0x45,0x45,0x39}, // 53 '5'
-    {0x3C,0x4A,0x49,0x49,0x30}, // 54 '6'
-    {0x01,0x71,0x09,0x05,0x03}, // 55 '7'
-    {0x36,0x49,0x49,0x49,0x36}, // 56 '8'
-    {0x06,0x49,0x49,0x29,0x1E}, // 57 '9'
-    {0x00,0x36,0x36,0x00,0x00}, // 58 ':'
-    {0x00,0x56,0x36,0x00,0x00}, // 59 ';'
-    {0x08,0x14,0x22,0x41,0x00}, // 60 '<'
-    {0x14,0x14,0x14,0x14,0x14}, // 61 '='
-    {0x00,0x41,0x22,0x14,0x08}, // 62 '>'
-    {0x02,0x01,0x51,0x09,0x06}, // 63 '?'
-    {0x32,0x49,0x79,0x41,0x3E}, // 64 '@'
-    {0x7E,0x11,0x11,0x11,0x7E}, // 65 'A'
-    {0x7F,0x49,0x49,0x49,0x36}, // 66 'B'
-    {0x3E,0x41,0x41,0x41,0x22}, // 67 'C'
-    {0x7F,0x41,0x41,0x22,0x1C}, // 68 'D'
-    {0x7F,0x49,0x49,0x49,0x41}, // 69 'E'
-    {0x7F,0x09,0x09,0x09,0x01}, // 70 'F'
-    {0x3E,0x41,0x49,0x49,0x7A}, // 71 'G'
-    {0x7F,0x08,0x08,0x08,0x7F}, // 72 'H'
-    {0x00,0x41,0x7F,0x41,0x00}, // 73 'I'
-    {0x20,0x40,0x41,0x3F,0x01}, // 74 'J'
-    {0x7F,0x08,0x14,0x22,0x41}, // 75 'K'
-    {0x7F,0x40,0x40,0x40,0x40}, // 76 'L'
-    {0x7F,0x02,0x0C,0x02,0x7F}, // 77 'M'
-    {0x7F,0x04,0x08,0x10,0x7F}, // 78 'N'
-    {0x3E,0x41,0x41,0x41,0x3E}, // 79 'O'
-    {0x7F,0x09,0x09,0x09,0x06}, // 80 'P'
-    {0x3E,0x41,0x51,0x21,0x5E}, // 81 'Q'
-    {0x7F,0x09,0x19,0x29,0x46}, // 82 'R'
-    {0x46,0x49,0x49,0x49,0x31}, // 83 'S'
-    {0x01,0x01,0x7F,0x01,0x01}, // 84 'T'
-    {0x3F,0x40,0x40,0x40,0x3F}, // 85 'U'
-    {0x1F,0x20,0x40,0x20,0x1F}, // 86 'V'
-    {0x3F,0x40,0x38,0x40,0x3F}, // 87 'W'
-    {0x63,0x14,0x08,0x14,0x63}, // 88 'X'
-    {0x07,0x08,0x70,0x08,0x07}, // 89 'Y'
-    {0x61,0x51,0x49,0x45,0x43}, // 90 'Z'
-    {0x00,0x7F,0x41,0x41,0x00}, // 91 '['
-    {0x02,0x04,0x08,0x10,0x20}, // 92 '\'
-    {0x00,0x41,0x41,0x7F,0x00}, // 93 ']'
-    {0x04,0x02,0x01,0x02,0x04}, // 94 '^'
-    {0x40,0x40,0x40,0x40,0x40}, // 95 '_'
-    {0x00,0x01,0x02,0x04,0x00}, // 96 '`'
-    {0x20,0x54,0x54,0x54,0x78}, // 97 'a'
-    {0x7F,0x48,0x44,0x44,0x38}, // 98 'b'
-    {0x38,0x44,0x44,0x44,0x20}, // 99 'c'
-    {0x38,0x44,0x44,0x48,0x7F}, // 100 'd'
-    {0x38,0x54,0x54,0x54,0x18}, // 101 'e'
-    {0x08,0x7E,0x09,0x01,0x02}, // 102 'f'
-    {0x0C,0x52,0x52,0x52,0x3E}, // 103 'g'
-    {0x7F,0x08,0x04,0x04,0x78}, // 104 'h'
-    {0x00,0x44,0x7D,0x40,0x00}, // 105 'i'
-    {0x20,0x40,0x44,0x3D,0x00}, // 106 'j'
-    {0x7F,0x10,0x28,0x44,0x00}, // 107 'k'
-    {0x00,0x41,0x7F,0x40,0x00}, // 108 'l'
-    {0x7C,0x04,0x18,0x04,0x78}, // 109 'm'
-    {0x7C,0x08,0x04,0x04,0x78}, // 110 'n'
-    {0x38,0x44,0x44,0x44,0x38}, // 111 'o'
-    {0x7C,0x14,0x14,0x14,0x08}, // 112 'p'
-    {0x08,0x14,0x14,0x18,0x7C}, // 113 'q'
-    {0x7C,0x08,0x04,0x04,0x08}, // 114 'r'
-    {0x48,0x54,0x54,0x54,0x20}, // 115 's'
-    {0x04,0x3F,0x44,0x40,0x20}, // 116 't'
-    {0x3C,0x40,0x40,0x20,0x7C}, // 117 'u'
-    {0x1C,0x20,0x40,0x20,0x1C}, // 118 'v'
-    {0x3C,0x40,0x30,0x40,0x3C}, // 119 'w'
-    {0x44,0x28,0x10,0x28,0x44}, // 120 'x'
-    {0x0C,0x50,0x50,0x50,0x3C}, // 121 'y'
-    {0x44,0x64,0x54,0x4C,0x44}, // 122 'z'
-    {0x00,0x08,0x36,0x41,0x00}, // 123 '{'
-    {0x00,0x00,0x7F,0x00,0x00}, // 124 '|'
-    {0x00,0x41,0x36,0x08,0x00}, // 125 '}'
-    {0x10,0x08,0x08,0x10,0x08}, // 126 '~'
-    {0x00,0x00,0x00,0x00,0x00}, // 127 DEL
-};
-
-static void oled_cmd(uint8_t cmd)
-{
-    uint8_t buf[2] = { 0x00, cmd };
-    i2c_master_write_to_device(I2C_PORT, OLED_ADDR, buf, 2, pdMS_TO_TICKS(10));
-}
-
-static void oled_data(const uint8_t *data, size_t len)
-{
-    uint8_t buf[len + 1];
-    buf[0] = 0x40;
-    memcpy(buf + 1, data, len);
-    i2c_master_write_to_device(I2C_PORT, OLED_ADDR, buf, len + 1, pdMS_TO_TICKS(50));
-}
-
-static void oled_flush(void)
-{
-    oled_cmd(0x21); oled_cmd(0); oled_cmd(127);
-    oled_cmd(0x22); oled_cmd(0); oled_cmd(7);
-    oled_data(oled_buf, sizeof(oled_buf));
-}
-
-static void oled_clear(void) { memset(oled_buf, 0, sizeof(oled_buf)); }
-
-static void oled_draw_char(uint8_t page, uint8_t col, char c)
-{
-    if (c < 32 || c > 127) c = ' ';
-    const uint8_t *glyph = font5x7[c - 32];
-    for (int i = 0; i < 5; i++)
-        if (col + i < OLED_WIDTH)
-            oled_buf[page * OLED_WIDTH + col + i] = glyph[i];
-    if (col + 5 < OLED_WIDTH)
-        oled_buf[page * OLED_WIDTH + col + 5] = 0x00;
-}
-
-static void oled_draw_str(uint8_t page, uint8_t col, const char *str)
-{
-    while (*str && col < OLED_WIDTH) {
-        oled_draw_char(page, col, *str++);
-        col += 6;
-    }
-}
-
-static void oled_init(void)
-{
-    // Configura o pino de Reset como saída (Equivalente ao pinMode do display.ino)
-    gpio_config_t io_conf = {
-        .pin_bit_mask = (1ULL << OLED_RST),
-        .mode = GPIO_MODE_OUTPUT,
-        .pull_up_en = GPIO_PULLUP_DISABLE,
-        .pull_down_en = GPIO_PULLDOWN_DISABLE,
-        .intr_type = GPIO_INTR_DISABLE
-    };
-    gpio_config(&io_conf);
-
-    // Sequência exata de Reset do display.ino
-    gpio_set_level(OLED_RST, 0);
-    vTaskDelay(pdMS_TO_TICKS(20));
-    gpio_set_level(OLED_RST, 1);
-    vTaskDelay(pdMS_TO_TICKS(20));
-
-    const uint8_t init_seq[] = {
-        0xAE,                   // display off
-        0xD5, 0x80,             // clock
-        0xA8, 0x3F,             // multiplex
-        0xD3, 0x00,             // offset
-        0x40,                   // start line
-        0x8D, 0x14,             // charge pump
-        0x20, 0x00,             // memory mode
-        0xA1,                   // seg remap
-        0xC8,                   // com scan
-        0xDA, 0x12,             // com pins
-        0x81, 0xFF,             // contraste máximo
-        0xD9, 0xF1,             // precharge
-        0xDB, 0x40,             // vcom
-        0xA4,                   // display ram
-        0xA6,                   // normal (não invertido)
-        0xAF,                   // display on
-    };
-    for (size_t i = 0; i < sizeof(init_seq); i++) oled_cmd(init_seq[i]);
-    memset(oled_buf, 0, sizeof(oled_buf));
-    ESP_LOGI(TAG, "OLED SSD1306 inicializado com Reset físico.");
-}
 // ── Localiza ou cria entrada de estatísticas para um nó ───────────────────────
 static node_stats_t *get_or_create_node(uint8_t id)
 {
@@ -617,26 +393,6 @@ static void spi_read_buf(uint8_t reg, uint8_t *buf, size_t len)
     };
     spi_device_transmit(spi, &t);
     memcpy(buf, rx + 1, len);
-}
-
-// ── Inicialização SPI ─────────────────────────────────────────────────────────
-static void spi_init(void)
-{
-    spi_bus_config_t bus = {
-        .miso_io_num   = PIN_MISO,
-        .mosi_io_num   = PIN_MOSI,
-        .sclk_io_num   = PIN_SCLK,
-        .quadwp_io_num = -1,
-        .quadhd_io_num = -1,
-    };
-    spi_device_interface_config_t dev = {
-        .clock_speed_hz = 1000000,
-        .mode           = 0,
-        .spics_io_num   = PIN_NSS,
-        .queue_size     = 1,
-    };
-    ESP_ERROR_CHECK(spi_bus_initialize(SPI2_HOST, &bus, SPI_DMA_DISABLED));
-    ESP_ERROR_CHECK(spi_bus_add_device(SPI2_HOST, &dev, &spi));
 }
 
 // ── Reset / init LoRa ─────────────────────────────────────────────────────────
@@ -986,20 +742,6 @@ static void mqtt_publish_average(void)
 
     ESP_LOGI(TAG, "Média publicada: %.1f °C (%d nós) @ %s", avg, valid_count, ts);
 }
-void i2c_master_init(void)
-{
-    i2c_config_t conf = {
-        .mode = I2C_MODE_MASTER,
-        .sda_io_num = I2C_MASTER_SDA_IO,
-        .scl_io_num = I2C_MASTER_SCL_IO,
-        .sda_pullup_en = GPIO_PULLUP_ENABLE,
-        .scl_pullup_en = GPIO_PULLUP_ENABLE,
-        .master.clk_speed = I2C_MASTER_FREQ_HZ,
-    };
-
-    i2c_param_config(I2C_MASTER_NUM, &conf);
-    i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0);
-}
 void i2c_scan_bus(void)
 {
     ESP_LOGI(TAG, "Scanning I2C bus...");
@@ -1022,7 +764,24 @@ void i2c_scan_bus(void)
     }
 }
 
-
+static void lora_spi_init(void)
+{
+    spi_bus_config_t bus = {
+        .miso_io_num   = PIN_MISO,
+        .mosi_io_num   = PIN_MOSI,
+        .sclk_io_num   = PIN_SCLK,
+        .quadwp_io_num = -1,
+        .quadhd_io_num = -1,
+    };
+    spi_device_interface_config_t devcfg = {
+        .clock_speed_hz = 1000000,
+        .mode           = 0,
+        .spics_io_num   = PIN_NSS,
+        .queue_size     = 1,
+    };
+    ESP_ERROR_CHECK(spi_bus_initialize(SPI2_HOST, &bus, SPI_DMA_DISABLED));
+    ESP_ERROR_CHECK(spi_bus_add_device(SPI2_HOST, &devcfg, &spi));
+}
 // ── app_main ──────────────────────────────────────────────────────────────────
 void app_main(void)
 {
@@ -1045,28 +804,35 @@ void app_main(void)
     wifi_init();
     ntp_init();
     mqtt_init();
-    i2c_master_init();
+
+    // Inicializa I2C + display OLED (componente nopnop2002/esp-idf-ssd1306)
+    i2c_master_init(&dev, CONFIG_SDA_GPIO, CONFIG_SCL_GPIO, CONFIG_RESET_GPIO);
+
+    #if CONFIG_SSD1306_128x64
+        ESP_LOGI(TAG, "Panel is 128x64");
+        ssd1306_init(&dev, 128, 64);
+    #endif
+    #if CONFIG_SSD1306_128x32
+        ESP_LOGI(TAG, "Panel is 128x32");
+        ssd1306_init(&dev, 128, 32);
+    #endif
+
+    ssd1306_clear_screen(&dev, false);
+    ssd1306_contrast(&dev, 0xff);
+    ssd1306_display_text(&dev, 0, "TESTE", 5, false);
+    vTaskDelay(pdMS_TO_TICKS(2000));
 
     for (int i = 0; i < 100 && !mqtt_connected; i++)
         vTaskDelay(pdMS_TO_TICKS(100));
 
-    // ── Inicializa DS3231 ─────────────────────────────────────────────────────
+    // DS3231 agora só lê/escreve no barramento já aberto pelo display
     if (ds3231_init() != ESP_OK)
         ESP_LOGW(TAG, "DS3231 indisponível — timestamps serão \"unknown\"");
+
     ESP_LOGI(TAG, "=== SCAN I2C ===");
     i2c_scan_bus();
     ESP_LOGI(TAG, "=== FIM SCAN ===");
-    // ── (Opcional) Acerto inicial do RTC — descomente se necessário ──────────
-    // ds3231_time_t t = { .seconds=0, .minutes=30, .hours=14,
-    //                     .day=2, .date=10, .month=6, .year=25 };
-    // ds3231_set_time(&t);
-    oled_init();
-    oled_clear();
-    oled_draw_str(0, 0, "TESTE");
-    oled_flush();
-    vTaskDelay(pdMS_TO_TICKS(2000));
-    spi_init();
-
+    lora_spi_init();
     if (!lora_init()) {
         ESP_LOGE(TAG, "Falha ao inicializar LoRa. Travando.");
         while (1) { led_blink(10); vTaskDelay(pdMS_TO_TICKS(500)); }
@@ -1104,7 +870,14 @@ void app_main(void)
             if (ds3231_get_time(&rtc_local) == ESP_OK)
                 ds3231_format_time(&rtc_local, ts_rx_time, sizeof(ts_rx_time));
 
-            oled_draw_str(0,0,"═════════════════════════════════");
+            char oled_line[24];
+            snprintf(oled_line, sizeof(oled_line), "No:%02X T:%.1fC", payload.node_id, payload.temperature_x10 / 10.0f);
+            ssd1306_display_text(&dev, 0, oled_line, strlen(oled_line), false);
+
+            snprintf(oled_line, sizeof(oled_line), "RSSI:%d SNR:%d", rssi, snr);
+            ssd1306_display_text(&dev, 1, oled_line, strlen(oled_line), false);
+
+            snprintf(oled_line, sizeof(oled_line), "%s", ts_rx_time);
             ESP_LOGI(TAG, "╔══════════════════════════════════╗");
             ESP_LOGI(TAG, "  Pacote #%lu do nó 0x%02X  [%s]",
                      (unsigned long)payload.counter, payload.node_id, ts_rx_time);

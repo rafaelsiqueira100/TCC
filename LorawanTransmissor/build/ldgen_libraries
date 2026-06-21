@@ -195,6 +195,8 @@ C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/mqtt/lib/mqtt_utils/li
 C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/perfmon/libperfmon.a
 C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/rt/librt.a
 C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/spiffs/libspiffs.a
-C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/main/libmain.a
+C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/ssd1306/libssd1306.a
 C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/driver/libdriver.a
+C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/main/libmain.a
+C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/ssd1306/libssd1306.a
 C:/Users/rafae/workspace/LorawanTransmissor/build/esp-idf/ttn-esp32/libttn-esp32.a

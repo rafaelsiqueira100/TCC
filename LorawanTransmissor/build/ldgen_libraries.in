@@ -195,6 +195,8 @@ $<TARGET_FILE:idf::mqtt::utils>
 $<TARGET_FILE:idf::perfmon>
 $<TARGET_FILE:idf::rt>
 $<TARGET_FILE:idf::spiffs>
-$<TARGET_FILE:idf::main>
+$<TARGET_FILE:idf::ssd1306>
 $<TARGET_FILE:__idf_driver>
+$<TARGET_FILE:idf::main>
+$<TARGET_FILE:__idf_ssd1306>
 $<TARGET_FILE:idf::ttn-esp32>
