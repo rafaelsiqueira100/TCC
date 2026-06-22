@@ -36,18 +36,19 @@ static const char *TAG = "I2C_SCAN";
 // ── WiFi / MQTT ───────────────────────────────────────────────────────────────
 #define WIFI_CONNECTED_BIT     BIT0
 
-//#define WIFI_SSID      "IoT-local"
-//#define WIFI_PASS      "ApenasCoisas!@Local"
-#define WIFI_SSID "HUAWEI SQ"
-#define WIFI_PASS "Siqueira@10"
-#define MQTT_URI 	"mqtt://192.168.3.82:1883"
-#define MQTT_USER 	"admin"
-#define MQTT_PASS	"hivemq"
-//#define MQTT_URI       "mqtt://143.106.12.206:1883"
-//#define MQTT_USER      "FEEC-broker"
-//#define MQTT_PASS      "Iotfeecgo"
+#define WIFI_SSID      "IoT-local"
+#define WIFI_PASS      "ApenasCoisas!@Local"
+//#define WIFI_SSID "HUAWEI SQ"
+//#define WIFI_PASS "Siqueira@10"
+//#define MQTT_URI 	"mqtt://192.168.3.82:1883"
+//#define MQTT_USER 	"admin"
+//#define MQTT_PASS	"hivemq"
+#define MQTT_URI       "mqtt://143.106.12.206:1883"
+#define MQTT_USER      "FEEC-broker"
+#define MQTT_PASS      "Iotfeecgo"
 
 #define MQTT_TOPIC_BASE        "rafael/dados"
+#define SPI_NO_DMA_MAX_LEN  63
 
 static EventGroupHandle_t wifi_event_group;
 typedef struct __attribute__((packed)) {
@@ -506,6 +507,13 @@ static int lora_receive(uint8_t *buf, size_t max_len)
             spi_write(REG_FIFO_ADDR_PTR, ptr);
             spi_read_buf(REG_FIFO, discard, nb);
         }
+        if (nb == 0 || nb > 64) {  // implausible for this protocol
+            ESP_LOGW(TAG, "RX_NB_BYTES implausível (%d) — possível leitura SPI corrompida", nb);
+            spi_write(REG_FIFO_ADDR_PTR, ptr);
+            uint8_t discard[64];
+            spi_read_buf(REG_FIFO, discard, nb > 64 ? 64 : nb);  // best-effort drain, capped
+            return -1;
+        }
         ESP_LOGW(TAG, "Erro de CRC — %d byte(s) descartados do FIFO", nb);
         return -1;
     }
@@ -513,6 +521,7 @@ static int lora_receive(uint8_t *buf, size_t max_len)
     uint8_t nb  = spi_read(REG_RX_NB_BYTES);
     uint8_t ptr = spi_read(REG_FIFO_RX_CURRENT_ADDR);
     if (nb > max_len) nb = max_len;
+    if (nb > SPI_NO_DMA_MAX_LEN) nb = SPI_NO_DMA_MAX_LEN;
     spi_write(REG_FIFO_ADDR_PTR, ptr);
     spi_read_buf(REG_FIFO, buf, nb);
     return nb;

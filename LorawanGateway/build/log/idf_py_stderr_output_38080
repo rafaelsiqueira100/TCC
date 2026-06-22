@@ -5,6 +5,4 @@ Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.e
 [0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
 [0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/esp/v6.0/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
 [0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/esp/v6.0/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
-[1;31m--- Error: ClearCommError failed (PermissionError(13, 'Acesso negado.', None, 5))[0m
-[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
 [0m

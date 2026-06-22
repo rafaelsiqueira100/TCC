@@ -1,0 +1,151 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanGateway\build\LorawanGateway.elf C:\Users\rafae\workspace\LorawanGateway\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun 21 2026 15:14:04[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22004h (139268) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=0003202c vaddr=3ffb0000 size=04b60h ( 19296) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00036b94 vaddr=40080000 size=09484h ( 38020) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a29f0h (666096) map[0m
+[0;32mI (397) esp_image: segment 4: paddr=000e2a18 vaddr=40089484 size=0f32ch ( 62252) load[0m
+[0;32mI (422) esp_image: segment 5: paddr=000f1d4c vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (435) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (435) boot: Disabling RNG early entropy source...[0m
+[0;32mI (445) cpu_start: Multicore app[0m
+[0;32mI (454) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (454) cpu_start: Pro cpu start user code[0m
+[0;32mI (454) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (456) app_init: Application information:[0m
+[0;32mI (460) app_init: Project name:     LorawanGateway[0m
+[0;32mI (464) app_init: App version:      1[0m
+[0;32mI (467) app_init: Compile time:     Jun 21 2026 15:13:06[0m
+[0;32mI (473) app_init: ELF file SHA256:  9d8f08f69...[0m
+[0;32mI (477) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (481) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (485) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (489) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (493) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (499) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (504) heap_init: At 3FFB9BC8 len 00026438 (153 KiB): DRAM[0m
+[0;32mI (509) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (520) heap_init: At 400987B0 len 00007850 (30 KiB): IRAM[0m
+[0;32mI (527) spi_flash: detected chip: generic[0m
+[0;32mI (529) spi_flash: flash io: dio[0m
+[0;33mW (532) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (545) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (615) wifi:wifi driver task: 3ffc176c, prio:23, stack:6656, core=0[0m
+[0;32mI (635) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (635) wifi:wifi certification version: v7.0[0m
+[0;32mI (635) wifi:config NVS flash: enabled[0m
+[0;32mI (635) wifi:config nano formatting: disabled[0m
+[0;32mI (635) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (645) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (645) wifi:Init management short buffer num: 32[0m
+[0;32mI (645) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (655) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (655) wifi:Init static rx buffer num: 10[0m
+[0;32mI (665) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (665) wifi_init: rx ba win: 6[0m
+[0;32mI (665) wifi_init: accept mbox: 6[0m
+[0;32mI (675) wifi_init: tcpip mbox: 32[0m
+[0;32mI (675) wifi_init: udp mbox: 6[0m
+[0;32mI (675) wifi_init: tcp mbox: 6[0m
+[0;32mI (675) wifi_init: tcp tx win: 5760[0m
+[0;32mI (685) wifi_init: tcp rx win: 5760[0m
+[0;32mI (685) wifi_init: tcp mss: 1440[0m
+[0;32mI (685) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (695) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (695) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (705) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (785) wifi:mode : sta (5c:01:3b:09:26:38)[0m
+[0;32mI (785) wifi:enable tsf[0m
+[0;32mI (785) I2C_SCAN: Aguardando conexão WiFi...[0m
+[0;32mI (795) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (805) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (805) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (815) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (845) wifi:connected with IoT-local, aid = 1, channel 11, BW20, bssid = d0:d3:e0:b6:b7:42[0m
+[0;32mI (845) wifi:security: WPA2-PSK, phy: bgn, rssi: -70[0m
+[0;32mI (845) wifi:pm start, type: 1[0m
+
+[0;32mI (845) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (875) wifi:<ba-add>idx:0 (ifx:0, d0:d3:e0:b6:b7:42), tid:0, ssn:2, winSize:64[0m
+[0;32mI (895) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1885) esp_netif_handlers: sta ip: 100.64.33.26, mask: 255.255.255.0, gw: 100.64.33.1[0m
+[0;32mI (1885) I2C_SCAN: WiFi conectado, IP: 100.64.33.26[0m
+[0;32mI (1885) I2C_SCAN: Aguardando sincronização NTP...[0m
+[0;32mI (11885) I2C_SCAN: NTP sincronizado[0m
+[0;32mI (11895) SSD1306: Legacy i2c driver is used[0m
+[0;32mI (11915) I2C_SCAN: MQTT conectado[0m
+[0;32mI (11945) I2C_SCAN: Panel is 128x64[0m
+[0;32mI (11945) SSD1306: OLED configured successfully[0m
+[0;32mI (14045) I2C_SCAN: DS3231 pronto para uso no barramento I2C compartilhado[0m
+[0;32mI (14045) I2C_SCAN: === SCAN I2C ===[0m
+[0;32mI (14045) I2C_SCAN: Scanning I2C bus...[0m
+[0;32mI (14055) I2C_SCAN: Device found at 0x3C[0m
+[0;32mI (14065) I2C_SCAN: === FIM SCAN ===[0m
+[0;32mI (14085) I2C_SCAN: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (14095) I2C_SCAN: LoRa inicializado — aguardando pacotes...[0m
+[0;33mW (58885) I2C_SCAN: Pacote inesperado: 63 bytes (esperado: 10)[0m
+[0;32mI (58885) I2C_SCAN: 02 00 03 fc 03 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (58885) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (58885) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (58895) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;33mW (59055) I2C_SCAN: Pacote inesperado: 63 bytes (esperado: 10)[0m
+[0;32mI (59055) I2C_SCAN: 02 00 e2 df fd 8c 16 06 ea 07 00 00 10 03 33 d4[0m
+[0;32mI (59055) I2C_SCAN: 00 00 00 3d 0a 37 3a 0a d7 93 3a 89 b8 5c 45 00[0m
+[0;32mI (59055) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 46 03 00 00 00 00[0m
+[0;32mI (59065) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;33mW (59235) I2C_SCAN: Pacote inesperado: 63 bytes (esperado: 10)[0m
+[0;32mI (59235) I2C_SCAN: 02 01 03 fb 03 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (59235) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (59235) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (59245) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;33mW (59585) I2C_SCAN: Pacote inesperado: 63 bytes (esperado: 10)[0m
+[0;32mI (59585) I2C_SCAN: 02 02 03 fa 03 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (59585) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (59585) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (59595) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;33mW (59755) I2C_SCAN: Pacote inesperado: 63 bytes (esperado: 10)[0m
+[0;32mI (59755) I2C_SCAN: 02 02 5a 34 79 c7 16 06 ea 07 00 00 10 03 31 e1[0m
+[0;32mI (59755) I2C_SCAN: 00 00 00 a9 52 77 c3 4a 4a 28 42 00 00 00 00 00[0m
+[0;32mI (59755) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 ca 03 00 00 00 00[0m
+[0;32mI (59765) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;33mW (59925) I2C_SCAN: Pacote inesperado: 63 bytes (esperado: 10)[0m
+[0;32mI (59925) I2C_SCAN: 02 03 03 f9 03 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (59925) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (59925) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (59935) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;33mW (60095) I2C_SCAN: Pacote inesperado: 63 bytes (esperado: 10)[0m
+[0;32mI (60095) I2C_SCAN: 02 03 a9 0c 04 43 16 06 ea 07 00 00 10 03 3a 9c[0m
+[0;32mI (60095) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 e0 72 45 00[0m
+[0;32mI (60095) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 73 03 00 00 00 00[0m
+[0;32mI (60105) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;33mW (60275) I2C_SCAN: Pacote inesperado: 63 bytes (esperado: 10)[0m
+[0;32mI (60275) I2C_SCAN: 02 04 03 f8 03 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (60275) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (60275) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (60285) I2C_SCAN: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m

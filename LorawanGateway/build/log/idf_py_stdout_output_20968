@@ -1,0 +1,335 @@
+Command: C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\rafae\workspace\LorawanGateway\build\LorawanGateway.elf C:\Users\rafae\workspace\LorawanGateway\build\bootloader\bootloader.elf --force-color -m 'C:\Users\rafae\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py'
+ets�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jun 21 2026 15:14:04[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21fb4h (139188) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=00031fdc vaddr=3ffb0000 size=04b60h ( 19296) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00036b44 vaddr=40080000 size=094d4h ( 38100) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a29a4h (666020) map[0m
+[0;32mI (397) esp_image: segment 4: paddr=000e29cc vaddr=400894d4 size=0f2dch ( 62172) load[0m
+[0;32mI (422) esp_image: segment 5: paddr=000f1cb0 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (435) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (435) boot: Disabling RNG early entropy source...[0m
+[0;32mI (445) cpu_start: Multicore app[0m
+[0;32mI (453) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (454) cpu_start: Pro cpu start user code[0m
+[0;32mI (454) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (456) app_init: Application information:[0m
+[0;32mI (459) app_init: Project name:     LorawanGateway[0m
+[0;32mI (464) app_init: App version:      1[0m
+[0;32mI (467) app_init: Compile time:     Jun 21 2026 15:13:06[0m
+[0;32mI (472) app_init: ELF file SHA256:  511973f3f...[0m
+[0;32mI (477) app_init: ESP-IDF:          v6.0-dirty[0m
+[0;32mI (481) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (485) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (489) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (493) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (499) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (504) heap_init: At 3FFB9BC8 len 00026438 (153 KiB): DRAM[0m
+[0;32mI (509) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (520) heap_init: At 400987B0 len 00007850 (30 KiB): IRAM[0m
+[0;32mI (527) spi_flash: detected chip: generic[0m
+[0;32mI (529) spi_flash: flash io: dio[0m
+[0;33mW (532) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (544) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (625) wifi:wifi driver task: 3ffc176c, prio:23, stack:6656, core=0[0m
+[0;32mI (645) wifi:wifi firmware version: 44738b4[0m
+[0;32mI (645) wifi:wifi certification version: v7.0[0m
+[0;32mI (645) wifi:config NVS flash: enabled[0m
+[0;32mI (645) wifi:config nano formatting: disabled[0m
+[0;32mI (645) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (655) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (655) wifi:Init management short buffer num: 32[0m
+[0;32mI (655) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (665) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (665) wifi:Init static rx buffer num: 10[0m
+[0;32mI (675) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (675) wifi_init: rx ba win: 6[0m
+[0;32mI (675) wifi_init: accept mbox: 6[0m
+[0;32mI (685) wifi_init: tcpip mbox: 32[0m
+[0;32mI (685) wifi_init: udp mbox: 6[0m
+[0;32mI (685) wifi_init: tcp mbox: 6[0m
+[0;32mI (695) wifi_init: tcp tx win: 5760[0m
+[0;32mI (695) wifi_init: tcp rx win: 5760[0m
+[0;32mI (695) wifi_init: tcp mss: 1440[0m
+[0;32mI (695) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (705) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (705) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (715) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (795) wifi:mode : sta (5c:01:3b:09:26:38)[0m
+[0;32mI (795) wifi:enable tsf[0m
+[0;32mI (795) I2C_SCAN: Aguardando conexão WiFi...[0m
+[0;32mI (815) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (815) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (825) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (825) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (855) wifi:connected with IoT-local, aid = 1, channel 11, BW20, bssid = d0:d3:e0:b6:b7:42[0m
+[0;32mI (855) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (855) wifi:pm start, type: 1[0m
+
+[0;32mI (855) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (875) wifi:<ba-add>idx:0 (ifx:0, d0:d3:e0:b6:b7:42), tid:0, ssn:2, winSize:64[0m
+[0;32mI (915) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1885) esp_netif_handlers: sta ip: 100.64.33.26, mask: 255.255.255.0, gw: 100.64.33.1[0m
+[0;32mI (1885) I2C_SCAN: WiFi conectado, IP: 100.64.33.26[0m
+[0;32mI (1885) I2C_SCAN: Aguardando sincronização NTP...[0m
+[0;32mI (11885) I2C_SCAN: NTP sincronizado[0m
+[0;32mI (11895) SSD1306: Legacy i2c driver is used[0m
+[0;32mI (11915) I2C_SCAN: MQTT conectado[0m
+[0;32mI (11945) I2C_SCAN: Panel is 128x64[0m
+[0;32mI (11945) SSD1306: OLED configured successfully[0m
+[0;32mI (14045) I2C_SCAN: DS3231 pronto para uso no barramento I2C compartilhado[0m
+[0;32mI (14045) I2C_SCAN: === SCAN I2C ===[0m
+[0;32mI (14045) I2C_SCAN: Scanning I2C bus...[0m
+[0;32mI (14055) I2C_SCAN: Device found at 0x3C[0m
+[0;32mI (14065) I2C_SCAN: === FIM SCAN ===[0m
+[0;32mI (14085) I2C_SCAN: SX1276 version: 0x12 (esperado: 0x12)[0m
+[0;32mI (14095) I2C_SCAN: LoRa inicializado — aguardando pacotes...[0m
+[1;31mE (25085) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (25085) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (25085) I2C_SCAN: 00 00 00 95 09 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (25085) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (25095) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (25105) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (25255) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (25255) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (25255) I2C_SCAN: 00 00 00 a6 09 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (25255) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (25265) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (25265) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (25435) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (25435) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (25435) I2C_SCAN: 00 00 00 b8 09 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (25435) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (25445) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (25445) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (25785) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (25785) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (25785) I2C_SCAN: 00 00 00 db 09 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (25785) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (25795) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (25795) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (25955) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (25955) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (25955) I2C_SCAN: 00 00 00 ec 09 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (25955) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (25965) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (25965) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (26125) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (26125) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (26125) I2C_SCAN: 00 00 00 fd 09 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (26125) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (26135) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (26135) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (26295) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (26295) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (26295) I2C_SCAN: 00 00 00 0e 0a 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (26295) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (26305) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (26305) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (26475) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (26475) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (26475) I2C_SCAN: 00 00 00 20 0a 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (26475) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (26485) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (26485) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (26645) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (26645) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (26645) I2C_SCAN: 00 00 00 31 0a 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (26645) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (26655) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (26655) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (75255) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (75255) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (75255) I2C_SCAN: 00 00 00 2e 1d 00 00 00 00 00 00 23 0c 06 00 ff[0m
+[0;32mI (75255) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (75265) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (75265) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (75425) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (75425) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (75425) I2C_SCAN: 00 00 00 3f 1d 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (75425) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (75435) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (75435) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (75595) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (75595) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (75595) I2C_SCAN: 00 00 00 50 1d 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (75595) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (75605) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (75605) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (75945) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (75945) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (75945) I2C_SCAN: 00 00 00 73 1d 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (75945) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (75955) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (75955) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (76295) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (76295) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (76295) I2C_SCAN: 00 00 00 96 1d 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (76295) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (76305) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (76305) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (76465) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (76465) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (76465) I2C_SCAN: 00 00 00 a7 1d 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (76465) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (76475) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (76475) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (76645) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (76645) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (76645) I2C_SCAN: 00 00 00 b9 1d 00 00 00 00 00 00 23 0a 06 00 ff[0m
+[0;32mI (76645) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (76655) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (76655) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (125425) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (125425) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (125425) I2C_SCAN: 00 00 00 c7 30 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (125425) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (125435) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (125445) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (125595) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (125595) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (125595) I2C_SCAN: 00 00 00 d8 30 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (125595) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (125605) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (125615) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (125775) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (125775) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (125775) I2C_SCAN: 00 00 00 ea 30 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (125775) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (125785) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (125795) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (126115) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (126115) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (126115) I2C_SCAN: 00 00 00 0c 31 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (126115) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (126125) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (126135) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (126285) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (126285) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (126285) I2C_SCAN: 00 00 00 1d 31 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (126285) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (126295) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (126305) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (126465) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (126465) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (126465) I2C_SCAN: 00 00 00 2f 31 00 00 00 00 00 00 23 02 06 00 ff[0m
+[0;32mI (126465) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (126475) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (126485) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (126635) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (126635) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (126815) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (126815) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (126815) I2C_SCAN: 00 00 00 52 31 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (126815) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (126825) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (126835) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (175595) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (175595) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (175595) I2C_SCAN: 00 00 00 60 44 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (175605) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (175605) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (175615) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (175935) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (175935) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (175935) I2C_SCAN: 00 00 00 82 44 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (175935) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (175945) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (175955) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (176285) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (176285) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (176285) I2C_SCAN: 00 00 00 a5 44 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (176285) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (176295) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (176305) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (176455) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (176455) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (176455) I2C_SCAN: 00 00 00 b6 44 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (176455) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (176465) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (176475) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (176635) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (176635) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (176635) I2C_SCAN: 00 00 00 c8 44 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (176635) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (176645) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (176655) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (176805) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (176805) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (176805) I2C_SCAN: 00 00 00 d9 44 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (176805) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (176815) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (176825) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (176985) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (176985) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (176985) I2C_SCAN: 00 00 00 eb 44 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (176985) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (176995) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (177005) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (177155) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (177155) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (225745) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (225745) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (225745) I2C_SCAN: 00 00 00 f7 57 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (225745) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (225755) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (225765) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (225915) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (225915) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (225915) I2C_SCAN: 00 00 00 08 58 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (225915) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (225925) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (225935) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (226095) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (226095) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (226095) I2C_SCAN: 00 00 00 1a 58 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (226095) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (226105) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (226115) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (226445) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (226445) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (226605) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (226605) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (226605) I2C_SCAN: 00 00 00 4d 58 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (226605) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (226615) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (226625) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (226785) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (226785) I2C_SCAN: Erro de CRC — 64 byte(s) descartados do FIFO[0m
+[1;31mE (226955) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (226955) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (226955) I2C_SCAN: 00 00 00 70 58 00 00 00 00 00 00 23 0e 06 00 ff[0m
+[0;32mI (226955) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (226965) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (226975) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
+[1;31mE (227135) spi_master: check_trans_valid(1118): txdata transfer > host maximum[0m
+[0;33mW (227135) I2C_SCAN: Pacote inesperado: 64 bytes (esperado: 10)[0m
+[0;32mI (227135) I2C_SCAN: 00 00 00 82 58 00 00 00 00 00 00 23 00 06 00 ff[0m
+[0;32mI (227135) I2C_SCAN: ff ff ff 60 ba fb 3f 00 00 00 00 c0 ba fb 3f b4[0m
+[0;32mI (227145) I2C_SCAN: b9 fc 3f 00 00 00 00 60 ba fb 3f 01 00 00 00 75[0m
+[0;32mI (227155) I2C_SCAN: d0 0d 80 90 ba fb 3f 00 00 00 00 c0 ba fb 3f c0[0m
